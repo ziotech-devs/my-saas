@@ -21,7 +21,7 @@ export const Logo = ({ size = 32, className }: Props) => {
       break;
     }
   }
-
+ 
   return (
     <img
       src={src}

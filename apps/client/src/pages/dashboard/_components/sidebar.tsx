@@ -1,5 +1,5 @@
 import { t } from "@lingui/macro";
-import { FadersHorizontalIcon, ReadCvLogoIcon } from "@phosphor-icons/react";
+import { ChatCircleIcon, FadersHorizontalIcon, ReadCvLogoIcon } from "@phosphor-icons/react";
 import { Button, KeyboardShortcut, Separator } from "@reactive-resume/ui";
 import { cn } from "@reactive-resume/utils";
 import { motion } from "framer-motion";
@@ -80,12 +80,23 @@ export const Sidebar = ({ setOpen }: SidebarProps) => {
     setOpen?.(false);
   });
 
+  useKeyboardShortcut(["shift", "c"], () => {
+    void navigate("/dashboard/stock-chat");
+    setOpen?.(false);
+  });
+
   const sidebarItems: SidebarItem[] = [
     {
       path: "/dashboard/resumes",
       name: t`Resumes`,
       shortcut: "⇧R",
       icon: <ReadCvLogoIcon />,
+    },
+    {
+      path: "/dashboard/stock-chat",
+      name: t`Stock Chat`,
+      shortcut: "⇧C",
+      icon: <ChatCircleIcon />,
     },
     {
       path: "/dashboard/settings",

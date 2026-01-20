@@ -210,6 +210,7 @@
     "nestjs-prisma": "^0.26.0",
     "nestjs-zod": "^3.0.0",
     "nodemailer": "^7.0.10",
+    "@langchain/langgraph": "^0.2.0",
     "openai": "^4.104.0",
     "otplib": "^12.0.1",
     "papaparse": "^5.5.3",

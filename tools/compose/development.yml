@@ -63,6 +63,38 @@ services:
       PROXY_PORT: ${CHROME_PORT:-8080}
       PROXY_SSL: "false"
 
+  langgraph-redis:
+    image: redis:6
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: redis-cli ping
+      interval: 5s
+      timeout: 1s
+      retries: 5
+
+  # LangGraph Graphs Service
+  graphs:
+    image: resume-builder
+    restart: unless-stopped
+    ports:
+      - "8123:8000"
+    depends_on:
+      langgraph-redis:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+    environment:
+      REDIS_URI: redis://langgraph-redis:6379
+      DATABASE_URI: postgres://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-postgres}?sslmode=disable
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4}
+      LANGSMITH_API_KEY: ${LANGSMITH_API_KEY:-}
+      LANGSMITH_PROJECT: ${LANGSMITH_PROJECT:-}
+      LANGSMITH_TRACING_V2: ${LANGSMITH_TRACING_V2:-}
+      STOCK_DATA_API_URL: https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&apikey=demo
+
 volumes:
   minio_data:
   postgres_data:

@@ -83,6 +83,7 @@ export const configSchema = z.object({
   OPENID_SCOPE: z.string().optional(),
   OPENID_TOKEN_URL: z.string().url().optional(),
   OPENID_USER_INFO_URL: z.string().url().optional(),
+  GRAPHS_URL: z.string().url().optional().default("http://localhost:8123"),
 });
 
 export type Config = z.infer<typeof configSchema>;

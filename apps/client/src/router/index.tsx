@@ -13,6 +13,7 @@ import { builderLoader, BuilderPage } from "../pages/builder/page";
 import { DashboardLayout } from "../pages/dashboard/layout";
 import { ResumesPage } from "../pages/dashboard/resumes/page";
 import { SettingsPage } from "../pages/dashboard/settings/page";
+import { StockChatPage } from "../pages/dashboard/stock-chat/page";
 import { HomeLayout } from "../pages/home/layout";
 import { HomePage } from "../pages/home/page";
 import { ErrorPage } from "../pages/public/error";
@@ -65,6 +66,7 @@ export const routes = createRoutesFromElements(
           <Route element={<DashboardLayout />}>
             <Route path="resumes" element={<ResumesPage />} />
             <Route path="settings" element={<SettingsPage />} />
+            <Route path="stock-chat" element={<StockChatPage />} />
 
             <Route index element={<Navigate replace to="/dashboard/resumes" />} />
           </Route>
