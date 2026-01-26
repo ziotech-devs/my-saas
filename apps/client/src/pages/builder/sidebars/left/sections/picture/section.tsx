@@ -9,8 +9,8 @@ import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@reactive-resume/ui";
-import { cn } from "@reactive-resume/utils";
+} from "@my-saas/ui";
+import { cn } from "@my-saas/utils";
 import { motion } from "framer-motion";
 import { useMemo, useRef } from "react";
 import { z } from "zod";

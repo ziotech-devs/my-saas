@@ -3,7 +3,7 @@ import "@/client/libs/dayjs";
 import { i18n } from "@lingui/core";
 import { detect, fromStorage, fromUrl } from "@lingui/detect-locale";
 import { I18nProvider } from "@lingui/react";
-import { languages } from "@reactive-resume/utils";
+import { languages } from "@my-saas/utils";
 import { useEffect } from "react";
 
 import { defaultLocale, dynamicActivate } from "../libs/lingui";

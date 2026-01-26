@@ -1,4 +1,4 @@
-import { cn } from "@reactive-resume/utils";
+import { cn } from "@my-saas/utils";
 import { forwardRef } from "react";
 
 export const Card = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(

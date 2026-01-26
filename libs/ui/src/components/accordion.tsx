@@ -1,6 +1,6 @@
 import { CaretDownIcon } from "@phosphor-icons/react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
-import { cn } from "@reactive-resume/utils";
+import { cn } from "@my-saas/utils";
 import { forwardRef } from "react";
 
 export const Accordion = AccordionPrimitive.Root;

@@ -1,4 +1,4 @@
-import type { UserDto } from "@reactive-resume/dto";
+import type { UserDto } from "@my-saas/dto";
 import { useQuery } from "@tanstack/react-query";
 import type { AxiosResponse } from "axios";
 import { useEffect } from "react";

@@ -1,14 +1,14 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { t } from "@lingui/macro";
 import { CheckIcon, DownloadSimpleIcon } from "@phosphor-icons/react";
-import type { JsonResume, LinkedIn, ReactiveResumeV3 } from "@reactive-resume/parser";
+import type { JsonResume, LinkedIn, ReactiveResumeV3 } from "@my-saas/parser";
 import {
   JsonResumeParser,
   LinkedInParser,
   ReactiveResumeParser,
   ReactiveResumeV3Parser,
-} from "@reactive-resume/parser";
-import type { ResumeData } from "@reactive-resume/schema";
+} from "@my-saas/parser";
+import type { ResumeData } from "@my-saas/schema";
 import {
   Button,
   Dialog,
@@ -32,7 +32,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@reactive-resume/ui";
+} from "@my-saas/ui";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";

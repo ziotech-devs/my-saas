@@ -1,15 +1,15 @@
 import { t } from "@lingui/macro";
-import { templatesList } from "@reactive-resume/utils";
+import { templatesList } from "@my-saas/utils";
 import { motion } from "framer-motion";
 
 export const TemplatesSection = () => (
-  <section id="sample-resumes" className="relative py-24 sm:py-32">
+  <section id="templates" className="relative py-24 sm:py-32">
     <div className="container flex flex-col gap-12 lg:min-h-[600px] lg:flex-row lg:items-start">
       <div className="space-y-4 lg:mt-16 lg:basis-96">
-        <h2 className="text-4xl font-bold">{t`Templates`}</h2>
+        <h2 className="text-4xl font-bold">{t`Templates & Examples`}</h2>
 
         <p className="leading-relaxed">
-          {t`Explore the templates available in Reactive Resume and view the resumes crafted with them. They could also serve as examples to help guide the creation of your next resume.`}
+          {t`Browse our collection of pre-built templates and examples to get started quickly. Each template is designed to help you customize and deploy faster, with best practices built right in.`}
         </p>
       </div>
 

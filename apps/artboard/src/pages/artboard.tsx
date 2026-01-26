@@ -1,4 +1,4 @@
-import { isLocalFont } from "@reactive-resume/utils";
+import { isLocalFont } from "@my-saas/utils";
 import { useEffect, useMemo } from "react";
 import { Helmet } from "react-helmet-async";
 import { Outlet } from "react-router";

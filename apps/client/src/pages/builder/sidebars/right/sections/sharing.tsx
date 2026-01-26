@@ -1,6 +1,6 @@
 import { t } from "@lingui/macro";
 import { CopySimpleIcon } from "@phosphor-icons/react";
-import { Button, Input, Label, Switch, Tooltip } from "@reactive-resume/ui";
+import { Button, Input, Label, Switch, Tooltip } from "@my-saas/ui";
 import { AnimatePresence, motion } from "framer-motion";
 
 import { useToast } from "@/client/hooks/use-toast";

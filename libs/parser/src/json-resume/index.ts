@@ -12,8 +12,8 @@ import {
   defaultResumeData,
   defaultSkill,
   defaultVolunteer,
-} from "@reactive-resume/schema";
-import type { Json } from "@reactive-resume/utils";
+} from "@my-saas/schema";
+import type { Json } from "@my-saas/utils";
 import type { Schema } from "zod";
 
 import type { Parser } from "../interfaces/parser";

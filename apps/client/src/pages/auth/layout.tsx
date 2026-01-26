@@ -1,5 +1,5 @@
 import { t } from "@lingui/macro";
-import { cn } from "@reactive-resume/utils";
+import { cn } from "@my-saas/utils";
 import { useMemo } from "react";
 import { Link, matchRoutes, Outlet, useLocation } from "react-router";
 

@@ -25,8 +25,8 @@ import {
   UpdatePasswordDto,
   userSchema,
   UserWithSecrets,
-} from "@reactive-resume/dto";
-import { ErrorMessage } from "@reactive-resume/utils";
+} from "@my-saas/dto";
+import { ErrorMessage } from "@my-saas/utils";
 import type { Response } from "express";
 
 import { User } from "../user/decorators/user.decorator";

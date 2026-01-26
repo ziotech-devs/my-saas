@@ -1,8 +1,8 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { t } from "@lingui/macro";
 import { ArrowLeftIcon } from "@phosphor-icons/react";
-import { twoFactorBackupSchema } from "@reactive-resume/dto";
-import { usePasswordToggle } from "@reactive-resume/hooks";
+import { twoFactorBackupSchema } from "@my-saas/dto";
+import { usePasswordToggle } from "@my-saas/hooks";
 import {
   Button,
   Form,
@@ -12,7 +12,7 @@ import {
   FormLabel,
   FormMessage,
   Input,
-} from "@reactive-resume/ui";
+} from "@my-saas/ui";
 import { useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";

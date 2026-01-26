@@ -2,7 +2,7 @@ import { t } from "@lingui/macro";
 import { createId } from "@paralleldrive/cuid2";
 import { CopySimpleIcon, PencilSimpleIcon, PlusIcon } from "@phosphor-icons/react";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
-import type { SectionItem, SectionWithItem } from "@reactive-resume/schema";
+import type { SectionItem, SectionWithItem } from "@my-saas/schema";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -21,7 +21,7 @@ import {
   DialogTitle,
   Form,
   ScrollArea,
-} from "@reactive-resume/ui";
+} from "@my-saas/ui";
 import { produce } from "immer";
 import get from "lodash.get";
 import { useEffect } from "react";

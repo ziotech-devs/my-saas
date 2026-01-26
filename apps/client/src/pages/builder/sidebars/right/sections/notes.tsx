@@ -1,5 +1,5 @@
 import { t } from "@lingui/macro";
-import { RichInput } from "@reactive-resume/ui";
+import { RichInput } from "@my-saas/ui";
 
 import { useResumeStore } from "@/client/stores/resume";
 

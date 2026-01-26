@@ -1,5 +1,5 @@
 import { t } from "@lingui/macro";
-import { ScrollArea, Separator } from "@reactive-resume/ui";
+import { ScrollArea, Separator } from "@my-saas/ui";
 import { useRef } from "react";
 
 import { Copyright } from "@/client/components/copyright";

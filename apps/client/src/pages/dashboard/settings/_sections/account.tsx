@@ -1,8 +1,8 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { t } from "@lingui/macro";
 import { CheckIcon, UploadSimpleIcon, WarningIcon } from "@phosphor-icons/react";
-import type { UpdateUserDto } from "@reactive-resume/dto";
-import { updateUserSchema } from "@reactive-resume/dto";
+import type { UpdateUserDto } from "@my-saas/dto";
+import { updateUserSchema } from "@my-saas/dto";
 import {
   Button,
   buttonVariants,
@@ -14,8 +14,8 @@ import {
   FormLabel,
   FormMessage,
   Input,
-} from "@reactive-resume/ui";
-import { cn } from "@reactive-resume/utils";
+} from "@my-saas/ui";
+import { cn } from "@my-saas/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";

@@ -7,15 +7,15 @@ import {
   PencilSimpleIcon,
   TrashSimpleIcon,
 } from "@phosphor-icons/react";
-import type { ResumeDto } from "@reactive-resume/dto";
+import type { ResumeDto } from "@my-saas/dto";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@reactive-resume/ui";
-import { cn } from "@reactive-resume/utils";
+} from "@my-saas/ui";
+import { cn } from "@my-saas/utils";
 import dayjs from "dayjs";
 import { AnimatePresence, motion } from "framer-motion";
 import { useNavigate } from "react-router";

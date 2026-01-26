@@ -1,4 +1,4 @@
-import { cn, isUrl } from "@reactive-resume/utils";
+import { cn, isUrl } from "@my-saas/utils";
 
 import { useArtboardStore } from "../store/artboard";
 

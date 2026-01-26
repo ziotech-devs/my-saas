@@ -10,8 +10,8 @@ import {
 import { ConfigService } from "@nestjs/config";
 import { JwtService } from "@nestjs/jwt";
 import { PrismaClientKnownRequestError } from "@prisma/client/runtime/library";
-import { AuthProvidersDto, LoginDto, RegisterDto, UserWithSecrets } from "@reactive-resume/dto";
-import { ErrorMessage } from "@reactive-resume/utils";
+import { AuthProvidersDto, LoginDto, RegisterDto, UserWithSecrets } from "@my-saas/dto";
+import { ErrorMessage } from "@my-saas/utils";
 import * as bcryptjs from "bcryptjs";
 import { authenticator } from "otplib";
 

@@ -14,8 +14,8 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@reactive-resume/ui";
-import { cn } from "@reactive-resume/utils";
+} from "@my-saas/ui";
+import { cn } from "@my-saas/utils";
 import { useState } from "react";
 
 import { toast } from "../hooks/use-toast";

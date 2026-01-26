@@ -1,8 +1,8 @@
 import { t } from "@lingui/macro";
 import { CaretRightIcon } from "@phosphor-icons/react";
-import { defaultSections } from "@reactive-resume/schema";
-import { Button, RichInput } from "@reactive-resume/ui";
-import { cn } from "@reactive-resume/utils";
+import { defaultSections } from "@my-saas/schema";
+import { Button, RichInput } from "@my-saas/ui";
+import { cn } from "@my-saas/utils";
 import { AnimatePresence, motion } from "framer-motion";
 
 import { AiActions } from "@/client/components/ai-actions";

@@ -1,4 +1,4 @@
-import type { Template } from "@reactive-resume/utils";
+import type { Template } from "@my-saas/utils";
 
 import { Azurill } from "./azurill";
 import { Bronzor } from "./bronzor";

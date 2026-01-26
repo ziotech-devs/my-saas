@@ -1,4 +1,4 @@
-import type { AuthResponseDto, TwoFactorDto } from "@reactive-resume/dto";
+import type { AuthResponseDto, TwoFactorDto } from "@my-saas/dto";
 import { useMutation } from "@tanstack/react-query";
 import type { AxiosResponse } from "axios";
 

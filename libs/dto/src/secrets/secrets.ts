@@ -1,4 +1,4 @@
-import { idSchema } from "@reactive-resume/schema";
+import { idSchema } from "@my-saas/schema";
 import { z } from "zod";
 
 export const secretsSchema = z.object({

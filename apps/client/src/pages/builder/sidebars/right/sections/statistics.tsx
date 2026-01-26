@@ -1,7 +1,7 @@
 import { t } from "@lingui/macro";
 import { InfoIcon } from "@phosphor-icons/react";
-import { Alert, AlertDescription, AlertTitle } from "@reactive-resume/ui";
-import { cn } from "@reactive-resume/utils";
+import { Alert, AlertDescription, AlertTitle } from "@my-saas/ui";
+import { cn } from "@my-saas/utils";
 import { AnimatePresence, motion } from "framer-motion";
 
 import { useResumeStatistics } from "@/client/services/resume";

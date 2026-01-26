@@ -1,4 +1,4 @@
-import { cn } from "@reactive-resume/utils";
+import { cn } from "@my-saas/utils";
 
 type Props = {
   title?: React.ReactNode;

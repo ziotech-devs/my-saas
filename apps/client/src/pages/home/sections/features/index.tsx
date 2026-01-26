@@ -25,7 +25,7 @@ import {
   TextAaIcon,
   TranslateIcon,
 } from "@phosphor-icons/react";
-import { cn, languages, templatesList } from "@reactive-resume/utils";
+import { cn, languages, templatesList } from "@my-saas/utils";
 import { motion } from "framer-motion";
 
 type Feature = {
@@ -43,29 +43,29 @@ export const FeaturesSection = () => {
   const templatesCount = templatesList.length;
 
   const features: Feature[] = [
-    { icon: <CurrencyDollarSimpleIcon />, title: t`Free, forever` },
-    { icon: <GitBranchIcon />, title: t`Open Source` },
-    { icon: <ScalesIcon />, title: t`MIT License` },
-    { icon: <ProhibitIcon />, title: t`No user tracking or advertising` },
-    { icon: <CloudIcon />, title: t`Self-host with Docker` },
-    { icon: <TranslateIcon />, title: t`Available in ${languagesCount} languages` },
-    { icon: <BrainIcon />, title: t`OpenAI Integration` },
-    { icon: <GithubLogoIcon />, title: t`Sign in with GitHub` },
-    { icon: <GoogleLogoIcon />, title: t`Sign in with Google` },
-    { icon: <EnvelopeSimpleIcon />, title: t`Sign in with Email` },
-    { icon: <LockIcon />, title: t`Secure with two-factor authentication` },
-    { icon: <StackSimpleIcon />, title: t`${templatesCount} resume templates to choose from` },
-    { icon: <FilesIcon />, title: t`Design single/multi page resumes` },
-    { icon: <FolderIcon />, title: t`Manage multiple resumes` },
-    { icon: <SwatchesIcon />, title: t`Customisable colour palettes` },
-    { icon: <LayoutIcon />, title: t`Customisable layouts` },
-    { icon: <StarIcon />, title: t`Custom resume sections` },
-    { icon: <NoteIcon />, title: t`Personal notes for each resume` },
-    { icon: <LockIcon />, title: t`Lock a resume to prevent editing` },
-    { icon: <FileIcon />, title: t`Supports A4/Letter page formats` },
-    { icon: <TextAaIcon />, title: t`Pick any font from Google Fonts` },
-    { icon: <GoogleChromeLogoIcon />, title: t`Host your resume publicly` },
-    { icon: <EyeIcon />, title: t`Track views and downloads` },
+    { icon: <CurrencyDollarSimpleIcon />, title: t`Flexible pricing plans` },
+    { icon: <GitBranchIcon />, title: t`API access included` },
+    { icon: <ScalesIcon />, title: t`Transparent pricing` },
+    { icon: <ProhibitIcon />, title: t`No hidden fees or tracking` },
+    { icon: <CloudIcon />, title: t`Cloud-hosted solution` },
+    { icon: <TranslateIcon />, title: t`Multi-language support` },
+    { icon: <BrainIcon />, title: t`AI-powered features` },
+    { icon: <GithubLogoIcon />, title: t`GitHub integration` },
+    { icon: <GoogleLogoIcon />, title: t`Google Workspace integration` },
+    { icon: <EnvelopeSimpleIcon />, title: t`Email notifications` },
+    { icon: <LockIcon />, title: t`Enterprise-grade security` },
+    { icon: <StackSimpleIcon />, title: t`${templatesCount}+ pre-built templates` },
+    { icon: <FilesIcon />, title: t`Unlimited projects` },
+    { icon: <FolderIcon />, title: t`Organize with folders` },
+    { icon: <SwatchesIcon />, title: t`Custom branding` },
+    { icon: <LayoutIcon />, title: t`Customizable dashboards` },
+    { icon: <StarIcon />, title: t`Priority support` },
+    { icon: <NoteIcon />, title: t`Collaborative notes` },
+    { icon: <LockIcon />, title: t`Role-based access control` },
+    { icon: <FileIcon />, title: t`Export to multiple formats` },
+    { icon: <TextAaIcon />, title: t`Rich text editor` },
+    { icon: <GoogleChromeLogoIcon />, title: t`Web-based platform` },
+    { icon: <EyeIcon />, title: t`Analytics and insights` },
     { icon: <CloudSunIcon />, title: t`Light or dark theme` },
     {
       icon: (
@@ -102,9 +102,9 @@ export const FeaturesSection = () => {
     <section id="features" className="relative bg-secondary-accent py-24 sm:py-32">
       <div className="container">
         <div className="space-y-6 leading-loose">
-          <h2 className="text-4xl font-bold">{t`Rich in features, not in pricing.`}</h2>
+          <h2 className="text-4xl font-bold">{t`Everything you need to succeed.`}</h2>
           <p className="max-w-4xl text-base leading-relaxed">
-            {t`Reactive Resume is a passion project of over 3 years of hard work, and with that comes a number of re-iterated ideas and features that have been built to (near) perfection.`}
+            {t`Our platform is built with modern technology and best practices, offering a comprehensive suite of features designed to help your team work smarter and faster.`}
           </p>
 
           <IconContext.Provider value={{ size: 14, weight: "bold" }}>

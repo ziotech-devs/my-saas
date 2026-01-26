@@ -1,82 +1,71 @@
 import { t } from "@lingui/macro";
+import {
+  CreditCardIcon,
+  LockIcon,
+  ShieldCheckIcon,
+  UserCircleIcon,
+} from "@phosphor-icons/react";
+import { IconContext } from "@phosphor-icons/react";
+import { cn } from "@my-saas/utils";
+
+type Feature = {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+};
+
+const features: Feature[] = [
+  {
+    icon: <LockIcon />,
+    title: t`Authentication`,
+    description: t`Secure user authentication with multiple sign-in options including email, OAuth providers, and two-factor authentication.`,
+  },
+  {
+    icon: <CreditCardIcon />,
+    title: t`Payments`,
+    description: t`Integrated payment processing with support for subscriptions, one-time payments, and multiple payment methods.`,
+  },
+  {
+    icon: <ShieldCheckIcon />,
+    title: t`Security`,
+    description: t`Enterprise-grade security with encryption, role-based access control, and compliance with industry standards.`,
+  },
+  {
+    icon: <UserCircleIcon />,
+    title: t`User Management`,
+    description: t`Comprehensive user management with profiles, teams, permissions, and activity tracking.`,
+  },
+];
 
 export const SupportSection = () => (
   <section
-    id="support"
+    id="main-features"
     className="relative space-y-12 bg-secondary-accent py-24 text-primary sm:py-32"
   >
-    <div className="container space-y-6">
-      <h1 className="text-4xl font-bold">{t`Supporting Reactive Resume`}</h1>
-
-      <p className="max-w-4xl leading-loose">
-        {t`Reactive Resume is a free and open-source project crafted mostly by me, and your support would be greatly appreciated. If you're inclined to contribute, and only if you can afford to, consider making a donation through any of the listed platforms. Additionally, donations to Reactive Resume through Open Collective are tax-exempt, as the project is fiscally hosted by Open Collective Europe.`}
-      </p>
-
-      <div className="flex items-center gap-x-10">
-        <a
-          href="https://github.com/sponsors/AmruthPillai"
-          rel="noreferrer noopener nofollow"
-          target="_blank"
-        >
-          <img
-            src="/support-logos/github-sponsors-light.svg"
-            className="hidden max-h-[42px] dark:block"
-            // eslint-disable-next-line lingui/no-unlocalized-strings
-            alt="GitHub Sponsors"
-          />
-          <img
-            src="/support-logos/github-sponsors-dark.svg"
-            className="block max-h-[42px] dark:hidden"
-            // eslint-disable-next-line lingui/no-unlocalized-strings
-            alt="GitHub Sponsors"
-          />
-        </a>
-        <a
-          href="https://opencollective.com/Reactive-Resume"
-          rel="noreferrer noopener nofollow"
-          target="_blank"
-        >
-          <img
-            src="/support-logos/open-collective-light.svg"
-            className="hidden max-h-[38px] dark:block"
-            // eslint-disable-next-line lingui/no-unlocalized-strings
-            alt="Open Collective"
-          />
-          <img
-            src="/support-logos/open-collective-dark.svg"
-            className="block max-h-[38px] dark:hidden"
-            // eslint-disable-next-line lingui/no-unlocalized-strings
-            alt="Open Collective"
-          />
-        </a>
-        <a href="https://paypal.me/amruthde" rel="noreferrer noopener nofollow" target="_blank">
-          {/* eslint-disable-next-line lingui/no-unlocalized-strings */}
-          <img src="/support-logos/paypal.svg" className="max-h-[28px]" alt="PayPal" />
-        </a>
+    <div className="container space-y-12">
+      <div className="space-y-4 text-center">
+        <h1 className="text-4xl font-bold">{t`Built-in Core Features`}</h1>
+        <p className="mx-auto max-w-2xl text-lg leading-relaxed">
+          {t`Everything you need to launch and scale your SaaS product, built right in. No need to integrate multiple services.`}
+        </p>
       </div>
 
-      <p className="max-w-4xl leading-loose">
-        {t`If you're multilingual, we'd love your help in bringing the app to more languages and communities. Don't worry if you don't see your language on the list - just give me a shout-out on GitHub, and I'll make sure to include it. Ready to get started? Jump into translation over at Crowdin by clicking the link below.`}
-      </p>
-
-      <div className="flex items-center gap-x-10">
-        <img
-          src="/support-logos/crowdin-light.svg"
-          className="hidden max-h-[32px] dark:block"
-          // eslint-disable-next-line lingui/no-unlocalized-strings
-          alt="Crowdin"
-        />
-        <img
-          src="/support-logos/crowdin-dark.svg"
-          className="block max-h-[32px] dark:hidden"
-          // eslint-disable-next-line lingui/no-unlocalized-strings
-          alt="Crowdin"
-        />
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        {features.map((feature, index) => (
+          <div
+            key={index}
+            className="space-y-4 rounded-lg bg-background p-6 shadow-sm"
+          >
+            <IconContext.Provider value={{ size: 32, weight: "bold" }}>
+              <div className="text-primary">{feature.icon}</div>
+            </IconContext.Provider>
+            <h3 className="text-xl font-semibold">{feature.title}</h3>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              {feature.description}
+            </p>
+          </div>
+        ))}
       </div>
-
-      <p className="max-w-4xl leading-loose">
-        {t`Even if you're not in a position to contribute financially, you can still make a difference by giving the GitHub repository a star, spreading the word to your friends, or dropping a quick message to let me know how Reactive Resume has helped you. Your feedback and support are always welcome and much appreciated!`}
-      </p>
     </div>
   </section>
 );

@@ -1,4 +1,4 @@
-import type { ResumeData } from "@reactive-resume/schema";
+import type { ResumeData } from "@my-saas/schema";
 import type { ZodDto } from "nestjs-zod/dto";
 import type { Schema } from "zod";
 

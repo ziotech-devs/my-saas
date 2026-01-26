@@ -1,5 +1,5 @@
 import { t } from "@lingui/macro";
-import { ScrollArea, Separator } from "@reactive-resume/ui";
+import { ScrollArea, Separator } from "@my-saas/ui";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 
@@ -13,7 +13,7 @@ export const SettingsPage = () => (
   <>
     <Helmet>
       <title>
-        {t`Settings`} - {t`Reactive Resume`}
+        {t`Settings`} - {t`My SaaS`}
       </title>
     </Helmet>
 

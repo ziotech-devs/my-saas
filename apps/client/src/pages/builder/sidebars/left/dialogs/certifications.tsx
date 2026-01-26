@@ -1,6 +1,6 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { t } from "@lingui/macro";
-import { certificationSchema, defaultCertification } from "@reactive-resume/schema";
+import { certificationSchema, defaultCertification } from "@my-saas/schema";
 import {
   FormControl,
   FormField,
@@ -9,7 +9,7 @@ import {
   FormMessage,
   Input,
   RichInput,
-} from "@reactive-resume/ui";
+} from "@my-saas/ui";
 import { useForm } from "react-hook-form";
 import type { z } from "zod";
 

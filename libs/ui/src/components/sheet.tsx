@@ -1,6 +1,6 @@
 import { XIcon } from "@phosphor-icons/react";
 import * as SheetPrimitive from "@radix-ui/react-dialog";
-import { cn } from "@reactive-resume/utils";
+import { cn } from "@my-saas/utils";
 import { type VariantProps } from "class-variance-authority";
 import { forwardRef } from "react";
 

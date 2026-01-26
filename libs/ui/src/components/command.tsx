@@ -1,5 +1,5 @@
 import { MagnifyingGlassIcon } from "@phosphor-icons/react";
-import { cn } from "@reactive-resume/utils";
+import { cn } from "@my-saas/utils";
 import { Command as CommandPrimitive } from "cmdk";
 import { forwardRef } from "react";
 

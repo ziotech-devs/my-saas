@@ -2,7 +2,7 @@ import { BadRequestException, Injectable, Logger } from "@nestjs/common";
 import { PassportStrategy } from "@nestjs/passport";
 import { createId } from "@paralleldrive/cuid2";
 import { User } from "@prisma/client";
-import { ErrorMessage, processUsername } from "@reactive-resume/utils";
+import { ErrorMessage, processUsername } from "@my-saas/utils";
 import { Profile, Strategy, StrategyOptions } from "passport-github2";
 
 import { UserService } from "@/server/user/user.service";

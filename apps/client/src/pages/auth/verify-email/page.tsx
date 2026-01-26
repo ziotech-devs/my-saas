@@ -1,6 +1,6 @@
 import { t, Trans } from "@lingui/macro";
 import { ArrowRightIcon, InfoIcon, SealCheckIcon } from "@phosphor-icons/react";
-import { Alert, AlertDescription, AlertTitle, Button } from "@reactive-resume/ui";
+import { Alert, AlertDescription, AlertTitle, Button } from "@my-saas/ui";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link, useNavigate, useSearchParams } from "react-router";

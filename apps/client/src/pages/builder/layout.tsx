@@ -1,4 +1,4 @@
-import { useBreakpoint } from "@reactive-resume/hooks";
+import { useBreakpoint } from "@my-saas/hooks";
 import {
   Panel,
   PanelGroup,
@@ -9,8 +9,8 @@ import {
   SheetHeader,
   SheetTitle,
   VisuallyHidden,
-} from "@reactive-resume/ui";
-import { cn } from "@reactive-resume/utils";
+} from "@my-saas/ui";
+import { cn } from "@my-saas/utils";
 import { Outlet } from "react-router";
 
 import { useBuilderStore } from "@/client/stores/builder";

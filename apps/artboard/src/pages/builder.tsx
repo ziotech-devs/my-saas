@@ -1,6 +1,6 @@
-import type { SectionKey } from "@reactive-resume/schema";
-import type { Template } from "@reactive-resume/utils";
-import { pageSizeMap } from "@reactive-resume/utils";
+import type { SectionKey } from "@my-saas/schema";
+import type { Template } from "@my-saas/utils";
+import { pageSizeMap } from "@my-saas/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { ReactZoomPanPinchRef } from "react-zoom-pan-pinch";

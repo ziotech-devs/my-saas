@@ -5,7 +5,7 @@ import {
   ToastProvider,
   ToastTitle,
   ToastViewport,
-} from "@reactive-resume/ui";
+} from "@my-saas/ui";
 
 import { useToast } from "../hooks/use-toast";
 

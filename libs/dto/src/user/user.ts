@@ -1,5 +1,5 @@
-import { idSchema } from "@reactive-resume/schema";
-import { dateSchema } from "@reactive-resume/utils";
+import { idSchema } from "@my-saas/schema";
+import { dateSchema } from "@my-saas/utils";
 import { createZodDto } from "nestjs-zod/dto";
 import { z } from "zod";
 

@@ -11,10 +11,10 @@ importers:
       '@paralleldrive/cuid2':
         specifier: ^2.2.2
         version: 2.2.2
-      '@reactive-resume/schema':
+      '@my-saas/schema':
         specifier: '*'
         version: link:../schema
-      '@reactive-resume/utils':
+      '@my-saas/utils':
         specifier: '*'
         version: link:../utils
       '@sindresorhus/slugify':

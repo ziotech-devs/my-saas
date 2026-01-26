@@ -1,6 +1,6 @@
 import { t } from "@lingui/macro";
-import type { AspectRatio } from "@reactive-resume/ui";
-import { Checkbox, Input, Label, ToggleGroup, ToggleGroupItem, Tooltip } from "@reactive-resume/ui";
+import type { AspectRatio } from "@my-saas/ui";
+import { Checkbox, Input, Label, ToggleGroup, ToggleGroupItem, Tooltip } from "@my-saas/ui";
 import { useMemo } from "react";
 
 import { useResumeStore } from "@/client/stores/resume";

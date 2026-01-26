@@ -1,6 +1,6 @@
 import { t } from "@lingui/macro";
-import { Card, CardContent, CardHeader, CardTitle, ScrollArea, Skeleton } from "@reactive-resume/ui";
-import { cn } from "@reactive-resume/utils";
+import { Card, CardContent, CardHeader, CardTitle, ScrollArea, Skeleton } from "@my-saas/ui";
+import { cn } from "@my-saas/utils";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { ArrowDownIcon, ArrowUpIcon } from "@phosphor-icons/react";

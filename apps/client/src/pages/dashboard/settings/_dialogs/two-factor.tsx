@@ -28,7 +28,7 @@ import {
   FormLabel,
   FormMessage,
   Input,
-} from "@reactive-resume/ui";
+} from "@my-saas/ui";
 import { QRCodeSVG } from "qrcode.react";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";

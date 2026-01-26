@@ -1,5 +1,5 @@
-import { useTheme } from "@reactive-resume/hooks";
-import { cn } from "@reactive-resume/utils";
+import { useTheme } from "@my-saas/hooks";
+import { cn } from "@my-saas/utils";
 
 type Props = {
   size?: number;
@@ -13,11 +13,11 @@ export const Icon = ({ size = 32, className }: Props) => {
 
   switch (isDarkMode) {
     case false: {
-      src = "/icon/dark.svg";
+      src = "/icon/light.svg";
       break;
     }
     case true: {
-      src = "/icon/light.svg";
+      src = "/icon/dark.svg";
       break;
     }
   }

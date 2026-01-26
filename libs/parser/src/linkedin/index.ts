@@ -9,9 +9,9 @@ import {
   defaultResumeData,
   defaultSkill,
   resumeDataSchema,
-} from "@reactive-resume/schema";
-import type { Json } from "@reactive-resume/utils";
-import { extractUrl, parseArrayLikeCSVEntry, parseCSV } from "@reactive-resume/utils";
+} from "@my-saas/schema";
+import type { Json } from "@my-saas/utils";
+import { extractUrl, parseArrayLikeCSVEntry, parseCSV } from "@my-saas/utils";
 import * as JSZip from "jszip";
 import type { Schema } from "zod";
 

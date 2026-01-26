@@ -1,6 +1,6 @@
 import { CaretRightIcon, CheckIcon } from "@phosphor-icons/react";
 import * as ContextMenuPrimitive from "@radix-ui/react-context-menu";
-import { cn } from "@reactive-resume/utils";
+import { cn } from "@my-saas/utils";
 import { forwardRef } from "react";
 
 export const ContextMenu = ContextMenuPrimitive.Root;

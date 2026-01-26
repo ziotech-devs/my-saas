@@ -13,9 +13,9 @@ import type {
   SectionWithItem,
   Skill,
   URL,
-} from "@reactive-resume/schema";
-import { Education, Experience, Volunteer } from "@reactive-resume/schema";
-import { cn, isEmptyString, isUrl, linearTransform, sanitize } from "@reactive-resume/utils";
+} from "@my-saas/schema";
+import { Education, Experience, Volunteer } from "@my-saas/schema";
+import { cn, isEmptyString, isUrl, linearTransform, sanitize } from "@my-saas/utils";
 import get from "lodash.get";
 import React, { Fragment } from "react";
 

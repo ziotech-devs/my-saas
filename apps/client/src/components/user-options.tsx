@@ -6,7 +6,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
   KeyboardShortcut,
-} from "@reactive-resume/ui";
+} from "@my-saas/ui";
 import { useNavigate } from "react-router";
 
 import { useLogout } from "../services/auth";

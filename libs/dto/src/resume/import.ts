@@ -1,5 +1,5 @@
 import { createId } from "@paralleldrive/cuid2";
-import { resumeDataSchema } from "@reactive-resume/schema";
+import { resumeDataSchema } from "@my-saas/schema";
 import slugify from "@sindresorhus/slugify";
 import { createZodDto } from "nestjs-zod/dto";
 import { z } from "zod";

@@ -1,4 +1,4 @@
-import type { SectionKey } from "@reactive-resume/schema";
+import type { SectionKey } from "@my-saas/schema";
 
 export type TemplateProps = {
   columns: SectionKey[][];

@@ -1,5 +1,5 @@
 {
-  "name": "@reactive-resume/hooks",
+  "name": "@my-saas/hooks",
   "version": "0.0.1",
   "private": false,
   "main": "./index.js",

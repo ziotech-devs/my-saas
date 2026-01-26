@@ -1,7 +1,7 @@
 import { t } from "@lingui/macro";
 import { CircleNotchIcon, FileJsIcon, FilePdfIcon } from "@phosphor-icons/react";
-import { buttonVariants, Card, CardContent, CardDescription, CardTitle } from "@reactive-resume/ui";
-import { cn } from "@reactive-resume/utils";
+import { buttonVariants, Card, CardContent, CardDescription, CardTitle } from "@my-saas/ui";
+import { cn } from "@my-saas/utils";
 import { saveAs } from "file-saver";
 
 import { usePrintResume } from "@/client/services/resume/print";

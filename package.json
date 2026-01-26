@@ -1,18 +1,12 @@
 {
-  "name": "@reactive-resume/source",
-  "description": "A free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume.",
+  "name": "my-saas",
+  "description": "My SaaS Boilerplate",
   "version": "4.5.5",
   "license": "MIT",
   "private": true,
   "packageManager": "pnpm@10.20.0",
   "author": {
-    "name": "Amruth Pillai",
-    "url": "https://amruthpillai.com",
-    "email": "hello@amruthpillai.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/AmruthPillai/Reactive-Resume.git"
+    "name": "Tal Kenigs"
   },
   "scripts": {
     "dev": "nx run-many -t serve",
@@ -130,6 +124,7 @@
     "@dnd-kit/utilities": "^3.2.2",
     "@fontsource/ibm-plex-sans": "^5.2.8",
     "@hookform/resolvers": "^3.10.0",
+    "@langchain/langgraph": "^0.2.0",
     "@lingui/core": "^4.14.1",
     "@lingui/detect-locale": "^4.14.1",
     "@lingui/macro": "^4.14.1",
@@ -210,7 +205,6 @@
     "nestjs-prisma": "^0.26.0",
     "nestjs-zod": "^3.0.0",
     "nodemailer": "^7.0.10",
-    "@langchain/langgraph": "^0.2.0",
     "openai": "^4.104.0",
     "otplib": "^12.0.1",
     "papaparse": "^5.5.3",

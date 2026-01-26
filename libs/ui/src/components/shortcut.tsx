@@ -1,4 +1,4 @@
-import { cn } from "@reactive-resume/utils";
+import { cn } from "@my-saas/utils";
 import { useEffect } from "react";
 import { useBoolean } from "usehooks-ts";
 

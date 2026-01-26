@@ -1,4 +1,4 @@
-import type { UpdateUserDto, UserDto } from "@reactive-resume/dto";
+import type { UpdateUserDto, UserDto } from "@my-saas/dto";
 import { useMutation } from "@tanstack/react-query";
 import type { AxiosResponse } from "axios";
 

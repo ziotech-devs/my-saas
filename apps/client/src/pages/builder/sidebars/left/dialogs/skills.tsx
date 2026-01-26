@@ -1,7 +1,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { t } from "@lingui/macro";
 import { XIcon } from "@phosphor-icons/react";
-import { defaultSkill, skillSchema } from "@reactive-resume/schema";
+import { defaultSkill, skillSchema } from "@my-saas/schema";
 import {
   Badge,
   BadgeInput,
@@ -13,7 +13,7 @@ import {
   FormMessage,
   Input,
   Slider,
-} from "@reactive-resume/ui";
+} from "@my-saas/ui";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { useForm } from "react-hook-form";

@@ -12,8 +12,8 @@ import {
   PopoverContent,
   PopoverTrigger,
   ScrollArea,
-} from "@reactive-resume/ui";
-import { cn } from "@reactive-resume/utils";
+} from "@my-saas/ui";
+import { cn } from "@my-saas/utils";
 import fuzzy from "fuzzy";
 import { useMemo, useState } from "react";
 

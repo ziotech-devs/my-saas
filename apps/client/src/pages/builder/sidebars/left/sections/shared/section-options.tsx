@@ -10,8 +10,8 @@ import {
   PlusIcon,
   TrashSimpleIcon,
 } from "@phosphor-icons/react";
-import type { SectionKey, SectionWithItem } from "@reactive-resume/schema";
-import { defaultSections } from "@reactive-resume/schema";
+import type { SectionKey, SectionWithItem } from "@my-saas/schema";
+import { defaultSections } from "@my-saas/schema";
 import {
   Button,
   DropdownMenu,
@@ -27,7 +27,7 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
   Input,
-} from "@reactive-resume/ui";
+} from "@my-saas/ui";
 import get from "lodash.get";
 import { useMemo } from "react";
 

@@ -1,5 +1,5 @@
 {
-  "name": "@reactive-resume/dto",
+  "name": "@my-saas/dto",
   "version": "0.0.1",
   "private": false,
   "type": "commonjs",
@@ -9,8 +9,8 @@
     "access": "public"
   },
   "dependencies": {
-    "@reactive-resume/utils": "*",
-    "@reactive-resume/schema": "*",
+    "@my-saas/utils": "*",
+    "@my-saas/schema": "*",
     "@sindresorhus/slugify": "^2.2.1",
     "nestjs-zod": "^3.0.0",
     "@swc/helpers": "~0.5.11",

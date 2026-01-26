@@ -1,7 +1,12 @@
 import { t } from "@lingui/macro";
-import { ChatCircleIcon, FadersHorizontalIcon, ReadCvLogoIcon } from "@phosphor-icons/react";
-import { Button, KeyboardShortcut, Separator } from "@reactive-resume/ui";
-import { cn } from "@reactive-resume/utils";
+import {
+  ChatCircleIcon,
+  CreditCardIcon,
+  FadersHorizontalIcon,
+  ReadCvLogoIcon,
+} from "@phosphor-icons/react";
+import { Button, KeyboardShortcut, Separator } from "@my-saas/ui";
+import { cn } from "@my-saas/utils";
 import { motion } from "framer-motion";
 import { Link, useLocation, useNavigate } from "react-router";
 import useKeyboardShortcut from "use-keyboard-shortcut";
@@ -85,6 +90,11 @@ export const Sidebar = ({ setOpen }: SidebarProps) => {
     setOpen?.(false);
   });
 
+  useKeyboardShortcut(["shift", "b"], () => {
+    void navigate("/dashboard/billing");
+    setOpen?.(false);
+  });
+
   const sidebarItems: SidebarItem[] = [
     {
       path: "/dashboard/resumes",
@@ -97,6 +107,12 @@ export const Sidebar = ({ setOpen }: SidebarProps) => {
       name: t`Stock Chat`,
       shortcut: "⇧C",
       icon: <ChatCircleIcon />,
+    },
+    {
+      path: "/dashboard/billing",
+      name: t`Billing`,
+      shortcut: "⇧B",
+      icon: <CreditCardIcon />,
     },
     {
       path: "/dashboard/settings",

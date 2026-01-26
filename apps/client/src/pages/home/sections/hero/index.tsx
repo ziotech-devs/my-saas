@@ -1,7 +1,7 @@
 import { t } from "@lingui/macro";
 import { ArrowRightIcon } from "@phosphor-icons/react";
-import { Badge, buttonVariants } from "@reactive-resume/ui";
-import { cn } from "@reactive-resume/utils";
+import { Badge, buttonVariants } from "@my-saas/ui";
+import { cn } from "@my-saas/utils";
 import { motion } from "framer-motion";
 import Tilt from "react-parallax-tilt";
 

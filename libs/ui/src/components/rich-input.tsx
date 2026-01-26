@@ -27,7 +27,7 @@ import {
   TextStrikethroughIcon,
 } from "@phosphor-icons/react";
 import { PopoverTrigger } from "@radix-ui/react-popover";
-import { cn } from "@reactive-resume/utils";
+import { cn } from "@my-saas/utils";
 import { Highlight } from "@tiptap/extension-highlight";
 import { Image } from "@tiptap/extension-image";
 import { Link } from "@tiptap/extension-link";

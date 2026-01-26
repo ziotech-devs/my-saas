@@ -1,9 +1,9 @@
 import { t } from "@lingui/macro";
 import { createId } from "@paralleldrive/cuid2";
-import type { ResumeDto } from "@reactive-resume/dto";
-import type { CustomSectionGroup, SectionKey } from "@reactive-resume/schema";
-import { defaultSection } from "@reactive-resume/schema";
-import { removeItemInLayout } from "@reactive-resume/utils";
+import type { ResumeDto } from "@my-saas/dto";
+import type { CustomSectionGroup, SectionKey } from "@my-saas/schema";
+import { defaultSection } from "@my-saas/schema";
+import { removeItemInLayout } from "@my-saas/utils";
 import _set from "lodash.set";
 import type { TemporalState } from "zundo";
 import { temporal } from "zundo";

@@ -1,5 +1,5 @@
-import { useTheme } from "@reactive-resume/hooks";
-import { cn } from "@reactive-resume/utils";
+import { useTheme } from "@my-saas/hooks";
+import { cn } from "@my-saas/utils";
 
 type Props = {
   size?: number;

@@ -16,9 +16,9 @@ import {
 } from "@dnd-kit/sortable";
 import { t } from "@lingui/macro";
 import { CaretRightIcon, PlusIcon } from "@phosphor-icons/react";
-import type { SectionItem, SectionKey, SectionWithItem } from "@reactive-resume/schema";
-import { Button } from "@reactive-resume/ui";
-import { cn } from "@reactive-resume/utils";
+import type { SectionItem, SectionKey, SectionWithItem } from "@my-saas/schema";
+import { Button } from "@my-saas/ui";
+import { cn } from "@my-saas/utils";
 import type { MotionProps } from "framer-motion";
 import { AnimatePresence, motion } from "framer-motion";
 import get from "lodash.get";

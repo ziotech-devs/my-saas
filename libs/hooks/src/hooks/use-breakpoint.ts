@@ -1,4 +1,4 @@
-import { breakpoints } from "@reactive-resume/utils";
+import { breakpoints } from "@my-saas/utils";
 import { useMemo } from "react";
 import { useBreakpoint as _useBreakpoint } from "use-breakpoint";
 

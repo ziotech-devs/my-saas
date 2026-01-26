@@ -12,8 +12,8 @@ import {
   CardDescription,
   CardFooter,
   CardTitle,
-} from "@reactive-resume/ui";
-import { cn } from "@reactive-resume/utils";
+} from "@my-saas/ui";
+import { cn } from "@my-saas/utils";
 
 import { SectionIcon } from "../shared/section-icon";
 

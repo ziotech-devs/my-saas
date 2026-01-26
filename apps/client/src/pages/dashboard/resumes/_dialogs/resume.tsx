@@ -1,9 +1,9 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { t } from "@lingui/macro";
 import { CaretDownIcon, FlaskIcon, MagicWandIcon, PlusIcon } from "@phosphor-icons/react";
-import type { ResumeDto } from "@reactive-resume/dto";
-import { createResumeSchema } from "@reactive-resume/dto";
-import { idSchema, sampleResume } from "@reactive-resume/schema";
+import type { ResumeDto } from "@my-saas/dto";
+import { createResumeSchema } from "@my-saas/dto";
+import { idSchema, sampleResume } from "@my-saas/schema";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -33,8 +33,8 @@ import {
   FormMessage,
   Input,
   Tooltip,
-} from "@reactive-resume/ui";
-import { cn, generateRandomName } from "@reactive-resume/utils";
+} from "@my-saas/ui";
+import { cn, generateRandomName } from "@my-saas/utils";
 import slugify from "@sindresorhus/slugify";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";

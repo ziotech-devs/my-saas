@@ -1,6 +1,6 @@
 import { t } from "@lingui/macro";
-import { useTheme } from "@reactive-resume/hooks";
-import { Label, Switch } from "@reactive-resume/ui";
+import { useTheme } from "@my-saas/hooks";
+import { Label, Switch } from "@my-saas/ui";
 import Prism from "prismjs";
 import { Helmet } from "react-helmet-async";
 import CodeEditor from "react-simple-code-editor";

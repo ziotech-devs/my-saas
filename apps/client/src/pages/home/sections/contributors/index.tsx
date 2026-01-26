@@ -1,67 +1,46 @@
 import { t } from "@lingui/macro";
-import { Avatar, AvatarFallback, AvatarImage, Tooltip } from "@reactive-resume/ui";
-import { cn } from "@reactive-resume/utils";
+import { buttonVariants } from "@my-saas/ui";
+import { cn } from "@my-saas/utils";
 import { motion } from "framer-motion";
-import { useMemo } from "react";
-
-import { useContributors } from "@/client/services/resume/contributors";
 
 export const ContributorsSection = () => {
-  const { github, crowdin, loading } = useContributors();
-
-  const contributors = useMemo(() => {
-    if (github && crowdin) return [...github, ...crowdin];
-    return [];
-  }, [github, crowdin]);
-
   return (
-    <section id="contributors" className="container relative space-y-12 py-24 sm:py-32">
-      <div className="space-y-6 text-center">
-        <h1 className="text-4xl font-bold">{t`By the community, for the community.`}</h1>
-        <p className="mx-auto max-w-3xl leading-loose">
-          {t`Reactive Resume thrives thanks to its vibrant community. This project owes its progress to numerous individuals who've dedicated their time and skills. Below, we celebrate the coders who've enhanced its features on GitHub and the linguists whose translations on Crowdin have made it accessible to a broader audience.`}
+    <section id="cta" className="container relative space-y-12 py-24 sm:py-32">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="space-y-8 text-center"
+      >
+        <h1 className="text-4xl font-bold sm:text-5xl">{t`Ready to get started?`}</h1>
+        <p className="mx-auto max-w-2xl text-lg leading-relaxed">
+          {t`Join thousands of teams already using our platform to streamline their workflow and boost productivity. Start your free trial today - no credit card required.`}
         </p>
-      </div>
 
-      {loading && (
-        <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-3">
-          {Array.from({ length: 40 })
-            .fill(0)
-            .map((_, index) => (
-              <motion.div
-                key={index}
-                viewport={{ once: true }}
-                initial={{ opacity: 0, scale: 0 }}
-                whileInView={{ opacity: 1, scale: 1, transition: { delay: index * 0.05 } }}
-              >
-                <Avatar>
-                  <AvatarFallback></AvatarFallback>
-                </Avatar>
-              </motion.div>
-            ))}
-        </div>
-      )}
-
-      <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-3">
-        {contributors.map((contributor, index) => (
-          <motion.div
-            key={index}
-            viewport={{ once: true }}
-            initial={{ opacity: 0, scale: 0 }}
-            className={cn(index >= 30 && "hidden lg:block")}
-            whileInView={{ opacity: 1, scale: 1, transition: { delay: index * 0.025 } }}
+        <div className="flex flex-wrap items-center justify-center gap-4">
+          <motion.a
+            href="#signup"
+            className={cn(buttonVariants({ size: "lg" }))}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            <a href={contributor.url} target="_blank" rel="noreferrer">
-              <Tooltip content={contributor.name}>
-                <Avatar>
-                  <AvatarImage src={contributor.avatar} alt={contributor.name} />
-                  <AvatarFallback>{contributor.name}</AvatarFallback>
-                </Avatar>
-              </Tooltip>
-            </a>
-          </motion.div>
-        ))}
-      </div>
+            {t`Start Free Trial`}
+          </motion.a>
+          <motion.a
+            href="#contact"
+            className={cn(buttonVariants({ variant: "outline", size: "lg" }))}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            {t`Contact Sales`}
+          </motion.a>
+        </div>
+
+        <p className="mx-auto max-w-xl text-sm leading-relaxed text-muted-foreground">
+          {t`Questions? Our team is here to help. Reach out anytime and we'll get back to you within 24 hours.`}
+        </p>
+      </motion.div>
     </section>
   );
 };

@@ -1,8 +1,8 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { t } from "@lingui/macro";
 import { XIcon } from "@phosphor-icons/react";
-import type { CustomSection } from "@reactive-resume/schema";
-import { customSectionSchema, defaultCustomSection } from "@reactive-resume/schema";
+import type { CustomSection } from "@my-saas/schema";
+import { customSectionSchema, defaultCustomSection } from "@my-saas/schema";
 import {
   Badge,
   BadgeInput,
@@ -14,7 +14,7 @@ import {
   FormMessage,
   Input,
   RichInput,
-} from "@reactive-resume/ui";
+} from "@my-saas/ui";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { useForm } from "react-hook-form";

@@ -1,6 +1,6 @@
 import { CaretRightIcon, CheckIcon, DotOutlineIcon } from "@phosphor-icons/react";
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu";
-import { cn } from "@reactive-resume/utils";
+import { cn } from "@my-saas/utils";
 import { forwardRef } from "react";
 
 export const DropdownMenu = DropdownMenuPrimitive.Root;
