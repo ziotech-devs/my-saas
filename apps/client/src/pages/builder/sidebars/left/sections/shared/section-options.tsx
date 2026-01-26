@@ -1,15 +1,4 @@
 import { plural, t } from "@lingui/macro";
-import {
-  ArrowCounterClockwiseIcon,
-  BroomIcon,
-  ColumnsIcon,
-  EyeIcon,
-  EyeSlashIcon,
-  ListIcon,
-  PencilSimpleIcon,
-  PlusIcon,
-  TrashSimpleIcon,
-} from "@phosphor-icons/react";
 import type { SectionKey, SectionWithItem } from "@my-saas/schema";
 import { defaultSections } from "@my-saas/schema";
 import {
@@ -28,6 +17,17 @@ import {
   DropdownMenuTrigger,
   Input,
 } from "@my-saas/ui";
+import {
+  ArrowCounterClockwiseIcon,
+  BroomIcon,
+  ColumnsIcon,
+  EyeIcon,
+  EyeSlashIcon,
+  ListIcon,
+  PencilSimpleIcon,
+  PlusIcon,
+  TrashSimpleIcon,
+} from "@phosphor-icons/react";
 import get from "lodash.get";
 import { useMemo } from "react";
 

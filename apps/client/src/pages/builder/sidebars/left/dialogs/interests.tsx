@@ -1,6 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { t } from "@lingui/macro";
-import { XIcon } from "@phosphor-icons/react";
 import { defaultInterest, interestSchema } from "@my-saas/schema";
 import {
   Badge,
@@ -13,6 +12,7 @@ import {
   FormMessage,
   Input,
 } from "@my-saas/ui";
+import { XIcon } from "@phosphor-icons/react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { useForm } from "react-hook-form";

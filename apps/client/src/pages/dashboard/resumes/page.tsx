@@ -1,6 +1,6 @@
 import { t } from "@lingui/macro";
-import { ListIcon, SquaresFourIcon } from "@phosphor-icons/react";
 import { ScrollArea, Tabs, TabsContent, TabsList, TabsTrigger } from "@my-saas/ui";
+import { ListIcon, SquaresFourIcon } from "@phosphor-icons/react";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { useLocalStorage } from "usehooks-ts";

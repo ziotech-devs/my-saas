@@ -15,10 +15,10 @@ import {
   verticalListSortingStrategy,
 } from "@dnd-kit/sortable";
 import { t } from "@lingui/macro";
-import { CaretRightIcon, PlusIcon } from "@phosphor-icons/react";
 import type { SectionItem, SectionKey, SectionWithItem } from "@my-saas/schema";
 import { Button } from "@my-saas/ui";
 import { cn } from "@my-saas/utils";
+import { CaretRightIcon, PlusIcon } from "@phosphor-icons/react";
 import type { MotionProps } from "framer-motion";
 import { AnimatePresence, motion } from "framer-motion";
 import get from "lodash.get";

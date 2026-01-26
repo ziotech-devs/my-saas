@@ -1,3 +1,7 @@
+import type { SectionKey, SectionWithItem } from "@my-saas/schema";
+import { defaultSection } from "@my-saas/schema";
+import type { ButtonProps } from "@my-saas/ui";
+import { Button, Tooltip } from "@my-saas/ui";
 import type { IconProps } from "@phosphor-icons/react";
 import {
   ArticleIcon,
@@ -15,10 +19,6 @@ import {
   UserIcon,
   UsersIcon,
 } from "@phosphor-icons/react";
-import type { SectionKey, SectionWithItem } from "@my-saas/schema";
-import { defaultSection } from "@my-saas/schema";
-import type { ButtonProps } from "@my-saas/ui";
-import { Button, Tooltip } from "@my-saas/ui";
 import get from "lodash.get";
 
 import { useResumeStore } from "@/client/stores/resume";

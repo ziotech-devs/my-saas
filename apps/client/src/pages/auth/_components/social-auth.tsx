@@ -1,6 +1,6 @@
 import { t } from "@lingui/macro";
-import { FingerprintIcon, GithubLogoIcon, GoogleLogoIcon } from "@phosphor-icons/react";
 import { Button } from "@my-saas/ui";
+import { FingerprintIcon, GithubLogoIcon, GoogleLogoIcon } from "@phosphor-icons/react";
 
 import { useAuthProviders } from "@/client/services/auth/providers";
 

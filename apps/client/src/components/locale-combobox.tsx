@@ -1,5 +1,4 @@
 import { t } from "@lingui/macro";
-import { CaretDownIcon, CheckIcon } from "@phosphor-icons/react";
 import {
   Button,
   Command,
@@ -14,6 +13,7 @@ import {
   ScrollArea,
 } from "@my-saas/ui";
 import { cn } from "@my-saas/utils";
+import { CaretDownIcon, CheckIcon } from "@phosphor-icons/react";
 import fuzzy from "fuzzy";
 import { useMemo, useState } from "react";
 

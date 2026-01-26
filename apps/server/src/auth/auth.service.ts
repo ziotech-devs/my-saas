@@ -1,5 +1,7 @@
 import { randomBytes } from "node:crypto";
 
+import { AuthProvidersDto, LoginDto, RegisterDto, UserWithSecrets } from "@my-saas/dto";
+import { ErrorMessage } from "@my-saas/utils";
 import {
   BadRequestException,
   ForbiddenException,
@@ -10,8 +12,6 @@ import {
 import { ConfigService } from "@nestjs/config";
 import { JwtService } from "@nestjs/jwt";
 import { PrismaClientKnownRequestError } from "@prisma/client/runtime/library";
-import { AuthProvidersDto, LoginDto, RegisterDto, UserWithSecrets } from "@my-saas/dto";
-import { ErrorMessage } from "@my-saas/utils";
 import * as bcryptjs from "bcryptjs";
 import { authenticator } from "otplib";
 

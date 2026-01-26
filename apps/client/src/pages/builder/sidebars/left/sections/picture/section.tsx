@@ -1,5 +1,4 @@
 import { t } from "@lingui/macro";
-import { ApertureIcon, TrashIcon, UploadSimpleIcon } from "@phosphor-icons/react";
 import {
   Avatar,
   AvatarImage,
@@ -11,6 +10,7 @@ import {
   PopoverTrigger,
 } from "@my-saas/ui";
 import { cn } from "@my-saas/utils";
+import { ApertureIcon, TrashIcon, UploadSimpleIcon } from "@phosphor-icons/react";
 import { motion } from "framer-motion";
 import { useMemo, useRef } from "react";
 import { z } from "zod";

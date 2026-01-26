@@ -1,7 +1,7 @@
+import { ContributorDto } from "@my-saas/dto";
 import { HttpService } from "@nestjs/axios";
 import { Injectable } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
-import { ContributorDto } from "@my-saas/dto";
 
 import { Config } from "../config/schema";
 

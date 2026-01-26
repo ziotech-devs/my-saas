@@ -1,6 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { t, Trans } from "@lingui/macro";
-import { FloppyDiskIcon, TrashSimpleIcon } from "@phosphor-icons/react";
 import {
   Alert,
   Button,
@@ -13,6 +12,7 @@ import {
   FormMessage,
   Input,
 } from "@my-saas/ui";
+import { FloppyDiskIcon, TrashSimpleIcon } from "@phosphor-icons/react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 

@@ -1,6 +1,6 @@
+import { UserDto } from "@my-saas/dto";
 import { Injectable } from "@nestjs/common";
 import { AuthGuard } from "@nestjs/passport";
-import { UserDto } from "@my-saas/dto";
 
 @Injectable()
 export class OptionalGuard extends AuthGuard("two-factor") {

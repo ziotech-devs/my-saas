@@ -1,3 +1,5 @@
+import type { ButtonProps } from "@my-saas/ui";
+import { Button, Tooltip } from "@my-saas/ui";
 import type { IconProps } from "@phosphor-icons/react";
 import {
   CodeIcon,
@@ -13,8 +15,6 @@ import {
   TranslateIcon,
   TrendUpIcon,
 } from "@phosphor-icons/react";
-import type { ButtonProps } from "@my-saas/ui";
-import { Button, Tooltip } from "@my-saas/ui";
 
 type MetadataKey =
   | "template"

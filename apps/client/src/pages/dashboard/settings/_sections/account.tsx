@@ -1,6 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { t } from "@lingui/macro";
-import { CheckIcon, UploadSimpleIcon, WarningIcon } from "@phosphor-icons/react";
 import type { UpdateUserDto } from "@my-saas/dto";
 import { updateUserSchema } from "@my-saas/dto";
 import {
@@ -16,6 +15,7 @@ import {
   Input,
 } from "@my-saas/ui";
 import { cn } from "@my-saas/utils";
+import { CheckIcon, UploadSimpleIcon, WarningIcon } from "@phosphor-icons/react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";

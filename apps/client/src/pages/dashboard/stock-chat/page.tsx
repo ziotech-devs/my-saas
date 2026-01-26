@@ -1,9 +1,9 @@
 import { t } from "@lingui/macro";
 import { Card, CardContent, CardHeader, CardTitle, ScrollArea, Skeleton } from "@my-saas/ui";
 import { cn } from "@my-saas/utils";
+import { ArrowDownIcon, ArrowUpIcon } from "@phosphor-icons/react";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
-import { ArrowDownIcon, ArrowUpIcon } from "@phosphor-icons/react";
 
 import { useStockData } from "@/client/services/stock-chat/data";
 
@@ -46,7 +46,8 @@ export const StockChatPage = () => {
           <Card>
             <CardContent className="pt-6">
               <p className="text-destructive">
-                {t`Error loading stock data: ${(error as Error).message}`}
+                {t`Error loading stock data:`}
+                {error.message}
               </p>
             </CardContent>
           </Card>
@@ -56,7 +57,8 @@ export const StockChatPage = () => {
           <ScrollArea className="h-[calc(100vh-140px)] lg:h-[calc(100vh-88px)]">
             <div className="space-y-4">
               <div className="text-sm text-muted-foreground">
-                {t`Last updated: ${new Date(data.timestamp).toLocaleString()}`}
+                {t`Last updated: `}
+                {new Date(data.timestamp).toLocaleString()}
               </div>
 
               <div className="grid gap-4 md:grid-cols-2">

@@ -1,13 +1,5 @@
 import { t } from "@lingui/macro";
 import {
-  CaretDownIcon,
-  ChatTeardropTextIcon,
-  CircleNotchIcon,
-  ExamIcon,
-  MagicWandIcon,
-  PenNibIcon,
-} from "@phosphor-icons/react";
-import {
   Badge,
   Button,
   DropdownMenu,
@@ -16,6 +8,14 @@ import {
   DropdownMenuTrigger,
 } from "@my-saas/ui";
 import { cn } from "@my-saas/utils";
+import {
+  CaretDownIcon,
+  ChatTeardropTextIcon,
+  CircleNotchIcon,
+  ExamIcon,
+  MagicWandIcon,
+  PenNibIcon,
+} from "@phosphor-icons/react";
 import { useState } from "react";
 
 import { toast } from "../hooks/use-toast";

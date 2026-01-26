@@ -1,6 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { t } from "@lingui/macro";
-import { CheckIcon, DownloadSimpleIcon } from "@phosphor-icons/react";
 import type { JsonResume, LinkedIn, ReactiveResumeV3 } from "@my-saas/parser";
 import {
   JsonResumeParser,
@@ -33,6 +32,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@my-saas/ui";
+import { CheckIcon, DownloadSimpleIcon } from "@phosphor-icons/react";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";

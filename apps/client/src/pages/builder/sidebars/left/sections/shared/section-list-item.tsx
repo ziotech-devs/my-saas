@@ -2,12 +2,6 @@ import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import { t } from "@lingui/macro";
 import {
-  CopySimpleIcon,
-  DotsSixVerticalIcon,
-  PencilSimpleIcon,
-  TrashSimpleIcon,
-} from "@phosphor-icons/react";
-import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
@@ -16,6 +10,12 @@ import {
   DropdownMenuTrigger,
 } from "@my-saas/ui";
 import { cn } from "@my-saas/utils";
+import {
+  CopySimpleIcon,
+  DotsSixVerticalIcon,
+  PencilSimpleIcon,
+  TrashSimpleIcon,
+} from "@phosphor-icons/react";
 import { motion } from "framer-motion";
 
 export type SectionListItemProps = {

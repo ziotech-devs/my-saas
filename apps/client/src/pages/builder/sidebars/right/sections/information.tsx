@@ -1,11 +1,5 @@
 import { t, Trans } from "@lingui/macro";
 import {
-  BookIcon,
-  EnvelopeSimpleOpenIcon,
-  GithubLogoIcon,
-  HandHeartIcon,
-} from "@phosphor-icons/react";
-import {
   buttonVariants,
   Card,
   CardContent,
@@ -14,6 +8,12 @@ import {
   CardTitle,
 } from "@my-saas/ui";
 import { cn } from "@my-saas/utils";
+import {
+  BookIcon,
+  EnvelopeSimpleOpenIcon,
+  GithubLogoIcon,
+  HandHeartIcon,
+} from "@phosphor-icons/react";
 
 import { SectionIcon } from "../shared/section-icon";
 

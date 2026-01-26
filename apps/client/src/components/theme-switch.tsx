@@ -1,7 +1,7 @@
 import { t } from "@lingui/macro";
-import { CloudSunIcon, MoonIcon, SunIcon } from "@phosphor-icons/react";
 import { useTheme } from "@my-saas/hooks";
 import { Button } from "@my-saas/ui";
+import { CloudSunIcon, MoonIcon, SunIcon } from "@phosphor-icons/react";
 import type { Variants } from "framer-motion";
 import { motion } from "framer-motion";
 import { useMemo } from "react";

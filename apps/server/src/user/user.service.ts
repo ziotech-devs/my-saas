@@ -1,7 +1,7 @@
-import { Injectable, InternalServerErrorException } from "@nestjs/common";
-import { Prisma, User } from "@prisma/client";
 import { UserWithSecrets } from "@my-saas/dto";
 import { ErrorMessage } from "@my-saas/utils";
+import { Injectable, InternalServerErrorException } from "@nestjs/common";
+import { Prisma, User } from "@prisma/client";
 import { PrismaService } from "nestjs-prisma";
 
 import { StorageService } from "../storage/storage.service";

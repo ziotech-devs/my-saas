@@ -1,4 +1,5 @@
 import { t } from "@lingui/macro";
+import { cn, templatesList } from "@my-saas/utils";
 import {
   BrainIcon,
   CloudIcon,
@@ -25,7 +26,6 @@ import {
   TextAaIcon,
   TranslateIcon,
 } from "@phosphor-icons/react";
-import { cn, languages, templatesList } from "@my-saas/utils";
 import { motion } from "framer-motion";
 
 type Feature = {
@@ -39,7 +39,6 @@ const featureLabel = cn(
 );
 
 export const FeaturesSection = () => {
-  const languagesCount = languages.length;
   const templatesCount = templatesList.length;
 
   const features: Feature[] = [

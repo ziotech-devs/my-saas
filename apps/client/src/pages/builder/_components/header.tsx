@@ -1,7 +1,7 @@
 import { t } from "@lingui/macro";
-import { HouseSimpleIcon, LockIcon, SidebarSimpleIcon } from "@phosphor-icons/react";
 import { Button, Tooltip } from "@my-saas/ui";
 import { cn } from "@my-saas/utils";
+import { HouseSimpleIcon, LockIcon, SidebarSimpleIcon } from "@phosphor-icons/react";
 import { Link } from "react-router";
 
 import { useBuilderStore } from "@/client/stores/builder";

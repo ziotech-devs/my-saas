@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import { createId } from "@paralleldrive/cuid2";
 import {
   defaultAward,
   defaultCertification,
@@ -17,6 +16,7 @@ import {
 } from "@my-saas/schema";
 import type { Json } from "@my-saas/utils";
 import { isUrl } from "@my-saas/utils";
+import { createId } from "@paralleldrive/cuid2";
 import type { Schema } from "zod";
 
 import type { Parser } from "../interfaces/parser";

@@ -1,8 +1,8 @@
+import { ResumeDto } from "@my-saas/dto";
+import { ErrorMessage } from "@my-saas/utils";
 import { HttpService } from "@nestjs/axios";
 import { Injectable, InternalServerErrorException, Logger } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
-import { ResumeDto } from "@my-saas/dto";
-import { ErrorMessage } from "@my-saas/utils";
 import retry from "async-retry";
 import { PDFDocument } from "pdf-lib";
 import { connect } from "puppeteer-core";

@@ -1,6 +1,4 @@
 import { t, Trans } from "@lingui/macro";
-import { createId } from "@paralleldrive/cuid2";
-import { DotsSixVerticalIcon, EnvelopeIcon, PlusIcon, XIcon } from "@phosphor-icons/react";
 import type { CustomField as ICustomField } from "@my-saas/schema";
 import {
   Button,
@@ -11,6 +9,8 @@ import {
   Tooltip,
 } from "@my-saas/ui";
 import { cn } from "@my-saas/utils";
+import { createId } from "@paralleldrive/cuid2";
+import { DotsSixVerticalIcon, EnvelopeIcon, PlusIcon, XIcon } from "@phosphor-icons/react";
 import { AnimatePresence, Reorder, useDragControls } from "framer-motion";
 
 import { useResumeStore } from "@/client/stores/resume";

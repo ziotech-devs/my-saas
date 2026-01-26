@@ -1,6 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { t } from "@lingui/macro";
-import { CaretDownIcon, FlaskIcon, MagicWandIcon, PlusIcon } from "@phosphor-icons/react";
 import type { ResumeDto } from "@my-saas/dto";
 import { createResumeSchema } from "@my-saas/dto";
 import { idSchema, sampleResume } from "@my-saas/schema";
@@ -35,6 +34,7 @@ import {
   Tooltip,
 } from "@my-saas/ui";
 import { cn, generateRandomName } from "@my-saas/utils";
+import { CaretDownIcon, FlaskIcon, MagicWandIcon, PlusIcon } from "@phosphor-icons/react";
 import slugify from "@sindresorhus/slugify";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";

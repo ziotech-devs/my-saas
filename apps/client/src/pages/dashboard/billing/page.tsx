@@ -1,5 +1,4 @@
 import { t } from "@lingui/macro";
-import { ArrowRightIcon, CheckIcon } from "@phosphor-icons/react";
 import {
   Badge,
   Button,
@@ -15,10 +14,11 @@ import {
   TabsList,
   TabsTrigger,
 } from "@my-saas/ui";
-import { cn } from "@my-saas/utils";
+import { cn, formatPrice } from "@my-saas/utils";
+import { ArrowRightIcon, CheckIcon } from "@phosphor-icons/react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Helmet } from "react-helmet-async";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 type BillingFrequency = "monthly" | "yearly";
 
@@ -38,78 +38,69 @@ type Plan = {
   buttonIcon?: boolean;
 };
 
-const plans: Plan[] = [
-  {
-    id: "starter",
-    title: t`Starter`,
-    description: t`Perfect for individuals and small teams`,
-    monthlyPrice: 9.99,
-    yearlyPrice: 99.99,
-    badge: {
-      label: t`Value`,
-      variant: "secondary",
-    },
-    features: [
-      t`Up to 3 team members`,
-      t`50K AI tokens/month`,
-      t`Core features`,
-      t`Email support`,
-      t`14-day free trial`,
-    ],
-    buttonText: t`Subscribe`,
-    buttonVariant: "secondary",
-  },
-  {
-    id: "pro",
-    title: t`Pro`,
-    description: t`Best for growing teams and professionals`,
-    monthlyPrice: 19.99,
-    yearlyPrice: 199.99,
-    badge: {
-      label: t`Popular`,
-      variant: "secondary",
-    },
-    features: [
-      t`Up to 10 team members`,
-      t`200K AI tokens/month`,
-      t`All Starter features`,
-      t`Priority support`,
-      t`Advanced analytics`,
-      t`14-day free trial`,
-    ],
-    buttonText: t`Subscribe`,
-    buttonVariant: "secondary",
-  },
-  {
-    id: "enterprise",
-    title: t`Enterprise`,
-    description: t`For large organizations with unlimited scale`,
-    monthlyPrice: 29.99,
-    yearlyPrice: 299.99,
-    features: [
-      t`Unlimited team members`,
-      t`Unlimited AI tokens`,
-      t`All Pro features`,
-      t`Dedicated support`,
-      t`Custom integrations`,
-      t`SLA guarantee`,
-    ],
-    buttonText: t`Contact Sales`,
-    buttonVariant: "primary",
-    buttonIcon: true,
-  },
-];
-
 export const BillingPage = () => {
+  const plans: Plan[] = [
+    {
+      id: "starter",
+      title: t`Starter`,
+      description: t`Perfect for individuals and small teams`,
+      monthlyPrice: 9.99,
+      yearlyPrice: 99.99,
+      badge: {
+        label: t`Value`,
+        variant: "secondary",
+      },
+      features: [
+        t`Up to 3 team members`,
+        t`50K AI tokens/month`,
+        t`Core features`,
+        t`Email support`,
+        t`14-day free trial`,
+      ],
+      buttonText: t`Subscribe`,
+      buttonVariant: "secondary",
+    },
+    {
+      id: "pro",
+      title: t`Pro`,
+      description: t`Best for growing teams and professionals`,
+      monthlyPrice: 19.99,
+      yearlyPrice: 199.99,
+      badge: {
+        label: t`Popular`,
+        variant: "secondary",
+      },
+      features: [
+        t`Up to 10 team members`,
+        t`200K AI tokens/month`,
+        t`All Starter features`,
+        t`Priority support`,
+        t`Advanced analytics`,
+        t`14-day free trial`,
+      ],
+      buttonText: t`Subscribe`,
+      buttonVariant: "secondary",
+    },
+    {
+      id: "enterprise",
+      title: t`Enterprise`,
+      description: t`For large organizations with unlimited scale`,
+      monthlyPrice: 29.99,
+      yearlyPrice: 299.99,
+      features: [
+        t`Unlimited team members`,
+        t`Unlimited AI tokens`,
+        t`All Pro features`,
+        t`Dedicated support`,
+        t`Custom integrations`,
+        t`SLA guarantee`,
+      ],
+      buttonText: t`Contact Sales`,
+      buttonVariant: "primary",
+      buttonIcon: true,
+    },
+  ];
   const [billingFrequency, setBillingFrequency] = useState<BillingFrequency>("monthly");
-
-  const formatPrice = (price: number) => {
-    return new Intl.NumberFormat("en-US", {
-      style: "currency",
-      currency: "USD",
-      minimumFractionDigits: 2,
-    }).format(price);
-  };
 
   const getPrice = (plan: Plan) => {
     return billingFrequency === "monthly" ? plan.monthlyPrice : plan.yearlyPrice;
@@ -139,10 +130,10 @@ export const BillingPage = () => {
         <ScrollArea hideScrollbar className="h-[calc(100vh-140px)] lg:h-[calc(100vh-88px)]">
           <Tabs
             value={billingFrequency}
+            className="space-y-8"
             onValueChange={(value) => {
               if (value) setBillingFrequency(value as BillingFrequency);
             }}
-            className="space-y-8"
           >
             <div className="space-y-4">
               <div>

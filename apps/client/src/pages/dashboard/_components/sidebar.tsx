@@ -1,12 +1,11 @@
 import { t } from "@lingui/macro";
-import {
-  ChatCircleIcon,
-  CreditCardIcon,
-  FadersHorizontalIcon,
-  ReadCvLogoIcon,
-} from "@phosphor-icons/react";
 import { Button, KeyboardShortcut, Separator } from "@my-saas/ui";
 import { cn } from "@my-saas/utils";
+import {
+  CreditCardIcon,
+  FadersHorizontalIcon,
+  HouseIcon,
+} from "@phosphor-icons/react";
 import { motion } from "framer-motion";
 import { Link, useLocation, useNavigate } from "react-router";
 import useKeyboardShortcut from "use-keyboard-shortcut";
@@ -75,18 +74,13 @@ export const Sidebar = ({ setOpen }: SidebarProps) => {
   const { user } = useUser();
   const navigate = useNavigate();
 
-  useKeyboardShortcut(["shift", "r"], () => {
-    void navigate("/dashboard/resumes");
+  useKeyboardShortcut(["shift", "d"], () => {
+    void navigate("/dashboard");
     setOpen?.(false);
   });
 
   useKeyboardShortcut(["shift", "s"], () => {
     void navigate("/dashboard/settings");
-    setOpen?.(false);
-  });
-
-  useKeyboardShortcut(["shift", "c"], () => {
-    void navigate("/dashboard/stock-chat");
     setOpen?.(false);
   });
 
@@ -97,16 +91,10 @@ export const Sidebar = ({ setOpen }: SidebarProps) => {
 
   const sidebarItems: SidebarItem[] = [
     {
-      path: "/dashboard/resumes",
-      name: t`Resumes`,
-      shortcut: "⇧R",
-      icon: <ReadCvLogoIcon />,
-    },
-    {
-      path: "/dashboard/stock-chat",
-      name: t`Stock Chat`,
-      shortcut: "⇧C",
-      icon: <ChatCircleIcon />,
+      path: "/dashboard",
+      name: t`Dashboard`,
+      shortcut: "⇧D",
+      icon: <HouseIcon />,
     },
     {
       path: "/dashboard/billing",

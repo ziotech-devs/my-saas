@@ -2,8 +2,8 @@
 /* eslint-disable lingui/no-unlocalized-strings */
 
 import { t, Trans } from "@lingui/macro";
-import { QuotesIcon } from "@phosphor-icons/react";
 import { cn } from "@my-saas/utils";
+import { QuotesIcon } from "@phosphor-icons/react";
 import { motion } from "framer-motion";
 
 const email = "hello@example.com";

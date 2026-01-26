@@ -1,7 +1,7 @@
+import { ErrorMessage, generateRandomName, processUsername } from "@my-saas/utils";
 import { BadRequestException, Injectable, Logger } from "@nestjs/common";
 import { PassportStrategy } from "@nestjs/passport";
 import { User } from "@prisma/client";
-import { ErrorMessage, generateRandomName, processUsername } from "@my-saas/utils";
 import { Profile, Strategy, StrategyOptions } from "passport-openidconnect";
 
 import { UserService } from "@/server/user/user.service";

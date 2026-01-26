@@ -1,5 +1,5 @@
-import { createId } from "@paralleldrive/cuid2";
 import type { ToastActionElement, ToastProps } from "@my-saas/ui";
+import { createId } from "@paralleldrive/cuid2";
 import { useEffect, useState } from "react";
 
 const TOAST_LIMIT = 1;

@@ -1,7 +1,7 @@
 import { t } from "@lingui/macro";
-import { DownloadSimpleIcon } from "@phosphor-icons/react";
 import { KeyboardShortcut } from "@my-saas/ui";
 import { cn } from "@my-saas/utils";
+import { DownloadSimpleIcon } from "@phosphor-icons/react";
 
 import { useDialog } from "@/client/stores/dialog";
 

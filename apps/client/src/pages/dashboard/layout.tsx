@@ -1,5 +1,5 @@
-import { SidebarSimpleIcon } from "@phosphor-icons/react";
 import { Button, Sheet, SheetClose, SheetContent, SheetTrigger } from "@my-saas/ui";
+import { SidebarSimpleIcon } from "@phosphor-icons/react";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Outlet } from "react-router";

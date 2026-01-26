@@ -1,4 +1,5 @@
 import { t } from "@lingui/macro";
+import { Button, Separator, Toggle, Tooltip } from "@my-saas/ui";
 import {
   ArrowClockwiseIcon,
   ArrowCounterClockwiseIcon,
@@ -14,7 +15,6 @@ import {
   MagnifyingGlassMinusIcon,
   MagnifyingGlassPlusIcon,
 } from "@phosphor-icons/react";
-import { Button, Separator, Toggle, Tooltip } from "@my-saas/ui";
 import { motion } from "framer-motion";
 import { useState } from "react";
 

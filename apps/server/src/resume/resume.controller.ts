@@ -1,4 +1,12 @@
 import {
+  CreateResumeDto,
+  importResumeSchema,
+  ResumeDto,
+  UpdateResumeDto,
+} from "@my-saas/dto";
+import { resumeDataSchema } from "@my-saas/schema";
+import { ErrorMessage } from "@my-saas/utils";
+import {
   BadRequestException,
   Body,
   Controller,
@@ -14,14 +22,6 @@ import {
 import { ApiTags } from "@nestjs/swagger";
 import { User as UserEntity } from "@prisma/client";
 import { PrismaClientKnownRequestError } from "@prisma/client/runtime/library";
-import {
-  CreateResumeDto,
-  importResumeSchema,
-  ResumeDto,
-  UpdateResumeDto,
-} from "@my-saas/dto";
-import { resumeDataSchema } from "@my-saas/schema";
-import { ErrorMessage } from "@my-saas/utils";
 import set from "lodash.set";
 import { zodToJsonSchema } from "zod-to-json-schema";
 

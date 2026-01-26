@@ -1,4 +1,18 @@
 import {
+  authResponseSchema,
+  backupCodesSchema,
+  ForgotPasswordDto,
+  messageSchema,
+  RegisterDto,
+  ResetPasswordDto,
+  TwoFactorBackupDto,
+  TwoFactorDto,
+  UpdatePasswordDto,
+  userSchema,
+  UserWithSecrets,
+} from "@my-saas/dto";
+import { ErrorMessage } from "@my-saas/utils";
+import {
   BadRequestException,
   Body,
   Controller,
@@ -13,20 +27,6 @@ import {
 } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
 import { ApiTags } from "@nestjs/swagger";
-import {
-  authResponseSchema,
-  backupCodesSchema,
-  ForgotPasswordDto,
-  messageSchema,
-  RegisterDto,
-  ResetPasswordDto,
-  TwoFactorBackupDto,
-  TwoFactorDto,
-  UpdatePasswordDto,
-  userSchema,
-  UserWithSecrets,
-} from "@my-saas/dto";
-import { ErrorMessage } from "@my-saas/utils";
 import type { Response } from "express";
 
 import { User } from "../user/decorators/user.decorator";

@@ -8,13 +8,9 @@ import { RegisterPage } from "../pages/auth/register/page";
 import { ResetPasswordPage } from "../pages/auth/reset-password/page";
 import { VerifyEmailPage } from "../pages/auth/verify-email/page";
 import { VerifyOtpPage } from "../pages/auth/verify-otp/page";
-import { BuilderLayout } from "../pages/builder/layout";
-import { builderLoader, BuilderPage } from "../pages/builder/page";
 import { BillingPage } from "../pages/dashboard/billing/page";
 import { DashboardLayout } from "../pages/dashboard/layout";
-import { ResumesPage } from "../pages/dashboard/resumes/page";
 import { SettingsPage } from "../pages/dashboard/settings/page";
-import { StockChatPage } from "../pages/dashboard/stock-chat/page";
 import { HomeLayout } from "../pages/home/layout";
 import { HomePage } from "../pages/home/page";
 import { ErrorPage } from "../pages/public/error";
@@ -65,26 +61,14 @@ export const routes = createRoutesFromElements(
       <Route path="dashboard">
         <Route element={<AuthGuard />}>
           <Route element={<DashboardLayout />}>
-            <Route path="resumes" element={<ResumesPage />} />
             <Route path="billing" element={<BillingPage />} />
             <Route path="settings" element={<SettingsPage />} />
-            <Route path="stock-chat" element={<StockChatPage />} />
 
-            <Route index element={<Navigate replace to="/dashboard/resumes" />} />
+            <Route index element={<BillingPage />} />
           </Route>
         </Route>
       </Route>
-
-      <Route path="builder">
-        <Route element={<AuthGuard />}>
-          <Route element={<BuilderLayout />}>
-            <Route path=":id" loader={builderLoader} element={<BuilderPage />} />
-
-            <Route index element={<Navigate replace to="/dashboard/resumes" />} />
-          </Route>
-        </Route>
-      </Route>
-
+      
       {/* Public Routes */}
       <Route path=":username">
         <Route path=":slug" loader={publicLoader} element={<PublicResumePage />} />

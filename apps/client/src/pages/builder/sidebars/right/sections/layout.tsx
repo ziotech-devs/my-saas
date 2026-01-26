@@ -17,16 +17,16 @@ import {
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import { t } from "@lingui/macro";
+import { defaultMetadata } from "@my-saas/schema";
+import { Button, Portal, Tooltip } from "@my-saas/ui";
+import type { LayoutLocator, SortablePayload } from "@my-saas/utils";
+import { cn, moveItemInLayout, parseLayoutLocator } from "@my-saas/utils";
 import {
   ArrowCounterClockwiseIcon,
   DotsSixVerticalIcon,
   PlusIcon,
   TrashSimpleIcon,
 } from "@phosphor-icons/react";
-import { defaultMetadata } from "@my-saas/schema";
-import { Button, Portal, Tooltip } from "@my-saas/ui";
-import type { LayoutLocator, SortablePayload } from "@my-saas/utils";
-import { cn, moveItemInLayout, parseLayoutLocator } from "@my-saas/utils";
 import get from "lodash.get";
 import { useState } from "react";
 

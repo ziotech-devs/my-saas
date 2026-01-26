@@ -1,6 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { t } from "@lingui/macro";
-import { XIcon } from "@phosphor-icons/react";
 import type { CustomSection } from "@my-saas/schema";
 import { customSectionSchema, defaultCustomSection } from "@my-saas/schema";
 import {
@@ -15,6 +14,7 @@ import {
   Input,
   RichInput,
 } from "@my-saas/ui";
+import { XIcon } from "@phosphor-icons/react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { useForm } from "react-hook-form";

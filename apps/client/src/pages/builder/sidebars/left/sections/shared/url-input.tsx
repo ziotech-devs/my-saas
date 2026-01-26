@@ -1,5 +1,4 @@
 import { t } from "@lingui/macro";
-import { TagIcon } from "@phosphor-icons/react";
 import type { URL } from "@my-saas/schema";
 import { urlSchema } from "@my-saas/schema";
 import {
@@ -10,6 +9,7 @@ import {
   PopoverTrigger,
   Tooltip,
 } from "@my-saas/ui";
+import { TagIcon } from "@phosphor-icons/react";
 import { forwardRef, useMemo } from "react";
 
 type Props = {

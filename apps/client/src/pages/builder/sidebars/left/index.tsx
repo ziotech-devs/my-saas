@@ -1,5 +1,4 @@
 import { t } from "@lingui/macro";
-import { PlusCircleIcon, PlusIcon } from "@phosphor-icons/react";
 import type {
   Award,
   Certification,
@@ -16,6 +15,7 @@ import type {
   Volunteer,
 } from "@my-saas/schema";
 import { Button, ScrollArea, Separator } from "@my-saas/ui";
+import { PlusCircleIcon, PlusIcon } from "@phosphor-icons/react";
 import { Fragment, useRef } from "react";
 import { Link } from "react-router";
 

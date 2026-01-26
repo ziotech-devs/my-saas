@@ -1,7 +1,7 @@
 import { t } from "@lingui/macro";
-import { PlusIcon } from "@phosphor-icons/react";
 import type { ResumeDto } from "@my-saas/dto";
 import { KeyboardShortcut } from "@my-saas/ui";
+import { PlusIcon } from "@phosphor-icons/react";
 
 import { useDialog } from "@/client/stores/dialog";
 

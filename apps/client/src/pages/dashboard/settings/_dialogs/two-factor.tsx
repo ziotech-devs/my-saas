@@ -1,7 +1,6 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { i18n } from "@lingui/core";
 import { msg, t } from "@lingui/macro";
-import { QrCodeIcon } from "@phosphor-icons/react";
 import {
   Alert,
   AlertDescription,
@@ -29,6 +28,7 @@ import {
   FormMessage,
   Input,
 } from "@my-saas/ui";
+import { QrCodeIcon } from "@phosphor-icons/react";
 import { QRCodeSVG } from "qrcode.react";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";

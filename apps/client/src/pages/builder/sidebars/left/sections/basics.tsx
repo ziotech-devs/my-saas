@@ -1,8 +1,8 @@
 import { t } from "@lingui/macro";
-import { CaretRightIcon } from "@phosphor-icons/react";
 import { basicsSchema } from "@my-saas/schema";
 import { Button, Input, Label } from "@my-saas/ui";
 import { cn } from "@my-saas/utils";
+import { CaretRightIcon } from "@phosphor-icons/react";
 import { AnimatePresence, motion } from "framer-motion";
 
 import { useResumeStore } from "@/client/stores/resume";

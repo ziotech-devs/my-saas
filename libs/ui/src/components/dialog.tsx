@@ -1,6 +1,6 @@
+import { cn } from "@my-saas/utils";
 import { XIcon } from "@phosphor-icons/react";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
-import { cn } from "@my-saas/utils";
 import { forwardRef } from "react";
 
 export const Dialog = DialogPrimitive.Root;

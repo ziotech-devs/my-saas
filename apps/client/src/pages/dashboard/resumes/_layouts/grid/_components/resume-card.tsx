@@ -1,12 +1,4 @@
 import { t } from "@lingui/macro";
-import {
-  CopySimpleIcon,
-  FolderOpenIcon,
-  LockIcon,
-  LockOpenIcon,
-  PencilSimpleIcon,
-  TrashSimpleIcon,
-} from "@phosphor-icons/react";
 import type { ResumeDto } from "@my-saas/dto";
 import {
   DropdownMenu,
@@ -16,6 +8,14 @@ import {
   DropdownMenuTrigger,
 } from "@my-saas/ui";
 import { cn } from "@my-saas/utils";
+import {
+  CopySimpleIcon,
+  FolderOpenIcon,
+  LockIcon,
+  LockOpenIcon,
+  PencilSimpleIcon,
+  TrashSimpleIcon,
+} from "@phosphor-icons/react";
 import dayjs from "dayjs";
 import { AnimatePresence, motion } from "framer-motion";
 import { useNavigate } from "react-router";

@@ -1,5 +1,5 @@
-import { CaretDownIcon, CheckIcon } from "@phosphor-icons/react";
 import { cn } from "@my-saas/utils";
+import { CaretDownIcon, CheckIcon } from "@phosphor-icons/react";
 import { forwardRef, useState } from "react";
 
 import { Button } from "./button";

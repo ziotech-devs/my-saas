@@ -1,6 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { t } from "@lingui/macro";
-import { ArrowLeftIcon } from "@phosphor-icons/react";
 import { forgotPasswordSchema } from "@my-saas/dto";
 import {
   Alert,
@@ -14,6 +13,7 @@ import {
   FormMessage,
   Input,
 } from "@my-saas/ui";
+import { ArrowLeftIcon } from "@phosphor-icons/react";
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";

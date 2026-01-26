@@ -1,7 +1,4 @@
 import { t } from "@lingui/macro";
-import { createId } from "@paralleldrive/cuid2";
-import { CopySimpleIcon, PencilSimpleIcon, PlusIcon } from "@phosphor-icons/react";
-import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import type { SectionItem, SectionWithItem } from "@my-saas/schema";
 import {
   AlertDialog,
@@ -22,6 +19,9 @@ import {
   Form,
   ScrollArea,
 } from "@my-saas/ui";
+import { createId } from "@paralleldrive/cuid2";
+import { CopySimpleIcon, PencilSimpleIcon, PlusIcon } from "@phosphor-icons/react";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { produce } from "immer";
 import get from "lodash.get";
 import { useEffect } from "react";
