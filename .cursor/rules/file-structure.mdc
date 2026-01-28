@@ -32,8 +32,6 @@ apps/server/src/
 ├── feature/          # Feature modules (domain-specific features)
 ├── health/           # Health checks and monitoring
 ├── mail/             # Email sending logic and templates
-├── printer/          # Printing services and integrations
-├── resume/           # Resume management features
 ├── stock-chat/       # Stock chat features and integrations
 ├── storage/          # File and object storage modules
 ├── translation/      # i18n and localization

@@ -22,29 +22,17 @@ msgstr ""
 msgid "You have enabled two-factor authentication successfully."
 msgstr "Anda telah berhasil mengaktifkan autentikasi dua faktor."
 
-#: apps/client/src/pages/home/sections/features/index.tsx:57
-msgid "{templatesCount} resume templates to choose from"
-msgstr "{templatesCount} format resume yang dapat dipilih"
+#: apps/client/src/pages/home/sections/features/index.tsx:56
+msgid "{templatesCount}+ pre-built templates"
+msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-options.tsx:142
-msgid "{value, plural, one {Column} other {Columns}}"
-msgstr "{value, plural, other {Kolom}}"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/information.tsx:25
-msgid "<0>I built Reactive Resume mostly by myself during my spare time, with a lot of help from other great open-source contributors.</0><1>If you like the app and want to support keeping it free forever, please donate whatever you can afford to give.</1>"
-msgstr "<0>Saya membuat Reactive Resume sendiri seringnya di waktu senggang, dengan banyak bantuan dari kontributor open source hebat lainnya.</0> <1>Jika Anda menyukai aplikasi ini dan ingin mendukung agar aplikasi ini tetap gratis selamanya, silakan sumbangkan berapa pun yang Anda mampu berikan.</1>"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/information.tsx:56
-msgid "<0>I'm sure the app is not perfect, but I'd like for it to be.</0><1>If you faced any issues while creating your resume, or have an idea that would help you and other users in creating your resume more easily, drop an issue on the repository or send me an email about it.</1>"
-msgstr "<0>Saya yakin aplikasi ini belum sempurna, tetapi saya ingin aplikasi ini sempurna.</0><1>Jika Anda menghadapi masalah apa pun saat membuat resume, atau memiliki ide yang dapat membantu Anda dan pengguna lain dalam membuat resume dengan lebih mudah, kirimkan masalah ke repositori atau kirimkan email kepada saya.</1>"
+#: apps/client/src/components/copyright.tsx:19
+msgid "© {currentYear} My SaaS. All rights reserved."
+msgstr ""
 
 #: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:299
 msgid "<0>Note: </0>By utilizing the OpenAI API, you acknowledge and accept the <1>terms of use</1> and <2>privacy policy</2> outlined by OpenAI. Please note that Reactive Resume bears no responsibility for any improper or unauthorized utilization of the service, and any resulting repercussions or liabilities solely rest on the user."
 msgstr "<0>Catatan: </0>Dengan menggunakan API OpenAI, Anda mengakui dan menerima <1>persyaratan penggunaan</1> dan <2>kebijakan privasi</2> yang diuraikan oleh OpenAI. Harap diperhatikan bahwa Reactive Resume tidak bertanggung jawab atas penggunaan layanan yang tidak tepat atau tidak sah, dan segala dampak atau kewajiban yang timbul sepenuhnya menjadi tanggung jawab pengguna."
-
-#: apps/client/src/pages/builder/sidebars/right/sections/information.tsx:90
-msgid "<0>The community has spent a lot of time writing the documentation for Reactive Resume, and I'm sure it will help you get started with the app.</0><1>There are also a lot of examples to help you get started, and features that you might not know about which could help you build your perfect resume.</1>"
-msgstr "<0>Komunitas ini telah menghabiskan banyak waktu untuk menulis dokumentasi untuk Reactive Resume, dan saya yakin ini akan membantu Anda mulai menggunakan aplikasi ini.</0><1>Ada juga banyak contoh untuk membantu Anda memulai, dan fitur-fitur yang mungkin tidak Anda ketahui yang dapat membantu Anda membuat resume yang sempurna.</1>"
 
 #: apps/client/src/pages/dashboard/settings/_sections/security.tsx:140
 msgid "<0>Two-factor authentication is currently disabled.</0> You can enable it by adding an authenticator app to your account."
@@ -56,22 +44,12 @@ msgstr "<0>Autentikasi dua faktor diaktifkan.</0> Anda akan diminta untuk memasu
 
 #: apps/client/src/pages/home/page.tsx:24
 #: apps/client/src/pages/home/sections/hero/index.tsx:40
-msgid "A free and open-source resume builder"
-msgstr "Pembuat resume gratis dan bersumber terbuka"
+msgid "A free and open-source SaaS boilerplate"
+msgstr ""
 
-#: apps/client/src/pages/home/components/footer.tsx:21
 #: apps/client/src/pages/home/sections/hero/index.tsx:45
-msgid "A free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume."
-msgstr "Pembuat resume gratis dan bersumber terbuka yang menyederhanakan proses pembuatan, pembaruan, dan berbagi resume Anda."
-
-#: apps/client/src/pages/builder/_components/toolbar.tsx:59
-#: apps/client/src/pages/builder/sidebars/right/sections/sharing.tsx:29
-msgid "A link has been copied to your clipboard."
-msgstr "Tautan telah disalin ke papan klip Anda."
-
-#: apps/client/src/components/copyright.tsx:29
-msgid "A passion project by <0>Amruth Pillai</0>"
-msgstr "Sebuah proyek penuh semangat dari <0>Amruth Pillai</0>"
+msgid "A free and open-source SaaS boilerplate that simplifies the process of creating, updating, and sharing your SaaS application."
+msgstr ""
 
 #: apps/client/src/pages/auth/forgot-password/page.tsx:57
 msgid "A password reset link should have been sent to your inbox, if an account existed with the email you provided."
@@ -85,9 +63,9 @@ msgstr "Resume dengan slug ini sudah ada, silakan pilih pengenal unik yang berbe
 msgid "A user with this email address and/or username already exists."
 msgstr "Pengguna dengan alamat email dan/atau nama pengguna ini sudah ada."
 
-#: apps/client/src/pages/builder/sidebars/right/sections/page.tsx:43
-msgid "A4"
-msgstr "A4"
+#: apps/client/src/pages/home/components/footer.tsx:46
+msgid "About"
+msgstr ""
 
 #. Helper text to let the user know what filetypes are accepted. {accept} can be .pdf or .json.
 #: apps/client/src/pages/dashboard/resumes/_dialogs/import.tsx:270
@@ -98,32 +76,13 @@ msgstr "Hanya menerima file {accept}"
 msgid "Account"
 msgstr "Akun"
 
-#: apps/client/src/pages/builder/sidebars/left/sections/custom/section.tsx:175
-msgid "Add a custom field"
-msgstr "Tambahkan kolom kustom"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-base.tsx:150
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-base.tsx:203
-msgctxt "For example, add a new work experience, or add a new profile."
-msgid "Add a new item"
-msgstr "Tambah item baru"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-options.tsx:91
-msgid "Add a new item"
-msgstr "Tambah item baru"
-
-#: apps/client/src/pages/builder/sidebars/left/index.tsx:149
-#: apps/client/src/pages/builder/sidebars/left/index.tsx:267
-msgid "Add a new section"
-msgstr "Tambahkan bagian baru"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/layout.tsx:266
-msgid "Add New Page"
-msgstr "Tambah halaman baru"
-
 #: apps/client/src/components/ai-actions.tsx:79
 msgid "AI"
 msgstr "Kecerdasan buatan"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:51
+msgid "AI-powered features"
+msgstr ""
 
 #: apps/client/src/pages/auth/register/page.tsx:71
 msgid "Already have an account?"
@@ -133,34 +92,17 @@ msgstr "Sudah memiliki akun?"
 msgid "An error occurred while validating the file."
 msgstr "Terjadi kesalahan saat memvalidasi file."
 
-#: apps/client/src/pages/public/error.tsx:23
-msgid "An internal server error occurred."
-msgstr "Terjadi kesalahan server internal."
+#: apps/client/src/pages/home/sections/features/index.tsx:67
+msgid "Analytics and insights"
+msgstr ""
 
-#: apps/client/src/pages/public/error.tsx:32
-msgid "An unexpected error occurred."
-msgstr "Terjadi kesalahan tak terduga."
-
-#: apps/client/src/pages/home/sections/features/index.tsx:134
+#: apps/client/src/pages/home/sections/features/index.tsx:133
 msgid "and many more..."
 msgstr "dan masih banyak lagi..."
 
-#: apps/client/src/pages/builder/sidebars/right/sections/sharing.tsx:57
-msgid "Anyone with the link can view and download the resume."
-msgstr "Siapa pun yang memiliki tautan dapat melihat dan mengunduh resume."
-
-#: apps/client/src/pages/builder/_components/toolbar.tsx:60
-#: apps/client/src/pages/builder/sidebars/right/sections/sharing.tsx:30
-msgid "Anyone with this link can view and download the resume. Share it on your profile or with recruiters."
-msgstr "Siapa pun yang memiliki tautan ini dapat melihat dan mengunduh resume tesebut. Bagikan di profil Anda atau dengan para perekrut."
-
-#: apps/client/src/pages/builder/sidebars/right/sections/css.tsx:41
-msgid "Apply Custom CSS"
-msgstr "Menerapkan CSS Khusus"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-dialog.tsx:128
-msgid "Are you sure you want to delete this item?"
-msgstr "Apakah Anda yakin Anda ingin menghapus item ini?"
+#: apps/client/src/pages/home/sections/features/index.tsx:46
+msgid "API access included"
+msgstr ""
 
 #: apps/client/src/pages/dashboard/resumes/_dialogs/resume.tsx:149
 msgid "Are you sure you want to delete your resume?"
@@ -182,22 +124,9 @@ msgstr "Apakah Anda yakin ingin membuka resume ini?"
 msgid "Are you sure?"
 msgstr "Apakah Anda yakin?"
 
-#. For example, Computer Science or Business Administration
-#: apps/client/src/pages/builder/sidebars/left/dialogs/education.tsx:73
-msgid "Area of Study"
-msgstr "Area belajar"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:79
-msgid "Aspect Ratio"
-msgstr "Rasio Aspek"
-
-#: apps/client/src/pages/home/sections/features/index.tsx:51
-msgid "Available in {languagesCount} languages"
-msgstr "Tersedia dalam {languagesCount} bahasa"
-
-#: apps/client/src/pages/builder/sidebars/left/dialogs/awards.tsx:53
-msgid "Awarder"
-msgstr "Pemberi penghargaan"
+#: apps/client/src/pages/home/sections/support/index.tsx:22
+msgid "Authentication"
+msgstr ""
 
 #: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:258
 msgid "Azure API Version"
@@ -217,10 +146,6 @@ msgstr "URL Sumber Daya Azure OpenAI"
 msgid "Back"
 msgstr "Kembali"
 
-#: apps/client/src/pages/builder/sidebars/right/sections/theme.tsx:73
-msgid "Background Color"
-msgstr "Warna Latar Belakang"
-
 #: apps/client/src/pages/auth/backup-otp/page.tsx:75
 msgid "Backup Code"
 msgstr "Kode Cadangan"
@@ -233,33 +158,34 @@ msgstr "Kode Cadangan hanya boleh berisi huruf kecil atau angka, dan harus tepat
 msgid "Base URL"
 msgstr "URL dasar"
 
-#: apps/client/src/pages/builder/sidebars/left/index.tsx:58
-msgctxt "The basics section of a resume consists of User's Picture, Full Name, Location etc."
-msgid "Basics"
-msgstr "Dasar-dasar"
+#: apps/client/src/pages/dashboard/billing/page.tsx:106
+#: apps/client/src/pages/dashboard/billing/page.tsx:202
+msgid "Billed Monthly"
+msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/left/sections/basics.tsx:43
-msgid "Basics"
-msgstr "Dasar-dasar"
+#: apps/client/src/pages/dashboard/billing/page.tsx:106
+#: apps/client/src/pages/dashboard/billing/page.tsx:219
+msgid "Billed Yearly"
+msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:191
-msgid "Border"
-msgstr "Perbatasan"
+#: apps/client/src/pages/dashboard/_components/sidebar.tsx:101
+#: apps/client/src/pages/dashboard/billing/page.tsx:113
+#: apps/client/src/pages/dashboard/billing/page.tsx:123
+msgid "Billing"
+msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:124
-msgid "Border Radius"
-msgstr "Radius Perbatasan"
+#: apps/client/src/pages/home/sections/templates/index.tsx:12
+msgid "Browse our collection of pre-built templates and examples to get started quickly. Each template is designed to help you customize and deploy faster, with best practices built right in."
+msgstr ""
 
-#: apps/client/src/pages/public/page.tsx:93
-msgid "Built with"
-msgstr "Dibangun dengan"
+#: apps/client/src/components/copyright.tsx:24
+msgid "Built with modern technology and best practices."
+msgstr ""
 
-#: apps/client/src/components/copyright.tsx:27
-#: apps/client/src/pages/home/sections/contributors/index.tsx:20
-msgid "By the community, for the community."
-msgstr "Oleh komunitas, untuk komunitas."
+#: apps/client/src/pages/home/sections/support/index.tsx:49
+msgid "Built-in Core Features"
+msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-dialog.tsx:135
 #: apps/client/src/pages/dashboard/resumes/_dialogs/lock.tsx:49
 #: apps/client/src/pages/dashboard/resumes/_dialogs/resume.tsx:156
 #: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:137
@@ -271,9 +197,9 @@ msgstr "Batalkan"
 msgid "Casual"
 msgstr "Santai"
 
-#: apps/client/src/pages/builder/_components/toolbar.tsx:130
-msgid "Center Artboard"
-msgstr "Papan Seni Tengah"
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:98
+msgid "Change"
+msgstr ""
 
 #: apps/client/src/components/locale-switch.tsx:17
 msgid "Change Language"
@@ -296,13 +222,21 @@ msgstr "Berubah pikiran tentang nama? Berikan nama yang baru."
 msgid "Check your email for the confirmation link to update your email address."
 msgstr "Periksa email Anda untuk mendapatkan tautan konfirmasi untuk memperbarui alamat email Anda."
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:144
-msgid "Circle"
-msgstr "Lingkaran"
+#: apps/client/src/pages/dashboard/billing/page.tsx:83
+msgid "Checkout canceled"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:181
+msgid "Choose a plan that works best for you. You can change or cancel your subscription at any time."
+msgstr ""
 
 #: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:249
 msgid "Close"
 msgstr "Tutup"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:49
+msgid "Cloud-hosted solution"
+msgstr ""
 
 #: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:201
 msgid "Code"
@@ -312,47 +246,36 @@ msgstr "Kode"
 msgid "Code must be exactly 6 digits long."
 msgstr "Kode harus terdiri dari 6 digit."
 
-#: apps/client/src/pages/builder/sidebars/left/index.tsx:272
-msgid "Collapse All"
+#: apps/client/src/pages/home/sections/features/index.tsx:62
+msgid "Collaborative notes"
 msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/left/sections/basics.tsx:30
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-base.tsx:115
-#: apps/client/src/pages/builder/sidebars/left/sections/summary.tsx:33
-msgid "Collapse section"
-msgstr ""
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-options.tsx:136
-msgid "Columns"
-msgstr "Kolom"
-
-#: apps/client/src/pages/builder/sidebars/left/dialogs/experience.tsx:39
+#: apps/client/src/pages/home/components/footer.tsx:43
 msgid "Company"
 msgstr "Perusahaan"
+
+#: apps/client/src/pages/home/sections/support/index.tsx:38
+msgid "Comprehensive user management with profiles, teams, permissions, and activity tracking."
+msgstr ""
 
 #: apps/client/src/components/ai-actions.tsx:119
 #: apps/client/src/components/ai-actions.tsx:122
 msgid "Confident"
 msgstr "Percaya diri"
 
+#: apps/client/src/pages/home/components/footer.tsx:49
+msgid "Contact"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/contributors/index.tsx:36
+msgid "Contact Sales"
+msgstr ""
+
 #: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:234
 #: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:246
 msgid "Continue"
 msgstr "Lanjutkan"
 
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-list-item.tsx:101
-msgid "Copy"
-msgstr "Salin"
-
-#: apps/client/src/pages/builder/_components/toolbar.tsx:164
-msgid "Copy Link to Resume"
-msgstr "Salin Tautan ke Resume"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/sharing.tsx:78
-msgid "Copy to Clipboard"
-msgstr "Menyalin ke Papan Klip"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-dialog.tsx:179
 #: apps/client/src/pages/dashboard/resumes/_dialogs/resume.tsx:244
 msgid "Create"
 msgstr "Membuat"
@@ -361,10 +284,6 @@ msgstr "Membuat"
 #: apps/client/src/pages/auth/register/page.tsx:69
 msgid "Create a new account"
 msgstr "Membuat akun baru"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-dialog.tsx:163
-msgid "Create a new item"
-msgstr "Membuat item baru"
 
 #: apps/client/src/pages/dashboard/resumes/_dialogs/resume.tsx:178
 #: apps/client/src/pages/dashboard/resumes/_layouts/grid/_components/create-card.tsx:28
@@ -385,27 +304,21 @@ msgstr "Buat Contoh Resume"
 msgid "Current Password"
 msgstr "Kata Sandi Saat Ini"
 
-#: apps/client/src/pages/builder/sidebars/right/index.tsx:93
-#: apps/client/src/pages/builder/sidebars/right/sections/css.tsx:27
-#: apps/client/src/pages/builder/sidebars/right/sections/css.tsx:28
-msgid "Custom CSS"
-msgstr "CSS khusus"
+#: apps/client/src/pages/dashboard/billing/page.tsx:139
+msgid "Current Subscription"
+msgstr ""
 
-#: apps/client/src/pages/home/sections/features/index.tsx:62
-msgid "Custom resume sections"
-msgstr "Bagian resume khusus"
+#: apps/client/src/pages/home/sections/features/index.tsx:59
+msgid "Custom branding"
+msgstr ""
 
 #: apps/client/src/stores/resume.ts:53
 msgid "Custom Section"
 msgstr "Bagian Khusus"
 
 #: apps/client/src/pages/home/sections/features/index.tsx:60
-msgid "Customisable colour palettes"
-msgstr "Palet warna yang dapat disesuaikan"
-
-#: apps/client/src/pages/home/sections/features/index.tsx:61
-msgid "Customisable layouts"
-msgstr "Tata letak yang dapat disesuaikan"
+msgid "Customizable dashboards"
+msgstr ""
 
 #: apps/client/src/pages/dashboard/settings/_sections/danger.tsx:62
 msgid "Danger Zone"
@@ -415,21 +328,10 @@ msgstr "Zona Bahaya"
 msgid "Dark"
 msgstr "Gelap"
 
-#: apps/client/src/pages/builder/sidebars/left/dialogs/awards.tsx:67
-#: apps/client/src/pages/builder/sidebars/left/dialogs/certifications.tsx:67
-#: apps/client/src/pages/builder/sidebars/left/dialogs/publications.tsx:67
-msgid "Date"
-msgstr "Tanggal"
+#: apps/client/src/pages/dashboard/_components/sidebar.tsx:95
+msgid "Dashboard"
+msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/left/dialogs/custom-section.tsx:109
-#: apps/client/src/pages/builder/sidebars/left/dialogs/education.tsx:110
-#: apps/client/src/pages/builder/sidebars/left/dialogs/experience.tsx:72
-#: apps/client/src/pages/builder/sidebars/left/dialogs/projects.tsx:101
-#: apps/client/src/pages/builder/sidebars/left/dialogs/volunteer.tsx:67
-msgid "Date or Date Range"
-msgstr "Tanggal atau Rentang Tanggal"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-dialog.tsx:137
 #: apps/client/src/pages/dashboard/resumes/_dialogs/resume.tsx:158
 #: apps/client/src/pages/dashboard/resumes/_layouts/grid/_components/resume-card.tsx:121
 #: apps/client/src/pages/dashboard/resumes/_layouts/list/_components/resume-item.tsx:127
@@ -446,18 +348,6 @@ msgstr "Menghapus Akun"
 msgid "Deployment Name"
 msgstr "Nama Penyebaran"
 
-#: apps/client/src/pages/builder/sidebars/left/dialogs/custom-section.tsx:95
-#: apps/client/src/pages/builder/sidebars/left/dialogs/languages.tsx:50
-#: apps/client/src/pages/builder/sidebars/left/dialogs/projects.tsx:87
-#: apps/client/src/pages/builder/sidebars/left/dialogs/references.tsx:53
-#: apps/client/src/pages/builder/sidebars/left/dialogs/skills.tsx:84
-msgid "Description"
-msgstr "Deskripsi"
-
-#: apps/client/src/pages/home/sections/features/index.tsx:58
-msgid "Design single/multi page resumes"
-msgstr "Desain resume satu / beberapa halaman"
-
 #: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:139
 msgid "Disable"
 msgstr "Nonaktifkan"
@@ -473,7 +363,7 @@ msgstr "Nonaktifkan 2FA"
 msgid "Discard"
 msgstr "Buang"
 
-#: apps/client/src/pages/builder/sidebars/right/sections/information.tsx:110
+#: apps/client/src/pages/home/components/footer.tsx:69
 msgid "Documentation"
 msgstr "Dokumentasi"
 
@@ -481,35 +371,14 @@ msgstr "Dokumentasi"
 msgid "Don't have an account?"
 msgstr "Belum memiliki akun?"
 
-#: apps/client/src/pages/builder/sidebars/right/sections/information.tsx:88
-msgid "Don't know where to begin? Hit the docs!"
-msgstr "Tidak tahu mulai dari mana? Buka dokumen!"
+#: apps/client/src/pages/home/sections/testimonials/index.tsx:70
+msgid "Don't just take our word for it. Here's what our customers have to say about their experience with our platform. Have questions or feedback? Reach out to us at <0>{email}</0>."
+msgstr ""
 
 #: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:107
 msgid "Don't see your language? <0>Help translate the app.</0>"
 msgstr "Tidak melihat bahasa Anda? <0>Bantu menerjemahkan aplikasi.</0>"
 
-#: apps/client/src/pages/builder/sidebars/right/sections/information.tsx:45
-msgid "Donate to Reactive Resume"
-msgstr "Sumbangan ke Reactive Resume"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/export.tsx:56
-msgid "Download a JSON snapshot of your resume. This file can be used to import your resume in the future, or can even be shared with others to collaborate."
-msgstr "Unduh cuplikan JSON dari resume Anda. File ini dapat digunakan untuk mengimpor resume Anda di masa mendatang, atau bahkan dapat dibagikan dengan orang lain untuk berkolaborasi."
-
-#: apps/client/src/pages/builder/sidebars/right/sections/export.tsx:78
-msgid "Download a PDF of your resume. This file can be used to print your resume, send it to recruiters, or upload on job portals."
-msgstr "Unduh file PDF resume Anda. File ini dapat digunakan untuk mencetak resume Anda, mengirimkannya ke perekrut, atau mengunggahnya di portal pekerjaan."
-
-#: apps/client/src/pages/builder/_components/toolbar.tsx:176
-msgid "Download PDF"
-msgstr "Unduh PDF"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/statistics.tsx:58
-msgid "Downloads"
-msgstr "Unduhan"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-dialog.tsx:181
 #: apps/client/src/pages/dashboard/resumes/_dialogs/resume.tsx:246
 #: apps/client/src/pages/dashboard/resumes/_layouts/grid/_components/resume-card.tsx:105
 #: apps/client/src/pages/dashboard/resumes/_layouts/list/_components/resume-item.tsx:95
@@ -517,29 +386,24 @@ msgstr "Unduhan"
 msgid "Duplicate"
 msgstr "Duplikat"
 
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-dialog.tsx:165
-msgid "Duplicate an existing item"
-msgstr "Menduplikasi item yang sudah ada"
-
 #: apps/client/src/pages/dashboard/resumes/_dialogs/resume.tsx:180
 msgid "Duplicate an existing resume"
 msgstr "Menggandakan resume yang sudah ada"
 
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-list-item.tsx:97
-msgid "Edit"
-msgstr "Sunting"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:169
-msgid "Effects"
-msgstr "Efek"
-
 #: apps/client/src/pages/auth/forgot-password/page.tsx:82
 #: apps/client/src/pages/auth/login/page.tsx:90
 #: apps/client/src/pages/auth/register/page.tsx:141
-#: apps/client/src/pages/builder/sidebars/left/sections/basics.tsx:81
 #: apps/client/src/pages/dashboard/settings/_sections/account.tsx:181
 msgid "Email"
 msgstr "Email"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:54
+msgid "Email notifications"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:21
+msgid "Empowering teams with powerful tools to streamline workflows and boost productivity."
+msgstr ""
 
 #: apps/client/src/pages/dashboard/settings/_sections/security.tsx:163
 msgid "Enable 2FA"
@@ -553,10 +417,6 @@ msgstr "Masukkan kata sandi baru di bawah ini, dan pastikan kata sandi tersebut 
 msgid "Enter one of the 10 backup codes you saved when you enabled two-factor authentication."
 msgstr "Masukkan salah satu dari 10 kode cadangan yang Anda simpan saat mengaktifkan autentikasi dua faktor."
 
-#: apps/client/src/pages/builder/sidebars/left/sections/custom/section.tsx:63
-msgid "Enter Phosphor Icon"
-msgstr "Masukkan Ikon Phosphor"
-
 #: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:170
 msgid "Enter the 6-digit code from your authenticator app to verify that 2FA has been setup correctly."
 msgstr "Masukkan kode 6 digit dari aplikasi autentikator Anda untuk memverifikasi bahwa 2FA telah diatur dengan benar."
@@ -569,37 +429,41 @@ msgstr "Masukkan kata sandi sekali pakai yang disediakan oleh aplikasi autentika
 msgid "Enter your email address and we will send you a link to reset your password if the account exists."
 msgstr "Masukkan alamat email Anda dan kami akan mengirimkan tautan untuk mengatur ulang kata sandi Anda jika akun tersebut ada."
 
-#: apps/client/src/pages/public/error.tsx:46
-msgid "Error {statusCode}"
-msgstr "Kesalahan {statusCode}"
+#: apps/client/src/pages/home/sections/features/index.tsx:55
+msgid "Enterprise-grade security"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/support/index.tsx:33
+msgid "Enterprise-grade security with encryption, role-based access control, and compliance with industry standards."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:49
+msgid "Error loading stock data:"
+msgstr ""
 
 #: apps/client/src/pages/dashboard/resumes/_dialogs/import.tsx:283
 msgid "Errors"
 msgstr "Kesalahan"
 
-#: apps/client/src/pages/home/sections/support/index.tsx:78
-msgid "Even if you're not in a position to contribute financially, you can still make a difference by giving the GitHub repository a star, spreading the word to your friends, or dropping a quick message to let me know how Reactive Resume has helped you. Your feedback and support are always welcome and much appreciated!"
-msgstr "Meskipun Anda belum bisa berkontribusi secara finansial, Anda masih bisa berkontribusi dengan cara memberikan bintang pada repositori GitHub, menyebarkannya ke teman-teman Anda, atau mengirimkan pesan singkat kepada saya bagaimana Reactive Resume telah membantu Anda. Umpan balik dan dukungan Anda selalu diterima dan sangat kami hargai!"
-
-#: apps/client/src/pages/builder/sidebars/left/index.tsx:271
-msgid "Expand All"
+#: apps/client/src/pages/home/sections/support/index.tsx:51
+msgid "Everything you need to launch and scale your SaaS product, built right in. No need to integrate multiple services."
 msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/left/sections/basics.tsx:30
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-base.tsx:115
-#: apps/client/src/pages/builder/sidebars/left/sections/summary.tsx:33
-msgid "Expand section"
+#: apps/client/src/pages/home/sections/features/index.tsx:104
+msgid "Everything you need to succeed."
 msgstr ""
 
-#: apps/client/src/pages/home/sections/templates/index.tsx:12
-msgid "Explore the templates available in Reactive Resume and view the resumes crafted with them. They could also serve as examples to help guide the creation of your next resume."
-msgstr "Jelajahi templat yang tersedia di Reactive Resume dan melihat resume yang dibuat dengan templat tersebut. Templat ini juga dapat digunakan sebagai contoh untuk membantu dalam pembuatan resume Anda."
+#: apps/client/src/pages/home/sections/features/index.tsx:64
+msgid "Export to multiple formats"
+msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/right/index.tsx:121
-#: apps/client/src/pages/builder/sidebars/right/sections/export.tsx:39
-#: apps/client/src/pages/builder/sidebars/right/sections/export.tsx:40
-msgid "Export"
-msgstr "Ekspor"
+#: apps/client/src/pages/home/components/footer.tsx:66
+msgid "FAQ"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:31
+msgid "Features"
+msgstr ""
 
 #: apps/client/src/pages/dashboard/resumes/_dialogs/import.tsx:255
 msgid "File"
@@ -617,25 +481,9 @@ msgstr "Akhirnya,"
 msgid "Fix Spelling & Grammar"
 msgstr "Perbaiki Ejaan & Tata Bahasa"
 
-#: apps/client/src/pages/builder/sidebars/right/sections/typography.tsx:107
-msgid "Font Family"
-msgstr "Keluarga Font"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/typography.tsx:148
-msgid "Font Size"
-msgstr "Ukuran Font"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/typography.tsx:122
-msgid "Font Subset"
-msgstr "Subset Font"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/typography.tsx:134
-msgid "Font Variants"
-msgstr "Varian Font"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/notes.tsx:35
-msgid "For example, information regarding which companies you sent this resume to or the links to the job descriptions can be noted down here."
-msgstr "Misalnya, informasi mengenai perusahaan mana yang Anda kirim resume tersebut atau tautan ke deskripsi pekerjaan dapat dicatat di sini."
+#: apps/client/src/pages/home/sections/features/index.tsx:45
+msgid "Flexible pricing plans"
+msgstr ""
 
 #: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:280
 msgid "Forget"
@@ -649,27 +497,10 @@ msgstr "Lupa Kata Sandi?"
 msgid "Forgot your password?"
 msgstr "Lupa kata sandi Anda?"
 
-#: apps/client/src/pages/builder/sidebars/right/sections/page.tsx:32
-#: apps/client/src/pages/builder/sidebars/right/sections/page.tsx:40
-msgid "Format"
-msgstr "Format"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/information.tsx:54
-msgid "Found a bug, or have an idea for a new feature?"
-msgstr "Ada bug, atau ide untuk fitur baru?"
-
-#: apps/client/src/pages/home/sections/features/index.tsx:46
-msgid "Free, forever"
-msgstr "Gratis, selamanya"
-
 #: apps/client/src/components/ai-actions.tsx:125
 #: apps/client/src/components/ai-actions.tsx:128
 msgid "Friendly"
 msgstr "Ramah"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/basics.tsx:56
-msgid "Full Name"
-msgstr "Nama Lengkap"
 
 #: apps/client/src/pages/dashboard/resumes/_dialogs/resume.tsx:202
 msgid "Generate a random title for your resume"
@@ -682,6 +513,10 @@ msgstr "Memulai"
 #: apps/client/src/pages/auth/_components/social-auth.tsx:18
 msgid "GitHub"
 msgstr "GitHub"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:52
+msgid "GitHub integration"
+msgstr ""
 
 #: apps/client/src/pages/home/sections/statistics/index.tsx:12
 msgid "GitHub Stars"
@@ -696,25 +531,17 @@ msgstr "Berikan nama baru pada resume lama Anda."
 msgid "Go to Dashboard"
 msgstr "Buka Dasbor"
 
-#: apps/client/src/pages/public/error.tsx:55
-msgid "Go to home"
-msgstr "Pergi ke halaman depan"
-
 #: apps/client/src/pages/auth/_components/social-auth.tsx:31
 msgid "Google"
 msgstr "Google"
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:202
-msgid "Grayscale"
-msgstr "Skala abu-abu"
+#: apps/client/src/pages/home/sections/features/index.tsx:53
+msgid "Google Workspace integration"
+msgstr ""
 
 #: apps/client/src/pages/dashboard/resumes/page.tsx:45
 msgid "Grid"
 msgstr "Grid"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/basics.tsx:70
-msgid "Headline"
-msgstr "Judul"
 
 #: apps/client/src/pages/dashboard/settings/_sections/account.tsx:107
 msgid "Here, you can update your account information such as your profile picture, name and username."
@@ -724,54 +551,15 @@ msgstr "Di sini, Anda dapat memperbarui informasi akun Anda seperti gambar profi
 msgid "Here, you can update your profile to customize and personalize your experience."
 msgstr "Di sini, Anda dapat memperbarui profil Anda untuk menyesuaikan dan mempersonalisasi pengalaman Anda."
 
-#: apps/client/src/pages/builder/sidebars/left/dialogs/languages.tsx:80
-#: apps/client/src/pages/builder/sidebars/left/dialogs/skills.tsx:115
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:180
-msgid "Hidden"
-msgstr "Tersembunyi"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-options.tsx:106
-msgid "Hide"
-msgstr "Sembunyikan"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/typography.tsx:192
-msgid "Hide Icons"
-msgstr "Sembunyikan Ikon"
-
 #: apps/client/src/pages/auth/login/page.tsx:115
 #: apps/client/src/pages/auth/register/page.tsx:168
 #: apps/client/src/pages/auth/reset-password/page.tsx:88
 msgid "Hold <0>Ctrl</0> to display your password temporarily."
 msgstr "Tahan <0>Ctrl</0> untuk menampilkan kata sandi Anda sementara."
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:93
-msgid "Horizontal"
-msgstr "Horisontal"
-
-#: apps/client/src/pages/home/sections/features/index.tsx:67
-msgid "Host your resume publicly"
-msgstr "Tampilkan resume Anda secara publik"
-
-#: apps/client/src/pages/home/sections/testimonials/index.tsx:70
-msgid "I always love to hear from the users of Reactive Resume with feedback or support. Here are some of the messages I've received. If you have any feedback, feel free to drop me an email at <0>{email}</0>."
-msgstr "Saya selalu senang mendengar dari para pengguna Reactive Resume dengan umpan balik atau dukungan. Berikut adalah beberapa pesan yang saya terima. Jika Anda memiliki umpan balik, jangan ragu untuk mengirimi saya email di <0>{email}</0>."
-
-#: apps/client/src/pages/builder/sidebars/left/dialogs/profiles.tsx:83
-#: apps/client/src/pages/builder/sidebars/left/sections/custom/section.tsx:53
-msgid "Icon"
-msgstr "Ikon"
-
-#: apps/client/src/pages/home/sections/logo-cloud/index.tsx:47
-msgid "If this app has helped you with your job hunt, let me know by reaching out through <0>this contact form</0>."
-msgstr "Jika aplikasi ini telah membantu Anda dalam mencari pekerjaan, beri tahu saya dengan menghubungi saya melalui <0>formulir kontak ini</0>."
-
 #: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:128
 msgid "If you disable two-factor authentication, you will no longer be required to enter a verification code when logging in."
 msgstr "Jika Anda menonaktifkan autentikasi dua faktor, Anda tidak akan lagi diminta untuk memasukkan kode verifikasi saat masuk."
-
-#: apps/client/src/pages/home/sections/support/index.tsx:59
-msgid "If you're multilingual, we'd love your help in bringing the app to more languages and communities. Don't worry if you don't see your language on the list - just give me a shout-out on GitHub, and I'll make sure to include it. Ready to get started? Jump into translation over at Crowdin by clicking the link below."
-msgstr "Jika Anda memliki kemampuan multibahasa, kami akan sangat senang jika Anda bisa membantu kami menghadirkan aplikasi ini ke lebih banyak bahasa dan komunitas. Jangan khawatir jika Anda tidak melihat bahasa Anda dalam daftar - cukup beri tahu saya di GitHub, dan saya akan memastikan untuk memasukkannya. Siap untuk memulai? Langsung saja mulai menerjemahkan di Crowdin dengan mengeklik tautan di bawah ini."
 
 #: apps/client/src/pages/dashboard/resumes/_dialogs/import.tsx:309
 msgid "Import"
@@ -799,19 +587,9 @@ msgstr "Pada bagian ini, Anda dapat mengubah kata sandi dan mengaktifkan/menonak
 msgid "In this section, you can delete your account and all the data associated to your user, but please keep in mind that <0>this action is irreversible</0>."
 msgstr "Pada bagian ini, Anda dapat menghapus akun dan semua data yang terkait dengan pengguna Anda, tetapi harap diingat bahwa <0>tindakan ini tidak dapat dibatalkan</0>."
 
-#: apps/client/src/pages/builder/sidebars/right/index.tsx:135
-#: apps/client/src/pages/builder/sidebars/right/sections/information.tsx:121
-#: apps/client/src/pages/builder/sidebars/right/sections/information.tsx:122
-msgid "Information"
-msgstr "Informasi"
-
-#: apps/client/src/pages/builder/sidebars/left/dialogs/education.tsx:39
-msgid "Institution"
-msgstr "Institusi"
-
-#: apps/client/src/pages/builder/sidebars/left/dialogs/certifications.tsx:53
-msgid "Issuer"
-msgstr "Penerbit"
+#: apps/client/src/pages/home/sections/support/index.tsx:28
+msgid "Integrated payment processing with support for subscriptions, one-time payments, and multiple payment methods."
+msgstr ""
 
 #: apps/client/src/services/errors/translate-error.ts:7
 msgid "It doesn't look like a user exists with the credentials you provided."
@@ -856,21 +634,13 @@ msgctxt "Localized version of a placeholder email. For example, max.mustermann@e
 msgid "john.doe@example.com"
 msgstr "john.doe@example.com"
 
-#: apps/client/src/pages/builder/sidebars/right/sections/export.tsx:54
-msgid "JSON"
-msgstr "JSON"
+#: apps/client/src/pages/home/sections/contributors/index.tsx:18
+msgid "Join thousands of teams already using our platform to streamline their workflow and boost productivity. Start your free trial today - no credit card required."
+msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/left/dialogs/custom-section.tsx:181
-#: apps/client/src/pages/builder/sidebars/left/dialogs/interests.tsx:84
-#: apps/client/src/pages/builder/sidebars/left/dialogs/projects.tsx:159
-#: apps/client/src/pages/builder/sidebars/left/dialogs/skills.tsx:130
-msgid "Keywords"
-msgstr "Kata kunci"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/url-input.tsx:42
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/url-input.tsx:52
-msgid "Label"
-msgstr "Label"
+#: apps/client/src/pages/home/sections/logo-cloud/index.tsx:47
+msgid "Join thousands of teams already using our platform. <0>Get in touch</0>."
+msgstr ""
 
 #: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:101
 msgid "Language"
@@ -881,40 +651,21 @@ msgstr "Bahasa"
 msgid "Last updated {lastUpdated}"
 msgstr "Terakhir diperbarui {lastUpdated}"
 
-#: apps/client/src/pages/builder/sidebars/right/index.tsx:72
-#: apps/client/src/pages/builder/sidebars/right/sections/layout.tsx:202
-#: apps/client/src/pages/builder/sidebars/right/sections/layout.tsx:203
-msgid "Layout"
-msgstr "Tata letak"
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:60
+msgid "Last updated:"
+msgstr ""
 
 #: apps/client/src/pages/home/sections/hero/call-to-action.tsx:38
 msgid "Learn more"
 msgstr "Pelajari lebih lanjut"
 
-#: apps/client/src/pages/builder/sidebars/right/sections/page.tsx:44
-msgid "Letter"
-msgstr "Surat"
-
-#: apps/client/src/pages/builder/sidebars/left/dialogs/languages.tsx:64
-#: apps/client/src/pages/builder/sidebars/left/dialogs/skills.tsx:98
-msgid "Level"
-msgstr "Tingkat"
-
-#: apps/client/src/components/copyright.tsx:16
-msgid "Licensed under <0>MIT</0>"
-msgstr "Berlisensi <0>MIT</0>"
-
 #: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:86
 msgid "Light"
 msgstr "Cahaya"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:69
+#: apps/client/src/pages/home/sections/features/index.tsx:68
 msgid "Light or dark theme"
 msgstr "Tema terang atau gelap"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/typography.tsx:165
-msgid "Line Height"
-msgstr "Tinggi Garis"
 
 #: apps/client/src/pages/dashboard/resumes/_layouts/grid/_components/import-card.tsx:33
 #: apps/client/src/pages/dashboard/resumes/_layouts/list/_components/import-item.tsx:22
@@ -925,23 +676,12 @@ msgstr "LinkedIn, Resume JSON, dll."
 msgid "List"
 msgstr "Daftar"
 
-#: apps/client/src/pages/builder/sidebars/left/dialogs/custom-section.tsx:123
-#: apps/client/src/pages/builder/sidebars/left/dialogs/experience.tsx:86
-#: apps/client/src/pages/builder/sidebars/left/dialogs/volunteer.tsx:81
-#: apps/client/src/pages/builder/sidebars/left/sections/basics.tsx:120
-msgid "Location"
-msgstr "Lokasi"
-
 #: apps/client/src/pages/dashboard/resumes/_dialogs/lock.tsx:51
 #: apps/client/src/pages/dashboard/resumes/_layouts/grid/_components/resume-card.tsx:115
 #: apps/client/src/pages/dashboard/resumes/_layouts/list/_components/resume-item.tsx:115
 #: apps/client/src/pages/dashboard/resumes/_layouts/list/_components/resume-item.tsx:166
 msgid "Lock"
 msgstr "Kunci"
-
-#: apps/client/src/pages/home/sections/features/index.tsx:64
-msgid "Lock a resume to prevent editing"
-msgstr "Mengunci resume untuk mencegah pengeditan"
 
 #: apps/client/src/pages/dashboard/resumes/_dialogs/lock.tsx:43
 msgid "Locking a resume will prevent any further changes to it. This is useful when you have already shared your resume with someone and you don't want to accidentally make any changes to it."
@@ -956,87 +696,52 @@ msgstr "Keluar"
 msgid "Lost your device?"
 msgstr "Kehilangan perangkat Anda?"
 
-#: apps/client/src/pages/builder/sidebars/right/sections/layout.tsx:252
-msgid "Main"
-msgstr "Utama"
-
-#: apps/client/src/pages/home/sections/features/index.tsx:59
-msgid "Manage multiple resumes"
-msgstr "Mengelola beberapa resume"
-
-#. The month and year should be uniform across all languages.
-#: apps/client/src/pages/builder/sidebars/left/dialogs/awards.tsx:71
-#: apps/client/src/pages/builder/sidebars/left/dialogs/certifications.tsx:69
-#: apps/client/src/pages/builder/sidebars/left/dialogs/publications.tsx:69
-msgid "March 2023"
-msgstr "Maret 2023"
-
-#: apps/client/src/pages/builder/sidebars/left/dialogs/education.tsx:112
-#: apps/client/src/pages/builder/sidebars/left/dialogs/experience.tsx:74
-#: apps/client/src/pages/builder/sidebars/left/dialogs/projects.tsx:103
-#: apps/client/src/pages/builder/sidebars/left/dialogs/volunteer.tsx:69
-msgid "March 2023 - Present"
-msgstr "Maret 2023 - Sekarang"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/page.tsx:50
-msgid "Margin"
-msgstr "Margin"
+#: apps/client/src/pages/dashboard/billing/page.tsx:172
+msgid "Manage Subscription"
+msgstr ""
 
 #: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:218
 msgid "Max Tokens"
 msgstr "Token Max"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:48
-msgid "MIT License"
-msgstr "Lisensi MIT"
-
 #: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:205
 msgid "Model"
 msgstr "Model"
 
+#: apps/client/src/pages/home/sections/features/index.tsx:50
+msgid "Multi-language support"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:113
+#: apps/client/src/pages/dashboard/settings/page.tsx:16
+#: apps/client/src/pages/home/page.tsx:24
+msgid "My SaaS"
+msgstr ""
+
 #: apps/client/src/pages/auth/register/page.tsx:98
-#: apps/client/src/pages/builder/sidebars/left/dialogs/custom-section.tsx:81
-#: apps/client/src/pages/builder/sidebars/left/dialogs/interests.tsx:69
-#: apps/client/src/pages/builder/sidebars/left/dialogs/languages.tsx:36
-#: apps/client/src/pages/builder/sidebars/left/dialogs/projects.tsx:73
-#: apps/client/src/pages/builder/sidebars/left/dialogs/publications.tsx:39
-#: apps/client/src/pages/builder/sidebars/left/dialogs/references.tsx:39
-#: apps/client/src/pages/builder/sidebars/left/dialogs/skills.tsx:70
-#: apps/client/src/pages/builder/sidebars/left/sections/custom/section.tsx:88
 #: apps/client/src/pages/dashboard/settings/_sections/account.tsx:153
 msgid "Name"
 msgstr "Nama"
-
-#: apps/client/src/pages/builder/sidebars/left/dialogs/certifications.tsx:39
-msgctxt "Name of the Certification"
-msgid "Name"
-msgstr "Nama"
-
-#: apps/client/src/pages/builder/sidebars/left/dialogs/profiles.tsx:40
-msgid "Network"
-msgstr "Jaringan"
 
 #: apps/client/src/pages/dashboard/settings/_sections/security.tsx:96
 msgid "New Password"
 msgstr "Kata Sandi Baru"
 
+#: apps/client/src/pages/home/sections/features/index.tsx:48
+msgid "No hidden fees or tracking"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:245
+msgid "No plans available"
+msgstr ""
+
 #: apps/client/src/components/locale-combobox.tsx:45
 msgid "No results found"
 msgstr "Tidak ada hasil yang ditemukan"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:49
-msgid "No user tracking or advertising"
-msgstr "Tidak ada pelacakan pengguna atau iklan"
-
 #: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:133
 msgid "Note: This will make your account less secure."
 msgstr "Catatan: Hal ini akan membuat akun Anda kurang aman."
-
-#: apps/client/src/pages/builder/sidebars/right/index.tsx:128
-#: apps/client/src/pages/builder/sidebars/right/sections/notes.tsx:16
-#: apps/client/src/pages/builder/sidebars/right/sections/notes.tsx:17
-msgid "Notes"
-msgstr "Catatan"
 
 #: apps/client/src/pages/auth/verify-otp/page.tsx:82
 msgid "One-Time Password"
@@ -1055,19 +760,11 @@ msgstr "Ups, server mengembalikan kesalahan."
 msgid "Open"
 msgstr "Buka"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:47
-msgid "Open Source"
-msgstr "Sumber Terbuka"
-
 #: apps/client/src/services/openai/change-tone.ts:35
 #: apps/client/src/services/openai/fix-grammar.ts:33
 #: apps/client/src/services/openai/improve-writing.ts:33
 msgid "OpenAI did not return any choices for your text."
 msgstr "OpenAI tidak mengembalikan pilihan apa pun untuk teks Anda."
-
-#: apps/client/src/pages/home/sections/features/index.tsx:52
-msgid "OpenAI Integration"
-msgstr "Integrasi OpenAI"
 
 #: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:120
 msgid "OpenAI/Azure OpenAI/Ollama Integration"
@@ -1077,29 +774,18 @@ msgstr "Integrasi OpenAI/Azure OpenAI/Ollama"
 msgid "OpenAI/Ollama API Key"
 msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/right/sections/page.tsx:67
-#: apps/client/src/pages/builder/sidebars/right/sections/typography.tsx:182
-msgid "Options"
-msgstr "Pilihan"
-
-#: apps/client/src/pages/auth/layout.tsx:47
+#: apps/client/src/pages/auth/layout.tsx:46
 msgctxt "The user can either login with email/password, or continue with GitHub or Google."
 msgid "or continue with"
 msgstr "atau lanjutkan dengan"
 
-#: apps/client/src/pages/builder/sidebars/left/dialogs/volunteer.tsx:39
-msgid "Organization"
-msgstr "Organisasi"
+#: apps/client/src/pages/home/sections/features/index.tsx:58
+msgid "Organize with folders"
+msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/right/index.tsx:100
-#: apps/client/src/pages/builder/sidebars/right/sections/page.tsx:25
-#: apps/client/src/pages/builder/sidebars/right/sections/page.tsx:26
-msgid "Page"
-msgstr "Halaman"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/layout.tsx:233
-msgid "Page {pageNumber}"
-msgstr "Halaman {pageNumber}"
+#: apps/client/src/pages/home/sections/features/index.tsx:106
+msgid "Our platform is built with modern technology and best practices, offering a comprehensive suite of features designed to help your team work smarter and faster."
+msgstr ""
 
 #: apps/client/src/pages/auth/login/page.tsx:110
 #: apps/client/src/pages/auth/register/page.tsx:163
@@ -1108,30 +794,21 @@ msgstr "Halaman {pageNumber}"
 msgid "Password"
 msgstr "Kata sandi"
 
-#: apps/client/src/pages/builder/sidebars/right/sections/export.tsx:76
-msgid "PDF"
-msgstr "PDF"
+#: apps/client/src/pages/home/sections/support/index.tsx:27
+msgid "Payments"
+msgstr ""
 
-#: apps/client/src/pages/home/sections/features/index.tsx:63
-msgid "Personal notes for each resume"
-msgstr "Catatan pribadi untuk setiap resume"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/basics.tsx:108
-msgid "Phone"
-msgstr "Telepon"
-
-#: apps/client/src/pages/auth/layout.tsx:76
+#: apps/client/src/pages/auth/layout.tsx:75
 msgid "Photograph by Patrick Tomasso"
 msgstr "Foto oleh Patrick Tomasso"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:66
-msgid "Pick any font from Google Fonts"
-msgstr "Pilih font apa pun dari Google Fonts"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/section.tsx:69
 #: apps/client/src/pages/dashboard/settings/_sections/account.tsx:121
 msgid "Picture"
 msgstr "Gambar"
+
+#: apps/client/src/components/copyright.tsx:30
+msgid "Platform"
+msgstr ""
 
 #: apps/client/src/pages/auth/verify-email/page.tsx:59
 msgid "Please note that this step is completely optional."
@@ -1145,34 +822,29 @@ msgstr "Pilih jenis file"
 msgid "Please store your backup codes in a secure location. You can use one of these one-time use codes to login in case you lose access to your authenticator app."
 msgstr "Simpanlah kode cadangan Anda di tempat yang aman. Anda dapat menggunakan salah satu dari kode sekali pakai ini untuk masuk jika Anda kehilangan akses ke aplikasi autentikator."
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:99
-msgid "Portrait"
-msgstr "Potret"
-
-#: apps/client/src/pages/builder/sidebars/left/dialogs/experience.tsx:54
-msgctxt "Position held at a company, for example, Software Engineer"
-msgid "Position"
-msgstr "Posisi"
-
-#: apps/client/src/pages/builder/sidebars/left/dialogs/volunteer.tsx:53
-msgid "Position"
-msgstr "Posisi"
-
-#: apps/client/src/pages/home/sections/features/index.tsx:96
+#: apps/client/src/pages/home/sections/features/index.tsx:95
 msgid "Powered by"
 msgstr "Didukung oleh"
 
-#: apps/client/src/pages/builder/sidebars/left/dialogs/profiles.tsx:94
-msgid "Powered by <0>Simple Icons</0>"
-msgstr "Didukung oleh <0>Simple Icons</0>"
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:94
+msgid "Price"
+msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/right/sections/theme.tsx:43
-msgid "Primary Color"
-msgstr "Warna Primer"
+#: apps/client/src/pages/home/components/footer.tsx:34
+msgid "Pricing"
+msgstr ""
 
-#: apps/client/src/pages/home/components/footer.tsx:47
+#: apps/client/src/pages/home/sections/features/index.tsx:61
+msgid "Priority support"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:52
 msgid "Privacy Policy"
 msgstr "Kebijakan Privasi"
+
+#: apps/client/src/pages/home/components/footer.tsx:28
+msgid "Product"
+msgstr ""
 
 #: apps/client/src/components/ai-actions.tsx:113
 #: apps/client/src/components/ai-actions.tsx:116
@@ -1183,19 +855,14 @@ msgstr "Profesional"
 msgid "Profile"
 msgstr "Profil"
 
-#: apps/client/src/pages/builder/sidebars/right/sections/sharing.tsx:55
-msgid "Public"
-msgstr "Publik"
+#: apps/client/src/pages/home/sections/statistics/index.tsx:14
+msgid "Projects Created"
+msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/left/dialogs/publications.tsx:53
-msgid "Publisher"
-msgstr "Penerbit"
+#: apps/client/src/pages/home/sections/contributors/index.tsx:41
+msgid "Questions? Our team is here to help. Reach out anytime and we'll get back to you within 24 hours."
+msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/right/sections/information.tsx:74
-msgid "Raise an issue"
-msgstr "Mengajukan masalah"
-
-#: apps/client/src/components/copyright.tsx:35
 #: apps/client/src/pages/auth/backup-otp/page.tsx:52
 #: apps/client/src/pages/auth/forgot-password/page.tsx:49
 #: apps/client/src/pages/auth/login/page.tsx:55
@@ -1203,92 +870,51 @@ msgstr "Mengajukan masalah"
 #: apps/client/src/pages/auth/reset-password/page.tsx:60
 #: apps/client/src/pages/auth/verify-email/page.tsx:43
 #: apps/client/src/pages/auth/verify-otp/page.tsx:52
-#: apps/client/src/pages/builder/page.tsx:60
 #: apps/client/src/pages/dashboard/resumes/page.tsx:22
-#: apps/client/src/pages/dashboard/settings/page.tsx:16
-#: apps/client/src/pages/home/components/footer.tsx:18
-#: apps/client/src/pages/home/page.tsx:24
-#: apps/client/src/pages/public/page.tsx:74
-#: apps/client/src/pages/public/page.tsx:95
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:17
 msgid "Reactive Resume"
 msgstr "Reactive Resume"
 
-#: apps/client/src/pages/home/sections/logo-cloud/index.tsx:39
-msgid "Reactive Resume has helped people land jobs at these great companies:"
-msgstr "Reactive Resume telah membantu banyak orang mendapatkan pekerjaan di perusahaan-perusahaan hebat ini:"
+#: apps/client/src/pages/home/sections/contributors/index.tsx:16
+msgid "Ready to get started?"
+msgstr ""
 
-#: apps/client/src/pages/home/sections/support/index.tsx:12
-msgid "Reactive Resume is a free and open-source project crafted mostly by me, and your support would be greatly appreciated. If you're inclined to contribute, and only if you can afford to, consider making a donation through any of the listed platforms. Additionally, donations to Reactive Resume through Open Collective are tax-exempt, as the project is fiscally hosted by Open Collective Europe."
-msgstr "Reactive Resume adalah proyek sumber terbuka dan gratis yang sebagian besar dibuat oleh saya, dan dukungan Anda akan sangat dihargai. Jika Anda ingin berkontribusi, dan hanya jika Anda mampu, pertimbangkan untuk memberikan donasi melalui salah satu platform yang terdaftar. Selain itu, donasi untuk Reactive Resume melalui Open Collective bebas pajak, karena proyek ini secara fiskal di-host oleh Open Collective Europe."
-
-#: apps/client/src/pages/home/sections/features/index.tsx:107
-msgid "Reactive Resume is a passion project of over 3 years of hard work, and with that comes a number of re-iterated ideas and features that have been built to (near) perfection."
-msgstr "Reactive Resume adalah proyek penuh semangat yang telah dikerjakan selama lebih dari 3 tahun, dan dengan itu muncullah sejumlah ide dan fitur yang diulang-ulang yang telah dibangun dengan (hampir) sempurna."
-
-#: apps/client/src/pages/home/sections/contributors/index.tsx:22
-msgid "Reactive Resume thrives thanks to its vibrant community. This project owes its progress to numerous individuals who've dedicated their time and skills. Below, we celebrate the coders who've enhanced its features on GitHub and the linguists whose translations on Crowdin have made it accessible to a broader audience."
-msgstr "Reactive Resume berkembang berkat komunitasnya yang dinamis. Proyek ini berkembang berkat banyak orang yang telah mendedikasikan waktu dan keterampilan mereka. Di bawah ini, kami merayakan para pembuat kode yang telah meningkatkan fitur-fiturnya di GitHub dan ahli bahasa yang terjemahannya di Crowdin telah membuatnya dapat diakses oleh audiens yang lebih luas."
-
-#: apps/client/src/pages/builder/_components/toolbar.tsx:89
-msgid "Redo"
-msgstr "Ulangi."
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-list-item.tsx:105
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-options.tsx:157
-msgid "Remove"
-msgstr "Menghapus"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/layout.tsx:236
-msgid "Remove Page"
-msgstr "Hapus Halaman"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-options.tsx:111
 #: apps/client/src/pages/dashboard/resumes/_layouts/grid/_components/resume-card.tsx:101
 #: apps/client/src/pages/dashboard/resumes/_layouts/list/_components/resume-item.tsx:86
 #: apps/client/src/pages/dashboard/resumes/_layouts/list/_components/resume-item.tsx:152
 msgid "Rename"
 msgstr "Ganti nama"
 
+#: apps/client/src/pages/dashboard/billing/page.tsx:150
+msgid "Renews on"
+msgstr ""
+
 #: apps/client/src/pages/dashboard/settings/_sections/account.tsx:199
 msgid "Resend email confirmation link"
 msgstr "Kirim ulang tautan konfirmasi email"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-options.tsx:152
-msgid "Reset"
-msgstr "Atur ulang"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/layout.tsx:206
-msgid "Reset Layout"
-msgstr "Atur Ulang Tata Letak"
 
 #: apps/client/src/pages/auth/reset-password/page.tsx:60
 #: apps/client/src/pages/auth/reset-password/page.tsx:65
 msgid "Reset your password"
 msgstr "Atur ulang kata sandi Anda"
 
-#: apps/client/src/pages/builder/_components/toolbar.tsx:124
-msgid "Reset Zoom"
-msgstr "Atur Ulang Zoom"
+#: apps/client/src/pages/home/components/footer.tsx:63
+msgid "Resources"
+msgstr ""
 
-#: apps/client/src/pages/dashboard/_components/sidebar.tsx:86
 #: apps/client/src/pages/dashboard/resumes/page.tsx:22
 #: apps/client/src/pages/dashboard/resumes/page.tsx:39
 msgid "Resumes"
 msgstr "Resume"
 
-#: apps/client/src/pages/home/sections/statistics/index.tsx:14
-msgid "Resumes Generated"
-msgstr "Resume yang Dihasilkan"
+#: apps/client/src/pages/home/sections/features/index.tsx:65
+msgid "Rich text editor"
+msgstr ""
 
-#: apps/client/src/pages/home/sections/features/index.tsx:105
-msgid "Rich in features, not in pricing."
-msgstr "Kaya di fitur, bukan di harga."
+#: apps/client/src/pages/home/sections/features/index.tsx:63
+msgid "Role-based access control"
+msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:138
-msgid "Rounded"
-msgstr "Bulat"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-dialog.tsx:180
 #: apps/client/src/pages/dashboard/resumes/_dialogs/resume.tsx:245
 #: apps/client/src/pages/dashboard/settings/_sections/account.tsx:217
 #: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:131
@@ -1307,61 +933,25 @@ msgstr "Tersimpan"
 msgid "Scan the QR code below with your authenticator app to setup 2FA on your account."
 msgstr "Pindai kode QR di bawah ini dengan aplikasi autentikator Anda untuk menyiapkan 2FA di akun Anda."
 
-#. Score or honors for the degree, for example, CGPA or magna cum laude
-#: apps/client/src/pages/builder/sidebars/left/dialogs/education.tsx:92
-msgid "Score"
-msgstr "Skor"
-
-#: apps/client/src/pages/builder/_components/toolbar.tsx:104
-msgid "Scroll to Pan"
-msgstr "Gulir ke Geser"
-
-#: apps/client/src/pages/builder/_components/toolbar.tsx:104
-msgid "Scroll to Zoom"
-msgstr "Gulir ke Zoom"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/typography.tsx:111
-msgid "Search for a font family"
-msgstr "Mencari keluarga font"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/typography.tsx:126
-msgid "Search for a font subset"
-msgstr "Mencari subset font"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/typography.tsx:139
-msgid "Search for a font variant"
-msgstr "Mencari varian font"
-
 #: apps/client/src/components/locale-combobox.tsx:41
 msgid "Search for a language"
 msgstr "Mencari bahasa"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:56
-msgid "Secure with two-factor authentication"
-msgstr "Aman dengan autentikasi dua faktor"
+#: apps/client/src/pages/home/sections/support/index.tsx:23
+msgid "Secure user authentication with multiple sign-in options including email, OAuth providers, and two-factor authentication."
+msgstr ""
 
 #: apps/client/src/pages/dashboard/settings/_sections/security.tsx:65
+#: apps/client/src/pages/home/sections/support/index.tsx:32
 msgid "Security"
 msgstr "Keamanan"
-
-#: apps/client/src/pages/home/sections/features/index.tsx:50
-msgid "Self-host with Docker"
-msgstr "Host mandiri dengan Docker"
 
 #: apps/client/src/pages/auth/forgot-password/page.tsx:104
 msgid "Send Email"
 msgstr "Kirim Email"
 
-#: apps/client/src/pages/builder/sidebars/right/sections/information.tsx:79
-msgid "Send me a message"
-msgstr "Kirimi saya pesan"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-options.tsx:97
-msgid "Separate Links"
-msgstr "Tautan Terpisah"
-
 #: apps/client/src/components/user-options.tsx:32
-#: apps/client/src/pages/dashboard/_components/sidebar.tsx:92
+#: apps/client/src/pages/dashboard/_components/sidebar.tsx:107
 #: apps/client/src/pages/dashboard/settings/page.tsx:16
 #: apps/client/src/pages/dashboard/settings/page.tsx:26
 msgid "Settings"
@@ -1370,28 +960,6 @@ msgstr "Pengaturan"
 #: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:159
 msgid "Setup two-factor authentication on your account"
 msgstr "Menyiapkan autentikasi dua faktor di akun Anda"
-
-#: apps/client/src/pages/builder/sidebars/right/index.tsx:107
-#: apps/client/src/pages/builder/sidebars/right/sections/sharing.tsx:38
-#: apps/client/src/pages/builder/sidebars/right/sections/sharing.tsx:39
-msgid "Sharing"
-msgstr "Berbagi"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-options.tsx:106
-msgid "Show"
-msgstr "Tampilkan"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/page.tsx:78
-msgid "Show Break Line"
-msgstr "Tampilkan Garis Istirahat"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/page.tsx:91
-msgid "Show Page Numbers"
-msgstr "Tampilkan Nomor Halaman"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/layout.tsx:253
-msgid "Sidebar"
-msgstr "Bilah samping"
 
 #: apps/client/src/pages/auth/backup-otp/page.tsx:103
 #: apps/client/src/pages/auth/login/page.tsx:127
@@ -1408,18 +976,6 @@ msgstr "Masuk sekarang"
 msgid "Sign in to your account"
 msgstr "Masuk ke akun Anda"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:55
-msgid "Sign in with Email"
-msgstr "Masuk dengan Email"
-
-#: apps/client/src/pages/home/sections/features/index.tsx:53
-msgid "Sign in with GitHub"
-msgstr "Masuk dengan GitHub"
-
-#: apps/client/src/pages/home/sections/features/index.tsx:54
-msgid "Sign in with Google"
-msgstr "Masuk dengan Google"
-
 #: apps/client/src/pages/auth/register/page.tsx:179
 msgid "Sign up"
 msgstr "Daftar"
@@ -1431,10 +987,6 @@ msgstr "Masuk melalui email saat ini dinonaktifkan oleh administrator."
 #: apps/client/src/pages/auth/register/page.tsx:82
 msgid "Signups are currently disabled by the administrator."
 msgstr "Pendaftaran saat ini dinonaktifkan oleh administrator."
-
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:65
-msgid "Size (in px)"
-msgstr "Ukuran (dalam px)"
 
 #: apps/client/src/pages/dashboard/resumes/_dialogs/resume.tsx:228
 msgid "Slug"
@@ -1452,11 +1004,6 @@ msgstr "Terjadi kesalahan saat mencetak resume Anda. Silakan coba lagi nanti ata
 msgid "Something went wrong while processing your request. Please try again later or raise an issue on GitHub."
 msgstr "Terjadi kesalahan saat memproses permintaan Anda. Silakan coba lagi nanti atau ajukan masalah di GitHub."
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:87
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:132
-msgid "Square"
-msgstr "Persegi"
-
 #: apps/client/src/pages/dashboard/resumes/_layouts/grid/_components/create-card.tsx:33
 #: apps/client/src/pages/dashboard/resumes/_layouts/list/_components/create-item.tsx:23
 msgid "Start building from scratch"
@@ -1466,43 +1013,30 @@ msgstr "Mulai membangun dari awal"
 msgid "Start building your resume by giving it a name."
 msgstr "Mulailah membuat resume Anda dengan memberikan nama."
 
-#: apps/client/src/pages/builder/sidebars/right/index.tsx:114
-#: apps/client/src/pages/builder/sidebars/right/sections/statistics.tsx:22
-#: apps/client/src/pages/builder/sidebars/right/sections/statistics.tsx:23
-msgid "Statistics"
-msgstr "Statistik"
+#: apps/client/src/pages/home/sections/contributors/index.tsx:28
+msgid "Start Free Trial"
+msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/right/sections/statistics.tsx:38
-msgid "Statistics are available only for public resumes."
-msgstr "Statistik hanya tersedia untuk resume publik."
+#: apps/client/src/pages/dashboard/billing/page.tsx:143
+msgid "Status"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:17
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:27
+msgid "Stock Chat"
+msgstr ""
 
 #: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:162
 msgid "Store your backup codes securely"
 msgstr "Menyimpan kode cadangan Anda dengan aman"
 
-#: apps/client/src/pages/builder/sidebars/left/dialogs/awards.tsx:101
-#: apps/client/src/pages/builder/sidebars/left/dialogs/certifications.tsx:95
-#: apps/client/src/pages/builder/sidebars/left/dialogs/custom-section.tsx:151
-#: apps/client/src/pages/builder/sidebars/left/dialogs/education.tsx:138
-#: apps/client/src/pages/builder/sidebars/left/dialogs/experience.tsx:114
-#: apps/client/src/pages/builder/sidebars/left/dialogs/projects.tsx:129
-#: apps/client/src/pages/builder/sidebars/left/dialogs/publications.tsx:95
-#: apps/client/src/pages/builder/sidebars/left/dialogs/references.tsx:81
-#: apps/client/src/pages/builder/sidebars/left/dialogs/volunteer.tsx:109
-msgid "Summary"
-msgstr "Ringkasan"
+#: apps/client/src/pages/dashboard/billing/page.tsx:76
+msgid "Subscription successful!"
+msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/right/sections/information.tsx:23
-msgid "Support the app by donating what you can!"
-msgstr "Dukung aplikasi ini dengan menyumbangkan apa yang Anda bisa!"
-
-#: apps/client/src/pages/home/sections/support/index.tsx:9
-msgid "Supporting Reactive Resume"
-msgstr "Mendukung Resume Reaktif"
-
-#: apps/client/src/pages/home/sections/features/index.tsx:65
-msgid "Supports A4/Letter page formats"
-msgstr "Mendukung format halaman A4/Surat"
+#: apps/client/src/pages/home/components/footer.tsx:72
+msgid "Support"
+msgstr ""
 
 #: apps/client/src/components/theme-switch.tsx:31
 msgid "Switch to Dark Mode"
@@ -1516,39 +1050,30 @@ msgstr "Beralih ke Mode Cahaya"
 msgid "System"
 msgstr "Sistem"
 
-#: apps/client/src/pages/builder/sidebars/right/index.tsx:65
-#: apps/client/src/pages/builder/sidebars/right/sections/template.tsx:18
-#: apps/client/src/pages/builder/sidebars/right/sections/template.tsx:19
-msgid "Template"
+#: apps/client/src/pages/home/components/footer.tsx:37
+msgid "Templates"
 msgstr "Templat"
 
 #: apps/client/src/pages/home/sections/templates/index.tsx:9
-msgid "Templates"
-msgstr "Templat"
+msgid "Templates & Examples"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:55
+msgid "Terms of Service"
+msgstr ""
 
 #: apps/client/src/pages/home/sections/testimonials/index.tsx:68
 msgid "Testimonials"
 msgstr "Testimonial"
 
-#: apps/client/src/pages/builder/sidebars/right/sections/theme.tsx:103
-msgid "Text Color"
-msgstr "Warna Teks"
-
-#: apps/client/src/pages/public/error.tsx:17
-msgid "The page you're looking for doesn't exist."
-msgstr "Halaman yang Anda cari tidak ada."
-
-#: apps/client/src/pages/public/error.tsx:29
-msgid "The request was invalid."
-msgstr "Permintaan tersebut tidak valid."
+#: apps/client/src/pages/dashboard/billing/page.tsx:77
+msgid "Thank you for subscribing. Your plan is now active."
+msgstr ""
 
 #: apps/client/src/services/errors/translate-error.ts:49
 msgid "The resume you want to update is locked, please unlock if you wish to make any changes to it."
 msgstr "Resume yang ingin Anda perbarui terkunci, silakan buka kuncinya jika Anda ingin melakukan perubahan."
 
-#: apps/client/src/pages/builder/sidebars/right/index.tsx:86
-#: apps/client/src/pages/builder/sidebars/right/sections/theme.tsx:19
-#: apps/client/src/pages/builder/sidebars/right/sections/theme.tsx:20
 #: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:79
 msgid "Theme"
 msgstr "Tema"
@@ -1556,10 +1081,6 @@ msgstr "Tema"
 #: apps/client/src/services/errors/translate-error.ts:40
 msgid "There was an error connecting to the browser. Please make sure 'chrome' is running and reachable."
 msgstr "Terjadi kesalahan saat menghubungkan ke browser. Pastikan 'chrome' berjalan dan dapat dijangkau."
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-dialog.tsx:130
-msgid "This action can be reverted by clicking on the undo button in the floating toolbar."
-msgstr "Tindakan ini dapat dikembalikan dengan mengeklik tombol undo di toolbar mengambang."
 
 #: apps/client/src/pages/dashboard/resumes/_dialogs/resume.tsx:151
 msgid "This action cannot be undone. This will permanently delete your resume and cannot be recovered."
@@ -1569,38 +1090,21 @@ msgstr "Tindakan ini tidak dapat dibatalkan. Tindakan ini akan menghapus resume 
 msgid "This email address is associated with an OAuth account. Please sign in with your OAuth provider."
 msgstr "Alamat email ini dikaitkan dengan akun OAuth. Silakan masuk dengan penyedia OAuth Anda."
 
-#: apps/client/src/pages/builder/_components/header.tsx:57
-msgid "This resume is locked, please unlock to make further changes."
-msgstr "Resume ini terkunci, silakan buka kunci untuk membuat perubahan lebih lanjut."
-
-#: apps/client/src/pages/builder/sidebars/right/sections/notes.tsx:23
-msgid "This section is reserved for your personal notes specific to this resume. The content here remains private and is not shared with anyone else."
-msgstr "Bagian ini disediakan untuk catatan pribadi Anda yang khusus untuk resume ini. Konten di sini bersifat pribadi dan tidak dibagikan dengan orang lain."
-
 #: apps/client/src/pages/dashboard/resumes/_dialogs/resume.tsx:216
 msgid "Tip: You can name the resume referring to the position you are applying for."
 msgstr "Tip: Anda dapat memberi nama resume yang mengacu pada posisi yang Anda lamar."
-
-#: apps/client/src/pages/builder/sidebars/left/dialogs/awards.tsx:39
-msgctxt "Name of the Award"
-msgid "Title"
-msgstr "Judul"
 
 #: apps/client/src/pages/dashboard/resumes/_dialogs/resume.tsx:196
 msgid "Title"
 msgstr "Judul"
 
-#: apps/client/src/pages/builder/_components/toolbar.tsx:138
-msgid "Toggle Page Break Line"
-msgstr "Beralih ke Garis Hentian Halaman"
+#: apps/client/src/pages/home/sections/features/index.tsx:47
+msgid "Transparent pricing"
+msgstr ""
 
-#: apps/client/src/pages/builder/_components/toolbar.tsx:150
-msgid "Toggle Page Numbers"
-msgstr "Beralih Nomor Halaman"
-
-#: apps/client/src/pages/home/sections/features/index.tsx:68
-msgid "Track views and downloads"
-msgstr "Melacak tampilan dan unduhan"
+#: apps/client/src/pages/home/sections/logo-cloud/index.tsx:39
+msgid "Trusted by teams at leading companies worldwide:"
+msgstr ""
 
 #: apps/client/src/pages/auth/verify-otp/page.tsx:52
 #: apps/client/src/pages/auth/verify-otp/page.tsx:57
@@ -1620,24 +1124,9 @@ msgstr "Autentikasi dua faktor tidak diaktifkan untuk akun ini."
 msgid "Type <0>delete</0> to confirm deleting your account."
 msgstr "Ketik <0>hapus</0> untuk mengonfirmasi penghapusan akun Anda."
 
-#. For example, Bachelor's Degree or Master's Degree
-#: apps/client/src/pages/builder/sidebars/left/dialogs/education.tsx:54
-msgid "Type of Study"
-msgstr "Jenis Studi"
-
-#: apps/client/src/pages/builder/sidebars/right/index.tsx:79
-#: apps/client/src/pages/builder/sidebars/right/sections/typography.tsx:76
-#: apps/client/src/pages/builder/sidebars/right/sections/typography.tsx:77
-msgid "Typography"
-msgstr "Tipografi"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/typography.tsx:203
-msgid "Underline Links"
-msgstr "Garis bawahi Tautan"
-
-#: apps/client/src/pages/builder/_components/toolbar.tsx:76
-msgid "Undo"
-msgstr "Membatalkan"
+#: apps/client/src/pages/home/sections/features/index.tsx:57
+msgid "Unlimited projects"
+msgstr ""
 
 #: apps/client/src/pages/dashboard/resumes/_dialogs/lock.tsx:52
 #: apps/client/src/pages/dashboard/resumes/_layouts/grid/_components/resume-card.tsx:110
@@ -1654,10 +1143,6 @@ msgstr "Membuka kunci resume akan memungkinkan Anda untuk membuat perubahan lagi
 msgid "Unverified"
 msgstr "Tidak diverifikasi"
 
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-dialog.tsx:164
-msgid "Update an existing item"
-msgstr "Memperbarui item yang sudah ada"
-
 #: apps/client/src/pages/dashboard/resumes/_dialogs/resume.tsx:179
 msgid "Update an existing resume"
 msgstr "Memperbarui resume yang sudah ada"
@@ -1665,14 +1150,6 @@ msgstr "Memperbarui resume yang sudah ada"
 #: apps/client/src/pages/dashboard/resumes/_dialogs/import.tsx:212
 msgid "Upload a file from one of the accepted sources to parse existing data and import it into Reactive Resume for easier editing."
 msgstr "Unggah file dari salah satu sumber yang diterima untuk mengurai data yang ada dan mengimpornya ke dalam Reactive Resume untuk pengeditan yang lebih mudah."
-
-#: apps/client/src/pages/builder/sidebars/right/sections/sharing.tsx:73
-msgid "URL"
-msgstr "URL"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/url-input.tsx:61
-msgid "URL must start with https://"
-msgstr "URL harus dimulai dengan https://"
 
 #: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:247
 msgid "Use Azure OpenAI"
@@ -1691,8 +1168,11 @@ msgstr "Gunakan kode cadangan Anda"
 msgid "User does not have an associated 'secrets' record. Please report this issue on GitHub."
 msgstr "Pengguna tidak memiliki catatan 'rahasia' yang terkait. Silakan laporkan masalah ini di GitHub."
 
+#: apps/client/src/pages/home/sections/support/index.tsx:37
+msgid "User Management"
+msgstr ""
+
 #: apps/client/src/pages/auth/register/page.tsx:119
-#: apps/client/src/pages/builder/sidebars/left/dialogs/profiles.tsx:55
 #: apps/client/src/pages/dashboard/settings/_sections/account.tsx:167
 msgid "Username"
 msgstr "Nama pengguna"
@@ -1709,10 +1189,6 @@ msgstr "Memvalidasi"
 msgid "Validated"
 msgstr "Tervalidasi"
 
-#: apps/client/src/pages/builder/sidebars/left/sections/custom/section.tsx:97
-msgid "Value"
-msgstr "Nilai"
-
 #: apps/client/src/pages/dashboard/settings/_sections/account.tsx:192
 msgid "Verified"
 msgstr "Terverifikasi"
@@ -1727,53 +1203,24 @@ msgid "Verify your email address"
 msgstr "Verifikasi alamat email Anda"
 
 #: apps/client/src/pages/home/sections/hero/index.tsx:26
-msgid "Version 4"
-msgstr "Versi 4"
+msgid "Version 1.0"
+msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/right/sections/statistics.tsx:51
-msgid "Views"
-msgstr "Tampilan"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-list-item.tsx:92
-msgid "Visible"
-msgstr "Terlihat"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/custom/section.tsx:70
-msgid "Visit <0>Phosphor Icons</0> for a list of available icons"
-msgstr "Kunjungi Ikon <0>Fosfor</0> untuk daftar ikon yang tersedia"
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:109
+msgid "Volume"
+msgstr ""
 
 #: apps/client/src/pages/auth/verify-email/page.tsx:61
 msgid "We verify your email address only to ensure that we can send you a password reset link in case you forget your password."
 msgstr "Kami memverifikasi alamat email Anda hanya untuk memastikan bahwa kami dapat mengirimkan tautan pengaturan ulang kata sandi jika Anda lupa kata sandi."
 
-#: apps/client/src/pages/builder/sidebars/left/dialogs/awards.tsx:87
-#: apps/client/src/pages/builder/sidebars/left/dialogs/certifications.tsx:81
-#: apps/client/src/pages/builder/sidebars/left/dialogs/custom-section.tsx:137
-#: apps/client/src/pages/builder/sidebars/left/dialogs/education.tsx:124
-#: apps/client/src/pages/builder/sidebars/left/dialogs/experience.tsx:100
-#: apps/client/src/pages/builder/sidebars/left/dialogs/profiles.tsx:69
-#: apps/client/src/pages/builder/sidebars/left/dialogs/projects.tsx:115
-#: apps/client/src/pages/builder/sidebars/left/dialogs/publications.tsx:81
-#: apps/client/src/pages/builder/sidebars/left/dialogs/references.tsx:67
-#: apps/client/src/pages/builder/sidebars/left/dialogs/volunteer.tsx:95
-#: apps/client/src/pages/builder/sidebars/left/sections/basics.tsx:96
-msgid "Website"
-msgstr "Situs web"
+#: apps/client/src/pages/home/sections/features/index.tsx:66
+msgid "Web-based platform"
+msgstr ""
 
 #: apps/client/src/pages/home/sections/hero/index.tsx:32
 msgid "What's new in the latest version"
 msgstr "Apa yang baru dalam versi terbaru"
-
-#: apps/client/src/pages/public/error.tsx:26
-msgid "You are not authorized to access this page."
-msgstr "Anda tidak berwenang untuk mengakses halaman ini."
-
-#: apps/client/src/pages/builder/sidebars/left/dialogs/custom-section.tsx:186
-#: apps/client/src/pages/builder/sidebars/left/dialogs/interests.tsx:89
-#: apps/client/src/pages/builder/sidebars/left/dialogs/projects.tsx:164
-#: apps/client/src/pages/builder/sidebars/left/dialogs/skills.tsx:135
-msgid "You can add multiple keywords by separating them with a comma or pressing enter."
-msgstr "Anda dapat menambahkan beberapa kata kunci dengan memisahkannya dengan koma atau menekan enter."
 
 #: apps/client/src/pages/auth/login/page.tsx:99
 msgid "You can also enter your username."
@@ -1790,14 +1237,6 @@ msgstr "Anda juga dapat berintegrasi dengan Ollama hanya dengan mengatur kunci A
 #: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:122
 msgid "You can make use of the OpenAI API, Azure OpenAI, or Ollama to help you generate content, or improve your writing while composing your resume."
 msgstr "Anda dapat menggunakan OpenAI API, Azure OpenAI, atau Ollama untuk membantu Anda menghasilkan konten, atau meningkatkan tulisan Anda saat membuat resume."
-
-#: apps/client/src/pages/builder/sidebars/right/sections/statistics.tsx:40
-msgid "You can track the number of views your resume has received, or how many people have downloaded the resume by enabling public sharing."
-msgstr "Anda dapat melacak jumlah tampilan yang diterima resume Anda, atau berapa banyak orang yang telah mengunduh resume dengan mengaktifkan berbagi publik."
-
-#: apps/client/src/pages/public/error.tsx:20
-msgid "You don't have permission to access this page."
-msgstr "Anda tidak memiliki izin untuk mengakses halaman ini."
 
 #: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:128
 msgid "You have the option to <0>obtain your own OpenAI API key</0>. This key empowers you to leverage the API as you see fit. Alternatively, if you wish to disable the AI features in Reactive Resume altogether, you can simply remove the key from your settings."
@@ -1832,11 +1271,14 @@ msgstr "Kunci API OpenAI Anda belum ditetapkan. Silakan buka pengaturan akun And
 msgid "Your password has been updated successfully."
 msgstr "Kata sandi Anda telah berhasil diperbarui."
 
-#: apps/client/src/pages/builder/_components/toolbar.tsx:112
-msgid "Zoom In"
-msgstr "Perbesar"
+#: apps/client/src/pages/home/components/footer.tsx:18
+msgid "Your SaaS Platform"
+msgstr ""
 
-#: apps/client/src/pages/builder/_components/toolbar.tsx:118
-msgid "Zoom Out"
-msgstr "Perkecil"
+#: apps/client/src/pages/dashboard/billing/page.tsx:84
+msgid "Your subscription checkout was canceled."
+msgstr ""
 
+#: apps/client/src/pages/dashboard/billing/page.tsx:158
+msgid "Your subscription will be canceled at the end of the billing period."
+msgstr ""

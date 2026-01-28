@@ -16,12 +16,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@/artboard/*": ["apps/artboard/src/*"],
       "@/client/*": ["apps/client/src/*"],
       "@/server/*": ["apps/server/src/*"],
       "@my-saas/dto": ["libs/dto/src/index.ts"],
       "@my-saas/hooks": ["libs/hooks/src/index.ts"],
-      "@my-saas/parser": ["libs/parser/src/index.ts"],
       "@my-saas/schema": ["libs/schema/src/index.ts"],
       "@my-saas/ui": ["libs/ui/src/index.ts"],
       "@my-saas/utils": ["libs/utils/src/index.ts"]

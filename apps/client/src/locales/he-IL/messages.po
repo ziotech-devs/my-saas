@@ -22,29 +22,17 @@ msgstr ""
 msgid "You have enabled two-factor authentication successfully."
 msgstr "הפעלת אימות דו־שלבי בהצלחה."
 
-#: apps/client/src/pages/home/sections/features/index.tsx:57
-msgid "{templatesCount} resume templates to choose from"
-msgstr "{templatesCount} תבניות קורות חיים לבחירתך"
+#: apps/client/src/pages/home/sections/features/index.tsx:56
+msgid "{templatesCount}+ pre-built templates"
+msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-options.tsx:142
-msgid "{value, plural, one {Column} other {Columns}}"
-msgstr "{value, plural, one {עמודה} two {עמודות} many {עמודות} other {עמודות}}"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/information.tsx:25
-msgid "<0>I built Reactive Resume mostly by myself during my spare time, with a lot of help from other great open-source contributors.</0><1>If you like the app and want to support keeping it free forever, please donate whatever you can afford to give.</1>"
-msgstr "<0>בניתי את Reactive Resume בעיקר בעצמי בזמן הפנוי שלי, עם המון עזרה ממתנדבי קוד פתוח מקסימים.</0><1>אם היישום נושא חן בעיניך ומעניין אותך לתרום כדי לדאוג שיישאר חופשי לעד, נא לתרום איך שמסתייע לך.</1>"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/information.tsx:56
-msgid "<0>I'm sure the app is not perfect, but I'd like for it to be.</0><1>If you faced any issues while creating your resume, or have an idea that would help you and other users in creating your resume more easily, drop an issue on the repository or send me an email about it.</1>"
-msgstr "<0>אין לי ספק שהיישום רחוק מלהיות מושלם אבל אני חותר לכך שיהיה כזה.</0><1>אם נתקלת בבעיות במהלך יצירת קורות החיים שלך או שיש לך רעיון שיכול לסייע לך ולמשתמשים אחרים ביצירת קורות חיים יותר בקלות, אפשר לדוח על הצעה/תקלה במאגר הקוד או לשלוח לי הודעה על כך בדוא״ל.</1>"
+#: apps/client/src/components/copyright.tsx:19
+msgid "© {currentYear} My SaaS. All rights reserved."
+msgstr ""
 
 #: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:299
 msgid "<0>Note: </0>By utilizing the OpenAI API, you acknowledge and accept the <1>terms of use</1> and <2>privacy policy</2> outlined by OpenAI. Please note that Reactive Resume bears no responsibility for any improper or unauthorized utilization of the service, and any resulting repercussions or liabilities solely rest on the user."
 msgstr "<0>לתשומת ליבך: </0>עצם השימוש ב־API של OpenAI מהווה הכרה והסכמה ל<1>תנאי השימוש</1> ול<2>מדיניות הפרטיות</2> שנקבעו על ידי OpenAI. נא לשים לב ש־Reactive Resume אינו אחראי במקרים של שימוש לא הולם או לא מורשה בשירות, לרבות השלכות נגזרות או התחייבויות שחלות באופן בלעדי על המשתמש."
-
-#: apps/client/src/pages/builder/sidebars/right/sections/information.tsx:90
-msgid "<0>The community has spent a lot of time writing the documentation for Reactive Resume, and I'm sure it will help you get started with the app.</0><1>There are also a lot of examples to help you get started, and features that you might not know about which could help you build your perfect resume.</1>"
-msgstr "<0>הקהילה השקיעה זמן רב בכתיבת התיעוד של Reactive Resume ואני משוכנע שהוא יסייע לך להתחיל את דרכך עם היישום.</0><1>יש גם דוגמאות רבות שיסייעו לך להיכנס לעניינים ויכולות שאולי לא הכרת ועשויות לסייע לך לבנות קורות חיים מושקעים.</1>"
 
 #: apps/client/src/pages/dashboard/settings/_sections/security.tsx:140
 msgid "<0>Two-factor authentication is currently disabled.</0> You can enable it by adding an authenticator app to your account."
@@ -56,22 +44,12 @@ msgstr "<0>אימות דו־שלבי פעיל.</0> תופיע בקשה למלא 
 
 #: apps/client/src/pages/home/page.tsx:24
 #: apps/client/src/pages/home/sections/hero/index.tsx:40
-msgid "A free and open-source resume builder"
-msgstr "בונה קורות חיים חינמי בקוד פתוח"
+msgid "A free and open-source SaaS boilerplate"
+msgstr ""
 
-#: apps/client/src/pages/home/components/footer.tsx:21
 #: apps/client/src/pages/home/sections/hero/index.tsx:45
-msgid "A free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume."
-msgstr "בונה קורות חיים חינמי בקוד פתוח שמפשט את תהליך יצירת, עדכון ושיתוף קורות החיים שלך."
-
-#: apps/client/src/pages/builder/_components/toolbar.tsx:59
-#: apps/client/src/pages/builder/sidebars/right/sections/sharing.tsx:29
-msgid "A link has been copied to your clipboard."
-msgstr "קישור הועתק ללוח הגזירים שלך."
-
-#: apps/client/src/components/copyright.tsx:29
-msgid "A passion project by <0>Amruth Pillai</0>"
-msgstr "מיזם שמונע מהתשוקה של <0>אמרות׳ פילאי</0>"
+msgid "A free and open-source SaaS boilerplate that simplifies the process of creating, updating, and sharing your SaaS application."
+msgstr ""
 
 #: apps/client/src/pages/auth/forgot-password/page.tsx:57
 msgid "A password reset link should have been sent to your inbox, if an account existed with the email you provided."
@@ -85,9 +63,9 @@ msgstr "כבר קיימים קורות חיים עם השם הייצוגי הז�
 msgid "A user with this email address and/or username already exists."
 msgstr "כבר קיים משתמש עם כתובת הדוא״ל ו/או שם המשתמש הזה."
 
-#: apps/client/src/pages/builder/sidebars/right/sections/page.tsx:43
-msgid "A4"
-msgstr "A4"
+#: apps/client/src/pages/home/components/footer.tsx:46
+msgid "About"
+msgstr ""
 
 #. Helper text to let the user know what filetypes are accepted. {accept} can be .pdf or .json.
 #: apps/client/src/pages/dashboard/resumes/_dialogs/import.tsx:270
@@ -98,32 +76,13 @@ msgstr "מקבל רק קובצי {accept}"
 msgid "Account"
 msgstr "חשבון"
 
-#: apps/client/src/pages/builder/sidebars/left/sections/custom/section.tsx:175
-msgid "Add a custom field"
-msgstr "הוספת שדה מותאם אישית"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-base.tsx:150
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-base.tsx:203
-msgctxt "For example, add a new work experience, or add a new profile."
-msgid "Add a new item"
-msgstr "הוספת פריט חדש"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-options.tsx:91
-msgid "Add a new item"
-msgstr "הוספת פריט חדש"
-
-#: apps/client/src/pages/builder/sidebars/left/index.tsx:149
-#: apps/client/src/pages/builder/sidebars/left/index.tsx:267
-msgid "Add a new section"
-msgstr "הוספת סעיף חדש"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/layout.tsx:266
-msgid "Add New Page"
-msgstr "הוספת עמוד חדש"
-
 #: apps/client/src/components/ai-actions.tsx:79
 msgid "AI"
 msgstr "בינה מלאכותית"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:51
+msgid "AI-powered features"
+msgstr ""
 
 #: apps/client/src/pages/auth/register/page.tsx:71
 msgid "Already have an account?"
@@ -133,34 +92,17 @@ msgstr "כבר יש לך חשבון?"
 msgid "An error occurred while validating the file."
 msgstr "אירעה שגיאה בתיקוף הקובץ."
 
-#: apps/client/src/pages/public/error.tsx:23
-msgid "An internal server error occurred."
-msgstr "אירעה שגיאה פנימית בשרת."
+#: apps/client/src/pages/home/sections/features/index.tsx:67
+msgid "Analytics and insights"
+msgstr ""
 
-#: apps/client/src/pages/public/error.tsx:32
-msgid "An unexpected error occurred."
-msgstr "אירעה שגיאה בלתי צפויה."
-
-#: apps/client/src/pages/home/sections/features/index.tsx:134
+#: apps/client/src/pages/home/sections/features/index.tsx:133
 msgid "and many more..."
 msgstr "ועוד שלל יכולות…"
 
-#: apps/client/src/pages/builder/sidebars/right/sections/sharing.tsx:57
-msgid "Anyone with the link can view and download the resume."
-msgstr "לכל מי שיש את הקישור יש אפשרות להוריד את קורות החיים."
-
-#: apps/client/src/pages/builder/_components/toolbar.tsx:60
-#: apps/client/src/pages/builder/sidebars/right/sections/sharing.tsx:30
-msgid "Anyone with this link can view and download the resume. Share it on your profile or with recruiters."
-msgstr "כל מי שמחזיק בקישור הזה יכול לצפות ולהוריד את קורות החיים. אפשר לשתף אותם בפרופיל שלך או עם מגייסים ומגייסות."
-
-#: apps/client/src/pages/builder/sidebars/right/sections/css.tsx:41
-msgid "Apply Custom CSS"
-msgstr "החל CSS מותאם אישית"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-dialog.tsx:128
-msgid "Are you sure you want to delete this item?"
-msgstr "למחוק את הפריט הזה?"
+#: apps/client/src/pages/home/sections/features/index.tsx:46
+msgid "API access included"
+msgstr ""
 
 #: apps/client/src/pages/dashboard/resumes/_dialogs/resume.tsx:149
 msgid "Are you sure you want to delete your resume?"
@@ -182,22 +124,9 @@ msgstr "לשחרר את קורות החיים האלה?"
 msgid "Are you sure?"
 msgstr "להמשיך?"
 
-#. For example, Computer Science or Business Administration
-#: apps/client/src/pages/builder/sidebars/left/dialogs/education.tsx:73
-msgid "Area of Study"
-msgstr "תחום לימודים"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:79
-msgid "Aspect Ratio"
-msgstr "יחס גובה־רוחב"
-
-#: apps/client/src/pages/home/sections/features/index.tsx:51
-msgid "Available in {languagesCount} languages"
-msgstr "זמין ב־{languagesCount} שפות"
-
-#: apps/client/src/pages/builder/sidebars/left/dialogs/awards.tsx:53
-msgid "Awarder"
-msgstr "גוף מעניק"
+#: apps/client/src/pages/home/sections/support/index.tsx:22
+msgid "Authentication"
+msgstr ""
 
 #: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:258
 msgid "Azure API Version"
@@ -217,10 +146,6 @@ msgstr "כתובת URL של משאב Azure OpenAI"
 msgid "Back"
 msgstr "חזרה"
 
-#: apps/client/src/pages/builder/sidebars/right/sections/theme.tsx:73
-msgid "Background Color"
-msgstr "צבע הרקע"
-
 #: apps/client/src/pages/auth/backup-otp/page.tsx:75
 msgid "Backup Code"
 msgstr "קוד גיבוי"
@@ -233,33 +158,34 @@ msgstr "קודים למטרות גיבוי יכולים להכיל רק אותי
 msgid "Base URL"
 msgstr "כתובת URL בסיסית"
 
-#: apps/client/src/pages/builder/sidebars/left/index.tsx:58
-msgctxt "The basics section of a resume consists of User's Picture, Full Name, Location etc."
-msgid "Basics"
-msgstr "פרטים בסיסיים"
+#: apps/client/src/pages/dashboard/billing/page.tsx:106
+#: apps/client/src/pages/dashboard/billing/page.tsx:202
+msgid "Billed Monthly"
+msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/left/sections/basics.tsx:43
-msgid "Basics"
-msgstr "פרטים בסיסיים"
+#: apps/client/src/pages/dashboard/billing/page.tsx:106
+#: apps/client/src/pages/dashboard/billing/page.tsx:219
+msgid "Billed Yearly"
+msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:191
-msgid "Border"
-msgstr "מסגרת"
+#: apps/client/src/pages/dashboard/_components/sidebar.tsx:101
+#: apps/client/src/pages/dashboard/billing/page.tsx:113
+#: apps/client/src/pages/dashboard/billing/page.tsx:123
+msgid "Billing"
+msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:124
-msgid "Border Radius"
-msgstr "רדיוס מסגרת"
+#: apps/client/src/pages/home/sections/templates/index.tsx:12
+msgid "Browse our collection of pre-built templates and examples to get started quickly. Each template is designed to help you customize and deploy faster, with best practices built right in."
+msgstr ""
 
-#: apps/client/src/pages/public/page.tsx:93
-msgid "Built with"
-msgstr "נבנה עם"
+#: apps/client/src/components/copyright.tsx:24
+msgid "Built with modern technology and best practices."
+msgstr ""
 
-#: apps/client/src/components/copyright.tsx:27
-#: apps/client/src/pages/home/sections/contributors/index.tsx:20
-msgid "By the community, for the community."
-msgstr "על ידי הקהילה ועבורה."
+#: apps/client/src/pages/home/sections/support/index.tsx:49
+msgid "Built-in Core Features"
+msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-dialog.tsx:135
 #: apps/client/src/pages/dashboard/resumes/_dialogs/lock.tsx:49
 #: apps/client/src/pages/dashboard/resumes/_dialogs/resume.tsx:156
 #: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:137
@@ -271,9 +197,9 @@ msgstr "ביטול"
 msgid "Casual"
 msgstr "יומיומי"
 
-#: apps/client/src/pages/builder/_components/toolbar.tsx:130
-msgid "Center Artboard"
-msgstr "מירכוז לוח היצירה"
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:98
+msgid "Change"
+msgstr ""
 
 #: apps/client/src/components/locale-switch.tsx:17
 msgid "Change Language"
@@ -296,13 +222,21 @@ msgstr "התחרטת לגבי השם? אפשר לתת שם חדש."
 msgid "Check your email for the confirmation link to update your email address."
 msgstr "יש לחפש בדוא״ל שלך קישור אימות לעדכון כתובת הדוא״ל שלך."
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:144
-msgid "Circle"
-msgstr "עיגול"
+#: apps/client/src/pages/dashboard/billing/page.tsx:83
+msgid "Checkout canceled"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:181
+msgid "Choose a plan that works best for you. You can change or cancel your subscription at any time."
+msgstr ""
 
 #: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:249
 msgid "Close"
 msgstr "סגירה"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:49
+msgid "Cloud-hosted solution"
+msgstr ""
 
 #: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:201
 msgid "Code"
@@ -312,47 +246,36 @@ msgstr "קוד"
 msgid "Code must be exactly 6 digits long."
 msgstr "הקוד חייב להיות בדיוק באורך 6 ספרות."
 
-#: apps/client/src/pages/builder/sidebars/left/index.tsx:272
-msgid "Collapse All"
+#: apps/client/src/pages/home/sections/features/index.tsx:62
+msgid "Collaborative notes"
 msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/left/sections/basics.tsx:30
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-base.tsx:115
-#: apps/client/src/pages/builder/sidebars/left/sections/summary.tsx:33
-msgid "Collapse section"
-msgstr ""
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-options.tsx:136
-msgid "Columns"
-msgstr "עמודות"
-
-#: apps/client/src/pages/builder/sidebars/left/dialogs/experience.tsx:39
+#: apps/client/src/pages/home/components/footer.tsx:43
 msgid "Company"
 msgstr "חברה"
+
+#: apps/client/src/pages/home/sections/support/index.tsx:38
+msgid "Comprehensive user management with profiles, teams, permissions, and activity tracking."
+msgstr ""
 
 #: apps/client/src/components/ai-actions.tsx:119
 #: apps/client/src/components/ai-actions.tsx:122
 msgid "Confident"
 msgstr "מלא בטחון עצמי"
 
+#: apps/client/src/pages/home/components/footer.tsx:49
+msgid "Contact"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/contributors/index.tsx:36
+msgid "Contact Sales"
+msgstr ""
+
 #: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:234
 #: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:246
 msgid "Continue"
 msgstr "המשך"
 
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-list-item.tsx:101
-msgid "Copy"
-msgstr "העתקה"
-
-#: apps/client/src/pages/builder/_components/toolbar.tsx:164
-msgid "Copy Link to Resume"
-msgstr "העתקת הקישור לקורות החיים"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/sharing.tsx:78
-msgid "Copy to Clipboard"
-msgstr "העתקה ללוח הגזירים"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-dialog.tsx:179
 #: apps/client/src/pages/dashboard/resumes/_dialogs/resume.tsx:244
 msgid "Create"
 msgstr "יצירה"
@@ -361,10 +284,6 @@ msgstr "יצירה"
 #: apps/client/src/pages/auth/register/page.tsx:69
 msgid "Create a new account"
 msgstr "יצירת חשבון חדש"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-dialog.tsx:163
-msgid "Create a new item"
-msgstr "יצירת פריט חדש"
 
 #: apps/client/src/pages/dashboard/resumes/_dialogs/resume.tsx:178
 #: apps/client/src/pages/dashboard/resumes/_layouts/grid/_components/create-card.tsx:28
@@ -385,27 +304,21 @@ msgstr "יצירת קורות חיים לדוגמה"
 msgid "Current Password"
 msgstr "סיסמה נוכחית"
 
-#: apps/client/src/pages/builder/sidebars/right/index.tsx:93
-#: apps/client/src/pages/builder/sidebars/right/sections/css.tsx:27
-#: apps/client/src/pages/builder/sidebars/right/sections/css.tsx:28
-msgid "Custom CSS"
-msgstr "CSS מותאם אישית"
+#: apps/client/src/pages/dashboard/billing/page.tsx:139
+msgid "Current Subscription"
+msgstr ""
 
-#: apps/client/src/pages/home/sections/features/index.tsx:62
-msgid "Custom resume sections"
-msgstr "סעיפים משלך לקורות החיים"
+#: apps/client/src/pages/home/sections/features/index.tsx:59
+msgid "Custom branding"
+msgstr ""
 
 #: apps/client/src/stores/resume.ts:53
 msgid "Custom Section"
 msgstr "סעיף מותאם אישית"
 
 #: apps/client/src/pages/home/sections/features/index.tsx:60
-msgid "Customisable colour palettes"
-msgstr "ערכות צבעים מותאמות אישית"
-
-#: apps/client/src/pages/home/sections/features/index.tsx:61
-msgid "Customisable layouts"
-msgstr "פריסות להתאמה אישית"
+msgid "Customizable dashboards"
+msgstr ""
 
 #: apps/client/src/pages/dashboard/settings/_sections/danger.tsx:62
 msgid "Danger Zone"
@@ -415,21 +328,10 @@ msgstr "אזור הדמדומים"
 msgid "Dark"
 msgstr "כהה"
 
-#: apps/client/src/pages/builder/sidebars/left/dialogs/awards.tsx:67
-#: apps/client/src/pages/builder/sidebars/left/dialogs/certifications.tsx:67
-#: apps/client/src/pages/builder/sidebars/left/dialogs/publications.tsx:67
-msgid "Date"
-msgstr "תאריך"
+#: apps/client/src/pages/dashboard/_components/sidebar.tsx:95
+msgid "Dashboard"
+msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/left/dialogs/custom-section.tsx:109
-#: apps/client/src/pages/builder/sidebars/left/dialogs/education.tsx:110
-#: apps/client/src/pages/builder/sidebars/left/dialogs/experience.tsx:72
-#: apps/client/src/pages/builder/sidebars/left/dialogs/projects.tsx:101
-#: apps/client/src/pages/builder/sidebars/left/dialogs/volunteer.tsx:67
-msgid "Date or Date Range"
-msgstr "תאריך או טווח תאריכים"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-dialog.tsx:137
 #: apps/client/src/pages/dashboard/resumes/_dialogs/resume.tsx:158
 #: apps/client/src/pages/dashboard/resumes/_layouts/grid/_components/resume-card.tsx:121
 #: apps/client/src/pages/dashboard/resumes/_layouts/list/_components/resume-item.tsx:127
@@ -446,18 +348,6 @@ msgstr "מחיקת חשבון"
 msgid "Deployment Name"
 msgstr "שם הפריסה"
 
-#: apps/client/src/pages/builder/sidebars/left/dialogs/custom-section.tsx:95
-#: apps/client/src/pages/builder/sidebars/left/dialogs/languages.tsx:50
-#: apps/client/src/pages/builder/sidebars/left/dialogs/projects.tsx:87
-#: apps/client/src/pages/builder/sidebars/left/dialogs/references.tsx:53
-#: apps/client/src/pages/builder/sidebars/left/dialogs/skills.tsx:84
-msgid "Description"
-msgstr "תיאור"
-
-#: apps/client/src/pages/home/sections/features/index.tsx:58
-msgid "Design single/multi page resumes"
-msgstr "תכנון קורות חיים עם עמוד אחד/יותר"
-
 #: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:139
 msgid "Disable"
 msgstr "השבתה"
@@ -473,7 +363,7 @@ msgstr "השבתת האימות הדו־שלבי"
 msgid "Discard"
 msgstr "התעלמות"
 
-#: apps/client/src/pages/builder/sidebars/right/sections/information.tsx:110
+#: apps/client/src/pages/home/components/footer.tsx:69
 msgid "Documentation"
 msgstr "תיעוד"
 
@@ -481,35 +371,14 @@ msgstr "תיעוד"
 msgid "Don't have an account?"
 msgstr "אין לך חשבון?"
 
-#: apps/client/src/pages/builder/sidebars/right/sections/information.tsx:88
-msgid "Don't know where to begin? Hit the docs!"
-msgstr "לא ברור לך מאיפה מתחילים? כדאי לבקר בתיעוד!"
+#: apps/client/src/pages/home/sections/testimonials/index.tsx:70
+msgid "Don't just take our word for it. Here's what our customers have to say about their experience with our platform. Have questions or feedback? Reach out to us at <0>{email}</0>."
+msgstr ""
 
 #: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:107
 msgid "Don't see your language? <0>Help translate the app.</0>"
 msgstr "השפה שלך לא מופיעה? <0>אפשר לסייע בתרגום היישום.</0>"
 
-#: apps/client/src/pages/builder/sidebars/right/sections/information.tsx:45
-msgid "Donate to Reactive Resume"
-msgstr "תרומה ל־Reactive Resume"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/export.tsx:56
-msgid "Download a JSON snapshot of your resume. This file can be used to import your resume in the future, or can even be shared with others to collaborate."
-msgstr "הורדת תמונת מצב ב־JSON של קורות החיים שלך. אפשר להשתמש בקובץ הזה כדי לייבא את קורות החיים שלך בעתיד או שאפשר אפילו לשתף אותם עם אחרים לעריכה משותפת."
-
-#: apps/client/src/pages/builder/sidebars/right/sections/export.tsx:78
-msgid "Download a PDF of your resume. This file can be used to print your resume, send it to recruiters, or upload on job portals."
-msgstr "הורדת PDF של קורות החיים שלך. אפשר להשתמש בקובץ הזה כדי להדפיס את קורות החיים שלך, לשלוח אותו למגייסים או להעלות אותו לפורטלים של מעסיקים."
-
-#: apps/client/src/pages/builder/_components/toolbar.tsx:176
-msgid "Download PDF"
-msgstr "הורדת PDF"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/statistics.tsx:58
-msgid "Downloads"
-msgstr "הורדות"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-dialog.tsx:181
 #: apps/client/src/pages/dashboard/resumes/_dialogs/resume.tsx:246
 #: apps/client/src/pages/dashboard/resumes/_layouts/grid/_components/resume-card.tsx:105
 #: apps/client/src/pages/dashboard/resumes/_layouts/list/_components/resume-item.tsx:95
@@ -517,29 +386,24 @@ msgstr "הורדות"
 msgid "Duplicate"
 msgstr "שכפול"
 
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-dialog.tsx:165
-msgid "Duplicate an existing item"
-msgstr "שכפול פריט קיים"
-
 #: apps/client/src/pages/dashboard/resumes/_dialogs/resume.tsx:180
 msgid "Duplicate an existing resume"
 msgstr "שכפול קורות חיים קיימים"
 
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-list-item.tsx:97
-msgid "Edit"
-msgstr "עריכה"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:169
-msgid "Effects"
-msgstr "אפקטים"
-
 #: apps/client/src/pages/auth/forgot-password/page.tsx:82
 #: apps/client/src/pages/auth/login/page.tsx:90
 #: apps/client/src/pages/auth/register/page.tsx:141
-#: apps/client/src/pages/builder/sidebars/left/sections/basics.tsx:81
 #: apps/client/src/pages/dashboard/settings/_sections/account.tsx:181
 msgid "Email"
 msgstr "דוא״ל"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:54
+msgid "Email notifications"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:21
+msgid "Empowering teams with powerful tools to streamline workflows and boost productivity."
+msgstr ""
 
 #: apps/client/src/pages/dashboard/settings/_sections/security.tsx:163
 msgid "Enable 2FA"
@@ -553,10 +417,6 @@ msgstr "נא למלא סיסמה חדשה להלן וכדאי לוודא שהי�
 msgid "Enter one of the 10 backup codes you saved when you enabled two-factor authentication."
 msgstr "נא להקליד אחת מבין 10 הקודים למטרות גיבוי שקיבלת עם הפעלה האימות הדו־שלבי."
 
-#: apps/client/src/pages/builder/sidebars/left/sections/custom/section.tsx:63
-msgid "Enter Phosphor Icon"
-msgstr "הזן את סמל הזרחן"
-
 #: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:170
 msgid "Enter the 6-digit code from your authenticator app to verify that 2FA has been setup correctly."
 msgstr "נא למלא את הקוד באורך 6 ספרות מיישומון המאמת שלך כדי לוודא שאימות דו־שלבי הוגדר כראוי."
@@ -569,37 +429,41 @@ msgstr "נא למלא את הסיסמה החד־פעמית שסופקה על י�
 msgid "Enter your email address and we will send you a link to reset your password if the account exists."
 msgstr "נא למלא את כתובת הדוא״ל שלך ואנו נשלח לך קישור לאיפוס הסיסמה שלך אם החשבון קיים."
 
-#: apps/client/src/pages/public/error.tsx:46
-msgid "Error {statusCode}"
-msgstr "שגיאה {statusCode}"
+#: apps/client/src/pages/home/sections/features/index.tsx:55
+msgid "Enterprise-grade security"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/support/index.tsx:33
+msgid "Enterprise-grade security with encryption, role-based access control, and compliance with industry standards."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:49
+msgid "Error loading stock data:"
+msgstr ""
 
 #: apps/client/src/pages/dashboard/resumes/_dialogs/import.tsx:283
 msgid "Errors"
 msgstr "שגיאות"
 
-#: apps/client/src/pages/home/sections/support/index.tsx:78
-msgid "Even if you're not in a position to contribute financially, you can still make a difference by giving the GitHub repository a star, spreading the word to your friends, or dropping a quick message to let me know how Reactive Resume has helped you. Your feedback and support are always welcome and much appreciated!"
-msgstr "אפילו אם אין לך יכולת לתרום כלכלית, עדיין אפשר לחולל שינוי על ידי הענקת כוכב למאגר ב־GitHub, הפצת המיזם בקרב חבריך או שליחת הודעה אליי כדי לספר לי איך Reactive Resume סייע לך. המשוב והתמיכה שלך תמיד מחממים את הלב ומאוד מוערכים!"
-
-#: apps/client/src/pages/builder/sidebars/left/index.tsx:271
-msgid "Expand All"
+#: apps/client/src/pages/home/sections/support/index.tsx:51
+msgid "Everything you need to launch and scale your SaaS product, built right in. No need to integrate multiple services."
 msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/left/sections/basics.tsx:30
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-base.tsx:115
-#: apps/client/src/pages/builder/sidebars/left/sections/summary.tsx:33
-msgid "Expand section"
+#: apps/client/src/pages/home/sections/features/index.tsx:104
+msgid "Everything you need to succeed."
 msgstr ""
 
-#: apps/client/src/pages/home/sections/templates/index.tsx:12
-msgid "Explore the templates available in Reactive Resume and view the resumes crafted with them. They could also serve as examples to help guide the creation of your next resume."
-msgstr "אפשר לעיין בתבניות שזמינות ב־Reactive Resume ולצפות בקורות החיים מעוצבים בהן. הן גם יכולות לשמש דוגמאות כדי לסייע בהכוונת יצירת קורות החיים הבאים שלך."
+#: apps/client/src/pages/home/sections/features/index.tsx:64
+msgid "Export to multiple formats"
+msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/right/index.tsx:121
-#: apps/client/src/pages/builder/sidebars/right/sections/export.tsx:39
-#: apps/client/src/pages/builder/sidebars/right/sections/export.tsx:40
-msgid "Export"
-msgstr "ייצוא"
+#: apps/client/src/pages/home/components/footer.tsx:66
+msgid "FAQ"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:31
+msgid "Features"
+msgstr ""
 
 #: apps/client/src/pages/dashboard/resumes/_dialogs/import.tsx:255
 msgid "File"
@@ -617,25 +481,9 @@ msgstr "ואחרונים חביבים,"
 msgid "Fix Spelling & Grammar"
 msgstr "תיקון איות ודקדוק"
 
-#: apps/client/src/pages/builder/sidebars/right/sections/typography.tsx:107
-msgid "Font Family"
-msgstr "משפחת גופנים"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/typography.tsx:148
-msgid "Font Size"
-msgstr "גודל כתב"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/typography.tsx:122
-msgid "Font Subset"
-msgstr "קבוצת משנה של גופנים"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/typography.tsx:134
-msgid "Font Variants"
-msgstr "הגווני גופן"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/notes.tsx:35
-msgid "For example, information regarding which companies you sent this resume to or the links to the job descriptions can be noted down here."
-msgstr "למשל, מידע לגבי לאילו חברות שלחת את קורות החיים האלה או את תיאורי התפקיד אפשר לתעד כאן."
+#: apps/client/src/pages/home/sections/features/index.tsx:45
+msgid "Flexible pricing plans"
+msgstr ""
 
 #: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:280
 msgid "Forget"
@@ -649,27 +497,10 @@ msgstr "שכחת סיסמה?"
 msgid "Forgot your password?"
 msgstr "שכחת את הסיסמה שלך?"
 
-#: apps/client/src/pages/builder/sidebars/right/sections/page.tsx:32
-#: apps/client/src/pages/builder/sidebars/right/sections/page.tsx:40
-msgid "Format"
-msgstr "תבנית"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/information.tsx:54
-msgid "Found a bug, or have an idea for a new feature?"
-msgstr "מצאת תקלה או שיש לך רעיון ליכולת חדשה?"
-
-#: apps/client/src/pages/home/sections/features/index.tsx:46
-msgid "Free, forever"
-msgstr "חינם, לעד"
-
 #: apps/client/src/components/ai-actions.tsx:125
 #: apps/client/src/components/ai-actions.tsx:128
 msgid "Friendly"
 msgstr "ידידותי"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/basics.tsx:56
-msgid "Full Name"
-msgstr "שם מלא"
 
 #: apps/client/src/pages/dashboard/resumes/_dialogs/resume.tsx:202
 msgid "Generate a random title for your resume"
@@ -682,6 +513,10 @@ msgstr "יוצאים לדרך"
 #: apps/client/src/pages/auth/_components/social-auth.tsx:18
 msgid "GitHub"
 msgstr "GitHub"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:52
+msgid "GitHub integration"
+msgstr ""
 
 #: apps/client/src/pages/home/sections/statistics/index.tsx:12
 msgid "GitHub Stars"
@@ -696,25 +531,17 @@ msgstr "נא להעניק לקורות החיים הישנים שלך שם חד�
 msgid "Go to Dashboard"
 msgstr "מעבר ללוח בקרה"
 
-#: apps/client/src/pages/public/error.tsx:55
-msgid "Go to home"
-msgstr "לעמוד הבית"
-
 #: apps/client/src/pages/auth/_components/social-auth.tsx:31
 msgid "Google"
 msgstr "Google"
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:202
-msgid "Grayscale"
-msgstr "גווני אפור"
+#: apps/client/src/pages/home/sections/features/index.tsx:53
+msgid "Google Workspace integration"
+msgstr ""
 
 #: apps/client/src/pages/dashboard/resumes/page.tsx:45
 msgid "Grid"
 msgstr "רשת"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/basics.tsx:70
-msgid "Headline"
-msgstr "כותרת עליונה"
 
 #: apps/client/src/pages/dashboard/settings/_sections/account.tsx:107
 msgid "Here, you can update your account information such as your profile picture, name and username."
@@ -724,54 +551,15 @@ msgstr "כאן אפשר לעדכן את פרטי החשבון שלך כגון ת
 msgid "Here, you can update your profile to customize and personalize your experience."
 msgstr "כאן אפשר לעדכן את הפרופיל שלך כדי להתאים ולהפוך את החוויה שלך לאישית יותר."
 
-#: apps/client/src/pages/builder/sidebars/left/dialogs/languages.tsx:80
-#: apps/client/src/pages/builder/sidebars/left/dialogs/skills.tsx:115
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:180
-msgid "Hidden"
-msgstr "מוסתר"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-options.tsx:106
-msgid "Hide"
-msgstr "הסתרה"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/typography.tsx:192
-msgid "Hide Icons"
-msgstr "הסתרת סמלים"
-
 #: apps/client/src/pages/auth/login/page.tsx:115
 #: apps/client/src/pages/auth/register/page.tsx:168
 #: apps/client/src/pages/auth/reset-password/page.tsx:88
 msgid "Hold <0>Ctrl</0> to display your password temporarily."
 msgstr "יש להחזיק את <0>Ctrl</0> כדי להציג את הסיסמה שלך באופן זמני."
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:93
-msgid "Horizontal"
-msgstr "אופקי"
-
-#: apps/client/src/pages/home/sections/features/index.tsx:67
-msgid "Host your resume publicly"
-msgstr "אחסון ציבורי של קורות החיים שלך"
-
-#: apps/client/src/pages/home/sections/testimonials/index.tsx:70
-msgid "I always love to hear from the users of Reactive Resume with feedback or support. Here are some of the messages I've received. If you have any feedback, feel free to drop me an email at <0>{email}</0>."
-msgstr "תמיד מעניין אותי לשמוע ממשתמשי Reactive Resume בנוגע למשוב שלהם. הנה חלק מההודעות שקיבלתי. אם יש לך משוב, אשמח לקבל ממך הודעה בדוא״ל אל <0>{email}</0>."
-
-#: apps/client/src/pages/builder/sidebars/left/dialogs/profiles.tsx:83
-#: apps/client/src/pages/builder/sidebars/left/sections/custom/section.tsx:53
-msgid "Icon"
-msgstr "סמל"
-
-#: apps/client/src/pages/home/sections/logo-cloud/index.tsx:47
-msgid "If this app has helped you with your job hunt, let me know by reaching out through <0>this contact form</0>."
-msgstr "אם היישום הזה עזר לך בחיפוש העבודה שלך, אפשר ליצור איתי קשר דרך <0>הטופס הזה</0> ולספר לי על כך."
-
 #: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:128
 msgid "If you disable two-factor authentication, you will no longer be required to enter a verification code when logging in."
 msgstr "השבתת אימות דו־שלבי תייתר את מילוי קוד האימות בעת הכניסה למערכת."
-
-#: apps/client/src/pages/home/sections/support/index.tsx:59
-msgid "If you're multilingual, we'd love your help in bringing the app to more languages and communities. Don't worry if you don't see your language on the list - just give me a shout-out on GitHub, and I'll make sure to include it. Ready to get started? Jump into translation over at Crowdin by clicking the link below."
-msgstr "איך האנגלית שלך? ושפות נוספות? נשמח לקבל את עזרתך בתרגום היישום לשפות וקהילות נוספות. אין מה לדאוג אם השפה שלך לא מופיעה ברשימה - כל שצריך לעשות הוא לפנות אלי ב־GitHub ואוודא שהיא תתווסף. אפשר להתחיל? ניתן לגשת למלאכת התרגום ב־Crowdin בלחיצה על הקישור שלהלן."
 
 #: apps/client/src/pages/dashboard/resumes/_dialogs/import.tsx:309
 msgid "Import"
@@ -799,19 +587,9 @@ msgstr "בסעיף הזה, אפשר לשנות את הסיסמה שלך ולהפ
 msgid "In this section, you can delete your account and all the data associated to your user, but please keep in mind that <0>this action is irreversible</0>."
 msgstr "בסעיף הזה, אפשר למחוק את החשבון שלך ואת כל הנתונים שמשויכים למשתמש שלך, אך נא לשים לב ש<0>זאת פעולה בלתי הפיכה</0>."
 
-#: apps/client/src/pages/builder/sidebars/right/index.tsx:135
-#: apps/client/src/pages/builder/sidebars/right/sections/information.tsx:121
-#: apps/client/src/pages/builder/sidebars/right/sections/information.tsx:122
-msgid "Information"
-msgstr "מידע"
-
-#: apps/client/src/pages/builder/sidebars/left/dialogs/education.tsx:39
-msgid "Institution"
-msgstr "מוסד"
-
-#: apps/client/src/pages/builder/sidebars/left/dialogs/certifications.tsx:53
-msgid "Issuer"
-msgstr "מנפיק"
+#: apps/client/src/pages/home/sections/support/index.tsx:28
+msgid "Integrated payment processing with support for subscriptions, one-time payments, and multiple payment methods."
+msgstr ""
 
 #: apps/client/src/services/errors/translate-error.ts:7
 msgid "It doesn't look like a user exists with the credentials you provided."
@@ -856,21 +634,13 @@ msgctxt "Localized version of a placeholder email. For example, max.mustermann@e
 msgid "john.doe@example.com"
 msgstr "israel.israeli@israel.gov.il"
 
-#: apps/client/src/pages/builder/sidebars/right/sections/export.tsx:54
-msgid "JSON"
-msgstr "JSON"
+#: apps/client/src/pages/home/sections/contributors/index.tsx:18
+msgid "Join thousands of teams already using our platform to streamline their workflow and boost productivity. Start your free trial today - no credit card required."
+msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/left/dialogs/custom-section.tsx:181
-#: apps/client/src/pages/builder/sidebars/left/dialogs/interests.tsx:84
-#: apps/client/src/pages/builder/sidebars/left/dialogs/projects.tsx:159
-#: apps/client/src/pages/builder/sidebars/left/dialogs/skills.tsx:130
-msgid "Keywords"
-msgstr "מילות מפתח"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/url-input.tsx:42
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/url-input.tsx:52
-msgid "Label"
-msgstr "תווית"
+#: apps/client/src/pages/home/sections/logo-cloud/index.tsx:47
+msgid "Join thousands of teams already using our platform. <0>Get in touch</0>."
+msgstr ""
 
 #: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:101
 msgid "Language"
@@ -881,40 +651,21 @@ msgstr "שפה"
 msgid "Last updated {lastUpdated}"
 msgstr "העדכון האחרון היה ב־{lastUpdated}"
 
-#: apps/client/src/pages/builder/sidebars/right/index.tsx:72
-#: apps/client/src/pages/builder/sidebars/right/sections/layout.tsx:202
-#: apps/client/src/pages/builder/sidebars/right/sections/layout.tsx:203
-msgid "Layout"
-msgstr "פריסה"
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:60
+msgid "Last updated:"
+msgstr ""
 
 #: apps/client/src/pages/home/sections/hero/call-to-action.tsx:38
 msgid "Learn more"
 msgstr "מידע נוסף"
 
-#: apps/client/src/pages/builder/sidebars/right/sections/page.tsx:44
-msgid "Letter"
-msgstr "מכתב"
-
-#: apps/client/src/pages/builder/sidebars/left/dialogs/languages.tsx:64
-#: apps/client/src/pages/builder/sidebars/left/dialogs/skills.tsx:98
-msgid "Level"
-msgstr "רמה"
-
-#: apps/client/src/components/copyright.tsx:16
-msgid "Licensed under <0>MIT</0>"
-msgstr "כפוף לרישיון <0>MIT</0>"
-
 #: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:86
 msgid "Light"
 msgstr "בהירה"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:69
+#: apps/client/src/pages/home/sections/features/index.tsx:68
 msgid "Light or dark theme"
 msgstr "ערכת עיצוב בהירה או כהה"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/typography.tsx:165
-msgid "Line Height"
-msgstr "גובה שורה"
 
 #: apps/client/src/pages/dashboard/resumes/_layouts/grid/_components/import-card.tsx:33
 #: apps/client/src/pages/dashboard/resumes/_layouts/list/_components/import-item.tsx:22
@@ -925,23 +676,12 @@ msgstr "LinkedIn,‏ JSON Resume וכו׳."
 msgid "List"
 msgstr "רשימה"
 
-#: apps/client/src/pages/builder/sidebars/left/dialogs/custom-section.tsx:123
-#: apps/client/src/pages/builder/sidebars/left/dialogs/experience.tsx:86
-#: apps/client/src/pages/builder/sidebars/left/dialogs/volunteer.tsx:81
-#: apps/client/src/pages/builder/sidebars/left/sections/basics.tsx:120
-msgid "Location"
-msgstr "מקום"
-
 #: apps/client/src/pages/dashboard/resumes/_dialogs/lock.tsx:51
 #: apps/client/src/pages/dashboard/resumes/_layouts/grid/_components/resume-card.tsx:115
 #: apps/client/src/pages/dashboard/resumes/_layouts/list/_components/resume-item.tsx:115
 #: apps/client/src/pages/dashboard/resumes/_layouts/list/_components/resume-item.tsx:166
 msgid "Lock"
 msgstr "נעילה"
-
-#: apps/client/src/pages/home/sections/features/index.tsx:64
-msgid "Lock a resume to prevent editing"
-msgstr "לנעול את קורות החיים כדי למנוע עריכה"
 
 #: apps/client/src/pages/dashboard/resumes/_dialogs/lock.tsx:43
 msgid "Locking a resume will prevent any further changes to it. This is useful when you have already shared your resume with someone and you don't want to accidentally make any changes to it."
@@ -956,87 +696,52 @@ msgstr "יציאה"
 msgid "Lost your device?"
 msgstr "איבדת את המכשיר שלך?"
 
-#: apps/client/src/pages/builder/sidebars/right/sections/layout.tsx:252
-msgid "Main"
-msgstr "ראשי"
-
-#: apps/client/src/pages/home/sections/features/index.tsx:59
-msgid "Manage multiple resumes"
-msgstr "ניהול מספר קורות חיים"
-
-#. The month and year should be uniform across all languages.
-#: apps/client/src/pages/builder/sidebars/left/dialogs/awards.tsx:71
-#: apps/client/src/pages/builder/sidebars/left/dialogs/certifications.tsx:69
-#: apps/client/src/pages/builder/sidebars/left/dialogs/publications.tsx:69
-msgid "March 2023"
-msgstr "מרץ 2023"
-
-#: apps/client/src/pages/builder/sidebars/left/dialogs/education.tsx:112
-#: apps/client/src/pages/builder/sidebars/left/dialogs/experience.tsx:74
-#: apps/client/src/pages/builder/sidebars/left/dialogs/projects.tsx:103
-#: apps/client/src/pages/builder/sidebars/left/dialogs/volunteer.tsx:69
-msgid "March 2023 - Present"
-msgstr "מרץ 2023 - כרגע"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/page.tsx:50
-msgid "Margin"
-msgstr "מרווח"
+#: apps/client/src/pages/dashboard/billing/page.tsx:172
+msgid "Manage Subscription"
+msgstr ""
 
 #: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:218
 msgid "Max Tokens"
 msgstr "אסימונים מקסימליים"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:48
-msgid "MIT License"
-msgstr "רישיון MIT"
-
 #: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:205
 msgid "Model"
 msgstr "מודל"
 
+#: apps/client/src/pages/home/sections/features/index.tsx:50
+msgid "Multi-language support"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:113
+#: apps/client/src/pages/dashboard/settings/page.tsx:16
+#: apps/client/src/pages/home/page.tsx:24
+msgid "My SaaS"
+msgstr ""
+
 #: apps/client/src/pages/auth/register/page.tsx:98
-#: apps/client/src/pages/builder/sidebars/left/dialogs/custom-section.tsx:81
-#: apps/client/src/pages/builder/sidebars/left/dialogs/interests.tsx:69
-#: apps/client/src/pages/builder/sidebars/left/dialogs/languages.tsx:36
-#: apps/client/src/pages/builder/sidebars/left/dialogs/projects.tsx:73
-#: apps/client/src/pages/builder/sidebars/left/dialogs/publications.tsx:39
-#: apps/client/src/pages/builder/sidebars/left/dialogs/references.tsx:39
-#: apps/client/src/pages/builder/sidebars/left/dialogs/skills.tsx:70
-#: apps/client/src/pages/builder/sidebars/left/sections/custom/section.tsx:88
 #: apps/client/src/pages/dashboard/settings/_sections/account.tsx:153
 msgid "Name"
 msgstr "שם"
-
-#: apps/client/src/pages/builder/sidebars/left/dialogs/certifications.tsx:39
-msgctxt "Name of the Certification"
-msgid "Name"
-msgstr "שם"
-
-#: apps/client/src/pages/builder/sidebars/left/dialogs/profiles.tsx:40
-msgid "Network"
-msgstr "רשת"
 
 #: apps/client/src/pages/dashboard/settings/_sections/security.tsx:96
 msgid "New Password"
 msgstr "סיסמה חדשה"
 
+#: apps/client/src/pages/home/sections/features/index.tsx:48
+msgid "No hidden fees or tracking"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:245
+msgid "No plans available"
+msgstr ""
+
 #: apps/client/src/components/locale-combobox.tsx:45
 msgid "No results found"
 msgstr "לא נמצאו תוצאות"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:49
-msgid "No user tracking or advertising"
-msgstr "אין מעקב אחרי המשתמשים או פרסום"
-
 #: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:133
 msgid "Note: This will make your account less secure."
 msgstr "לתשומת ליבך: זה ישפר את ההגנה על החשבון שלך."
-
-#: apps/client/src/pages/builder/sidebars/right/index.tsx:128
-#: apps/client/src/pages/builder/sidebars/right/sections/notes.tsx:16
-#: apps/client/src/pages/builder/sidebars/right/sections/notes.tsx:17
-msgid "Notes"
-msgstr "הערות"
 
 #: apps/client/src/pages/auth/verify-otp/page.tsx:82
 msgid "One-Time Password"
@@ -1055,19 +760,11 @@ msgstr "אופס, השרת החזיר שגיאה."
 msgid "Open"
 msgstr "פתיחה"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:47
-msgid "Open Source"
-msgstr "קוד פתוח"
-
 #: apps/client/src/services/openai/change-tone.ts:35
 #: apps/client/src/services/openai/fix-grammar.ts:33
 #: apps/client/src/services/openai/improve-writing.ts:33
 msgid "OpenAI did not return any choices for your text."
 msgstr "OpenAI לא החזיר אפשרויות לטקסט שלך."
-
-#: apps/client/src/pages/home/sections/features/index.tsx:52
-msgid "OpenAI Integration"
-msgstr "שילוב מול OpenAI"
 
 #: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:120
 msgid "OpenAI/Azure OpenAI/Ollama Integration"
@@ -1077,29 +774,18 @@ msgstr "OpenAI/Azure OpenAI/Ollama אינטגרציה"
 msgid "OpenAI/Ollama API Key"
 msgstr "מפתח API של OpenAI/Ollama"
 
-#: apps/client/src/pages/builder/sidebars/right/sections/page.tsx:67
-#: apps/client/src/pages/builder/sidebars/right/sections/typography.tsx:182
-msgid "Options"
-msgstr "אפשרויות"
-
-#: apps/client/src/pages/auth/layout.tsx:47
+#: apps/client/src/pages/auth/layout.tsx:46
 msgctxt "The user can either login with email/password, or continue with GitHub or Google."
 msgid "or continue with"
 msgstr "או להמשיך עם"
 
-#: apps/client/src/pages/builder/sidebars/left/dialogs/volunteer.tsx:39
-msgid "Organization"
-msgstr "ארגון"
+#: apps/client/src/pages/home/sections/features/index.tsx:58
+msgid "Organize with folders"
+msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/right/index.tsx:100
-#: apps/client/src/pages/builder/sidebars/right/sections/page.tsx:25
-#: apps/client/src/pages/builder/sidebars/right/sections/page.tsx:26
-msgid "Page"
-msgstr "עמוד"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/layout.tsx:233
-msgid "Page {pageNumber}"
-msgstr "דף {pageNumber}"
+#: apps/client/src/pages/home/sections/features/index.tsx:106
+msgid "Our platform is built with modern technology and best practices, offering a comprehensive suite of features designed to help your team work smarter and faster."
+msgstr ""
 
 #: apps/client/src/pages/auth/login/page.tsx:110
 #: apps/client/src/pages/auth/register/page.tsx:163
@@ -1108,30 +794,21 @@ msgstr "דף {pageNumber}"
 msgid "Password"
 msgstr "סיסמה"
 
-#: apps/client/src/pages/builder/sidebars/right/sections/export.tsx:76
-msgid "PDF"
-msgstr "PDF"
+#: apps/client/src/pages/home/sections/support/index.tsx:27
+msgid "Payments"
+msgstr ""
 
-#: apps/client/src/pages/home/sections/features/index.tsx:63
-msgid "Personal notes for each resume"
-msgstr "הערות אישיות לכל קורות חיים"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/basics.tsx:108
-msgid "Phone"
-msgstr "טלפון"
-
-#: apps/client/src/pages/auth/layout.tsx:76
+#: apps/client/src/pages/auth/layout.tsx:75
 msgid "Photograph by Patrick Tomasso"
 msgstr "תמונה מאת פטריק טומאסו"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:66
-msgid "Pick any font from Google Fonts"
-msgstr "אפשר לבחור כל גופן מבין הגופנים של Google"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/section.tsx:69
 #: apps/client/src/pages/dashboard/settings/_sections/account.tsx:121
 msgid "Picture"
 msgstr "תמונה"
+
+#: apps/client/src/components/copyright.tsx:30
+msgid "Platform"
+msgstr ""
 
 #: apps/client/src/pages/auth/verify-email/page.tsx:59
 msgid "Please note that this step is completely optional."
@@ -1145,34 +822,29 @@ msgstr "נא לבחור סוג קובץ"
 msgid "Please store your backup codes in a secure location. You can use one of these one-time use codes to login in case you lose access to your authenticator app."
 msgstr "נא לאחסון את הקודים שלמטרות גיבוי במקום מוגן. אפשר להשתמש באחד מהקודים החד־פעמיים האלה כדי להיכנס אם איבדת את הגישה ליישומון המאמת שלך."
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:99
-msgid "Portrait"
-msgstr "לאורך"
-
-#: apps/client/src/pages/builder/sidebars/left/dialogs/experience.tsx:54
-msgctxt "Position held at a company, for example, Software Engineer"
-msgid "Position"
-msgstr "תפקיד"
-
-#: apps/client/src/pages/builder/sidebars/left/dialogs/volunteer.tsx:53
-msgid "Position"
-msgstr "תפקיד"
-
-#: apps/client/src/pages/home/sections/features/index.tsx:96
+#: apps/client/src/pages/home/sections/features/index.tsx:95
 msgid "Powered by"
 msgstr "מופעל על גבי"
 
-#: apps/client/src/pages/builder/sidebars/left/dialogs/profiles.tsx:94
-msgid "Powered by <0>Simple Icons</0>"
-msgstr "נעזר ב־<0>Simple Icons</0>"
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:94
+msgid "Price"
+msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/right/sections/theme.tsx:43
-msgid "Primary Color"
-msgstr "צבע עיקרי"
+#: apps/client/src/pages/home/components/footer.tsx:34
+msgid "Pricing"
+msgstr ""
 
-#: apps/client/src/pages/home/components/footer.tsx:47
+#: apps/client/src/pages/home/sections/features/index.tsx:61
+msgid "Priority support"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:52
 msgid "Privacy Policy"
 msgstr "מדיניות פרטיות"
+
+#: apps/client/src/pages/home/components/footer.tsx:28
+msgid "Product"
+msgstr ""
 
 #: apps/client/src/components/ai-actions.tsx:113
 #: apps/client/src/components/ai-actions.tsx:116
@@ -1183,19 +855,14 @@ msgstr "מקצועי"
 msgid "Profile"
 msgstr "פרופיל"
 
-#: apps/client/src/pages/builder/sidebars/right/sections/sharing.tsx:55
-msgid "Public"
-msgstr "ציבורי"
+#: apps/client/src/pages/home/sections/statistics/index.tsx:14
+msgid "Projects Created"
+msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/left/dialogs/publications.tsx:53
-msgid "Publisher"
-msgstr "מוציא לאור"
+#: apps/client/src/pages/home/sections/contributors/index.tsx:41
+msgid "Questions? Our team is here to help. Reach out anytime and we'll get back to you within 24 hours."
+msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/right/sections/information.tsx:74
-msgid "Raise an issue"
-msgstr "דיווח על בעיה"
-
-#: apps/client/src/components/copyright.tsx:35
 #: apps/client/src/pages/auth/backup-otp/page.tsx:52
 #: apps/client/src/pages/auth/forgot-password/page.tsx:49
 #: apps/client/src/pages/auth/login/page.tsx:55
@@ -1203,92 +870,51 @@ msgstr "דיווח על בעיה"
 #: apps/client/src/pages/auth/reset-password/page.tsx:60
 #: apps/client/src/pages/auth/verify-email/page.tsx:43
 #: apps/client/src/pages/auth/verify-otp/page.tsx:52
-#: apps/client/src/pages/builder/page.tsx:60
 #: apps/client/src/pages/dashboard/resumes/page.tsx:22
-#: apps/client/src/pages/dashboard/settings/page.tsx:16
-#: apps/client/src/pages/home/components/footer.tsx:18
-#: apps/client/src/pages/home/page.tsx:24
-#: apps/client/src/pages/public/page.tsx:74
-#: apps/client/src/pages/public/page.tsx:95
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:17
 msgid "Reactive Resume"
 msgstr "Reactive Resume"
 
-#: apps/client/src/pages/home/sections/logo-cloud/index.tsx:39
-msgid "Reactive Resume has helped people land jobs at these great companies:"
-msgstr "Reactive Resume סייע לאנשים להתקבל למשרות בחברות הנהדרות הבאות:"
+#: apps/client/src/pages/home/sections/contributors/index.tsx:16
+msgid "Ready to get started?"
+msgstr ""
 
-#: apps/client/src/pages/home/sections/support/index.tsx:12
-msgid "Reactive Resume is a free and open-source project crafted mostly by me, and your support would be greatly appreciated. If you're inclined to contribute, and only if you can afford to, consider making a donation through any of the listed platforms. Additionally, donations to Reactive Resume through Open Collective are tax-exempt, as the project is fiscally hosted by Open Collective Europe."
-msgstr "Reactive Resume הוא מיזם חופשי בקוד פתוח שנוצר בעיקר על ידיי והתמיכה שלך תהיה מאוד מוערכת. אם שקלת לתרום ויש לך אפשרות כלכלית שכזאת, כדאי לשקול לתרום דרך אחת מהפלטפורמות שמופיעות כאן. בנוסף, התרומות ל־Reactive Resume דרך Open Collective מוכרות במס כיוון שהמיזם מתארח באופן פיסקאלי (משפטית) על ידי Open Collective אירופה."
-
-#: apps/client/src/pages/home/sections/features/index.tsx:107
-msgid "Reactive Resume is a passion project of over 3 years of hard work, and with that comes a number of re-iterated ideas and features that have been built to (near) perfection."
-msgstr "Reactive Resume הוא מיזם שקם מתוך תשוקה כבר למעלה מ־3 שנות עבודה שבהן התגלגלו מגוון רעיונות ויכולות שנבנו באופן (כמעט) מושלם."
-
-#: apps/client/src/pages/home/sections/contributors/index.tsx:22
-msgid "Reactive Resume thrives thanks to its vibrant community. This project owes its progress to numerous individuals who've dedicated their time and skills. Below, we celebrate the coders who've enhanced its features on GitHub and the linguists whose translations on Crowdin have made it accessible to a broader audience."
-msgstr "מיזם Reactive Resume משגשג בזכות הקהילה התוססת שלו. המיזם הזה חב את התפתחותו למגוון דמויות מפתח שהקדישו את זמנם וכשרונם. להלן, אפשר לחגוג למתכנתים ששיפרו את היכולות של המיזם ב־GitHub והמתרגמים שהתרגומים שלהם דרך Crowdin עזרו לפרוץ את הדרך לקהל רחב יותר."
-
-#: apps/client/src/pages/builder/_components/toolbar.tsx:89
-msgid "Redo"
-msgstr "ביצוע מחדש"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-list-item.tsx:105
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-options.tsx:157
-msgid "Remove"
-msgstr "הסרה"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/layout.tsx:236
-msgid "Remove Page"
-msgstr "הסרת עמוד"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-options.tsx:111
 #: apps/client/src/pages/dashboard/resumes/_layouts/grid/_components/resume-card.tsx:101
 #: apps/client/src/pages/dashboard/resumes/_layouts/list/_components/resume-item.tsx:86
 #: apps/client/src/pages/dashboard/resumes/_layouts/list/_components/resume-item.tsx:152
 msgid "Rename"
 msgstr "שינוי שם"
 
+#: apps/client/src/pages/dashboard/billing/page.tsx:150
+msgid "Renews on"
+msgstr ""
+
 #: apps/client/src/pages/dashboard/settings/_sections/account.tsx:199
 msgid "Resend email confirmation link"
 msgstr "שליחת קישור לאימות בדוא״ל מחדש"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-options.tsx:152
-msgid "Reset"
-msgstr "איפוס"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/layout.tsx:206
-msgid "Reset Layout"
-msgstr "איפוס פריסה"
 
 #: apps/client/src/pages/auth/reset-password/page.tsx:60
 #: apps/client/src/pages/auth/reset-password/page.tsx:65
 msgid "Reset your password"
 msgstr "איפוס הסיסמה שלך"
 
-#: apps/client/src/pages/builder/_components/toolbar.tsx:124
-msgid "Reset Zoom"
-msgstr "איפוס תקריב"
+#: apps/client/src/pages/home/components/footer.tsx:63
+msgid "Resources"
+msgstr ""
 
-#: apps/client/src/pages/dashboard/_components/sidebar.tsx:86
 #: apps/client/src/pages/dashboard/resumes/page.tsx:22
 #: apps/client/src/pages/dashboard/resumes/page.tsx:39
 msgid "Resumes"
 msgstr "מסמכי קורות חיים"
 
-#: apps/client/src/pages/home/sections/statistics/index.tsx:14
-msgid "Resumes Generated"
-msgstr "נוצרו מסמכי קורות חיים"
+#: apps/client/src/pages/home/sections/features/index.tsx:65
+msgid "Rich text editor"
+msgstr ""
 
-#: apps/client/src/pages/home/sections/features/index.tsx:105
-msgid "Rich in features, not in pricing."
-msgstr "עשיר ביכולות, לא בממון."
+#: apps/client/src/pages/home/sections/features/index.tsx:63
+msgid "Role-based access control"
+msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:138
-msgid "Rounded"
-msgstr "מעוגל"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-dialog.tsx:180
 #: apps/client/src/pages/dashboard/resumes/_dialogs/resume.tsx:245
 #: apps/client/src/pages/dashboard/settings/_sections/account.tsx:217
 #: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:131
@@ -1307,61 +933,25 @@ msgstr "נשמר"
 msgid "Scan the QR code below with your authenticator app to setup 2FA on your account."
 msgstr "יש לסרוק את קוד ה־QR שלהלן עם יישומון המאמת שלך כדי להקים אימות דו־שלבי לחשבון שלך."
 
-#. Score or honors for the degree, for example, CGPA or magna cum laude
-#: apps/client/src/pages/builder/sidebars/left/dialogs/education.tsx:92
-msgid "Score"
-msgstr "ציון"
-
-#: apps/client/src/pages/builder/_components/toolbar.tsx:104
-msgid "Scroll to Pan"
-msgstr "גלול כדי להזיז"
-
-#: apps/client/src/pages/builder/_components/toolbar.tsx:104
-msgid "Scroll to Zoom"
-msgstr "גלול כדי להגדיל"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/typography.tsx:111
-msgid "Search for a font family"
-msgstr "חיפוש משפחת גופנים"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/typography.tsx:126
-msgid "Search for a font subset"
-msgstr "חיפוש תת־קבוצת גופנים"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/typography.tsx:139
-msgid "Search for a font variant"
-msgstr "חיפוש הגוון גופן"
-
 #: apps/client/src/components/locale-combobox.tsx:41
 msgid "Search for a language"
 msgstr "חיפוש שפה"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:56
-msgid "Secure with two-factor authentication"
-msgstr "הגנה עם אימות דו־שלבי"
+#: apps/client/src/pages/home/sections/support/index.tsx:23
+msgid "Secure user authentication with multiple sign-in options including email, OAuth providers, and two-factor authentication."
+msgstr ""
 
 #: apps/client/src/pages/dashboard/settings/_sections/security.tsx:65
+#: apps/client/src/pages/home/sections/support/index.tsx:32
 msgid "Security"
 msgstr "אבטחה"
-
-#: apps/client/src/pages/home/sections/features/index.tsx:50
-msgid "Self-host with Docker"
-msgstr "אירוח עצמי עם Docker"
 
 #: apps/client/src/pages/auth/forgot-password/page.tsx:104
 msgid "Send Email"
 msgstr "שליחת דוא״ל"
 
-#: apps/client/src/pages/builder/sidebars/right/sections/information.tsx:79
-msgid "Send me a message"
-msgstr "שליחה הודעה אליי"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-options.tsx:97
-msgid "Separate Links"
-msgstr "קישורים נפרדים"
-
 #: apps/client/src/components/user-options.tsx:32
-#: apps/client/src/pages/dashboard/_components/sidebar.tsx:92
+#: apps/client/src/pages/dashboard/_components/sidebar.tsx:107
 #: apps/client/src/pages/dashboard/settings/page.tsx:16
 #: apps/client/src/pages/dashboard/settings/page.tsx:26
 msgid "Settings"
@@ -1370,28 +960,6 @@ msgstr "הגדרות"
 #: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:159
 msgid "Setup two-factor authentication on your account"
 msgstr "הקמת אימות דו־שלבי לחשבון שלך"
-
-#: apps/client/src/pages/builder/sidebars/right/index.tsx:107
-#: apps/client/src/pages/builder/sidebars/right/sections/sharing.tsx:38
-#: apps/client/src/pages/builder/sidebars/right/sections/sharing.tsx:39
-msgid "Sharing"
-msgstr "שיתוף"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-options.tsx:106
-msgid "Show"
-msgstr "הצגה"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/page.tsx:78
-msgid "Show Break Line"
-msgstr "הצגת שורת מעבר"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/page.tsx:91
-msgid "Show Page Numbers"
-msgstr "הצגת מספרי שורות"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/layout.tsx:253
-msgid "Sidebar"
-msgstr "סרגל צד"
 
 #: apps/client/src/pages/auth/backup-otp/page.tsx:103
 #: apps/client/src/pages/auth/login/page.tsx:127
@@ -1408,18 +976,6 @@ msgstr "כניסה כעת"
 msgid "Sign in to your account"
 msgstr "כניסה לחשבון שלך"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:55
-msgid "Sign in with Email"
-msgstr "כניסה עם דוא״ל"
-
-#: apps/client/src/pages/home/sections/features/index.tsx:53
-msgid "Sign in with GitHub"
-msgstr "כניסה עם GitHub"
-
-#: apps/client/src/pages/home/sections/features/index.tsx:54
-msgid "Sign in with Google"
-msgstr "כניסה עם Google"
-
 #: apps/client/src/pages/auth/register/page.tsx:179
 msgid "Sign up"
 msgstr "הרשמה"
@@ -1431,10 +987,6 @@ msgstr "הכניסה באמצעות דוא\"ל מושבתת כרגע על ידי
 #: apps/client/src/pages/auth/register/page.tsx:82
 msgid "Signups are currently disabled by the administrator."
 msgstr "ההרשמות מושבתות כרגע על ידי ההנהלה."
-
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:65
-msgid "Size (in px)"
-msgstr "גודל (בפיקסלים)"
 
 #: apps/client/src/pages/dashboard/resumes/_dialogs/resume.tsx:228
 msgid "Slug"
@@ -1452,11 +1004,6 @@ msgstr "משהו השתבש במהלך הדפסת קורות החיים שלך. 
 msgid "Something went wrong while processing your request. Please try again later or raise an issue on GitHub."
 msgstr "משהו השתבש בעיבוד הבקשה שלך. נא לנסות שוב מאוחר יותר או לדווח על תקלה ב־GitHub."
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:87
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:132
-msgid "Square"
-msgstr "מרובע"
-
 #: apps/client/src/pages/dashboard/resumes/_layouts/grid/_components/create-card.tsx:33
 #: apps/client/src/pages/dashboard/resumes/_layouts/list/_components/create-item.tsx:23
 msgid "Start building from scratch"
@@ -1466,43 +1013,30 @@ msgstr "התחלת בנייה מאפס"
 msgid "Start building your resume by giving it a name."
 msgstr "אפשר להתחיל לבנות את קורות החיים שלך על ידי ציון שם."
 
-#: apps/client/src/pages/builder/sidebars/right/index.tsx:114
-#: apps/client/src/pages/builder/sidebars/right/sections/statistics.tsx:22
-#: apps/client/src/pages/builder/sidebars/right/sections/statistics.tsx:23
-msgid "Statistics"
-msgstr "סטטיסטיקה"
+#: apps/client/src/pages/home/sections/contributors/index.tsx:28
+msgid "Start Free Trial"
+msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/right/sections/statistics.tsx:38
-msgid "Statistics are available only for public resumes."
-msgstr "סטטיסטיקה זמינה רק לקורות חיים ציבוריים."
+#: apps/client/src/pages/dashboard/billing/page.tsx:143
+msgid "Status"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:17
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:27
+msgid "Stock Chat"
+msgstr ""
 
 #: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:162
 msgid "Store your backup codes securely"
 msgstr "יש לאחסן את הקודים למטרות גיבוי בצורה מוגנת"
 
-#: apps/client/src/pages/builder/sidebars/left/dialogs/awards.tsx:101
-#: apps/client/src/pages/builder/sidebars/left/dialogs/certifications.tsx:95
-#: apps/client/src/pages/builder/sidebars/left/dialogs/custom-section.tsx:151
-#: apps/client/src/pages/builder/sidebars/left/dialogs/education.tsx:138
-#: apps/client/src/pages/builder/sidebars/left/dialogs/experience.tsx:114
-#: apps/client/src/pages/builder/sidebars/left/dialogs/projects.tsx:129
-#: apps/client/src/pages/builder/sidebars/left/dialogs/publications.tsx:95
-#: apps/client/src/pages/builder/sidebars/left/dialogs/references.tsx:81
-#: apps/client/src/pages/builder/sidebars/left/dialogs/volunteer.tsx:109
-msgid "Summary"
-msgstr "תקציר"
+#: apps/client/src/pages/dashboard/billing/page.tsx:76
+msgid "Subscription successful!"
+msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/right/sections/information.tsx:23
-msgid "Support the app by donating what you can!"
-msgstr "אפשר לתמוך ביישום על ידי תרומה בכל דרך שאפשרית לך!"
-
-#: apps/client/src/pages/home/sections/support/index.tsx:9
-msgid "Supporting Reactive Resume"
-msgstr "תמיכה ב־Reactive Resume"
-
-#: apps/client/src/pages/home/sections/features/index.tsx:65
-msgid "Supports A4/Letter page formats"
-msgstr "תמיכה בגודלי הדפים A4/מכתב"
+#: apps/client/src/pages/home/components/footer.tsx:72
+msgid "Support"
+msgstr ""
 
 #: apps/client/src/components/theme-switch.tsx:31
 msgid "Switch to Dark Mode"
@@ -1516,39 +1050,30 @@ msgstr "עבור למצב בהיר"
 msgid "System"
 msgstr "מערכת"
 
-#: apps/client/src/pages/builder/sidebars/right/index.tsx:65
-#: apps/client/src/pages/builder/sidebars/right/sections/template.tsx:18
-#: apps/client/src/pages/builder/sidebars/right/sections/template.tsx:19
-msgid "Template"
-msgstr "תבנית"
-
-#: apps/client/src/pages/home/sections/templates/index.tsx:9
+#: apps/client/src/pages/home/components/footer.tsx:37
 msgid "Templates"
 msgstr "תבניות"
+
+#: apps/client/src/pages/home/sections/templates/index.tsx:9
+msgid "Templates & Examples"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:55
+msgid "Terms of Service"
+msgstr ""
 
 #: apps/client/src/pages/home/sections/testimonials/index.tsx:68
 msgid "Testimonials"
 msgstr "המלצות"
 
-#: apps/client/src/pages/builder/sidebars/right/sections/theme.tsx:103
-msgid "Text Color"
-msgstr "צבע כתב"
-
-#: apps/client/src/pages/public/error.tsx:17
-msgid "The page you're looking for doesn't exist."
-msgstr "הדף שאתה מחפש אינו קיים."
-
-#: apps/client/src/pages/public/error.tsx:29
-msgid "The request was invalid."
-msgstr "הבקשה אינה חוקית."
+#: apps/client/src/pages/dashboard/billing/page.tsx:77
+msgid "Thank you for subscribing. Your plan is now active."
+msgstr ""
 
 #: apps/client/src/services/errors/translate-error.ts:49
 msgid "The resume you want to update is locked, please unlock if you wish to make any changes to it."
 msgstr "קורות החיים שברצונך לעדכן נעולים, נא לשחרר אותם כדי לבצע שינויים."
 
-#: apps/client/src/pages/builder/sidebars/right/index.tsx:86
-#: apps/client/src/pages/builder/sidebars/right/sections/theme.tsx:19
-#: apps/client/src/pages/builder/sidebars/right/sections/theme.tsx:20
 #: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:79
 msgid "Theme"
 msgstr "ערכת עיצוב"
@@ -1556,10 +1081,6 @@ msgstr "ערכת עיצוב"
 #: apps/client/src/services/errors/translate-error.ts:40
 msgid "There was an error connecting to the browser. Please make sure 'chrome' is running and reachable."
 msgstr "קרתה תקלה בחיבור לדפדפן. נא לוודא ש־‚chrome’ פעיל ונגיש."
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-dialog.tsx:130
-msgid "This action can be reverted by clicking on the undo button in the floating toolbar."
-msgstr "אפשר לחזור אחורה מהפעולה הזאת על ידי לחיצה על כפתור ההחזרה בסרגל הכלים המרחף."
 
 #: apps/client/src/pages/dashboard/resumes/_dialogs/resume.tsx:151
 msgid "This action cannot be undone. This will permanently delete your resume and cannot be recovered."
@@ -1569,38 +1090,21 @@ msgstr "זאת פעולה בלתי הפיעה. היא תמחק את קורות �
 msgid "This email address is associated with an OAuth account. Please sign in with your OAuth provider."
 msgstr "כתובת הדוא״ל משויכת לחשבון OAuth. נא להיכנס עם ספק ה־OAuth שלך."
 
-#: apps/client/src/pages/builder/_components/header.tsx:57
-msgid "This resume is locked, please unlock to make further changes."
-msgstr "קורות חיים אלו נעולים, נא לשחרר כדי לערוך עוד שינויים."
-
-#: apps/client/src/pages/builder/sidebars/right/sections/notes.tsx:23
-msgid "This section is reserved for your personal notes specific to this resume. The content here remains private and is not shared with anyone else."
-msgstr "סעיף זה שמור להערות האישיות שלך שנוגעות לקורות חיים אלה. התוכן כאן נשאר פרטי ואינו משותף עם אף אחד אחר."
-
 #: apps/client/src/pages/dashboard/resumes/_dialogs/resume.tsx:216
 msgid "Tip: You can name the resume referring to the position you are applying for."
 msgstr "עצה: אפשר לתת שם לקורות החיים לפי התפקיד שבחרת לגשת אליו."
-
-#: apps/client/src/pages/builder/sidebars/left/dialogs/awards.tsx:39
-msgctxt "Name of the Award"
-msgid "Title"
-msgstr "כותרת"
 
 #: apps/client/src/pages/dashboard/resumes/_dialogs/resume.tsx:196
 msgid "Title"
 msgstr "כותרת"
 
-#: apps/client/src/pages/builder/_components/toolbar.tsx:138
-msgid "Toggle Page Break Line"
-msgstr "החלפת מצב שורות מעבר עמוד"
+#: apps/client/src/pages/home/sections/features/index.tsx:47
+msgid "Transparent pricing"
+msgstr ""
 
-#: apps/client/src/pages/builder/_components/toolbar.tsx:150
-msgid "Toggle Page Numbers"
-msgstr "החלפת תצוגת מספרי עמודים"
-
-#: apps/client/src/pages/home/sections/features/index.tsx:68
-msgid "Track views and downloads"
-msgstr "מעקב אחר צפיות והורדות"
+#: apps/client/src/pages/home/sections/logo-cloud/index.tsx:39
+msgid "Trusted by teams at leading companies worldwide:"
+msgstr ""
 
 #: apps/client/src/pages/auth/verify-otp/page.tsx:52
 #: apps/client/src/pages/auth/verify-otp/page.tsx:57
@@ -1620,24 +1124,9 @@ msgstr "אימות דו־שלבי לא מופעל לחשבון הזה."
 msgid "Type <0>delete</0> to confirm deleting your account."
 msgstr "נא להקליד <0>delete</0> (מחיקה) כדי לאשר את מחיקת החשבון שלך."
 
-#. For example, Bachelor's Degree or Master's Degree
-#: apps/client/src/pages/builder/sidebars/left/dialogs/education.tsx:54
-msgid "Type of Study"
-msgstr "סוג הלימודים"
-
-#: apps/client/src/pages/builder/sidebars/right/index.tsx:79
-#: apps/client/src/pages/builder/sidebars/right/sections/typography.tsx:76
-#: apps/client/src/pages/builder/sidebars/right/sections/typography.tsx:77
-msgid "Typography"
-msgstr "טיפוגרפיה"
-
-#: apps/client/src/pages/builder/sidebars/right/sections/typography.tsx:203
-msgid "Underline Links"
-msgstr "הוספת קווים מתחת לקישורים"
-
-#: apps/client/src/pages/builder/_components/toolbar.tsx:76
-msgid "Undo"
-msgstr "החזרה"
+#: apps/client/src/pages/home/sections/features/index.tsx:57
+msgid "Unlimited projects"
+msgstr ""
 
 #: apps/client/src/pages/dashboard/resumes/_dialogs/lock.tsx:52
 #: apps/client/src/pages/dashboard/resumes/_layouts/grid/_components/resume-card.tsx:110
@@ -1654,10 +1143,6 @@ msgstr "שחרור קורות חיים יאפשר לערוך בו שינויים
 msgid "Unverified"
 msgstr "לא מאומת"
 
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-dialog.tsx:164
-msgid "Update an existing item"
-msgstr "עדכון פריט קיים"
-
 #: apps/client/src/pages/dashboard/resumes/_dialogs/resume.tsx:179
 msgid "Update an existing resume"
 msgstr "עדכון קורות חיים קיימים"
@@ -1665,14 +1150,6 @@ msgstr "עדכון קורות חיים קיימים"
 #: apps/client/src/pages/dashboard/resumes/_dialogs/import.tsx:212
 msgid "Upload a file from one of the accepted sources to parse existing data and import it into Reactive Resume for easier editing."
 msgstr "יש להעלות קובץ מאחד מהמקורות המוסכמים כדי לפענח נתונים קיימים ולייבא אותם לתוך Reactive Resume להקלה על העריכה."
-
-#: apps/client/src/pages/builder/sidebars/right/sections/sharing.tsx:73
-msgid "URL"
-msgstr "כתובת"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/url-input.tsx:61
-msgid "URL must start with https://"
-msgstr "כתובת חייבת להיפתח ב־https://‎"
 
 #: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:247
 msgid "Use Azure OpenAI"
@@ -1691,8 +1168,11 @@ msgstr "להשתמש בקוד הגיבוי שלך"
 msgid "User does not have an associated 'secrets' record. Please report this issue on GitHub."
 msgstr "למשתמש אין רשומת ‚סודות’ (secrets) משויכת אליו. נא לדווח על התקלה הזאת ב־GitHub."
 
+#: apps/client/src/pages/home/sections/support/index.tsx:37
+msgid "User Management"
+msgstr ""
+
 #: apps/client/src/pages/auth/register/page.tsx:119
-#: apps/client/src/pages/builder/sidebars/left/dialogs/profiles.tsx:55
 #: apps/client/src/pages/dashboard/settings/_sections/account.tsx:167
 msgid "Username"
 msgstr "שם משתמש"
@@ -1709,10 +1189,6 @@ msgstr "תיקוף"
 msgid "Validated"
 msgstr "תקף"
 
-#: apps/client/src/pages/builder/sidebars/left/sections/custom/section.tsx:97
-msgid "Value"
-msgstr "ערך"
-
 #: apps/client/src/pages/dashboard/settings/_sections/account.tsx:192
 msgid "Verified"
 msgstr "מאומת"
@@ -1727,53 +1203,24 @@ msgid "Verify your email address"
 msgstr "אימות כתובת הדוא״ל שלך"
 
 #: apps/client/src/pages/home/sections/hero/index.tsx:26
-msgid "Version 4"
-msgstr "גרסה 4"
+msgid "Version 1.0"
+msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/right/sections/statistics.tsx:51
-msgid "Views"
-msgstr "צפיות"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/shared/section-list-item.tsx:92
-msgid "Visible"
-msgstr "גלוי"
-
-#: apps/client/src/pages/builder/sidebars/left/sections/custom/section.tsx:70
-msgid "Visit <0>Phosphor Icons</0> for a list of available icons"
-msgstr "בקרו <0>ב-Phosphor Icons</0> לקבלת רשימת הסמלים הזמינים."
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:109
+msgid "Volume"
+msgstr ""
 
 #: apps/client/src/pages/auth/verify-email/page.tsx:61
 msgid "We verify your email address only to ensure that we can send you a password reset link in case you forget your password."
 msgstr "אנו מאמתים את כתובת הדוא״ל שלך רק כדי לוודא שאפשר לשלוח לך קישור לאיפוס סיסמה למקרה ששכחת אותה."
 
-#: apps/client/src/pages/builder/sidebars/left/dialogs/awards.tsx:87
-#: apps/client/src/pages/builder/sidebars/left/dialogs/certifications.tsx:81
-#: apps/client/src/pages/builder/sidebars/left/dialogs/custom-section.tsx:137
-#: apps/client/src/pages/builder/sidebars/left/dialogs/education.tsx:124
-#: apps/client/src/pages/builder/sidebars/left/dialogs/experience.tsx:100
-#: apps/client/src/pages/builder/sidebars/left/dialogs/profiles.tsx:69
-#: apps/client/src/pages/builder/sidebars/left/dialogs/projects.tsx:115
-#: apps/client/src/pages/builder/sidebars/left/dialogs/publications.tsx:81
-#: apps/client/src/pages/builder/sidebars/left/dialogs/references.tsx:67
-#: apps/client/src/pages/builder/sidebars/left/dialogs/volunteer.tsx:95
-#: apps/client/src/pages/builder/sidebars/left/sections/basics.tsx:96
-msgid "Website"
-msgstr "אתר אינטרנט"
+#: apps/client/src/pages/home/sections/features/index.tsx:66
+msgid "Web-based platform"
+msgstr ""
 
 #: apps/client/src/pages/home/sections/hero/index.tsx:32
 msgid "What's new in the latest version"
 msgstr "מה חדש בגרסה העדכנית"
-
-#: apps/client/src/pages/public/error.tsx:26
-msgid "You are not authorized to access this page."
-msgstr "אין לך הרשאה לגשת לדף זה."
-
-#: apps/client/src/pages/builder/sidebars/left/dialogs/custom-section.tsx:186
-#: apps/client/src/pages/builder/sidebars/left/dialogs/interests.tsx:89
-#: apps/client/src/pages/builder/sidebars/left/dialogs/projects.tsx:164
-#: apps/client/src/pages/builder/sidebars/left/dialogs/skills.tsx:135
-msgid "You can add multiple keywords by separating them with a comma or pressing enter."
-msgstr "אפשר להוסיף מספר מילות מפתח על ידי הפרדתן בפסיק או בלחיצה על Enter."
 
 #: apps/client/src/pages/auth/login/page.tsx:99
 msgid "You can also enter your username."
@@ -1790,14 +1237,6 @@ msgstr "ניתן גם לבצע אינטגרציה עם Ollama פשוט על יד
 #: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:122
 msgid "You can make use of the OpenAI API, Azure OpenAI, or Ollama to help you generate content, or improve your writing while composing your resume."
 msgstr "אתה יכול להשתמש ב-OpenAI API, Azure OpenAI או Ollama כדי לעזור לך ליצור תוכן או לשפר את הכתיבה שלך בזמן שאתה כותב את קורות החיים שלך."
-
-#: apps/client/src/pages/builder/sidebars/right/sections/statistics.tsx:40
-msgid "You can track the number of views your resume has received, or how many people have downloaded the resume by enabling public sharing."
-msgstr "אפשר לעקוב אחר מספר הצפיות או אחר ההורדות של קורות החיים על ידי הפעלת שיתוף ציבורי."
-
-#: apps/client/src/pages/public/error.tsx:20
-msgid "You don't have permission to access this page."
-msgstr "אין לך הרשאה לגשת לדף זה."
 
 #: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:128
 msgid "You have the option to <0>obtain your own OpenAI API key</0>. This key empowers you to leverage the API as you see fit. Alternatively, if you wish to disable the AI features in Reactive Resume altogether, you can simply remove the key from your settings."
@@ -1832,11 +1271,14 @@ msgstr "מפתח ה־API של OpenAI טרם הוגדר. נא לגשת להגדר
 msgid "Your password has been updated successfully."
 msgstr "הסיסמה שלך עודכנה בהצלחה."
 
-#: apps/client/src/pages/builder/_components/toolbar.tsx:112
-msgid "Zoom In"
-msgstr "התקרבות"
+#: apps/client/src/pages/home/components/footer.tsx:18
+msgid "Your SaaS Platform"
+msgstr ""
 
-#: apps/client/src/pages/builder/_components/toolbar.tsx:118
-msgid "Zoom Out"
-msgstr "התרחקות"
+#: apps/client/src/pages/dashboard/billing/page.tsx:84
+msgid "Your subscription checkout was canceled."
+msgstr ""
 
+#: apps/client/src/pages/dashboard/billing/page.tsx:158
+msgid "Your subscription will be canceled at the end of the billing period."
+msgstr ""

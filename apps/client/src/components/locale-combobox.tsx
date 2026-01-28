@@ -17,7 +17,7 @@ import { CaretDownIcon, CheckIcon } from "@phosphor-icons/react";
 import fuzzy from "fuzzy";
 import { useMemo, useState } from "react";
 
-import { useLanguages } from "../services/resume/translation";
+import { useLanguages } from "../services/translation/translation";
 
 type Props = {
   value: string;

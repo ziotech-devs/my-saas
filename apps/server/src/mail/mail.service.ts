@@ -19,7 +19,7 @@ export class MailService {
       Logger.log(options, "MailService#sendEmail");
       return;
     }
-
+    console.log(this.mailerService);
     return this.mailerService.sendMail(options);
   }
 }

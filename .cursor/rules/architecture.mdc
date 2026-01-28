@@ -16,7 +16,6 @@ alwaysApply: true
 packages/
 ├── server/     # NestJS API  
 ├── client/     # React app
-├── artboard/     # React app
 ├── graphs/     # Langgraph python app
 ```
 
@@ -25,7 +24,7 @@ packages/
 packages/
 ├── dto/     # Shared DTOs
 ├── hooks/     # Shared hooks
-├── parser/     # Shared parsers
+
 ├── schema/     # Shared schema
 ├── ui/     # Shared UI components
 ├── utils/     # Shared utilities
