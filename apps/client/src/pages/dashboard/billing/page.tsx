@@ -15,99 +15,95 @@ import {
   TabsTrigger,
 } from "@my-saas/ui";
 import { cn, formatPrice } from "@my-saas/utils";
-import { ArrowRightIcon, CheckIcon } from "@phosphor-icons/react";
+import { ArrowRightIcon, CheckIcon, SpinnerGapIcon } from "@phosphor-icons/react";
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { useSearchParams } from "react-router";
 
-type BillingFrequency = "monthly" | "yearly";
+import { toast } from "@/client/hooks/use-toast";
+import {
+  useBillingItems,
+  useCreateBillingPortalSession,
+  useCreateCheckoutSession,
+  useSubscription,
+} from "@/client/services/billing";
+import { BillingItemDto, BillingItemMetadataDto } from "@my-saas/dto";
 
-type Plan = {
-  id: string;
-  title: string;
-  description: string;
-  monthlyPrice: number;
-  yearlyPrice: number;
-  badge?: {
-    label: string;
-    variant: "primary" | "secondary" | "success" | "warning" | "error" | "info";
-  };
-  features: string[];
-  buttonText: string;
-  buttonVariant: "primary" | "secondary" | "outline";
-  buttonIcon?: boolean;
+type BillingInterval = BillingItemDto["interval"];
+
+const defaultBillingItemMetadata: BillingItemMetadataDto = {
+  title: "Title",
+  description: "Description",
+  features: [
+    "Feature 1",
+    "Feature 2",
+    "Feature 3",
+  ],
+  badge: {
+    label: "Badge Label",
+    variant: "secondary",
+  },
+  buttonText: "Button Text",
+  buttonVariant: "secondary",
+  buttonIcon: true,
 };
 
 export const BillingPage = () => {
-  const plans: Plan[] = [
-    {
-      id: "starter",
-      title: t`Starter`,
-      description: t`Perfect for individuals and small teams`,
-      monthlyPrice: 9.99,
-      yearlyPrice: 99.99,
-      badge: {
-        label: t`Value`,
-        variant: "secondary",
-      },
-      features: [
-        t`Up to 3 team members`,
-        t`50K AI tokens/month`,
-        t`Core features`,
-        t`Email support`,
-        t`14-day free trial`,
-      ],
-      buttonText: t`Subscribe`,
-      buttonVariant: "secondary",
-    },
-    {
-      id: "pro",
-      title: t`Pro`,
-      description: t`Best for growing teams and professionals`,
-      monthlyPrice: 19.99,
-      yearlyPrice: 199.99,
-      badge: {
-        label: t`Popular`,
-        variant: "secondary",
-      },
-      features: [
-        t`Up to 10 team members`,
-        t`200K AI tokens/month`,
-        t`All Starter features`,
-        t`Priority support`,
-        t`Advanced analytics`,
-        t`14-day free trial`,
-      ],
-      buttonText: t`Subscribe`,
-      buttonVariant: "secondary",
-    },
-    {
-      id: "enterprise",
-      title: t`Enterprise`,
-      description: t`For large organizations with unlimited scale`,
-      monthlyPrice: 29.99,
-      yearlyPrice: 299.99,
-      features: [
-        t`Unlimited team members`,
-        t`Unlimited AI tokens`,
-        t`All Pro features`,
-        t`Dedicated support`,
-        t`Custom integrations`,
-        t`SLA guarantee`,
-      ],
-      buttonText: t`Contact Sales`,
-      buttonVariant: "primary",
-      buttonIcon: true,
-    },
-  ];
-  const [billingFrequency, setBillingFrequency] = useState<BillingFrequency>("monthly");
+  const [searchParams, setSearchParams] = useSearchParams();
+  const { subscription, loading: subscriptionLoading } = useSubscription();
+  const { items: billingItems, loading: itemsLoading } = useBillingItems();
+  const { createCheckout, loading: checkoutLoading } = useCreateCheckoutSession();
+  const { createPortal, loading: portalLoading } = useCreateBillingPortalSession();
 
-  const getPrice = (plan: Plan) => {
-    return billingFrequency === "monthly" ? plan.monthlyPrice : plan.yearlyPrice;
+  const [billingInterval, setBillingInterval] = useState<BillingInterval>("monthly");
+  const [loadingBillingItemId, setLoadingBillingItemId] = useState<string | null>(null);
+
+  let monthlyPlans: BillingItemDto[] = [];
+  let yearlyPlans: BillingItemDto[] = [];
+  billingItems.forEach((item: BillingItemDto) => {
+    if (item.interval === "monthly") {
+      monthlyPlans.push(item);
+    } else {
+      yearlyPlans.push(item);
+    }
+  });
+
+  useEffect(() => {
+    if (searchParams.get("success") === "true") {
+      toast({
+        variant: "success",
+        title: t`Subscription successful!`,
+        description: t`Thank you for subscribing. Your plan is now active.`,
+      });
+      setSearchParams({});
+    } else if (searchParams.get("canceled") === "true") {
+      toast({
+        variant: "info",
+        title: t`Checkout canceled`,
+        description: t`Your subscription checkout was canceled.`,
+      });
+      setSearchParams({});
+    }
+  }, [searchParams, setSearchParams]);
+
+  const handleSubscribe = async (billingItemId: string) => {
+    setLoadingBillingItemId(billingItemId);
+    try {
+      await createCheckout({ billingItemId });
+    } finally {
+      setLoadingBillingItemId(null);
+    }
   };
 
+  const handleManageSubscription = async () => {
+    await createPortal();
+  };
+
+  const dataLoading = subscriptionLoading || itemsLoading;
+
   const getBillingCycle = () => {
-    return billingFrequency === "monthly" ? t`Billed Monthly` : t`Billed Yearly`;
+    return billingInterval === "monthly" ? t`Billed Monthly` : t`Billed Yearly`;
   };
 
   return (
@@ -129,13 +125,57 @@ export const BillingPage = () => {
 
         <ScrollArea hideScrollbar className="h-[calc(100vh-140px)] lg:h-[calc(100vh-88px)]">
           <Tabs
-            value={billingFrequency}
+            value={billingInterval}
             className="space-y-8"
             onValueChange={(value) => {
-              if (value) setBillingFrequency(value as BillingFrequency);
+              if (value) setBillingInterval(value as BillingInterval);
             }}
           >
             <div className="space-y-4">
+              {/* Current Subscription Status */}
+              {subscription && (
+                <Card className="border-primary/50 bg-primary/5">
+                  <CardHeader className="pb-2">
+                    <CardTitle className="text-lg">{t`Current Subscription`}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-2">
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm opacity-75">{t`Status`}</span>
+                      <Badge variant={subscription.status === "active" ? "success" : "secondary"}>
+                        {subscription.status}
+                      </Badge>
+                    </div>
+                    {subscription.currentPeriodEnd && (
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm opacity-75">{t`Renews on`}</span>
+                        <span className="text-sm">
+                          {new Date(subscription.currentPeriodEnd).toLocaleDateString()}
+                        </span>
+                      </div>
+                    )}
+                    {subscription.cancelAtPeriodEnd && (
+                      <p className="text-sm text-warning-accent">
+                        {t`Your subscription will be canceled at the end of the billing period.`}
+                      </p>
+                    )}
+                  </CardContent>
+                  <CardFooter>
+                    <Button
+                      variant="outline"
+                      className="w-full"
+                      onClick={handleManageSubscription}
+                      disabled={portalLoading}
+                    >
+                      {portalLoading ? (
+                        <SpinnerGapIcon size={16} className="animate-spin" />
+                      ) : (
+                        t`Manage Subscription`
+                      )}
+                    </Button>
+                  </CardFooter>
+                </Card>
+              )}
+
               <div>
                 <p className="leading-relaxed opacity-75">
                   {t`Choose a plan that works best for you. You can change or cancel your subscription at any time.`}
@@ -156,7 +196,7 @@ export const BillingPage = () => {
                         size={16}
                         className={cn(
                           "transition-opacity",
-                          billingFrequency === "monthly" ? "opacity-100" : "opacity-0",
+                          billingInterval === "monthly" ? "opacity-100" : "opacity-0",
                         )}
                       />
                       <span className="text-sm whitespace-nowrap">{t`Billed Monthly`}</span>
@@ -173,7 +213,7 @@ export const BillingPage = () => {
                         size={16}
                         className={cn(
                           "transition-opacity",
-                          billingFrequency === "yearly" ? "opacity-100" : "opacity-0",
+                          billingInterval === "yearly" ? "opacity-100" : "opacity-0",
                         )}
                       />
                       <span className="text-sm whitespace-nowrap">{t`Billed Yearly`}</span>
@@ -185,80 +225,104 @@ export const BillingPage = () => {
 
             {/* Pricing Cards */}
             <AnimatePresence mode="wait">
-              <motion.div
-                key={billingFrequency}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.2 }}
-                className="grid gap-6 md:grid-cols-3"
-              >
-              {plans.map((plan) => {
-                const price = getPrice(plan);
-                const pricePerMonth = billingFrequency === "yearly" ? price / 12 : price;
+              {itemsLoading ? (
+                <motion.div
+                  key="loading"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className="flex justify-center py-12"
+                >
+                  <SpinnerGapIcon size={32} className="animate-spin opacity-50" />
+                </motion.div>
+              ) : (billingInterval === "monthly" && monthlyPlans.length === 0) ||
+                (billingInterval === "yearly" && yearlyPlans.length === 0) ? (
+                <motion.div
+                  key="empty"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className="py-12 text-center opacity-75"
+                >
+                  {t`No plans available`}
+                </motion.div>
+              ) : (
+                <motion.div
+                  key={billingInterval}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.2 }}
+                  className="grid gap-6 md:grid-cols-3"
+                >
+                  {(billingInterval === "monthly" ? monthlyPlans : yearlyPlans).map((plan) => {
+                    const metadata = plan.metadata || defaultBillingItemMetadata;
 
-                return (
-                  <Card key={plan.id} className="relative flex flex-col">
-                    {/* Badge */}
-                    {plan.badge && (
-                      <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
-                        <Badge variant={plan.badge.variant} className="px-3 py-1">
-                          {plan.badge.label}
-                        </Badge>
-                      </div>
-                    )}
+                    return (
+                      <Card key={plan.id} className="relative flex flex-col">
+                        <CardHeader className="space-y-2 pb-4">
+                          <CardTitle className="text-2xl font-bold">{metadata.title}</CardTitle>
+                          <CardDescription className="text-sm leading-relaxed">
+                            {metadata.description}
+                          </CardDescription>
+                        </CardHeader>
 
-                    <CardHeader className="space-y-2 pb-4">
-                      <CardTitle className="text-2xl font-bold">{plan.title}</CardTitle>
-                      <CardDescription className="text-sm leading-relaxed">
-                        {plan.description}
-                      </CardDescription>
-                    </CardHeader>
+                        <CardContent className="flex-1 space-y-4">
+                          {/* Price */}
+                          <div className="space-y-1">
+                            <div className="flex items-baseline gap-x-1">
+                              <span className="text-4xl font-bold">{formatPrice(plan.price)}</span>
+                              <span className="text-sm opacity-75">/{billingInterval.slice(0, -2)}</span>
+                            </div>
+                            <p className="text-xs opacity-75">{getBillingCycle()}</p>
+                          </div>
 
-                    <CardContent className="flex-1 space-y-4">
-                      {/* Price */}
-                      <div className="space-y-1">
-                        <div className="flex items-baseline gap-x-1">
-                          <span className="text-4xl font-bold">{formatPrice(pricePerMonth)}</span>
-                          <span className="text-sm opacity-75">/month</span>
-                        </div>
-                        <p className="text-xs opacity-75">{getBillingCycle()}</p>
-                      </div>
+                          {/* Separator */}
+                          <Separator className="border-dashed" />
 
-                      {/* Separator */}
-                      <Separator className="border-dashed" />
+                          {/* Features */}
+                          <ul className="space-y-3">
+                            {metadata.features.map((feature, index) => (
+                              <li key={index} className="flex items-start gap-x-2">
+                                <CheckIcon
+                                  size={20}
+                                  className="mt-0.5 shrink-0 text-success-accent"
+                                  weight="bold"
+                                />
+                                <span className="text-sm leading-relaxed opacity-75">{feature}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </CardContent>
 
-                      {/* Features */}
-                      <ul className="space-y-3">
-                        {plan.features.map((feature, index) => (
-                          <li key={index} className="flex items-start gap-x-2">
-                            <CheckIcon
-                              size={20}
-                              className="mt-0.5 shrink-0 text-success-accent"
-                              weight="bold"
-                            />
-                            <span className="text-sm leading-relaxed opacity-75">{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </CardContent>
-
-                    <CardFooter>
-                      <Button
-                        variant={plan.buttonVariant}
-                        className={cn(
-                          "w-full",
-                          plan.buttonVariant === "primary" && "bg-primary text-primary-foreground",
-                        )}
-                      >
-                        {plan.buttonText}
-                        {plan.buttonIcon && <ArrowRightIcon size={16} className="ml-2" />}
-                      </Button>
-                    </CardFooter>
-                  </Card>
-                );
-              })}
-              </motion.div>
+                        <CardFooter>
+                          <Button
+                            variant={metadata.buttonVariant}
+                            className={cn(
+                              "w-full",
+                              metadata.buttonVariant === "primary" &&
+                                "bg-primary text-primary-foreground",
+                            )}
+                            disabled={loadingBillingItemId === plan.id || dataLoading}
+                            onClick={() => {
+                              handleSubscribe(plan.id);
+                            }}
+                          >
+                            {loadingBillingItemId === plan.id ? (
+                              <SpinnerGapIcon size={16} className="animate-spin" />
+                            ) : (
+                              <>
+                                {metadata.buttonText}
+                                {metadata.buttonIcon && (
+                                  <ArrowRightIcon size={16} className="ml-2" />
+                                )}
+                              </>
+                            )}
+                          </Button>
+                        </CardFooter>
+                      </Card>
+                    );
+                  })}
+                </motion.div>
+              )}
             </AnimatePresence>
           </Tabs>
         </ScrollArea>

@@ -1,0 +1,72 @@
+---
+description: My SaaS development rules and best practices
+globs: []
+alwaysApply: true
+---
+# My SaaS Development Rules
+
+This directory contains Twenty's development guidelines and best practices in the modern Cursor Rules format (MDC). These rules are automatically applied based on file patterns and provide context-aware guidance to AI assistants.
+
+## Rules Overview
+
+### Core Guidelines
+- **architecture.mdc** - Project overview, technology stack, and infrastructure setup (Always Applied)
+- **nx-rules.mdc** - Nx workspace guidelines and best practices (Auto-attached to Nx files)
+
+### Code Quality
+- **typescript-guidelines.mdc** - TypeScript best practices and conventions (Auto-attached to .ts/.tsx files)
+- **code-style.mdc** - General coding standards and style guide (Auto-attached to code files)
+- **file-structure.mdc** - File and directory organization patterns (Auto-attached to config files)
+
+### React Development
+- **react-general-guidelines.mdc** - Core React development principles (Auto-attached to React files)
+
+### Testing & Quality
+- **testing-guidelines.mdc** - Testing strategies and best practices (Auto-attached to test files)
+
+### Internationalization
+- **translations.mdc** - Translation workflow and i18n setup (Auto-attached to locale files)
+
+## How Rules Work
+
+### Automatic Attachment
+Rules are automatically included in your AI context based on file patterns (globs). When you work on TypeScript files, the TypeScript guidelines are automatically loaded.
+
+### Manual Reference
+You can manually reference any rule using the `@ruleName` syntax:
+- `@nx-rules` - Include Nx-specific guidance
+- `@react-general-guidelines` - Load React best practices
+- `@testing-guidelines` - Get testing recommendations
+- `@creating-syncable-entity` - Guide for creating new syncable entities
+
+### Rule Types Used
+- **Always Applied** - Loaded in every context (architecture.mdc, README.mdc)
+- **Auto Attached** - Loaded when matching file patterns are referenced
+- **Agent Requested** - Available for AI to include when relevant
+- **Manual** - Only included when explicitly mentioned
+
+## Rule Format Reference
+
+Each rule file uses the MDC format with metadata:
+
+```markdown
+---
+description: Brief description of the rule's purpose
+globs: ["**/*.ts", "**/*.tsx"]  # File patterns for auto-attachment
+alwaysApply: false              # Whether to always include this rule
+---
+
+# Rule Title
+
+Rule content in Markdown format...
+```
+
+## Migration from Legacy Format
+
+The rules have been migrated from the legacy `.md` format to the modern `.mdc` format, providing:
+- Better context awareness through file pattern matching
+- Improved organization with metadata headers
+- More flexible rule application strategies
+- Enhanced integration with Cursor's AI features
+
+For the most up-to-date version of these guidelines, always refer to the files in this directory.

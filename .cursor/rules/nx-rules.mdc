@@ -1,0 +1,78 @@
+---
+description: Guidelines and best practices for working with Nx in the Twenty workspace, including workspace architecture understanding, configuration management, and generator usage.
+globs: ["**/nx.json", "**/project.json", "**/workspace.json"]
+alwaysApply: true
+---
+
+# Nx Guidelines
+
+## Core Commands
+```bash
+"dev": "nx run-many -t serve",
+"test": "pnpm vitest run",
+"prebuild": "pnpm prisma:generate",
+"build": "nx run-many -t build",
+"prestart": "pnpm prisma:migrate",
+"start": "node dist/apps/server/main",
+"lint": "nx run-many -t lint",
+"lint:fix": "nx run-many -t lint --fix",
+"crowdin:sync": "crowdin push && crowdin pull",
+"prisma:generate": "pnpm exec prisma generate",
+"prisma:migrate": "pnpm exec prisma migrate deploy",
+"prisma:migrate:dev": "pnpm exec prisma migrate dev",
+"prisma:studio": "pnpm exec prisma studio",
+"messages:extract": "pnpm exec lingui extract --clean --overwrite"
+```
+
+## Project Structure
+- Each package has a `project.json` with targets
+- Dependencies managed through `tsconfig.json` path mappings
+- Shared libraries in `packages/` directory
+
+## Build Targets
+```json
+// project.json
+{
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build", // or @nx/webpack:webpack for server apps
+      "options": { "outputPath": "dist/apps/client" } // or "dist/apps/server"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": { "jestConfig": "apps/client/jest.config.mjs" } // or "apps/server/jest.config.mjs"
+    }
+  }
+}
+```
+
+## Linting Strategy
+For faster development, always prefer linting only changed files:
+- Use `npx nx lint:diff-with-main <project>` to lint only files changed vs main branch
+- Use `--configuration=fix` to auto-fix issues in changed files
+- Only use `npx nx lint <project>` when you need to lint the entire project
+
+## Dependency Graph
+```bash
+# View project dependencies
+npx nx graph
+
+# Check what's affected by changes (runs target on affected projects)
+npx nx affected --target=test
+npx nx affected --target=build --base=main
+```
+
+## Library Management
+- Use `npx nx g @nx/workspace:library` generator for shared libs
+- Internal imports use `@/` path mapping
+- Libraries must export through index.ts barrel files
+
+## Cache Configuration
+- Nx caches build outputs and test results
+- Configure `outputs` in project.json targets
+- Use `inputs` to define what invalidates cache
+```
+
+
+
+
