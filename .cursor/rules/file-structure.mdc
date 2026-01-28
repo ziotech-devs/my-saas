@@ -1,0 +1,78 @@
+---
+description: File structure guidelines for My SaaS
+globs: []
+alwaysApply: true
+---
+# File Structure Guidelines
+
+## Directory Organization
+```
+apps/client/src/
+├── components/      # Reusable UI components
+├── pages/          # Route components  
+├── stores/         # State management
+├── services/       # API services
+├── constants/      # Constants
+├── hooks/          # Custom hooks
+└── router/         # Router
+└── libs/           # External libraries
+└── locales/        # Locales
+└── providers/      # Providers
+└── styles/         # Styles
+```
+
+```
+apps/server/src/
+├── assets/           # Static assets (images, fonts, etc)
+├── auth/             # Authentication logic and modules
+├── billing/          # Billing and payment modules
+├── config/           # Configuration files and environment
+├── contributors/     # Contributor-related modules
+├── database/         # Database entities, migrations, seeds
+├── feature/          # Feature modules (domain-specific features)
+├── health/           # Health checks and monitoring
+├── mail/             # Email sending logic and templates
+├── printer/          # Printing services and integrations
+├── resume/           # Resume management features
+├── stock-chat/       # Stock chat features and integrations
+├── storage/          # File and object storage modules
+├── translation/      # i18n and localization
+├── types/            # Shared/global type definitions
+├── user/             # User management modules
+```
+
+## File Naming
+- **kebab-case** for all files and directories
+- **Descriptive suffixes** for clarity
+```
+// ✅ Correct naming
+user-profile.component.tsx
+user-profile.styles.ts
+user-profile.test.tsx
+user.service.ts
+user.entity.ts
+create-user.dto.ts
+```
+
+## File Size Guidelines
+- **Components**: Under 300 lines
+- **Extract logic** into hooks/utilities when files grow large
+- **Use composition** over large monolithic components
+
+## Configuration Files
+
+### Project Configuration
+```
+.vscode/                       # VSCode settings
+├── settings.json
+├── extensions.json
+└── launch.json
+
+.github/                       # GitHub workflows
+├── workflows/
+└── templates/
+
+.cursor/                       # Cursor rules
+├── rules/
+└── environment.json
+```

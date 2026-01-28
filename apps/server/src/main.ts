@@ -16,6 +16,7 @@ patchNestJsSwagger();
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule, {
     logger: process.env.NODE_ENV === "development" ? ["debug"] : ["error", "warn", "log"],
+    rawBody: true, // Required for Stripe webhook signature verification
   });
 
   const configService = app.get(ConfigService<Config>);

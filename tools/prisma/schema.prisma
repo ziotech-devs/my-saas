@@ -19,20 +19,80 @@ enum Visibility {
   private
 }
 
+enum SubscriptionInterval {
+  monthly
+  yearly
+}
+
 model User {
-  id               String   @id @default(cuid())
+  id               String           @id @default(cuid())
   name             String
   picture          String?
-  username         String   @unique
-  email            String   @unique
-  locale           String   @default("en-US")
-  emailVerified    Boolean  @default(false)
-  twoFactorEnabled Boolean  @default(false)
-  createdAt        DateTime @default(now())
-  updatedAt        DateTime @updatedAt
+  username         String           @unique
+  email            String           @unique
+  locale           String           @default("en-US")
+  emailVerified    Boolean          @default(false)
+  twoFactorEnabled Boolean          @default(false)
+  createdAt        DateTime         @default(now())
+  updatedAt        DateTime         @updatedAt
   provider         Provider
   secrets          Secrets?
   resumes          Resume[]
+  billingCustomer  BillingCustomer?
+}
+
+model BillingCustomer {
+  id               String               @id @default(cuid())
+  userId           String               @unique
+  user             User                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+  stripeCustomerId String               @unique
+  subscription     BillingSubscription?
+  createdAt        DateTime             @default(now())
+  updatedAt        DateTime             @updatedAt
+}
+
+model BillingSubscription {
+  id                   String          @id @default(cuid())
+  billingCustomerId    String          @unique
+  billingCustomer      BillingCustomer @relation(fields: [billingCustomerId], references: [id], onDelete: Cascade)
+  stripeSubscriptionId String          @unique
+  status               String
+  currentPeriodEnd     DateTime?
+  cancelAtPeriodEnd    Boolean         @default(false)
+  billingItemId        String?
+  billingItem          BillingItem?    @relation(fields: [billingItemId], references: [id], onDelete: SetNull)
+  createdAt            DateTime        @default(now())
+  updatedAt            DateTime        @updatedAt
+}
+
+model BillingItem {
+  id            String                @id @default(cuid())
+  planKey       String // e.g. "basic", "pro", "enterprise"
+  stripePriceId String                @unique
+  subscriptions BillingSubscription[]
+  price         Float                 @default(0.00)
+  interval      SubscriptionInterval  @default(monthly)
+  metadata      BillingItemMetadata?
+  createdAt     DateTime              @default(now())
+  updatedAt     DateTime              @updatedAt
+}
+
+model BillingItemMetadata {
+  id             String      @id @default(cuid())
+  billingItemId  String      @unique
+  billingItem    BillingItem @relation(fields: [billingItemId], references: [id], onDelete: Cascade)
+  title          String
+  description    String
+  monthlyPrice   Float
+  yearlyPrice    Float
+  badge          Json? // { label: string, variant: string }
+  features       Json        @default("[]") // string[]
+  buttonText     String      @default("Subscribe")
+  buttonVariant  String      @default("secondary") // "primary" | "secondary" | "outline"
+  buttonIcon     Boolean     @default(false)
+  isContactSales Boolean     @default(false)
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
 }
 
 model Secrets {

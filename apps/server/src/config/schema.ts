@@ -84,6 +84,11 @@ export const configSchema = z.object({
   OPENID_TOKEN_URL: z.string().url().optional(),
   OPENID_USER_INFO_URL: z.string().url().optional(),
   GRAPHS_URL: z.string().url().optional().default("http://localhost:8123"),
+
+  // Stripe (Optional)
+  STRIPE_SECRET_KEY: z.string().optional(),
+  STRIPE_WEBHOOK_SECRET: z.string().optional(),
+  STRIPE_BILLING_PORTAL_RETURN_URL: z.string().url().optional(),
 });
 
 export type Config = z.infer<typeof configSchema>;
