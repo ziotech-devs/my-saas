@@ -14,7 +14,6 @@ import { SettingsPage } from "../pages/dashboard/settings/page";
 import { HomeLayout } from "../pages/home/layout";
 import { HomePage } from "../pages/home/page";
 import { ErrorPage } from "../pages/public/error";
-import { publicLoader, PublicResumePage } from "../pages/public/page";
 import { Providers } from "../providers";
 import { AuthGuard } from "./guards/auth";
 import { GuestGuard } from "./guards/guest";
@@ -67,11 +66,6 @@ export const routes = createRoutesFromElements(
             <Route index element={<BillingPage />} />
           </Route>
         </Route>
-      </Route>
-      
-      {/* Public Routes */}
-      <Route path=":username">
-        <Route path=":slug" loader={publicLoader} element={<PublicResumePage />} />
       </Route>
     </Route>
   </Route>,

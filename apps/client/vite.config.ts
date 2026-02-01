@@ -21,13 +21,6 @@ export default defineConfig({
     host: true,
     port: 5173,
     fs: { allow: [searchForWorkspaceRoot(process.cwd())] },
-
-    proxy: {
-      "/artboard": {
-        target: "http://localhost:6173",
-        changeOrigin: true,
-      },
-    },
   },
 
   optimizeDeps: {

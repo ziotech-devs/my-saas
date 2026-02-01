@@ -3,7 +3,6 @@ import { ApiTags } from "@nestjs/swagger";
 import { HealthCheck, HealthCheckService } from "@nestjs/terminus";
 
 import { configSchema } from "../config/schema";
-import { BrowserHealthIndicator } from "./browser.health";
 import { DatabaseHealthIndicator } from "./database.health";
 import { StorageHealthIndicator } from "./storage.health";
 
@@ -13,7 +12,6 @@ export class HealthController {
   constructor(
     private readonly health: HealthCheckService,
     private readonly database: DatabaseHealthIndicator,
-    private readonly browser: BrowserHealthIndicator,
     private readonly storage: StorageHealthIndicator,
   ) {}
 
@@ -21,7 +19,6 @@ export class HealthController {
     return this.health.check([
       () => this.database.isHealthy(),
       () => this.storage.isHealthy(),
-      () => this.browser.isHealthy(),
     ]);
   }
 

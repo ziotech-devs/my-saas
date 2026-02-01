@@ -41,29 +41,39 @@ export class BillingController {
       throw new BadRequestException("billingItemId is required");
     }
 
-    const billingItem = await this.billingService.getBillingItemById(body.billingItemId);
+    try {
+      const billingItem = await this.billingService.getBillingItemById(
+        body.billingItemId,
+      );
 
-    if (!billingItem) {
-      throw new BadRequestException(`No billing item found with id "${body.billingItemId}"`);
+      if (!billingItem) {
+        throw new BadRequestException(
+          `No billing item found with id "${body.billingItemId}"`,
+        );
+      }
+
+      const publicUrl = this.configService.getOrThrow("PUBLIC_URL");
+      const successUrl = `${publicUrl}/dashboard/billing?success=true`;
+      const cancelUrl = `${publicUrl}/dashboard/billing?canceled=true`;
+
+      const url = await this.billingService.createCheckoutSession(
+        user,
+        billingItem.stripePriceId,
+        successUrl,
+        cancelUrl,
+      );
+
+      return { url };
+    } catch (error) {
+      throw new BadRequestException(error);
     }
-
-    const publicUrl = this.configService.getOrThrow("PUBLIC_URL");
-    const successUrl = `${publicUrl}/dashboard/billing?success=true`;
-    const cancelUrl = `${publicUrl}/dashboard/billing?canceled=true`;
-
-    const url = await this.billingService.createCheckoutSession(
-      user,
-      billingItem.stripePriceId,
-      successUrl,
-      cancelUrl,
-    );
-
-    return { url };
   }
 
   @Post("portal")
   @UseGuards(JwtGuard)
-  async createBillingPortalSession(@UserDecorator() user: User): Promise<{ url: string }> {
+  async createBillingPortalSession(
+    @UserDecorator() user: User,
+  ): Promise<{ url: string }> {
     const url = await this.billingService.createBillingPortalSession(user);
     return { url };
   }
@@ -79,7 +89,7 @@ export class BillingController {
   @UseGuards(JwtGuard)
   async getBillingItems() {
     const items = await this.billingService.getAllBillingItems();
-    return items
+    return items;
   }
 
   @Post("webhook")
@@ -98,7 +108,11 @@ export class BillingController {
       throw new BadRequestException("Raw body not available");
     }
 
-    const event = this.stripeService.constructEvent(req.rawBody, signature, webhookSecret);
+    const event = this.stripeService.constructEvent(
+      req.rawBody,
+      signature,
+      webhookSecret,
+    );
 
     await this.billingService.handleWebhookEvent(event);
 

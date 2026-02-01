@@ -25,7 +25,7 @@ const emptyTransporter = nodemailer.createTransport({});
         }
 
         return {
-          defaults: { from },
+          defaults: { from},
           transport: smtpUrl ?? emptyTransporter,
         };
       },

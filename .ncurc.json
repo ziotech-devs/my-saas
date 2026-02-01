@@ -10,7 +10,6 @@
     "@nx/*",
     "@swc/*",
     "@swc-node/*",
-    "@reactive-resume/*",
     "eslint-plugin-unused-imports"
   ]
 }

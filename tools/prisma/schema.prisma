@@ -14,11 +14,6 @@ enum Provider {
   openid
 }
 
-enum Visibility {
-  public
-  private
-}
-
 enum SubscriptionInterval {
   monthly
   yearly
@@ -37,7 +32,6 @@ model User {
   updatedAt        DateTime         @updatedAt
   provider         Provider
   secrets          Secrets?
-  resumes          Resume[]
   billingCustomer  BillingCustomer?
 }
 
@@ -66,7 +60,7 @@ model BillingSubscription {
 }
 
 model BillingItem {
-  id            String                @id @default(cuid())
+  id            String                @id @default(uuid())
   planKey       String // e.g. "basic", "pro", "enterprise"
   stripePriceId String                @unique
   subscriptions BillingSubscription[]
@@ -108,34 +102,4 @@ model Secrets {
   user                 User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([userId, id])
-}
-
-model Resume {
-  id         String      @id @default(cuid())
-  title      String
-  slug       String
-  data       Json        @default("{}")
-  visibility Visibility  @default(private)
-  locked     Boolean     @default(false)
-  statistics Statistics?
-  userId     String
-  user       User        @relation(fields: [userId], references: [id], onDelete: Cascade)
-  createdAt  DateTime    @default(now())
-  updatedAt  DateTime    @updatedAt
-
-  @@unique([userId, id])
-  @@unique([userId, slug])
-  @@index(fields: [userId])
-}
-
-model Statistics {
-  id        String   @id @default(cuid())
-  views     Int      @default(0)
-  downloads Int      @default(0)
-  resumeId  String   @unique
-  resume    Resume   @relation(fields: [resumeId], references: [id], onDelete: Cascade)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  @@unique([resumeId, id])
 }
