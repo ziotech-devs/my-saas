@@ -20,7 +20,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useSearchParams } from "react-router";
-
 import { toast } from "@/client/hooks/use-toast";
 import {
   useBillingItems,
@@ -91,10 +90,17 @@ export const BillingPage = () => {
     setLoadingBillingItemId(billingItemId);
     try {
       await createCheckout({ billingItemId });
+    } catch (error) {
+      toast({
+        variant: "error",
+        title: t`Error subscribing`,
+        description: t`An error occurred while subscribing to the plan.`,
+      });
     } finally {
       setLoadingBillingItemId(null);
     }
-  };
+  }
+
 
   const handleManageSubscription = async () => {
     await createPortal();
@@ -299,7 +305,7 @@ export const BillingPage = () => {
                             className={cn(
                               "w-full",
                               metadata.buttonVariant === "primary" &&
-                                "bg-primary text-primary-foreground",
+                              "bg-primary text-primary-foreground",
                             )}
                             disabled={loadingBillingItemId === plan.id || dataLoading}
                             onClick={() => {

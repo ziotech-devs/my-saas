@@ -60,7 +60,7 @@ model BillingSubscription {
 }
 
 model BillingItem {
-  id            String                @id @default(cuid())
+  id            String                @id @default(uuid())
   planKey       String // e.g. "basic", "pro", "enterprise"
   stripePriceId String                @unique
   subscriptions BillingSubscription[]
@@ -103,4 +103,3 @@ model Secrets {
 
   @@unique([userId, id])
 }
-
