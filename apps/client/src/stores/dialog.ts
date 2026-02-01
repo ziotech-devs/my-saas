@@ -1,7 +1,6 @@
-import type { SectionKey } from "@my-saas/schema";
 import { create } from "zustand";
 
-export type DialogName = "resume" | "lock" | "import" | "two-factor" | SectionKey;
+export type DialogName = "lock" | "two-factor";
 
 export type DialogMode = "create" | "update" | "duplicate" | "delete";
 
@@ -33,7 +32,6 @@ export const useDialogStore = create<DialogState & DialogActions>()((set) => ({
 
 export const useDialog = <T = unknown>(name: DialogName) => {
   const dialog = useDialogStore((state) => {
-    if (name.startsWith("custom.")) name = "custom";
     return state.dialog?.name === name ? state.dialog : null;
   });
 
