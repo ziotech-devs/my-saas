@@ -6,6 +6,7 @@ import react from "@vitejs/plugin-react";
 import { defineConfig, searchForWorkspaceRoot } from "vite";
 
 export default defineConfig({
+  root: __dirname,
   cacheDir: "../../node_modules/.vite/client",
 
   build: {

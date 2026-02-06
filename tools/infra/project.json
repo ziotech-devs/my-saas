@@ -1,0 +1,44 @@
+{
+  "name": "infra",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "tools/infra",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "tsc",
+        "cwd": "tools/infra"
+      }
+    },
+    "synth": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx cdk synth",
+        "cwd": "tools/infra"
+      }
+    },
+    "deploy": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx cdk deploy --all",
+        "cwd": "tools/infra"
+      }
+    },
+    "diff": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx cdk diff",
+        "cwd": "tools/infra"
+      }
+    },
+    "destroy": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx cdk destroy --all",
+        "cwd": "tools/infra"
+      }
+    }
+  },
+  "tags": ["infra"]
+}
