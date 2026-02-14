@@ -10,6 +10,7 @@ import {
   Protocol,
   Secret as EcsSecret,
 } from 'aws-cdk-lib/aws-ecs';
+import type { IRepository } from 'aws-cdk-lib/aws-ecr';
 import {
   ApplicationLoadBalancer,
   ApplicationProtocol,
@@ -19,24 +20,23 @@ import {
 import { LogGroup, RetentionDays } from 'aws-cdk-lib/aws-logs';
 import type { ISecret } from 'aws-cdk-lib/aws-secretsmanager';
 import type { IBucket } from 'aws-cdk-lib/aws-s3';
-import { ScalableTarget, ServiceNamespace } from 'aws-cdk-lib/aws-applicationautoscaling';
 import type { Construct } from 'constructs';
 
 export type ApiStackProps = StackProps & {
   vpc: IVpc;
   albSecurityGroup: ISecurityGroup;
   ecsSecurityGroup: ISecurityGroup;
+  adminerSecurityGroup: ISecurityGroup;
   databaseSecret: ISecret;
   databaseHost: string;
   databasePort: string;
   uploadsBucket: IBucket;
   frontendUrl: string;
+  ecrRepository: IRepository;
+  appSecret: ISecret;
 };
 
 export class ApiStack extends Stack {
-  public readonly alb: ApplicationLoadBalancer;
-  public readonly albUrl: string;
-
   constructor(scope: Construct, id: string, props: ApiStackProps) {
     super(scope, id, props);
 
@@ -44,72 +44,24 @@ export class ApiStack extends Stack {
       vpc,
       albSecurityGroup,
       ecsSecurityGroup,
+      adminerSecurityGroup,
       databaseSecret,
       databaseHost,
       databasePort,
       uploadsBucket,
-      frontendUrl,
+      ecrRepository,
+      appSecret,
     } = props;
 
-    // ECS Cluster
+    // Shared ECS Cluster
     const cluster = new Cluster(this, 'Cluster', {
       clusterName: 'my-saas-cluster',
       vpc,
       containerInsights: true,
     });
 
-    // CloudWatch Log Group
-    const logGroup = new LogGroup(this, 'ApiLogGroup', {
-      logGroupName: '/ecs/my-saas-api',
-      retention: RetentionDays.ONE_MONTH,
-    });
-
-    // Fargate Task Definition
-    const taskDefinition = new FargateTaskDefinition(this, 'ApiTaskDef', {
-      memoryLimitMiB: 512,
-      cpu: 256,
-    });
-
-    // Grant S3 access to task role
-    uploadsBucket.grantReadWrite(taskDefinition.taskRole);
-
-    // Container definition
-    const container = taskDefinition.addContainer('api', {
-      image: ContainerImage.fromRegistry('node:20-alpine'),
-      logging: LogDrivers.awsLogs({
-        streamPrefix: 'api',
-        logGroup,
-      }),
-      environment: {
-        NODE_ENV: 'production',
-        PORT: '3000',
-        DATABASE_HOST: databaseHost,
-        DATABASE_PORT: databasePort,
-        DATABASE_NAME: 'mysaas',
-        STORAGE_BUCKET: uploadsBucket.bucketName,
-        STORAGE_REGION: this.region,
-        PUBLIC_URL: frontendUrl,
-      },
-      secrets: {
-        DATABASE_USERNAME: EcsSecret.fromSecretsManager(databaseSecret, 'username'),
-        DATABASE_PASSWORD: EcsSecret.fromSecretsManager(databaseSecret, 'password'),
-      },
-      healthCheck: {
-        command: ['CMD-SHELL', 'wget -q --spider http://localhost:3000/api/health || exit 1'],
-        interval: Duration.seconds(30),
-        timeout: Duration.seconds(5),
-        retries: 3,
-        startPeriod: Duration.seconds(60),
-      },
-    });
-
-    container.addPortMappings({
-      containerPort: 3000,
-      protocol: Protocol.TCP,
-    });
-
-    // Application Load Balancer
-    this.alb = new ApplicationLoadBalancer(this, 'Alb', {
+    // Shared Application Load Balancer
+    const alb = new ApplicationLoadBalancer(this, 'Alb', {
       loadBalancerName: 'my-saas-alb',
       vpc,
       internetFacing: true,
@@ -119,8 +71,110 @@ export class ApiStack extends Stack {
       },
     });
 
-    // Target Group
-    const targetGroup = new ApplicationTargetGroup(this, 'ApiTargetGroup', {
+    // ──────────────────────────────────────
+    // API Service
+    // ──────────────────────────────────────
+
+    const apiLogGroup = new LogGroup(this, 'ApiLogGroup', {
+      logGroupName: '/ecs/my-saas-api',
+      retention: RetentionDays.ONE_MONTH,
+    });
+
+    const apiTaskDef = new FargateTaskDefinition(this, 'ApiTaskDef', {
+      memoryLimitMiB: 512,
+      cpu: 256,
+    });
+
+    uploadsBucket.grantReadWrite(apiTaskDef.taskRole);
+
+    // Inject all app secrets from Secrets Manager
+    const appSecretKeys = [
+      'PUBLIC_URL',
+      'STORAGE_URL',
+      'ACCESS_TOKEN_SECRET',
+      'REFRESH_TOKEN_SECRET',
+      'CHROME_PORT',
+      'CHROME_TOKEN',
+      'CHROME_URL',
+      'CHROME_IGNORE_HTTPS_ERRORS',
+      'MAIL_FROM',
+      'SMTP_URL',
+      'STORAGE_ENDPOINT',
+      'STORAGE_PORT',
+      'STORAGE_REGION',
+      'STORAGE_BUCKET',
+      'STORAGE_ACCESS_KEY',
+      'STORAGE_SECRET_KEY',
+      'STORAGE_USE_SSL',
+      'STORAGE_SKIP_BUCKET_CHECK',
+      'DISABLE_SIGNUPS',
+      'DISABLE_EMAIL_AUTH',
+      'GITHUB_CLIENT_ID',
+      'GITHUB_CLIENT_SECRET',
+      'GITHUB_CALLBACK_URL',
+      'GOOGLE_CLIENT_ID',
+      'GOOGLE_CLIENT_SECRET',
+      'GOOGLE_CALLBACK_URL',
+      'VITE_OPENID_NAME',
+      'OPENID_AUTHORIZATION_URL',
+      'OPENID_CALLBACK_URL',
+      'OPENID_CLIENT_ID',
+      'OPENID_CLIENT_SECRET',
+      'OPENID_ISSUER',
+      'OPENID_SCOPE',
+      'OPENID_TOKEN_URL',
+      'OPENID_USER_INFO_URL',
+      'OPENAI_API_KEY',
+      'LANGSMITH_API_KEY',
+      'LANGSMITH_TRACING_V2',
+      'LANGSMITH_PROJECT',
+      'LANGSMITH_ENDPOINT',
+      'TAVILY_API_KEY',
+      'STRIPE_PUBLISHABLE_KEY',
+      'STRIPE_SECRET_KEY',
+      'STRIPE_WEBHOOK_SECRET',
+      'STRIPE_BILLING_PORTAL_RETURN_URL',
+      'ANTHROPIC_API_KEY',
+    ];
+
+    const ecsSecrets: Record<string, EcsSecret> = {};
+    for (const key of appSecretKeys) {
+      ecsSecrets[key] = EcsSecret.fromSecretsManager(appSecret, key);
+    }
+
+    ecsSecrets['DATABASE_USERNAME'] = EcsSecret.fromSecretsManager(databaseSecret, 'username');
+    ecsSecrets['DATABASE_PASSWORD'] = EcsSecret.fromSecretsManager(databaseSecret, 'password');
+    ecsSecrets['DATABASE_URL'] = EcsSecret.fromSecretsManager(appSecret, 'DATABASE_URL');
+
+    const apiContainer = apiTaskDef.addContainer('api', {
+      image: ContainerImage.fromEcrRepository(ecrRepository, 'latest'),
+      logging: LogDrivers.awsLogs({
+        streamPrefix: 'api',
+        logGroup: apiLogGroup,
+      }),
+      environment: {
+        NODE_ENV: 'production',
+        PORT: '3000',
+        DATABASE_HOST: databaseHost,
+        DATABASE_PORT: databasePort,
+        DATABASE_NAME: 'mysaas',
+      },
+      secrets: ecsSecrets,
+      healthCheck: {
+        command: ['CMD-SHELL', 'wget -q --spider http://localhost:3000/api/health || exit 1'],
+        interval: Duration.seconds(30),
+        timeout: Duration.seconds(5),
+        retries: 3,
+        startPeriod: Duration.seconds(60),
+      },
+    });
+
+    apiContainer.addPortMappings({
+      containerPort: 3000,
+      protocol: Protocol.TCP,
+    });
+
+    const apiTargetGroup = new ApplicationTargetGroup(this, 'ApiTargetGroup', {
       targetGroupName: 'my-saas-api-tg',
       vpc,
       port: 3000,
@@ -135,17 +189,15 @@ export class ApiStack extends Stack {
       },
     });
 
-    // HTTP Listener
-    this.alb.addListener('HttpListener', {
+    alb.addListener('HttpListener', {
       port: 80,
-      defaultTargetGroups: [targetGroup],
+      defaultTargetGroups: [apiTargetGroup],
     });
 
-    // Fargate Service
-    const service = new FargateService(this, 'ApiService', {
+    const apiService = new FargateService(this, 'ApiService', {
       serviceName: 'my-saas-api',
       cluster,
-      taskDefinition,
+      taskDefinition: apiTaskDef,
       desiredCount: 1,
       securityGroups: [ecsSecurityGroup],
       vpcSubnets: {
@@ -157,10 +209,9 @@ export class ApiStack extends Stack {
       },
     });
 
-    service.attachToApplicationTargetGroup(targetGroup);
+    apiService.attachToApplicationTargetGroup(apiTargetGroup);
 
-    // Auto Scaling
-    const scaling = service.autoScaleTaskCount({
+    const scaling = apiService.autoScaleTaskCount({
       minCapacity: 1,
       maxCapacity: 4,
     });
@@ -177,17 +228,93 @@ export class ApiStack extends Stack {
       scaleOutCooldown: Duration.seconds(60),
     });
 
-    this.albUrl = `http://${this.alb.loadBalancerDnsName}`;
+    // ──────────────────────────────────────
+    // Adminer Service
+    // ──────────────────────────────────────
 
+    const adminerLogGroup = new LogGroup(this, 'AdminerLogGroup', {
+      logGroupName: '/ecs/my-saas-adminer',
+      retention: RetentionDays.ONE_WEEK,
+    });
+
+    const adminerTaskDef = new FargateTaskDefinition(this, 'AdminerTaskDef', {
+      memoryLimitMiB: 512,
+      cpu: 256,
+    });
+
+    const adminerContainer = adminerTaskDef.addContainer('adminer', {
+      image: ContainerImage.fromRegistry('shyim/adminerevo:latest'),
+      logging: LogDrivers.awsLogs({
+        streamPrefix: 'adminer',
+        logGroup: adminerLogGroup,
+      }),
+      environment: {
+        ADMINER_DEFAULT_DRIVER: 'pgsql',
+        ADMINER_DEFAULT_SERVER: databaseHost,
+        ADMINER_DEFAULT_DB: 'mysaas',
+      },
+      secrets: {
+        ADMINER_DEFAULT_USER: EcsSecret.fromSecretsManager(databaseSecret, 'username'),
+        ADMINER_DEFAULT_PASSWORD: EcsSecret.fromSecretsManager(databaseSecret, 'password'),
+      },
+    });
+
+    adminerContainer.addPortMappings({
+      containerPort: 8080,
+      protocol: Protocol.TCP,
+    });
+
+    const adminerTargetGroup = new ApplicationTargetGroup(this, 'AdminerTargetGroup', {
+      targetGroupName: 'my-saas-adminer-tg',
+      vpc,
+      port: 8080,
+      protocol: ApplicationProtocol.HTTP,
+      targetType: TargetType.IP,
+      healthCheck: {
+        path: '/',
+        interval: Duration.seconds(60),
+        timeout: Duration.seconds(10),
+        healthyThresholdCount: 2,
+        unhealthyThresholdCount: 3,
+      },
+    });
+
+    alb.addListener('AdminerListener', {
+      port: 8080,
+      defaultTargetGroups: [adminerTargetGroup],
+    });
+
+    const adminerService = new FargateService(this, 'AdminerService', {
+      serviceName: 'my-saas-adminer',
+      cluster,
+      taskDefinition: adminerTaskDef,
+      desiredCount: 1,
+      securityGroups: [adminerSecurityGroup],
+      vpcSubnets: {
+        subnetType: SubnetType.PRIVATE_WITH_EGRESS,
+      },
+      assignPublicIp: false,
+    });
+
+    adminerService.attachToApplicationTargetGroup(adminerTargetGroup);
+
+    // ──────────────────────────────────────
     // Outputs
+    // ──────────────────────────────────────
+
     new CfnOutput(this, 'AlbDnsName', {
-      value: this.alb.loadBalancerDnsName,
+      value: alb.loadBalancerDnsName,
       description: 'Application Load Balancer DNS name',
     });
 
-    new CfnOutput(this, 'AlbUrl', {
-      value: this.albUrl,
-      description: 'Application Load Balancer URL',
+    new CfnOutput(this, 'ApiUrl', {
+      value: `http://${alb.loadBalancerDnsName}`,
+      description: 'API URL (port 80)',
+    });
+
+    new CfnOutput(this, 'AdminerUrl', {
+      value: `http://${alb.loadBalancerDnsName}:8080`,
+      description: 'Adminer URL (database management, port 8080)',
     });
 
     new CfnOutput(this, 'EcsClusterName', {
@@ -195,9 +322,14 @@ export class ApiStack extends Stack {
       description: 'ECS Cluster name',
     });
 
-    new CfnOutput(this, 'EcsServiceName', {
-      value: service.serviceName,
-      description: 'ECS Service name',
+    new CfnOutput(this, 'ApiServiceName', {
+      value: apiService.serviceName,
+      description: 'API ECS Service name',
+    });
+
+    new CfnOutput(this, 'AdminerServiceName', {
+      value: adminerService.serviceName,
+      description: 'Adminer ECS Service name',
     });
   }
 }

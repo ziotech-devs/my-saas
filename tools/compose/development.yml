@@ -50,19 +50,6 @@ services:
       MINIO_ROOT_USER: ${STORAGE_ACCESS_KEY:-minioadmin}
       MINIO_ROOT_PASSWORD: ${STORAGE_SECRET_KEY:-minioadmin}
 
-  # Chrome Browser (for printing and previews)
-  chrome:
-    image: ghcr.io/browserless/chromium:latest
-    restart: unless-stopped
-    ports:
-      - ${CHROME_PORT:-8080}:3000
-    environment:
-      HEALTH: "true"
-      TOKEN: ${CHROME_TOKEN:-chrome_token}
-      PROXY_HOST: "localhost"
-      PROXY_PORT: ${CHROME_PORT:-8080}
-      PROXY_SSL: "false"
-
   langgraph-redis:
     image: redis:6
     restart: unless-stopped
@@ -74,9 +61,12 @@ services:
       timeout: 1s
       retries: 5
 
-  # LangGraph Graphs Service
+  #LangGraph Graphs Service
   graphs:
-    image: resume-builder
+    build:
+      context: ./apps/graphs
+      dockerfile: Dockerfile
+    image: resume-builder:local
     restart: unless-stopped
     ports:
       - "8123:8000"
@@ -96,6 +86,5 @@ services:
       STOCK_DATA_API_URL: https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&apikey=demo
 
 volumes:
-  minio_data:
   my-saas-postgres:
-    external: true
+  minio_data:

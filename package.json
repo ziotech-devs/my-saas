@@ -9,7 +9,7 @@
     "name": "Tal Kenigs"
   },
   "scripts": {
-    "dev": "nx run-many -t serve --exclude=graphs",
+    "dev": "nx run-many -t serve --exclude=graphs --no-tui",
     "test": "pnpm vitest run",
     "prebuild": "pnpm prisma:generate",
     "build": "nx run-many -t build",
@@ -21,6 +21,7 @@
     "prisma:generate": "pnpm exec prisma generate",
     "prisma:migrate": "pnpm exec prisma migrate deploy",
     "prisma:migrate:dev": "pnpm exec prisma migrate dev",
+    "prisma:seed": "pnpm exec prisma db seed",
     "prisma:studio": "pnpm exec prisma studio",
     "messages:extract": "pnpm exec lingui extract --clean --overwrite",
     "cdk:synth": "nx run infra:synth",
@@ -143,6 +144,7 @@
     "@nestjs/jwt": "^10.2.0",
     "@nestjs/passport": "^10.0.3",
     "@nestjs/platform-express": "^10.4.20",
+    "@nestjs/schedule": "^6.1.1",
     "@nestjs/serve-static": "^4.0.2",
     "@nestjs/swagger": "^7.4.2",
     "@nestjs/terminus": "^10.3.0",
@@ -258,6 +260,7 @@
     "node": ">=22.13.1"
   },
   "prisma": {
-    "schema": "tools/prisma/schema.prisma"
+    "schema": "tools/prisma/schema.prisma",
+    "seed": "npx ts-node --compiler-options {\"module\":\"CommonJS\"} tools/prisma/seed.ts"
   }
 }

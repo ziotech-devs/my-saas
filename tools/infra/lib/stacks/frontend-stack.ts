@@ -10,11 +10,9 @@ import {
   ViewerProtocolPolicy,
   CachePolicy,
   AllowedMethods,
-  OriginAccessIdentity,
-  ErrorResponse,
   PriceClass,
 } from 'aws-cdk-lib/aws-cloudfront';
-import { S3Origin } from 'aws-cdk-lib/aws-cloudfront-origins';
+import { S3BucketOrigin } from 'aws-cdk-lib/aws-cloudfront-origins';
 import type { Construct } from 'constructs';
 
 export type FrontendStackProps = StackProps;
@@ -37,22 +35,10 @@ export class FrontendStack extends Stack {
       autoDeleteObjects: true,
     });
 
-    const originAccessIdentity = new OriginAccessIdentity(
-      this,
-      'OriginAccessIdentity',
-      {
-        comment: 'OAI for My SaaS frontend',
-      }
-    );
-
-    this.bucket.grantRead(originAccessIdentity);
-
     // CloudFront distribution
     this.distribution = new Distribution(this, 'Distribution', {
       defaultBehavior: {
-        origin: new S3Origin(this.bucket, {
-          originAccessIdentity,
-        }),
+        origin: S3BucketOrigin.withOriginAccessControl(this.bucket),
         viewerProtocolPolicy: ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
         cachePolicy: CachePolicy.CACHING_OPTIMIZED,
         allowedMethods: AllowedMethods.ALLOW_GET_HEAD_OPTIONS,

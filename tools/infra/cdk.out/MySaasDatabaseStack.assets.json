@@ -1,0 +1,21 @@
+{
+  "version": "48.0.0",
+  "files": {
+    "74694ef981727414c2d27639765d8dca52054962e97a94bdf31f559889749852": {
+      "displayName": "MySaasDatabaseStack Template",
+      "source": {
+        "path": "MySaasDatabaseStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "301394200094-us-east-1-3671a6f7": {
+          "bucketName": "cdk-hnb659fds-assets-301394200094-us-east-1",
+          "objectKey": "74694ef981727414c2d27639765d8dca52054962e97a94bdf31f559889749852.json",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::301394200094:role/cdk-hnb659fds-file-publishing-role-301394200094-us-east-1"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

@@ -14,6 +14,7 @@ export class NetworkStack extends Stack {
   public readonly vpc: Vpc;
   public readonly albSecurityGroup: SecurityGroup;
   public readonly ecsSecurityGroup: SecurityGroup;
+  public readonly adminerSecurityGroup: SecurityGroup;
   public readonly rdsSecurityGroup: SecurityGroup;
 
   constructor(scope: Construct, id: string, props?: NetworkStackProps) {
@@ -56,6 +57,12 @@ export class NetworkStack extends Stack {
       'Allow HTTPS from internet'
     );
 
+    this.albSecurityGroup.addIngressRule(
+      Peer.anyIpv4(),
+      Port.tcp(8080),
+      'Allow Adminer from internet'
+    );
+
     this.ecsSecurityGroup = new SecurityGroup(this, 'EcsSecurityGroup', {
       vpc: this.vpc,
       securityGroupName: 'my-saas-ecs-sg',
@@ -69,6 +76,19 @@ export class NetworkStack extends Stack {
       'Allow traffic from ALB on port 3000'
     );
 
+    this.adminerSecurityGroup = new SecurityGroup(this, 'AdminerSecurityGroup', {
+      vpc: this.vpc,
+      securityGroupName: 'my-saas-adminer-sg',
+      description: 'Security group for Adminer Fargate tasks',
+      allowAllOutbound: true,
+    });
+
+    this.adminerSecurityGroup.addIngressRule(
+      this.albSecurityGroup,
+      Port.tcp(8080),
+      'Allow traffic from ALB on port 8080'
+    );
+
     this.rdsSecurityGroup = new SecurityGroup(this, 'RdsSecurityGroup', {
       vpc: this.vpc,
       securityGroupName: 'my-saas-rds-sg',
@@ -80,6 +100,12 @@ export class NetworkStack extends Stack {
       this.ecsSecurityGroup,
       Port.tcp(5432),
       'Allow PostgreSQL from ECS'
+    );
+
+    this.rdsSecurityGroup.addIngressRule(
+      this.adminerSecurityGroup,
+      Port.tcp(5432),
+      'Allow PostgreSQL from Adminer'
     );
   }
 }

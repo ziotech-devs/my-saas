@@ -18,6 +18,8 @@ import { StockChatModule } from "./stock-chat/stock-chat.module";
 import { StorageModule } from "./storage/storage.module";
 import { TranslationModule } from "./translation/translation.module";
 import { UserModule } from "./user/user.module";
+import { ScheduleModule } from "@nestjs/schedule";
+import { JobsModule } from "./jobs/jobs.module";
 
 @Module({
   imports: [
@@ -27,7 +29,8 @@ import { UserModule } from "./user/user.module";
     MailModule,
     RavenModule,
     HealthModule,
-
+    // ScheduleModule.forRoot(),
+    // JobsModule,
     // Feature Modules
     AuthModule.register(),
     UserModule,

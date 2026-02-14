@@ -1,0 +1,21 @@
+{
+  "version": "48.0.0",
+  "files": {
+    "7e84c55fa3490bbd1e7da4d9950d45265dfe6a113c63c2ff275730b9881de6f5": {
+      "displayName": "MySaasApiStack Template",
+      "source": {
+        "path": "MySaasApiStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "301394200094-us-east-1-a17ecbe1": {
+          "bucketName": "cdk-hnb659fds-assets-301394200094-us-east-1",
+          "objectKey": "7e84c55fa3490bbd1e7da4d9950d45265dfe6a113c63c2ff275730b9881de6f5.json",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::301394200094:role/cdk-hnb659fds-file-publishing-role-301394200094-us-east-1"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}
