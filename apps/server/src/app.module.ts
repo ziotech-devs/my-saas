@@ -29,8 +29,8 @@ import { JobsModule } from "./jobs/jobs.module";
     MailModule,
     RavenModule,
     HealthModule,
-    // ScheduleModule.forRoot(),
-    // JobsModule,
+    ScheduleModule.forRoot(),
+    JobsModule,
     // Feature Modules
     AuthModule.register(),
     UserModule,

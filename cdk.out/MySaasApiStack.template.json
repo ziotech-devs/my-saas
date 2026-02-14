@@ -35,9 +35,6 @@
     "Subnets": [
      {
       "Fn::ImportValue": "MySaasNetworkStack:ExportsOutputRefVpcPublicSubnet1Subnet5C2D37C4FFA2B456"
-     },
-     {
-      "Fn::ImportValue": "MySaasNetworkStack:ExportsOutputRefVpcPublicSubnet2Subnet691E08A351552740"
      }
     ],
     "Type": "application"
@@ -127,16 +124,16 @@
      "Statement": [
       {
        "Action": [
-        "s3:Abort*",
-        "s3:DeleteObject*",
-        "s3:GetBucket*",
         "s3:GetObject*",
+        "s3:GetBucket*",
         "s3:List*",
+        "s3:DeleteObject*",
         "s3:PutObject",
         "s3:PutObjectLegalHold",
         "s3:PutObjectRetention",
         "s3:PutObjectTagging",
-        "s3:PutObjectVersionTagging"
+        "s3:PutObjectVersionTagging",
+        "s3:Abort*"
        ],
        "Effect": "Allow",
        "Resource": [
@@ -1014,8 +1011,8 @@
       {
        "Action": [
         "ecr:BatchCheckLayerAvailability",
-        "ecr:BatchGetImage",
-        "ecr:GetDownloadUrlForLayer"
+        "ecr:GetDownloadUrlForLayer",
+        "ecr:BatchGetImage"
        ],
        "Effect": "Allow",
        "Resource": {
@@ -1042,18 +1039,23 @@
       },
       {
        "Action": [
-        "secretsmanager:DescribeSecret",
-        "secretsmanager:GetSecretValue"
+        "secretsmanager:GetSecretValue",
+        "secretsmanager:DescribeSecret"
        ],
        "Effect": "Allow",
-       "Resource": [
-        {
-         "Fn::ImportValue": "MySaasDatabaseStack:ExportsOutputRefPostgresInstanceSecretAttachmentDFCC79DF38428EF0"
-        },
-        {
-         "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
-        }
-       ]
+       "Resource": {
+        "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+       }
+      },
+      {
+       "Action": [
+        "secretsmanager:GetSecretValue",
+        "secretsmanager:DescribeSecret"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::ImportValue": "MySaasDatabaseStack:ExportsOutputRefPostgresInstanceSecretAttachmentDFCC79DF38428EF0"
+       }
       }
      ],
      "Version": "2012-10-17"
@@ -1102,12 +1104,20 @@
      "Ref": "ClusterEB0386A7"
     },
     "DeploymentConfiguration": {
+     "Alarms": {
+      "AlarmNames": [],
+      "Enable": false,
+      "Rollback": false
+     },
      "DeploymentCircuitBreaker": {
       "Enable": true,
       "Rollback": true
      },
      "MaximumPercent": 200,
      "MinimumHealthyPercent": 50
+    },
+    "DeploymentController": {
+     "Type": "ECS"
     },
     "DesiredCount": 1,
     "EnableECSManagedTags": false,
@@ -1133,9 +1143,6 @@
       "Subnets": [
        {
         "Fn::ImportValue": "MySaasNetworkStack:ExportsOutputRefVpcPrivateSubnet1Subnet536B997AFD4CC940"
-       },
-       {
-        "Fn::ImportValue": "MySaasNetworkStack:ExportsOutputRefVpcPrivateSubnet2Subnet3788AAA1380949A3"
        }
       ]
      }
@@ -1177,7 +1184,18 @@
       ]
      ]
     },
-    "RoleARN": "arn:aws:iam::301394200094:role/aws-service-role/ecs.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_ECSService",
+    "RoleARN": {
+     "Fn::Join": [
+      "",
+      [
+       "arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":iam::301394200094:role/aws-service-role/ecs.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_ECSService"
+      ]
+     ]
+    },
     "ScalableDimension": "ecs:service:DesiredCount",
     "ServiceNamespace": "ecs"
    },
@@ -1407,8 +1425,8 @@
       },
       {
        "Action": [
-        "secretsmanager:DescribeSecret",
-        "secretsmanager:GetSecretValue"
+        "secretsmanager:GetSecretValue",
+        "secretsmanager:DescribeSecret"
        ],
        "Effect": "Allow",
        "Resource": {
@@ -1462,6 +1480,11 @@
      "Ref": "ClusterEB0386A7"
     },
     "DeploymentConfiguration": {
+     "Alarms": {
+      "AlarmNames": [],
+      "Enable": false,
+      "Rollback": false
+     },
      "MaximumPercent": 200,
      "MinimumHealthyPercent": 50
     },
@@ -1489,9 +1512,6 @@
       "Subnets": [
        {
         "Fn::ImportValue": "MySaasNetworkStack:ExportsOutputRefVpcPrivateSubnet1Subnet536B997AFD4CC940"
-       },
-       {
-        "Fn::ImportValue": "MySaasNetworkStack:ExportsOutputRefVpcPrivateSubnet2Subnet3788AAA1380949A3"
        }
       ]
      }

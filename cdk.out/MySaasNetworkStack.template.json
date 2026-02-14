@@ -138,88 +138,11 @@
     "aws:cdk:path": "MySaasNetworkStack/Vpc/PublicSubnet1/NATGateway"
    }
   },
-  "VpcPublicSubnet2Subnet691E08A3": {
-   "Type": "AWS::EC2::Subnet",
-   "Properties": {
-    "AvailabilityZone": "us-east-1b",
-    "CidrBlock": "10.0.1.0/24",
-    "MapPublicIpOnLaunch": true,
-    "Tags": [
-     {
-      "Key": "aws-cdk:subnet-name",
-      "Value": "Public"
-     },
-     {
-      "Key": "aws-cdk:subnet-type",
-      "Value": "Public"
-     },
-     {
-      "Key": "Name",
-      "Value": "MySaasNetworkStack/Vpc/PublicSubnet2"
-     }
-    ],
-    "VpcId": {
-     "Ref": "Vpc8378EB38"
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "MySaasNetworkStack/Vpc/PublicSubnet2/Subnet"
-   }
-  },
-  "VpcPublicSubnet2RouteTable94F7E489": {
-   "Type": "AWS::EC2::RouteTable",
-   "Properties": {
-    "Tags": [
-     {
-      "Key": "Name",
-      "Value": "MySaasNetworkStack/Vpc/PublicSubnet2"
-     }
-    ],
-    "VpcId": {
-     "Ref": "Vpc8378EB38"
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "MySaasNetworkStack/Vpc/PublicSubnet2/RouteTable"
-   }
-  },
-  "VpcPublicSubnet2RouteTableAssociationDD5762D8": {
-   "Type": "AWS::EC2::SubnetRouteTableAssociation",
-   "Properties": {
-    "RouteTableId": {
-     "Ref": "VpcPublicSubnet2RouteTable94F7E489"
-    },
-    "SubnetId": {
-     "Ref": "VpcPublicSubnet2Subnet691E08A3"
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "MySaasNetworkStack/Vpc/PublicSubnet2/RouteTableAssociation"
-   }
-  },
-  "VpcPublicSubnet2DefaultRoute97F91067": {
-   "Type": "AWS::EC2::Route",
-   "Properties": {
-    "DestinationCidrBlock": "0.0.0.0/0",
-    "GatewayId": {
-     "Ref": "VpcIGWD7BA715C"
-    },
-    "RouteTableId": {
-     "Ref": "VpcPublicSubnet2RouteTable94F7E489"
-    }
-   },
-   "DependsOn": [
-    "VpcVPCGWBF912B6E"
-   ],
-   "Metadata": {
-    "aws:cdk:path": "MySaasNetworkStack/Vpc/PublicSubnet2/DefaultRoute"
-   }
-  },
   "VpcPrivateSubnet1Subnet536B997A": {
    "Type": "AWS::EC2::Subnet",
    "Properties": {
     "AvailabilityZone": "us-east-1a",
-    "CidrBlock": "10.0.2.0/24",
+    "CidrBlock": "10.0.1.0/24",
     "MapPublicIpOnLaunch": false,
     "Tags": [
      {
@@ -289,80 +212,6 @@
     "aws:cdk:path": "MySaasNetworkStack/Vpc/PrivateSubnet1/DefaultRoute"
    }
   },
-  "VpcPrivateSubnet2Subnet3788AAA1": {
-   "Type": "AWS::EC2::Subnet",
-   "Properties": {
-    "AvailabilityZone": "us-east-1b",
-    "CidrBlock": "10.0.3.0/24",
-    "MapPublicIpOnLaunch": false,
-    "Tags": [
-     {
-      "Key": "aws-cdk:subnet-name",
-      "Value": "Private"
-     },
-     {
-      "Key": "aws-cdk:subnet-type",
-      "Value": "Private"
-     },
-     {
-      "Key": "Name",
-      "Value": "MySaasNetworkStack/Vpc/PrivateSubnet2"
-     }
-    ],
-    "VpcId": {
-     "Ref": "Vpc8378EB38"
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "MySaasNetworkStack/Vpc/PrivateSubnet2/Subnet"
-   }
-  },
-  "VpcPrivateSubnet2RouteTableA678073B": {
-   "Type": "AWS::EC2::RouteTable",
-   "Properties": {
-    "Tags": [
-     {
-      "Key": "Name",
-      "Value": "MySaasNetworkStack/Vpc/PrivateSubnet2"
-     }
-    ],
-    "VpcId": {
-     "Ref": "Vpc8378EB38"
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "MySaasNetworkStack/Vpc/PrivateSubnet2/RouteTable"
-   }
-  },
-  "VpcPrivateSubnet2RouteTableAssociationA89CAD56": {
-   "Type": "AWS::EC2::SubnetRouteTableAssociation",
-   "Properties": {
-    "RouteTableId": {
-     "Ref": "VpcPrivateSubnet2RouteTableA678073B"
-    },
-    "SubnetId": {
-     "Ref": "VpcPrivateSubnet2Subnet3788AAA1"
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "MySaasNetworkStack/Vpc/PrivateSubnet2/RouteTableAssociation"
-   }
-  },
-  "VpcPrivateSubnet2DefaultRoute060D2087": {
-   "Type": "AWS::EC2::Route",
-   "Properties": {
-    "DestinationCidrBlock": "0.0.0.0/0",
-    "NatGatewayId": {
-     "Ref": "VpcPublicSubnet1NATGateway4D7517AA"
-    },
-    "RouteTableId": {
-     "Ref": "VpcPrivateSubnet2RouteTableA678073B"
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "MySaasNetworkStack/Vpc/PrivateSubnet2/DefaultRoute"
-   }
-  },
   "VpcIGWD7BA715C": {
    "Type": "AWS::EC2::InternetGateway",
    "Properties": {
@@ -389,117 +238,6 @@
    },
    "Metadata": {
     "aws:cdk:path": "MySaasNetworkStack/Vpc/VPCGW"
-   }
-  },
-  "VpcRestrictDefaultSecurityGroupCustomResourceC73DA2BE": {
-   "Type": "Custom::VpcRestrictDefaultSG",
-   "Properties": {
-    "ServiceToken": {
-     "Fn::GetAtt": [
-      "CustomVpcRestrictDefaultSGCustomResourceProviderHandlerDC833E5E",
-      "Arn"
-     ]
-    },
-    "DefaultSecurityGroupId": {
-     "Fn::GetAtt": [
-      "Vpc8378EB38",
-      "DefaultSecurityGroup"
-     ]
-    },
-    "Account": "301394200094"
-   },
-   "UpdateReplacePolicy": "Delete",
-   "DeletionPolicy": "Delete",
-   "Metadata": {
-    "aws:cdk:path": "MySaasNetworkStack/Vpc/RestrictDefaultSecurityGroupCustomResource/Default"
-   }
-  },
-  "CustomVpcRestrictDefaultSGCustomResourceProviderRole26592FE0": {
-   "Type": "AWS::IAM::Role",
-   "Properties": {
-    "AssumeRolePolicyDocument": {
-     "Version": "2012-10-17",
-     "Statement": [
-      {
-       "Action": "sts:AssumeRole",
-       "Effect": "Allow",
-       "Principal": {
-        "Service": "lambda.amazonaws.com"
-       }
-      }
-     ]
-    },
-    "ManagedPolicyArns": [
-     {
-      "Fn::Sub": "arn:${AWS::Partition}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
-     }
-    ],
-    "Policies": [
-     {
-      "PolicyName": "Inline",
-      "PolicyDocument": {
-       "Version": "2012-10-17",
-       "Statement": [
-        {
-         "Effect": "Allow",
-         "Action": [
-          "ec2:AuthorizeSecurityGroupIngress",
-          "ec2:AuthorizeSecurityGroupEgress",
-          "ec2:RevokeSecurityGroupIngress",
-          "ec2:RevokeSecurityGroupEgress"
-         ],
-         "Resource": [
-          {
-           "Fn::Join": [
-            "",
-            [
-             "arn:aws:ec2:us-east-1:301394200094:security-group/",
-             {
-              "Fn::GetAtt": [
-               "Vpc8378EB38",
-               "DefaultSecurityGroup"
-              ]
-             }
-            ]
-           ]
-          }
-         ]
-        }
-       ]
-      }
-     }
-    ]
-   },
-   "Metadata": {
-    "aws:cdk:path": "MySaasNetworkStack/Custom::VpcRestrictDefaultSGCustomResourceProvider/Role"
-   }
-  },
-  "CustomVpcRestrictDefaultSGCustomResourceProviderHandlerDC833E5E": {
-   "Type": "AWS::Lambda::Function",
-   "Properties": {
-    "Code": {
-     "S3Bucket": "cdk-hnb659fds-assets-301394200094-us-east-1",
-     "S3Key": "7fa1e366ee8a9ded01fc355f704cff92bfd179574e6f9cfee800a3541df1b200.zip"
-    },
-    "Timeout": 900,
-    "MemorySize": 128,
-    "Handler": "__entrypoint__.handler",
-    "Role": {
-     "Fn::GetAtt": [
-      "CustomVpcRestrictDefaultSGCustomResourceProviderRole26592FE0",
-      "Arn"
-     ]
-    },
-    "Runtime": "nodejs22.x",
-    "Description": "Lambda function for removing all inbound/outbound rules from the VPC default security group"
-   },
-   "DependsOn": [
-    "CustomVpcRestrictDefaultSGCustomResourceProviderRole26592FE0"
-   ],
-   "Metadata": {
-    "aws:cdk:path": "MySaasNetworkStack/Custom::VpcRestrictDefaultSGCustomResourceProvider/Handler",
-    "aws:asset:path": "asset.7fa1e366ee8a9ded01fc355f704cff92bfd179574e6f9cfee800a3541df1b200",
-    "aws:asset:property": "Code"
    }
   },
   "AlbSecurityGroup86A59E99": {
@@ -706,7 +444,7 @@
   "CDKMetadata": {
    "Type": "AWS::CDK::Metadata",
    "Properties": {
-    "Analytics": "v2:deflate64:H4sIAAAAAAAA/32OwW6DQAxEvyX3ZdvSVD1TVEVcKgRRrpVZHOoEvNHaC4qi/HtFU4VTe5qZ55E1qU2fX+3TCiZJXHtMemrspVZwRwOTfKJL7WV3cibf867MTRmbnlwdG0ad2eIqHxW30PS48IVlIt4RKHm+l2fzXpSzfIBuQHGCsykDjaC4PC5YMTDeC7clvylTBfc1IKup0cVAet4EH08/G/4FBXcBRa6mQvExODR5FPXDEvf8x6kMfqQWwxsImkwEtVboiLurYd+iPcjDmK7ti31cHYQoCZGVBrTVTb8BkKETOHMBAAA="
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/32OwYrCQBBEv8X7ZFyjsmcRkVwkJOJVOm3v2hp7ZLrHIOK/L1kXc9tTVT2KonKfTz/9ZASdZng4Zy03/lEb4NlBp3vC3D92V3TLL9mVS1empmWsUyNkPRtcFZLRFpqWBj6whWpABuMg73JvVkXZywZsDUYd3F0Z+QZGw3AhRlHoXXg9+UsLM8DjhcRcTZgi230dQ7r+fvgXFPIdSfXpKtKQItLTSTiQP+n4ls/83H+MTsqcxSTGF/LVS38ACUU6RTABAAA="
    },
    "Metadata": {
     "aws:cdk:path": "MySaasNetworkStack/CDKMetadata/Default"
@@ -720,14 +458,6 @@
    },
    "Export": {
     "Name": "MySaasNetworkStack:ExportsOutputRefVpcPrivateSubnet1Subnet536B997AFD4CC940"
-   }
-  },
-  "ExportsOutputRefVpcPrivateSubnet2Subnet3788AAA1380949A3": {
-   "Value": {
-    "Ref": "VpcPrivateSubnet2Subnet3788AAA1"
-   },
-   "Export": {
-    "Name": "MySaasNetworkStack:ExportsOutputRefVpcPrivateSubnet2Subnet3788AAA1380949A3"
    }
   },
   "ExportsOutputFnGetAttRdsSecurityGroup632A77E4GroupId9D343172": {
@@ -758,14 +488,6 @@
    },
    "Export": {
     "Name": "MySaasNetworkStack:ExportsOutputRefVpcPublicSubnet1Subnet5C2D37C4FFA2B456"
-   }
-  },
-  "ExportsOutputRefVpcPublicSubnet2Subnet691E08A351552740": {
-   "Value": {
-    "Ref": "VpcPublicSubnet2Subnet691E08A3"
-   },
-   "Export": {
-    "Name": "MySaasNetworkStack:ExportsOutputRefVpcPublicSubnet2Subnet691E08A351552740"
    }
   },
   "ExportsOutputRefVpc8378EB38272D6E3A": {

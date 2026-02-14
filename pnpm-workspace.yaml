@@ -6,7 +6,5 @@ onlyBuiltDependencies:
   - "@swc/core"
   - esbuild
   - nx
-  - oxc-resolver
   - prisma
-  - puppeteer-core
   - sharp

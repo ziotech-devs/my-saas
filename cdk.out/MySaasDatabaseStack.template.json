@@ -8,9 +8,6 @@
     "SubnetIds": [
      {
       "Fn::ImportValue": "MySaasNetworkStack:ExportsOutputRefVpcPrivateSubnet1Subnet536B997AFD4CC940"
-     },
-     {
-      "Fn::ImportValue": "MySaasNetworkStack:ExportsOutputRefVpcPrivateSubnet2Subnet3788AAA1380949A3"
      }
     ]
    },

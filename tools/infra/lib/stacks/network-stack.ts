@@ -22,7 +22,7 @@ export class NetworkStack extends Stack {
 
     this.vpc = new Vpc(this, 'Vpc', {
       vpcName: 'my-saas-vpc',
-      maxAzs: 1,
+      maxAzs: 2,
       natGateways: 1,
       subnetConfiguration: [
         {
