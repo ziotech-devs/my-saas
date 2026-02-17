@@ -63,10 +63,7 @@ services:
 
   #LangGraph Graphs Service
   graphs:
-    build:
-      context: ./apps/graphs
-      dockerfile: Dockerfile
-    image: resume-builder:local
+    image: my-saas-graphs:latest
     restart: unless-stopped
     ports:
       - "8123:8000"
@@ -84,6 +81,8 @@ services:
       LANGSMITH_PROJECT: ${LANGSMITH_PROJECT:-}
       LANGSMITH_TRACING_V2: ${LANGSMITH_TRACING_V2:-}
       STOCK_DATA_API_URL: https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&apikey=demo
+      TAVILY_API_KEY: ${TAVILY_API_KEY:-}
+      SCRAPER_POSTGRES_URI: ${SCRAPER_POSTGRES_URI:-}
 
 volumes:
   my-saas-postgres:

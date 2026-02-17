@@ -1,1 +1,1 @@
-FROM resume-builder
+FROM my-saas-server:local

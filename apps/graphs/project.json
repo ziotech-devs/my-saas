@@ -10,8 +10,14 @@
         "command": "cd apps/graphs && langgraph dev",
         "envFile": ".env"
       }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "cd apps/graphs && langgraph build -t my-saas-graphs",
+        "envFile": ".env"
+      }
     }
-
   },
   "tags": ["backend", "python"]
 }

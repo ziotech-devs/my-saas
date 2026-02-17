@@ -1,16 +1,13 @@
 {
   "graphs": {
-    "stock_chat_graph": "./stock_chat_graph.py:graph"
+    "scraper_graph": "./scraper_graph.py:graph"
   },
   "python_version": "3.11",
   "dockerfile_lines": [],
-  "dependencies": ["."],
+  "dependencies": [
+    "./"
+  ],
   "env": {
-    "OPENAI_API_KEY": "${OPENAI_API_KEY}",
-    "OPENAI_MODEL": "${OPENAI_MODEL}",
-    "LANGSMITH_API_KEY": "${LANGSMITH_API_KEY}",
-    "LANGSMITH_PROJECT": "${LANGSMITH_PROJECT}",
-    "LANGSMITH_TRACING_V2": "true",
-    "STOCK_DATA_API_URL": "${STOCK_DATA_API_URL}"
+    "LANGSMITH_TRACING_V2": "true"
   }
 }
