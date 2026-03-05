@@ -1,0 +1,50 @@
+import { t } from "@lingui/macro";
+import { Button } from "@my-saas/ui";
+import { FingerprintIcon, GithubLogoIcon, GoogleLogoIcon } from "@phosphor-icons/react";
+
+import { useAuthProviders } from "@/client/services/auth/providers";
+
+export const SocialAuth = () => {
+  const { providers } = useAuthProviders();
+
+  if (!providers || providers.length === 0) return null;
+
+  return (
+    <div className="grid grid-cols-2 gap-4">
+      {providers.includes("github") && (
+        <Button asChild size="lg" className="w-full !bg-[#222] !text-white hover:!bg-[#222]/80">
+          <a href="/api/auth/github">
+            <GithubLogoIcon className="mr-3 size-4" />
+            {t`GitHub`}
+          </a>
+        </Button>
+      )}
+
+      {providers.includes("google") && (
+        <Button
+          asChild
+          size="lg"
+          className="w-full !bg-[#4285F4] !text-white hover:!bg-[#4285F4]/80"
+        >
+          <a href="/api/auth/google">
+            <GoogleLogoIcon className="mr-3 size-4" />
+            {t`Google`}
+          </a>
+        </Button>
+      )}
+
+      {providers.includes("openid") && (
+        <Button
+          asChild
+          size="lg"
+          className="w-full !bg-[#dc2626] !text-white hover:!bg-[#dc2626]/80"
+        >
+          <a href="/api/auth/openid">
+            <FingerprintIcon className="mr-3 size-4" />
+            {import.meta.env.VITE_OPENID_NAME}
+          </a>
+        </Button>
+      )}
+    </div>
+  );
+};

@@ -1,0 +1,21 @@
+{
+  "version": "48.0.0",
+  "files": {
+    "34fd4f5c062b2411a5e72c2e4ed876e08561dd9dfc84545f09766820b92ce7e1": {
+      "displayName": "MySaasCacheStack Template",
+      "source": {
+        "path": "MySaasCacheStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "301394200094-us-east-1-fb85a374": {
+          "bucketName": "cdk-hnb659fds-assets-301394200094-us-east-1",
+          "objectKey": "34fd4f5c062b2411a5e72c2e4ed876e08561dd9dfc84545f09766820b92ce7e1.json",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::301394200094:role/cdk-hnb659fds-file-publishing-role-301394200094-us-east-1"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

@@ -1,0 +1,182 @@
+name: Deploy to AWS
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: "${{ github.workflow }}-${{ github.ref }}"
+  cancel-in-progress: true
+
+env:
+  AWS_REGION: us-east-1
+  ECR_REGISTRY: 301394200094.dkr.ecr.us-east-1.amazonaws.com
+  ECR_REPOSITORY: my-saas-api
+  ECR_REPOSITORY_GRAPHS: my-saas-graphs
+  ECS_CLUSTER: my-saas-cluster
+  ECS_SERVICE: my-saas-api
+  ECS_SERVICE_GRAPHS: my-saas-graphs
+  FRONTEND_BUCKET: my-saas-frontend-301394200094-us-east-1
+  NX_LOAD_DOT_ENV_FILES: false
+
+jobs:
+  test:
+    name: Test & Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Test
+        run: pnpm test
+
+      - name: Build
+        run: pnpm build
+
+  deploy-api:
+    name: Deploy API → ECR + ECS
+    runs-on: ubuntu-latest
+    needs: test
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Login to Amazon ECR
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build and Push Docker Image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          platforms: linux/amd64
+          push: true
+          tags: ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          build-args: |
+            NX_CLOUD_ACCESS_TOKEN=${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
+
+      - name: Force ECS Redeploy
+        run: |
+          aws ecs update-service \
+            --cluster ${{ env.ECS_CLUSTER }} \
+            --service ${{ env.ECS_SERVICE }} \
+            --force-new-deployment
+
+  deploy-frontend:
+    name: Deploy Frontend → S3 + CloudFront
+    runs-on: ubuntu-latest
+    needs: test
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Extract i18n messages
+        run: pnpm messages:extract
+
+      - name: Build Frontend
+        run: pnpm exec nx run client:build
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Sync to S3
+        run: aws s3 sync dist/apps/client s3://${{ env.FRONTEND_BUCKET }} --delete
+
+      - name: Invalidate CloudFront Cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
+            --paths "/*"
+
+  deploy-graphs:
+    name: Deploy Graphs → ECR + ECS
+    runs-on: ubuntu-latest
+    needs: test
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Login to Amazon ECR
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install LangGraph CLI
+        run: pip install langgraph-cli
+
+      - name: Build LangGraph Image
+        working-directory: apps/graphs
+        run: langgraph build -t ${{ env.ECR_REPOSITORY_GRAPHS }}:latest
+
+      - name: Tag and Push to ECR
+        run: |
+          docker tag ${{ env.ECR_REPOSITORY_GRAPHS }}:latest \
+            ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY_GRAPHS }}:latest
+          docker push ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY_GRAPHS }}:latest
+
+      - name: Force ECS Redeploy
+        run: |
+          STATUS=$(aws ecs describe-services \
+            --cluster ${{ env.ECS_CLUSTER }} \
+            --services ${{ env.ECS_SERVICE_GRAPHS }} \
+            --query 'services[0].status' --output text)
+          if [ "$STATUS" = "ACTIVE" ]; then
+            aws ecs update-service \
+              --cluster ${{ env.ECS_CLUSTER }} \
+              --service ${{ env.ECS_SERVICE_GRAPHS }} \
+              --force-new-deployment
+          else
+            echo "Service not active (status: $STATUS), skipping redeploy — CDK will handle it"
+          fi

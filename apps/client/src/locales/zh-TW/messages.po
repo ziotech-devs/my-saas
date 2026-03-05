@@ -1,0 +1,1115 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2023-11-10 13:15+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: zh\n"
+"Project-Id-Version: my-saas\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-02-27 11:37\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Traditional\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: my-saas\n"
+"X-Crowdin-Project-ID: 875978\n"
+"X-Crowdin-Language: zh-TW\n"
+"X-Crowdin-File: messages.po\n"
+"X-Crowdin-File-ID: 1\n"
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:171
+msgid "You have enabled two-factor authentication successfully."
+msgstr "您已成功啟用雙因子驗證。"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:56
+msgid "{templatesCount}+ pre-built templates"
+msgstr ""
+
+#: apps/client/src/components/copyright.tsx:19
+msgid "© {currentYear} My SaaS. All rights reserved."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:299
+msgid "<0>Note: </0>By utilizing the OpenAI API, you acknowledge and accept the <1>terms of use</1> and <2>privacy policy</2> outlined by OpenAI. Please note that Reactive Resume bears no responsibility for any improper or unauthorized utilization of the service, and any resulting repercussions or liabilities solely rest on the user."
+msgstr "<0>注意：</0>使用 OpenAI API 即表示您承認並接受<1>使用條款</1>和<2>隱私權政策</2>OpenAI 概述。請注意，Reactive Resume 對任何不當或未經授權的服務使用不承擔任何責任，由此產生的任何影響或責任僅由使用者承擔。"
+
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:140
+msgid "<0>Two-factor authentication is currently disabled.</0> You can enable it by adding an authenticator app to your account."
+msgstr "<0>目前已停用雙因子驗證。</0> 您可以透過驗證器應用程式的新增來啟用它。"
+
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:133
+msgid "<0>Two-factor authentication is enabled.</0> You will be asked to enter a code every time you sign in."
+msgstr "<0>已啟用雙因子驗證。</0>每次登入時，系統都會要求您輸入驗證碼。"
+
+#: apps/client/src/pages/home/page.tsx:23
+#: apps/client/src/pages/home/sections/hero/index.tsx:80
+msgid "A free and open-source SaaS boilerplate"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/hero/index.tsx:89
+msgid "A free and open-source SaaS boilerplate that simplifies the process of creating, updating, and sharing your SaaS application."
+msgstr ""
+
+#: apps/client/src/pages/auth/forgot-password/page.tsx:57
+msgid "A password reset link should have been sent to your inbox, if an account existed with the email you provided."
+msgstr "如果您提供的電子郵件帳號存在，密碼重設連結應已發送到您的收件匣。"
+
+#: apps/client/src/services/errors/translate-error.ts:10
+msgid "A user with this email address and/or username already exists."
+msgstr "此電子郵件地址和/或使用者名稱已存在。"
+
+#: apps/client/src/pages/home/about/page.tsx:5
+#: apps/client/src/pages/home/components/footer.tsx:43
+msgid "About"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:105
+msgid "Account"
+msgstr "帳號"
+
+#: apps/client/src/pages/dashboard/_components/sidebar.tsx:113
+#: apps/client/src/pages/dashboard/agent-chat/page.tsx:34
+msgid "Agent Chat"
+msgstr ""
+
+#: apps/client/src/components/ai-actions.tsx:79
+msgid "AI"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:51
+msgid "AI-powered features"
+msgstr ""
+
+#: apps/client/src/pages/auth/register/page.tsx:71
+msgid "Already have an account?"
+msgstr "已經有一個帳戶？"
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:97
+msgid "An error occurred while subscribing to the plan."
+msgstr ""
+
+#: apps/client/src/pages/public/error.tsx:23
+msgid "An internal server error occurred."
+msgstr ""
+
+#: apps/client/src/pages/public/error.tsx:32
+msgid "An unexpected error occurred."
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:67
+msgid "Analytics and insights"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:133
+msgid "and many more..."
+msgstr "還有很多..."
+
+#: apps/client/src/pages/home/sections/features/index.tsx:46
+msgid "API access included"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:125
+msgid "Are you sure you want to disable two-factor authentication?"
+msgstr "您確定要停用雙因子驗證？"
+
+#: apps/client/src/pages/dashboard/settings/_sections/danger.tsx:94
+msgid "Are you sure?"
+msgstr "你確定嗎？"
+
+#: apps/client/src/pages/dashboard/agent-chat/_components/chat-input.tsx:41
+msgid "Ask anything..."
+msgstr ""
+
+#: apps/client/src/pages/home/sections/support/index.tsx:22
+msgid "Authentication"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:258
+msgid "Azure API Version"
+msgstr "Azure API 版本"
+
+#: apps/client/src/services/openai/client.ts:18
+msgid "Azure OpenAI Base URL, deployment name (model), and API version are required when using Azure OpenAI."
+msgstr "使用 Azure OpenAI 時，需要 Azure OpenAI 基本 URL、部署名稱 (模型) 和 API 版本。"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:183
+msgid "Azure OpenAI Resource URL"
+msgstr "Azure OpenAI 資源 URL"
+
+#: apps/client/src/pages/auth/backup-otp/page.tsx:99
+#: apps/client/src/pages/auth/forgot-password/page.tsx:100
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:243
+msgid "Back"
+msgstr "返回"
+
+#: apps/client/src/pages/auth/backup-otp/page.tsx:75
+msgid "Backup Code"
+msgstr "備份代碼"
+
+#: apps/client/src/pages/auth/backup-otp/page.tsx:81
+msgid "Backup Codes may contain only lowercase letters or numbers, and must be exactly 10 characters."
+msgstr "備份碼只能包含小寫字母或數字，且必須正好為 10 個字元。"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:183
+msgid "Base URL"
+msgstr "網站網址:"
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:112
+#: apps/client/src/pages/dashboard/billing/page.tsx:208
+msgid "Billed Monthly"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:112
+#: apps/client/src/pages/dashboard/billing/page.tsx:225
+msgid "Billed Yearly"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/_components/sidebar.tsx:107
+#: apps/client/src/pages/dashboard/billing/page.tsx:119
+#: apps/client/src/pages/dashboard/billing/page.tsx:129
+msgid "Billing"
+msgstr ""
+
+#: apps/client/src/components/copyright.tsx:24
+msgid "Built with modern technology and best practices."
+msgstr ""
+
+#: apps/client/src/pages/home/sections/support/index.tsx:49
+msgid "Built-in Core Features"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:137
+msgid "Cancel"
+msgstr "取消"
+
+#: apps/client/src/components/ai-actions.tsx:107
+#: apps/client/src/components/ai-actions.tsx:110
+msgid "Casual"
+msgstr "休閒"
+
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:98
+msgid "Change"
+msgstr ""
+
+#: apps/client/src/components/locale-switch.tsx:17
+msgid "Change Language"
+msgstr "變更語言"
+
+#: apps/client/src/pages/auth/reset-password/page.tsx:99
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:115
+msgid "Change Password"
+msgstr "更改密碼"
+
+#: apps/client/src/components/ai-actions.tsx:101
+msgid "Change Tone"
+msgstr "改變音調"
+
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:70
+msgid "Check your email for the confirmation link to update your email address."
+msgstr "查看電子郵件中的確認連結，以更新您的電子郵件地址。"
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:82
+msgid "Checkout canceled"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:187
+msgid "Choose a plan that works best for you. You can change or cancel your subscription at any time."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:249
+msgid "Close"
+msgstr "關閉"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:49
+msgid "Cloud-hosted solution"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:201
+msgid "Code"
+msgstr "驗證碼"
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:52
+msgid "Code must be exactly 6 digits long."
+msgstr "驗證碼必須是 6 位數字。"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:62
+msgid "Collaborative notes"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:40
+msgid "Company"
+msgstr "公司"
+
+#: apps/client/src/pages/home/sections/support/index.tsx:38
+msgid "Comprehensive user management with profiles, teams, permissions, and activity tracking."
+msgstr ""
+
+#: apps/client/src/components/ai-actions.tsx:119
+#: apps/client/src/components/ai-actions.tsx:122
+msgid "Confident"
+msgstr "自信"
+
+#: apps/client/src/pages/home/components/footer.tsx:46
+#: apps/client/src/pages/home/contact/page.tsx:5
+msgid "Contact"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/contributors/index.tsx:36
+msgid "Contact Sales"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:234
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:246
+msgid "Continue"
+msgstr "繼續"
+
+#: apps/client/src/pages/auth/register/page.tsx:64
+#: apps/client/src/pages/auth/register/page.tsx:69
+msgid "Create a new account"
+msgstr "建立一個新帳戶"
+
+#: apps/client/src/pages/auth/login/page.tsx:65
+msgctxt "This is a link to create a new account"
+msgid "Create one now"
+msgstr "立即建立"
+
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:82
+msgid "Current Password"
+msgstr "Contraseña actual"
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:145
+msgid "Current Subscription"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:59
+msgid "Custom branding"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:60
+msgid "Customizable dashboards"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/danger.tsx:62
+msgid "Danger Zone"
+msgstr "危險操作"
+
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:87
+msgid "Dark"
+msgstr "暗色"
+
+#: apps/client/src/pages/dashboard/_components/sidebar.tsx:101
+msgid "Dashboard"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/danger.tsx:79
+#: apps/client/src/pages/dashboard/settings/_sections/danger.tsx:94
+msgid "Delete Account"
+msgstr "刪除帳號"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:205
+msgid "Deployment Name"
+msgstr "部署名稱"
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:139
+msgid "Disable"
+msgstr "停用"
+
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:154
+msgid "Disable 2FA"
+msgstr "停用雙因子驗證（2FA）"
+
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:220
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:134
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:118
+msgid "Discard"
+msgstr "放棄"
+
+#: apps/client/src/pages/home/components/footer.tsx:66
+#: apps/client/src/pages/home/docs/page.tsx:5
+msgid "Documentation"
+msgstr "文件"
+
+#: apps/client/src/pages/auth/login/page.tsx:62
+msgid "Don't have an account?"
+msgstr "還沒有帳號嗎？"
+
+#: apps/client/src/pages/home/sections/testimonials/index.tsx:70
+msgid "Don't just take our word for it. Here's what our customers have to say about their experience with our platform. Have questions or feedback? Reach out to us at <0>{email}</0>."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:107
+msgid "Don't see your language? <0>Help translate the app.</0>"
+msgstr "沒有見到您的語言？<0>幫忙翻譯應用程式。</0>"
+
+#: apps/client/src/pages/auth/forgot-password/page.tsx:82
+#: apps/client/src/pages/auth/login/page.tsx:90
+#: apps/client/src/pages/auth/register/page.tsx:141
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:181
+msgid "Email"
+msgstr "電子郵件"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:54
+msgid "Email notifications"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:21
+msgid "Empowering teams with powerful tools to streamline workflows and boost productivity."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:163
+msgid "Enable 2FA"
+msgstr "啟用雙因子驗證"
+
+#: apps/client/src/pages/auth/reset-password/page.tsx:67
+msgid "Enter a new password below, and make sure it's secure."
+msgstr "在下方輸入新密碼，並確保其安全性。"
+
+#: apps/client/src/pages/auth/backup-otp/page.tsx:59
+msgid "Enter one of the 10 backup codes you saved when you enabled two-factor authentication."
+msgstr "輸入您在啟用雙因子驗證時儲存的 10 個備份代碼之一。"
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:170
+msgid "Enter the 6-digit code from your authenticator app to verify that 2FA has been setup correctly."
+msgstr "輸入驗證器應用程式中的 6 位數代碼，以驗證 2FA 設定是否正確。"
+
+#: apps/client/src/pages/auth/verify-otp/page.tsx:60
+msgid "Enter the one-time password provided by your authenticator app below."
+msgstr "在下面輸入您的身份驗證器應用程式提供的一次性密碼。"
+
+#: apps/client/src/pages/auth/forgot-password/page.tsx:70
+msgid "Enter your email address and we will send you a link to reset your password if the account exists."
+msgstr "輸入您的電子郵件地址，如果帳戶存在，我們將向您發送重置密碼的網址。"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:55
+msgid "Enterprise-grade security"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/support/index.tsx:33
+msgid "Enterprise-grade security with encryption, role-based access control, and compliance with industry standards."
+msgstr ""
+
+#: apps/client/src/pages/public/error.tsx:46
+msgid "Error {statusCode}"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:49
+msgid "Error loading stock data:"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:96
+msgid "Error subscribing"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/support/index.tsx:51
+msgid "Everything you need to launch and scale your SaaS product, built right in. No need to integrate multiple services."
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:104
+msgid "Everything you need to succeed."
+msgstr ""
+
+#: apps/client/src/pages/home/sections/hero/index.tsx:72
+msgid "Explore what's included"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:64
+msgid "Export to multiple formats"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:63
+msgid "FAQ"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:31
+msgid "Features"
+msgstr ""
+
+#: apps/client/src/components/ai-actions.tsx:90
+msgid "Fix Spelling & Grammar"
+msgstr "修正拼字和語法"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:45
+msgid "Flexible pricing plans"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:280
+msgid "Forget"
+msgstr "略過"
+
+#: apps/client/src/pages/auth/login/page.tsx:131
+msgid "Forgot Password?"
+msgstr "忘記密碼?"
+
+#: apps/client/src/pages/auth/forgot-password/page.tsx:68
+msgid "Forgot your password?"
+msgstr "忘記密碼？"
+
+#: apps/client/src/components/ai-actions.tsx:125
+#: apps/client/src/components/ai-actions.tsx:128
+msgid "Friendly"
+msgstr "友善"
+
+#: apps/client/src/pages/auth/_components/social-auth.tsx:18
+msgid "GitHub"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:52
+msgid "GitHub integration"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/statistics/index.tsx:12
+msgid "GitHub Stars"
+msgstr "GitHub 點讚數"
+
+#: apps/client/src/pages/auth/verify-email/page.tsx:67
+msgid "Go to Dashboard"
+msgstr "前往儀表板"
+
+#: apps/client/src/pages/public/error.tsx:55
+msgid "Go to home"
+msgstr ""
+
+#: apps/client/src/pages/auth/_components/social-auth.tsx:31
+msgid "Google"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:53
+msgid "Google Workspace integration"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:107
+msgid "Here, you can update your account information such as your profile picture, name and username."
+msgstr "在這裡，您可以更新您的帳戶資訊，例如個人檔案圖片、姓名和使用者名稱。"
+
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:68
+msgid "Here, you can update your profile to customize and personalize your experience."
+msgstr "在這裡，您可以更新個人資料，根據個人喜好定制和個人化使用體驗。"
+
+#: apps/client/src/pages/auth/login/page.tsx:115
+#: apps/client/src/pages/auth/register/page.tsx:168
+#: apps/client/src/pages/auth/reset-password/page.tsx:88
+msgid "Hold <0>Ctrl</0> to display your password temporarily."
+msgstr "按住 <0>Ctrl</0> 暫時顯示您的密碼。"
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:128
+msgid "If you disable two-factor authentication, you will no longer be required to enter a verification code when logging in."
+msgstr "如果停用雙因子驗證，登入時將不再需要輸入驗證碼。"
+
+#: apps/client/src/components/ai-actions.tsx:85
+msgid "Improve Writing"
+msgstr "改善寫作"
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:188
+msgid "In case you are unable to scan this QR Code, you can also copy-paste this link into your authenticator app."
+msgstr "如果您無法掃描此 QR 代碼，也可以將此連結複製貼到您的驗證器應用程式中。"
+
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:67
+msgid "In this section, you can change your password and enable/disable two-factor authentication."
+msgstr "在這部份，您可以變更密碼和啟用/停用雙因子驗證。"
+
+#: apps/client/src/pages/dashboard/settings/_sections/danger.tsx:64
+msgid "In this section, you can delete your account and all the data associated to your user, but please keep in mind that <0>this action is irreversible</0>."
+msgstr "在這部分，您可以刪除您的帳戶以及與您的使用者相關的所有資料，但請記住 <0>此動作是不可逆的</0>。"
+
+#: apps/client/src/pages/home/sections/support/index.tsx:28
+msgid "Integrated payment processing with support for subscriptions, one-time payments, and multiple payment methods."
+msgstr ""
+
+#: apps/client/src/services/errors/translate-error.ts:7
+msgid "It doesn't look like a user exists with the credentials you provided."
+msgstr "似乎沒有任何使用者與你提供的憑證資訊相符。"
+
+#: apps/client/src/services/errors/translate-error.ts:37
+msgid "It looks like the backup code you provided is invalid or used. Please try again."
+msgstr "您提供的備份代碼似乎無效或已使用。請再試一次。"
+
+#: apps/client/src/services/errors/translate-error.ts:19
+msgid "It looks like the reset token you provided is invalid. Please try restarting the password reset process again."
+msgstr "您提供的重置代碼似乎無效。請嘗試重新啟動密碼重置程序。"
+
+#: apps/client/src/services/errors/translate-error.ts:34
+msgid "It looks like the two-factor authentication code you provided is invalid. Please try again."
+msgstr "您提供的雙因子驗證碼似乎無效。請再試一次。"
+
+#: apps/client/src/services/errors/translate-error.ts:22
+msgid "It looks like the verification token you provided is invalid. Please try restarting the verification process again."
+msgstr "您提供的驗證代碼似乎無效。請嘗試重新啟動驗證程序。"
+
+#: apps/client/src/services/errors/translate-error.ts:25
+msgid "It looks like your email address has already been verified."
+msgstr "看來您的電子郵件已通過驗證。"
+
+#: apps/client/src/pages/auth/register/page.tsx:101
+msgctxt "Localized version of a placeholder name. For example, Max Mustermann in German or Jan Kowalski in Polish."
+msgid "John Doe"
+msgstr "無名氏"
+
+#: apps/client/src/pages/auth/register/page.tsx:123
+msgctxt "Localized version of a placeholder username. For example, max.mustermann in German or jan.kowalski in Polish."
+msgid "john.doe"
+msgstr ""
+
+#: apps/client/src/pages/auth/register/page.tsx:145
+msgctxt "Localized version of a placeholder email. For example, max.mustermann@example.de in German or jan.kowalski@example.pl in Polish."
+msgid "john.doe@example.com"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/contributors/index.tsx:18
+msgid "Join thousands of teams already using our platform to streamline their workflow and boost productivity. Start your free trial today - no credit card required."
+msgstr ""
+
+#: apps/client/src/pages/home/sections/logo-cloud/index.tsx:47
+msgid "Join thousands of teams already using our platform. <0>Get in touch</0>."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:101
+msgid "Language"
+msgstr "語言"
+
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:60
+msgid "Last updated:"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:86
+msgid "Light"
+msgstr "亮色"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:68
+msgid "Light or dark theme"
+msgstr "亮色或暗色主題"
+
+#: apps/client/src/pages/home/sections/hero/call-to-action.tsx:14
+msgid "Live Demo"
+msgstr ""
+
+#: apps/client/src/components/user-options.tsx:38
+msgid "Logout"
+msgstr "登出"
+
+#: apps/client/src/pages/auth/verify-otp/page.tsx:64
+msgid "Lost your device?"
+msgstr "遺失裝置？"
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:178
+msgid "Manage Subscription"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:218
+msgid "Max Tokens"
+msgstr "最大 Token"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:205
+msgid "Model"
+msgstr "模型"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:50
+msgid "Multi-language support"
+msgstr ""
+
+#: apps/client/src/pages/auth/backup-otp/page.tsx:52
+#: apps/client/src/pages/auth/forgot-password/page.tsx:49
+#: apps/client/src/pages/auth/login/page.tsx:55
+#: apps/client/src/pages/auth/register/page.tsx:64
+#: apps/client/src/pages/auth/reset-password/page.tsx:60
+#: apps/client/src/pages/auth/verify-email/page.tsx:43
+#: apps/client/src/pages/auth/verify-otp/page.tsx:52
+#: apps/client/src/pages/dashboard/agent-chat/page.tsx:34
+#: apps/client/src/pages/dashboard/billing/page.tsx:119
+#: apps/client/src/pages/dashboard/settings/page.tsx:16
+#: apps/client/src/pages/home/page.tsx:23
+msgid "My SaaS"
+msgstr ""
+
+#: apps/client/src/pages/auth/register/page.tsx:98
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:153
+msgid "Name"
+msgstr "名稱"
+
+#: apps/client/src/pages/dashboard/agent-chat/page.tsx:112
+msgid "New chat"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:96
+msgid "New Password"
+msgstr "新密碼"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:48
+msgid "No hidden fees or tracking"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:251
+msgid "No plans available"
+msgstr ""
+
+#: apps/client/src/components/locale-combobox.tsx:45
+msgid "No results found"
+msgstr "找不到相符的結果"
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:133
+msgid "Note: This will make your account less secure."
+msgstr "注意：這會降低您帳戶的安全性。"
+
+#: apps/client/src/pages/auth/verify-otp/page.tsx:82
+msgid "One-Time Password"
+msgstr "一次性密碼"
+
+#: apps/client/src/components/ai-actions.tsx:56
+#: apps/client/src/libs/axios.ts:30
+msgid "Oops, the server returned an error."
+msgstr "哎呀，伺服器傳回錯誤。"
+
+#: apps/client/src/services/openai/change-tone.ts:35
+#: apps/client/src/services/openai/fix-grammar.ts:33
+#: apps/client/src/services/openai/improve-writing.ts:33
+msgid "OpenAI did not return any choices for your text."
+msgstr "OpenAI 沒有為您的文字傳回任何選項。"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:120
+msgid "OpenAI/Azure OpenAI/Ollama Integration"
+msgstr "OpenAI/Azure OpenAI/Ollama 整合"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:169
+msgid "OpenAI/Ollama API Key"
+msgstr "OpenAI/Ollama API 金鑰"
+
+#: apps/client/src/pages/auth/layout.tsx:46
+msgctxt "The user can either login with email/password, or continue with GitHub or Google."
+msgid "or continue with"
+msgstr "或繼續使用"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:58
+msgid "Organize with folders"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:106
+msgid "Our platform is built with modern technology and best practices, offering a comprehensive suite of features designed to help your team work smarter and faster."
+msgstr ""
+
+#: apps/client/src/pages/auth/login/page.tsx:110
+#: apps/client/src/pages/auth/register/page.tsx:163
+#: apps/client/src/pages/auth/reset-password/page.tsx:83
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:73
+msgid "Password"
+msgstr "密碼"
+
+#: apps/client/src/pages/home/sections/support/index.tsx:27
+msgid "Payments"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:121
+msgid "Picture"
+msgstr "圖片"
+
+#: apps/client/src/components/copyright.tsx:31
+msgid "Platform"
+msgstr ""
+
+#: apps/client/src/pages/auth/verify-email/page.tsx:59
+msgid "Please note that this step is completely optional."
+msgstr "請注意，這一步驟是完全可選的。"
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:228
+msgid "Please store your backup codes in a secure location. You can use one of these one-time use codes to login in case you lose access to your authenticator app."
+msgstr "請將您的備份代碼存放在安全的地方。您可以使用其中一個一次性使用代碼登入，以防萬一遺失驗證器應用程式的存取權。"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:95
+msgid "Powered by"
+msgstr "提供者為"
+
+#: apps/client/src/pages/dashboard/agent-chat/page.tsx:145
+msgid "Powered by Tavily web search + OpenAI"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:94
+msgid "Price"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:34
+#: apps/client/src/pages/home/pricing/page.tsx:5
+msgid "Pricing"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:61
+msgid "Priority support"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:49
+#: apps/client/src/pages/home/privacy-policy/page.tsx:5
+msgid "Privacy Policy"
+msgstr "隱私政策"
+
+#: apps/client/src/pages/home/components/footer.tsx:28
+msgid "Product"
+msgstr ""
+
+#: apps/client/src/components/ai-actions.tsx:113
+#: apps/client/src/components/ai-actions.tsx:116
+msgid "Professional"
+msgstr "專業"
+
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:66
+msgid "Profile"
+msgstr "個人設置"
+
+#: apps/client/src/pages/home/sections/statistics/index.tsx:14
+msgid "Projects Created"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/contributors/index.tsx:41
+msgid "Questions? Our team is here to help. Reach out anytime and we'll get back to you within 24 hours."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:17
+msgid "Reactive Resume"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/hero/call-to-action.tsx:20
+msgid "Read docs"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/contributors/index.tsx:16
+msgid "Ready to get started?"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:156
+msgid "Renews on"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:199
+msgid "Resend email confirmation link"
+msgstr "重新傳送電子郵件確認連結"
+
+#: apps/client/src/pages/auth/reset-password/page.tsx:60
+#: apps/client/src/pages/auth/reset-password/page.tsx:65
+msgid "Reset your password"
+msgstr "重置密碼"
+
+#: apps/client/src/pages/home/components/footer.tsx:60
+msgid "Resources"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:65
+msgid "Rich text editor"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:63
+msgid "Role-based access control"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:217
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:131
+msgid "Save Changes"
+msgstr "儲存變更"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:274
+msgid "Save Locally"
+msgstr "儲存至本機"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:274
+msgid "Saved"
+msgstr "已儲存"
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:168
+msgid "Scan the QR code below with your authenticator app to setup 2FA on your account."
+msgstr "使用驗證器應用程式掃描下面的 QR 代碼，在您的帳戶上設定 2FA。"
+
+#: apps/client/src/components/locale-combobox.tsx:41
+msgid "Search for a language"
+msgstr "搜尋語言"
+
+#: apps/client/src/pages/dashboard/agent-chat/page.tsx:64
+msgid "Search the web and get AI-summarized answers"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/support/index.tsx:23
+msgid "Secure user authentication with multiple sign-in options including email, OAuth providers, and two-factor authentication."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:65
+#: apps/client/src/pages/home/sections/support/index.tsx:32
+msgid "Security"
+msgstr "安全性"
+
+#: apps/client/src/pages/auth/forgot-password/page.tsx:104
+msgid "Send Email"
+msgstr "傳送電子郵件"
+
+#: apps/client/src/components/user-options.tsx:32
+#: apps/client/src/pages/dashboard/_components/sidebar.tsx:119
+#: apps/client/src/pages/dashboard/settings/page.tsx:16
+#: apps/client/src/pages/dashboard/settings/page.tsx:26
+msgid "Settings"
+msgstr "設定"
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:159
+msgid "Setup two-factor authentication on your account"
+msgstr "在您的帳戶上設定雙因子驗證"
+
+#: apps/client/src/pages/auth/backup-otp/page.tsx:103
+#: apps/client/src/pages/auth/login/page.tsx:127
+#: apps/client/src/pages/auth/verify-otp/page.tsx:92
+msgid "Sign in"
+msgstr "登入"
+
+#: apps/client/src/pages/auth/register/page.tsx:74
+msgid "Sign in now"
+msgstr "立即登入"
+
+#: apps/client/src/pages/auth/login/page.tsx:55
+#: apps/client/src/pages/auth/login/page.tsx:60
+msgid "Sign in to your account"
+msgstr "登入您的帳戶"
+
+#: apps/client/src/pages/auth/register/page.tsx:179
+msgid "Sign up"
+msgstr "註冊"
+
+#: apps/client/src/pages/auth/login/page.tsx:74
+msgid "Signing in via email is currently disabled by the administrator."
+msgstr "目前管理員已停用透過電子郵件登入。"
+
+#: apps/client/src/pages/auth/register/page.tsx:82
+msgid "Signups are currently disabled by the administrator."
+msgstr "目前管理員已停用註冊功能。"
+
+#: apps/client/src/services/errors/translate-error.ts:43
+msgid "Something went wrong while processing your request. Please try again later or raise an issue on GitHub."
+msgstr "在處理您的請求時出了問題。請稍後再試，或在 GitHub 上提出問題。"
+
+#: apps/client/src/pages/home/sections/contributors/index.tsx:28
+msgid "Start Free Trial"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:149
+msgid "Status"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:17
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:27
+msgid "Stock Chat"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:162
+msgid "Store your backup codes securely"
+msgstr "安全儲存您的備份代碼"
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:75
+msgid "Subscription successful!"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:69
+#: apps/client/src/pages/home/support/page.tsx:5
+msgid "Support"
+msgstr ""
+
+#: apps/client/src/components/theme-switch.tsx:31
+msgid "Switch to Dark Mode"
+msgstr "切換至黑暗模式"
+
+#: apps/client/src/components/theme-switch.tsx:29
+msgid "Switch to Light Mode"
+msgstr "切換至燈光模式"
+
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:85
+msgid "System"
+msgstr "系統"
+
+#: apps/client/src/pages/home/components/footer.tsx:52
+#: apps/client/src/pages/home/terms/page.tsx:5
+msgid "Terms of Service"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/testimonials/index.tsx:68
+msgid "Testimonials"
+msgstr "用戶評價"
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:76
+msgid "Thank you for subscribing. Your plan is now active."
+msgstr ""
+
+#: apps/client/src/pages/public/error.tsx:17
+msgid "The page you're looking for doesn't exist."
+msgstr ""
+
+#: apps/client/src/pages/public/error.tsx:29
+msgid "The request was invalid."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:79
+msgid "Theme"
+msgstr "佈景主題"
+
+#: apps/client/src/services/errors/translate-error.ts:40
+msgid "There was an error connecting to the browser. Please make sure 'chrome' is running and reachable."
+msgstr "連接瀏覽器時發生錯誤。請確定 'chrome' 正在執行並且可以連線。"
+
+#: apps/client/src/services/errors/translate-error.ts:16
+msgid "This email address is associated with an OAuth account. Please sign in with your OAuth provider."
+msgstr "此電子郵件地址與 OAuth 帳戶相關聯。請使用您的 OAuth 供應商登入。"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:47
+msgid "Transparent pricing"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/logo-cloud/index.tsx:39
+msgid "Trusted by teams at leading companies worldwide:"
+msgstr ""
+
+#: apps/client/src/pages/auth/verify-otp/page.tsx:52
+#: apps/client/src/pages/auth/verify-otp/page.tsx:57
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:129
+msgid "Two-Factor Authentication"
+msgstr "雙因子驗證"
+
+#: apps/client/src/services/errors/translate-error.ts:31
+msgid "Two-factor authentication is already enabled for this account."
+msgstr "此帳戶已啟用雙因子驗證。"
+
+#: apps/client/src/services/errors/translate-error.ts:28
+msgid "Two-factor authentication is not enabled for this account."
+msgstr "此帳戶未啟用雙因子驗證。"
+
+#: apps/client/src/pages/dashboard/settings/_sections/danger.tsx:84
+msgid "Type <0>delete</0> to confirm deleting your account."
+msgstr "輸入 <0>delete</0> 確認刪除您的帳戶。"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:57
+msgid "Unlimited projects"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:192
+msgid "Unverified"
+msgstr "未驗證"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:247
+msgid "Use Azure OpenAI"
+msgstr "使用 Azure OpenAI"
+
+#: apps/client/src/components/theme-switch.tsx:30
+msgid "Use System Theme"
+msgstr "使用系統主題"
+
+#: apps/client/src/pages/auth/backup-otp/page.tsx:52
+#: apps/client/src/pages/auth/backup-otp/page.tsx:57
+msgid "Use your backup code"
+msgstr "使用您的備份代碼"
+
+#: apps/client/src/services/errors/translate-error.ts:13
+msgid "User does not have an associated 'secrets' record. Please report this issue on GitHub."
+msgstr "使用者沒有相關的 'secrets' 記錄。請在 GitHub 上報告此問題。"
+
+#: apps/client/src/pages/home/sections/support/index.tsx:37
+msgid "User Management"
+msgstr ""
+
+#: apps/client/src/pages/auth/register/page.tsx:119
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:167
+msgid "Username"
+msgstr "使用者名稱"
+
+#: apps/client/src/pages/home/sections/statistics/index.tsx:13
+msgid "Users Signed Up"
+msgstr "已註冊使用者"
+
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:192
+msgid "Verified"
+msgstr "已驗證"
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:161
+msgid "Verify that two-factor authentication has been setup correctly"
+msgstr "確認已正確設定雙因子驗證"
+
+#: apps/client/src/pages/auth/verify-email/page.tsx:43
+#: apps/client/src/pages/auth/verify-email/page.tsx:48
+msgid "Verify your email address"
+msgstr "確認你的電子郵件地址"
+
+#: apps/client/src/pages/home/sections/hero/index.tsx:67
+msgid "Version 1.0"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:109
+msgid "Volume"
+msgstr ""
+
+#: apps/client/src/pages/auth/verify-email/page.tsx:61
+msgid "We verify your email address only to ensure that we can send you a password reset link in case you forget your password."
+msgstr "我們驗證您的電子郵件地址，只是為了確保您忘記密碼時，我們可以寄送密碼重設連結給您。"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:66
+msgid "Web-based platform"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/agent-chat/page.tsx:56
+msgid "What do you want to know?"
+msgstr ""
+
+#: apps/client/src/pages/public/error.tsx:26
+msgid "You are not authorized to access this page."
+msgstr ""
+
+#: apps/client/src/pages/auth/login/page.tsx:99
+msgid "You can also enter your username."
+msgstr "您也可以輸入您的使用者名稱。"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:144
+msgid "You can also integrate with Azure OpenAI by enabling the <0>Use Azure OpenAI</0> checkbox and setting the Resource URL to your Azure OpenAI resource: <1>https://your-resource.openai.azure.com</1>. Set the deployment name in the Model field and specify the appropriate API version for your Azure deployment."
+msgstr "您也可以與 Azure OpenAI 整合，方法是啟用<0>使用 Azure OpenAI</0>核取方塊，並將資源 URL 設定為您的 Azure OpenAI 資源<1>：https://your-resource.openai.azure.com。</1>在模型欄位中設定部署名稱，並為您的 Azure 部署指定適當的 API 版本。"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:153
+msgid "You can also integrate with Ollama simply by setting the API key to<0>sk-1234567890abcdef</0> and the Base URL to your Ollama URL, i.e.<1>http://localhost:11434/v1</1>. You can also pick and choose models and set the max tokens as per your preference."
+msgstr "您也可以透過設定 API key<0>tosk-1234567890abcdef</0>和 Base URL 至您的 Ollama URL (即<1>http://localhost:11434/v1</1>) 來與 Ollama 整合。您也可以依您的喜好挑選模型和設定最大代幣。"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:122
+msgid "You can make use of the OpenAI API, Azure OpenAI, or Ollama to help you generate content, or improve your writing while composing your resume."
+msgstr "您可以利用 OpenAI API、Azure OpenAI 或 Ollama 來幫助您產生內容，或在撰寫履歷時改善您的文筆。"
+
+#: apps/client/src/pages/public/error.tsx:20
+msgid "You don't have permission to access this page."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:128
+msgid "You have the option to <0>obtain your own OpenAI API key</0>. This key empowers you to leverage the API as you see fit. Alternatively, if you wish to disable the AI features in Reactive Resume altogether, you can simply remove the key from your settings."
+msgstr "您可以選擇 <0>取得自己的 OpenAI API 金鑰</0> 。此金鑰可讓您隨心所欲地使用 API。或者，如果您想要完全停用 Reactive Resume 中的 AI 功能，您可以直接從設定中移除金鑰。"
+
+#: apps/client/src/pages/auth/verify-email/page.tsx:50
+msgid "You should have received an email from <0>My SaaS</0> with a link to verify your account."
+msgstr ""
+
+#: apps/client/src/pages/auth/forgot-password/page.tsx:49
+#: apps/client/src/pages/auth/forgot-password/page.tsx:54
+msgid "You've got mail!"
+msgstr "你有新郵件"
+
+#: apps/client/src/pages/dashboard/settings/_sections/danger.tsx:52
+msgid "Your account and all your data has been deleted successfully. Goodbye!"
+msgstr "您的帳戶和所有資料已成功刪除。再見"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:289
+msgid "Your API key is securely stored in the browser's local storage and is only utilized when making requests to OpenAI via their official SDK. Rest assured that your key is not transmitted to any external server except when interacting with OpenAI's services."
+msgstr "您的 API 密鑰會安全地儲存在瀏覽器的本機儲存空間中，並且僅會在透過官方 SDK 向 OpenAI 提出請求時使用。請放心，除了與 OpenAI 的服務互動時，您的金鑰不會傳送到任何外部伺服器。"
+
+#: apps/client/src/pages/auth/verify-email/page.tsx:28
+msgid "Your email address has been verified successfully."
+msgstr "您的電子郵件地址已成功驗證。"
+
+#: apps/client/src/services/openai/client.ts:11
+msgid "Your OpenAI API Key has not been set yet. Please go to your account settings to enable OpenAI Integration."
+msgstr "您的 OpenAI API 密鑰尚未設定。請前往您的帳戶設定啟用 OpenAI 整合。"
+
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:56
+msgid "Your password has been updated successfully."
+msgstr "您的密碼已成功更新。"
+
+#: apps/client/src/pages/home/components/footer.tsx:18
+msgid "Your SaaS Platform"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:83
+msgid "Your subscription checkout was canceled."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:164
+msgid "Your subscription will be canceled at the end of the billing period."
+msgstr ""

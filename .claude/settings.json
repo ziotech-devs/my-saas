@@ -1,0 +1,7 @@
+{
+  "enabledPlugins": {
+    "superpowers@claude-plugins-official": true,
+    "deploy-on-aws@agent-plugins-for-aws": true,
+    "docker-compose-generator@claude-code-plugins-plus": true
+  }
+}

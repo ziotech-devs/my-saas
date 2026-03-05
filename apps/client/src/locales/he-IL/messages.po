@@ -1,0 +1,1115 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2023-11-10 13:15+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: he\n"
+"Project-Id-Version: my-saas\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-02-27 11:37\n"
+"Last-Translator: \n"
+"Language-Team: Hebrew\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3;\n"
+"X-Crowdin-Project: my-saas\n"
+"X-Crowdin-Project-ID: 875978\n"
+"X-Crowdin-Language: he\n"
+"X-Crowdin-File: messages.po\n"
+"X-Crowdin-File-ID: 1\n"
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:171
+msgid "You have enabled two-factor authentication successfully."
+msgstr "הפעלת אימות דו־שלבי בהצלחה."
+
+#: apps/client/src/pages/home/sections/features/index.tsx:56
+msgid "{templatesCount}+ pre-built templates"
+msgstr "{templatesCount}+ תבניות מוכנות מראש"
+
+#: apps/client/src/components/copyright.tsx:19
+msgid "© {currentYear} My SaaS. All rights reserved."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:299
+msgid "<0>Note: </0>By utilizing the OpenAI API, you acknowledge and accept the <1>terms of use</1> and <2>privacy policy</2> outlined by OpenAI. Please note that Reactive Resume bears no responsibility for any improper or unauthorized utilization of the service, and any resulting repercussions or liabilities solely rest on the user."
+msgstr "<0>לתשומת ליבך: </0>עצם השימוש ב־API של OpenAI מהווה הכרה והסכמה ל<1>תנאי השימוש</1> ול<2>מדיניות הפרטיות</2> שנקבעו על ידי OpenAI. נא לשים לב ש־Reactive Resume אינו אחראי במקרים של שימוש לא הולם או לא מורשה בשירות, לרבות השלכות נגזרות או התחייבויות שחלות באופן בלעדי על המשתמש."
+
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:140
+msgid "<0>Two-factor authentication is currently disabled.</0> You can enable it by adding an authenticator app to your account."
+msgstr "<0>אימות דו־שלבי מושבת כרגע.</0> אפשר להפעיל אותו על ידי הוספת יישומון מאמת לחשבון שלך."
+
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:133
+msgid "<0>Two-factor authentication is enabled.</0> You will be asked to enter a code every time you sign in."
+msgstr "<0>אימות דו־שלבי פעיל.</0> תופיע בקשה למלא את הקוד שלך עם כל כניסה למערכת."
+
+#: apps/client/src/pages/home/page.tsx:23
+#: apps/client/src/pages/home/sections/hero/index.tsx:80
+msgid "A free and open-source SaaS boilerplate"
+msgstr "תבנית SaaS חינמית וקוד פתוח"
+
+#: apps/client/src/pages/home/sections/hero/index.tsx:89
+msgid "A free and open-source SaaS boilerplate that simplifies the process of creating, updating, and sharing your SaaS application."
+msgstr "תבנית SaaS חינמית וקוד פתוח שמפשטת את תהליך יצירה, עדכון ושיתוף ה‑SaaS שלך."
+
+#: apps/client/src/pages/auth/forgot-password/page.tsx:57
+msgid "A password reset link should have been sent to your inbox, if an account existed with the email you provided."
+msgstr "קישור לאיפוס הסיסמה אמור היה להישלח לדואר הנכנס בדוא״ל שלך, בהנחה שיש חשבון עם כתובת הדוא״ל שסיפקת."
+
+#: apps/client/src/services/errors/translate-error.ts:10
+msgid "A user with this email address and/or username already exists."
+msgstr "כבר קיים משתמש עם כתובת הדוא״ל ו/או שם המשתמש הזה."
+
+#: apps/client/src/pages/home/about/page.tsx:5
+#: apps/client/src/pages/home/components/footer.tsx:43
+msgid "About"
+msgstr "על הפרויקט"
+
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:105
+msgid "Account"
+msgstr "חשבון"
+
+#: apps/client/src/pages/dashboard/_components/sidebar.tsx:113
+#: apps/client/src/pages/dashboard/agent-chat/page.tsx:34
+msgid "Agent Chat"
+msgstr ""
+
+#: apps/client/src/components/ai-actions.tsx:79
+msgid "AI"
+msgstr "בינה מלאכותית"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:51
+msgid "AI-powered features"
+msgstr "יכולות מבוססות בינה מלאכותית"
+
+#: apps/client/src/pages/auth/register/page.tsx:71
+msgid "Already have an account?"
+msgstr "כבר יש לך חשבון?"
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:97
+msgid "An error occurred while subscribing to the plan."
+msgstr ""
+
+#: apps/client/src/pages/public/error.tsx:23
+msgid "An internal server error occurred."
+msgstr ""
+
+#: apps/client/src/pages/public/error.tsx:32
+msgid "An unexpected error occurred."
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:67
+msgid "Analytics and insights"
+msgstr "ניתוח נתונים ותובנות"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:133
+msgid "and many more..."
+msgstr "ועוד שלל יכולות…"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:46
+msgid "API access included"
+msgstr "גישה ל‑API כלולה"
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:125
+msgid "Are you sure you want to disable two-factor authentication?"
+msgstr "להשבית את האימות הדו־שלבי שלך?"
+
+#: apps/client/src/pages/dashboard/settings/_sections/danger.tsx:94
+msgid "Are you sure?"
+msgstr "להמשיך?"
+
+#: apps/client/src/pages/dashboard/agent-chat/_components/chat-input.tsx:41
+msgid "Ask anything..."
+msgstr ""
+
+#: apps/client/src/pages/home/sections/support/index.tsx:22
+msgid "Authentication"
+msgstr "אימות"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:258
+msgid "Azure API Version"
+msgstr "גרסת ממשק ה-API של Azure"
+
+#: apps/client/src/services/openai/client.ts:18
+msgid "Azure OpenAI Base URL, deployment name (model), and API version are required when using Azure OpenAI."
+msgstr "כתובת URL בסיסית של Azure OpenAI, שם הפריסה (מודל) וגרסת ה-API נדרשים בעת שימוש ב-Azure OpenAI."
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:183
+msgid "Azure OpenAI Resource URL"
+msgstr "כתובת URL של משאב Azure OpenAI"
+
+#: apps/client/src/pages/auth/backup-otp/page.tsx:99
+#: apps/client/src/pages/auth/forgot-password/page.tsx:100
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:243
+msgid "Back"
+msgstr "חזרה"
+
+#: apps/client/src/pages/auth/backup-otp/page.tsx:75
+msgid "Backup Code"
+msgstr "קוד גיבוי"
+
+#: apps/client/src/pages/auth/backup-otp/page.tsx:81
+msgid "Backup Codes may contain only lowercase letters or numbers, and must be exactly 10 characters."
+msgstr "קודים למטרות גיבוי יכולים להכיל רק אותיות לטיניות קטנות או מספרים והם חייבים להיות באורך של 10 תווים בדיוק."
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:183
+msgid "Base URL"
+msgstr "כתובת URL בסיסית"
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:112
+#: apps/client/src/pages/dashboard/billing/page.tsx:208
+msgid "Billed Monthly"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:112
+#: apps/client/src/pages/dashboard/billing/page.tsx:225
+msgid "Billed Yearly"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/_components/sidebar.tsx:107
+#: apps/client/src/pages/dashboard/billing/page.tsx:119
+#: apps/client/src/pages/dashboard/billing/page.tsx:129
+msgid "Billing"
+msgstr ""
+
+#: apps/client/src/components/copyright.tsx:24
+msgid "Built with modern technology and best practices."
+msgstr ""
+
+#: apps/client/src/pages/home/sections/support/index.tsx:49
+msgid "Built-in Core Features"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:137
+msgid "Cancel"
+msgstr "ביטול"
+
+#: apps/client/src/components/ai-actions.tsx:107
+#: apps/client/src/components/ai-actions.tsx:110
+msgid "Casual"
+msgstr "יומיומי"
+
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:98
+msgid "Change"
+msgstr ""
+
+#: apps/client/src/components/locale-switch.tsx:17
+msgid "Change Language"
+msgstr "שנה שפה"
+
+#: apps/client/src/pages/auth/reset-password/page.tsx:99
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:115
+msgid "Change Password"
+msgstr "החלפת סיסמה"
+
+#: apps/client/src/components/ai-actions.tsx:101
+msgid "Change Tone"
+msgstr "שינוי אופן התנסחות"
+
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:70
+msgid "Check your email for the confirmation link to update your email address."
+msgstr "יש לחפש בדוא״ל שלך קישור אימות לעדכון כתובת הדוא״ל שלך."
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:82
+msgid "Checkout canceled"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:187
+msgid "Choose a plan that works best for you. You can change or cancel your subscription at any time."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:249
+msgid "Close"
+msgstr "סגירה"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:49
+msgid "Cloud-hosted solution"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:201
+msgid "Code"
+msgstr "קוד"
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:52
+msgid "Code must be exactly 6 digits long."
+msgstr "הקוד חייב להיות בדיוק באורך 6 ספרות."
+
+#: apps/client/src/pages/home/sections/features/index.tsx:62
+msgid "Collaborative notes"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:40
+msgid "Company"
+msgstr "חברה"
+
+#: apps/client/src/pages/home/sections/support/index.tsx:38
+msgid "Comprehensive user management with profiles, teams, permissions, and activity tracking."
+msgstr ""
+
+#: apps/client/src/components/ai-actions.tsx:119
+#: apps/client/src/components/ai-actions.tsx:122
+msgid "Confident"
+msgstr "מלא בטחון עצמי"
+
+#: apps/client/src/pages/home/components/footer.tsx:46
+#: apps/client/src/pages/home/contact/page.tsx:5
+msgid "Contact"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/contributors/index.tsx:36
+msgid "Contact Sales"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:234
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:246
+msgid "Continue"
+msgstr "המשך"
+
+#: apps/client/src/pages/auth/register/page.tsx:64
+#: apps/client/src/pages/auth/register/page.tsx:69
+msgid "Create a new account"
+msgstr "יצירת חשבון חדש"
+
+#: apps/client/src/pages/auth/login/page.tsx:65
+msgctxt "This is a link to create a new account"
+msgid "Create one now"
+msgstr "יצירת אחד כזה עכשיו"
+
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:82
+msgid "Current Password"
+msgstr "סיסמה נוכחית"
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:145
+msgid "Current Subscription"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:59
+msgid "Custom branding"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:60
+msgid "Customizable dashboards"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/danger.tsx:62
+msgid "Danger Zone"
+msgstr "אזור הדמדומים"
+
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:87
+msgid "Dark"
+msgstr "כהה"
+
+#: apps/client/src/pages/dashboard/_components/sidebar.tsx:101
+msgid "Dashboard"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/danger.tsx:79
+#: apps/client/src/pages/dashboard/settings/_sections/danger.tsx:94
+msgid "Delete Account"
+msgstr "מחיקת חשבון"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:205
+msgid "Deployment Name"
+msgstr "שם הפריסה"
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:139
+msgid "Disable"
+msgstr "השבתה"
+
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:154
+msgid "Disable 2FA"
+msgstr "השבתת האימות הדו־שלבי"
+
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:220
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:134
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:118
+msgid "Discard"
+msgstr "התעלמות"
+
+#: apps/client/src/pages/home/components/footer.tsx:66
+#: apps/client/src/pages/home/docs/page.tsx:5
+msgid "Documentation"
+msgstr "תיעוד"
+
+#: apps/client/src/pages/auth/login/page.tsx:62
+msgid "Don't have an account?"
+msgstr "אין לך חשבון?"
+
+#: apps/client/src/pages/home/sections/testimonials/index.tsx:70
+msgid "Don't just take our word for it. Here's what our customers have to say about their experience with our platform. Have questions or feedback? Reach out to us at <0>{email}</0>."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:107
+msgid "Don't see your language? <0>Help translate the app.</0>"
+msgstr "השפה שלך לא מופיעה? <0>אפשר לסייע בתרגום היישום.</0>"
+
+#: apps/client/src/pages/auth/forgot-password/page.tsx:82
+#: apps/client/src/pages/auth/login/page.tsx:90
+#: apps/client/src/pages/auth/register/page.tsx:141
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:181
+msgid "Email"
+msgstr "דוא״ל"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:54
+msgid "Email notifications"
+msgstr "התראות בדוא\"ל"
+
+#: apps/client/src/pages/home/components/footer.tsx:21
+msgid "Empowering teams with powerful tools to streamline workflows and boost productivity."
+msgstr "מעצים צוותים באמצעות כלים חזקים לייעול תהליכי העבודה והגברת הפרודוקטיביות."
+
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:163
+msgid "Enable 2FA"
+msgstr "הפעלת אימות דו־שלבי"
+
+#: apps/client/src/pages/auth/reset-password/page.tsx:67
+msgid "Enter a new password below, and make sure it's secure."
+msgstr "נא למלא סיסמה חדשה להלן וכדאי לוודא שהיא בטוחה."
+
+#: apps/client/src/pages/auth/backup-otp/page.tsx:59
+msgid "Enter one of the 10 backup codes you saved when you enabled two-factor authentication."
+msgstr "נא להקליד אחת מבין 10 הקודים למטרות גיבוי שקיבלת עם הפעלה האימות הדו־שלבי."
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:170
+msgid "Enter the 6-digit code from your authenticator app to verify that 2FA has been setup correctly."
+msgstr "נא למלא את הקוד באורך 6 ספרות מיישומון המאמת שלך כדי לוודא שאימות דו־שלבי הוגדר כראוי."
+
+#: apps/client/src/pages/auth/verify-otp/page.tsx:60
+msgid "Enter the one-time password provided by your authenticator app below."
+msgstr "נא למלא את הסיסמה החד־פעמית שסופקה על ידי יישומון המאמת שלך להלן."
+
+#: apps/client/src/pages/auth/forgot-password/page.tsx:70
+msgid "Enter your email address and we will send you a link to reset your password if the account exists."
+msgstr "נא למלא את כתובת הדוא״ל שלך ואנו נשלח לך קישור לאיפוס הסיסמה שלך אם החשבון קיים."
+
+#: apps/client/src/pages/home/sections/features/index.tsx:55
+msgid "Enterprise-grade security"
+msgstr "אבטחה ברמת ארגון"
+
+#: apps/client/src/pages/home/sections/support/index.tsx:33
+msgid "Enterprise-grade security with encryption, role-based access control, and compliance with industry standards."
+msgstr "אבטחה ברמת ארגון עם הצפנה, בקרת גישה מבוססת תפקידים ועמידה בסטנדרטים של התעשייה."
+
+#: apps/client/src/pages/public/error.tsx:46
+msgid "Error {statusCode}"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:49
+msgid "Error loading stock data:"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:96
+msgid "Error subscribing"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/support/index.tsx:51
+msgid "Everything you need to launch and scale your SaaS product, built right in. No need to integrate multiple services."
+msgstr "כל מה שנדרש כדי להשיק ולהגדיל את מוצר ה‑SaaS שלכם מובנה כבר במערכת – בלי צורך לחבר בין שירותים רבים."
+
+#: apps/client/src/pages/home/sections/features/index.tsx:104
+msgid "Everything you need to succeed."
+msgstr "כל מה שנדרש כדי להצליח."
+
+#: apps/client/src/pages/home/sections/hero/index.tsx:72
+msgid "Explore what's included"
+msgstr "גלו מה כלול"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:64
+msgid "Export to multiple formats"
+msgstr "ייצוא למגוון פורמטים"
+
+#: apps/client/src/pages/home/components/footer.tsx:63
+msgid "FAQ"
+msgstr "שאלות נפוצות"
+
+#: apps/client/src/pages/home/components/footer.tsx:31
+msgid "Features"
+msgstr "יכולות"
+
+#: apps/client/src/components/ai-actions.tsx:90
+msgid "Fix Spelling & Grammar"
+msgstr "תיקון איות ודקדוק"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:45
+msgid "Flexible pricing plans"
+msgstr "תוכניות תמחור גמישות"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:280
+msgid "Forget"
+msgstr "לשכוח"
+
+#: apps/client/src/pages/auth/login/page.tsx:131
+msgid "Forgot Password?"
+msgstr "שכחת סיסמה?"
+
+#: apps/client/src/pages/auth/forgot-password/page.tsx:68
+msgid "Forgot your password?"
+msgstr "שכחת את הסיסמה שלך?"
+
+#: apps/client/src/components/ai-actions.tsx:125
+#: apps/client/src/components/ai-actions.tsx:128
+msgid "Friendly"
+msgstr "ידידותי"
+
+#: apps/client/src/pages/auth/_components/social-auth.tsx:18
+msgid "GitHub"
+msgstr "גיטהאב"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:52
+msgid "GitHub integration"
+msgstr "אינטגרציה עם גיטהאב"
+
+#: apps/client/src/pages/home/sections/statistics/index.tsx:12
+msgid "GitHub Stars"
+msgstr "כוכבים ב־GitHub"
+
+#: apps/client/src/pages/auth/verify-email/page.tsx:67
+msgid "Go to Dashboard"
+msgstr "מעבר ללוח בקרה"
+
+#: apps/client/src/pages/public/error.tsx:55
+msgid "Go to home"
+msgstr "חזרה לדף הבית"
+
+#: apps/client/src/pages/auth/_components/social-auth.tsx:31
+msgid "Google"
+msgstr "גוגל"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:53
+msgid "Google Workspace integration"
+msgstr "אינטגרציה עם Google Workspace"
+
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:107
+msgid "Here, you can update your account information such as your profile picture, name and username."
+msgstr "כאן אפשר לעדכן את פרטי החשבון שלך כגון תמונת הפרופיל, השם ושם המשתמש."
+
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:68
+msgid "Here, you can update your profile to customize and personalize your experience."
+msgstr "כאן אפשר לעדכן את הפרופיל שלך כדי להתאים ולהפוך את החוויה שלך לאישית יותר."
+
+#: apps/client/src/pages/auth/login/page.tsx:115
+#: apps/client/src/pages/auth/register/page.tsx:168
+#: apps/client/src/pages/auth/reset-password/page.tsx:88
+msgid "Hold <0>Ctrl</0> to display your password temporarily."
+msgstr "יש להחזיק את <0>Ctrl</0> כדי להציג את הסיסמה שלך באופן זמני."
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:128
+msgid "If you disable two-factor authentication, you will no longer be required to enter a verification code when logging in."
+msgstr "השבתת אימות דו־שלבי תייתר את מילוי קוד האימות בעת הכניסה למערכת."
+
+#: apps/client/src/components/ai-actions.tsx:85
+msgid "Improve Writing"
+msgstr "שיפור הכתיבה"
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:188
+msgid "In case you are unable to scan this QR Code, you can also copy-paste this link into your authenticator app."
+msgstr "אם לא הצלחת לסרוק את קוד ה־QR הזה, תמיד אפשר להעתיק ולהדביק את הקישור הזה לתוך יישומון המאמת שלך."
+
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:67
+msgid "In this section, you can change your password and enable/disable two-factor authentication."
+msgstr "בסעיף הזה, אפשר לשנות את הסיסמה שלך ולהפעיל/להשבית אימות דו־שלבי."
+
+#: apps/client/src/pages/dashboard/settings/_sections/danger.tsx:64
+msgid "In this section, you can delete your account and all the data associated to your user, but please keep in mind that <0>this action is irreversible</0>."
+msgstr "בסעיף הזה, אפשר למחוק את החשבון שלך ואת כל הנתונים שמשויכים למשתמש שלך, אך נא לשים לב ש<0>זאת פעולה בלתי הפיכה</0>."
+
+#: apps/client/src/pages/home/sections/support/index.tsx:28
+msgid "Integrated payment processing with support for subscriptions, one-time payments, and multiple payment methods."
+msgstr "מערכת תשלומים משולבת עם תמיכה במנויים, תשלומים חד‑פעמיים ואמצעי תשלום מרובים."
+
+#: apps/client/src/services/errors/translate-error.ts:7
+msgid "It doesn't look like a user exists with the credentials you provided."
+msgstr "לא נראה שקיים משתמש עם פרטי הכניסה שמולאו."
+
+#: apps/client/src/services/errors/translate-error.ts:37
+msgid "It looks like the backup code you provided is invalid or used. Please try again."
+msgstr "נראה שקוד הגיבוי שסיפקת שגוי או שכבר נוצל. נא לנסות שוב."
+
+#: apps/client/src/services/errors/translate-error.ts:19
+msgid "It looks like the reset token you provided is invalid. Please try restarting the password reset process again."
+msgstr "נראה שאסימון האיפוס שסיפקת שגוי. נא לנסות להפעיל מחדש את תהליך איפוס הסיסמה."
+
+#: apps/client/src/services/errors/translate-error.ts:34
+msgid "It looks like the two-factor authentication code you provided is invalid. Please try again."
+msgstr "נראה שקוד האימות הדו־שלבי שסיפקת שגוי. נא לנסות שוב."
+
+#: apps/client/src/services/errors/translate-error.ts:22
+msgid "It looks like the verification token you provided is invalid. Please try restarting the verification process again."
+msgstr "נראה שאסימון האימות שסיפקת שגוי. נא לנסות להפעיל מחדש את תהליך האימות."
+
+#: apps/client/src/services/errors/translate-error.ts:25
+msgid "It looks like your email address has already been verified."
+msgstr "נראה שכתובת הדוא״ל שלך כבר עברה אימות."
+
+#: apps/client/src/pages/auth/register/page.tsx:101
+msgctxt "Localized version of a placeholder name. For example, Max Mustermann in German or Jan Kowalski in Polish."
+msgid "John Doe"
+msgstr "ישראל ישראלי"
+
+#: apps/client/src/pages/auth/register/page.tsx:123
+msgctxt "Localized version of a placeholder username. For example, max.mustermann in German or jan.kowalski in Polish."
+msgid "john.doe"
+msgstr "israel.israeli"
+
+#: apps/client/src/pages/auth/register/page.tsx:145
+msgctxt "Localized version of a placeholder email. For example, max.mustermann@example.de in German or jan.kowalski@example.pl in Polish."
+msgid "john.doe@example.com"
+msgstr "israel.israeli@israel.gov.il"
+
+#: apps/client/src/pages/home/sections/contributors/index.tsx:18
+msgid "Join thousands of teams already using our platform to streamline their workflow and boost productivity. Start your free trial today - no credit card required."
+msgstr "הצטרפו לאלפי צוותים שכבר משתמשים בפלטפורמה שלנו כדי לייעל את תהליכי העבודה ולהעלות את התפוקה. התחילו עכשיו תקופת ניסיון חינמית – בלי צורך בכרטיס אשראי."
+
+#: apps/client/src/pages/home/sections/logo-cloud/index.tsx:47
+msgid "Join thousands of teams already using our platform. <0>Get in touch</0>."
+msgstr "הצטרפו לאלפי צוותים שכבר משתמשים בפלטפורמה שלנו. <0>דברו איתנו</0>."
+
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:101
+msgid "Language"
+msgstr "שפה"
+
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:60
+msgid "Last updated:"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:86
+msgid "Light"
+msgstr "בהירה"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:68
+msgid "Light or dark theme"
+msgstr "ערכת עיצוב בהירה או כהה"
+
+#: apps/client/src/pages/home/sections/hero/call-to-action.tsx:14
+msgid "Live Demo"
+msgstr "הדגמה חיה"
+
+#: apps/client/src/components/user-options.tsx:38
+msgid "Logout"
+msgstr "יציאה"
+
+#: apps/client/src/pages/auth/verify-otp/page.tsx:64
+msgid "Lost your device?"
+msgstr "איבדת את המכשיר שלך?"
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:178
+msgid "Manage Subscription"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:218
+msgid "Max Tokens"
+msgstr "אסימונים מקסימליים"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:205
+msgid "Model"
+msgstr "מודל"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:50
+msgid "Multi-language support"
+msgstr "תמיכה במספר שפות"
+
+#: apps/client/src/pages/auth/backup-otp/page.tsx:52
+#: apps/client/src/pages/auth/forgot-password/page.tsx:49
+#: apps/client/src/pages/auth/login/page.tsx:55
+#: apps/client/src/pages/auth/register/page.tsx:64
+#: apps/client/src/pages/auth/reset-password/page.tsx:60
+#: apps/client/src/pages/auth/verify-email/page.tsx:43
+#: apps/client/src/pages/auth/verify-otp/page.tsx:52
+#: apps/client/src/pages/dashboard/agent-chat/page.tsx:34
+#: apps/client/src/pages/dashboard/billing/page.tsx:119
+#: apps/client/src/pages/dashboard/settings/page.tsx:16
+#: apps/client/src/pages/home/page.tsx:23
+msgid "My SaaS"
+msgstr "My SaaS"
+
+#: apps/client/src/pages/auth/register/page.tsx:98
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:153
+msgid "Name"
+msgstr "שם"
+
+#: apps/client/src/pages/dashboard/agent-chat/page.tsx:112
+msgid "New chat"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:96
+msgid "New Password"
+msgstr "סיסמה חדשה"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:48
+msgid "No hidden fees or tracking"
+msgstr "בלי עמלות נסתרות או מעקב מיותר"
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:251
+msgid "No plans available"
+msgstr ""
+
+#: apps/client/src/components/locale-combobox.tsx:45
+msgid "No results found"
+msgstr "לא נמצאו תוצאות"
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:133
+msgid "Note: This will make your account less secure."
+msgstr "לתשומת ליבך: זה ישפר את ההגנה על החשבון שלך."
+
+#: apps/client/src/pages/auth/verify-otp/page.tsx:82
+msgid "One-Time Password"
+msgstr "סיסמה חד־פעמית"
+
+#: apps/client/src/components/ai-actions.tsx:56
+#: apps/client/src/libs/axios.ts:30
+msgid "Oops, the server returned an error."
+msgstr "אופס, השרת החזיר שגיאה."
+
+#: apps/client/src/services/openai/change-tone.ts:35
+#: apps/client/src/services/openai/fix-grammar.ts:33
+#: apps/client/src/services/openai/improve-writing.ts:33
+msgid "OpenAI did not return any choices for your text."
+msgstr "OpenAI לא החזיר אפשרויות לטקסט שלך."
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:120
+msgid "OpenAI/Azure OpenAI/Ollama Integration"
+msgstr "OpenAI/Azure OpenAI/Ollama אינטגרציה"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:169
+msgid "OpenAI/Ollama API Key"
+msgstr "מפתח API של OpenAI/Ollama"
+
+#: apps/client/src/pages/auth/layout.tsx:46
+msgctxt "The user can either login with email/password, or continue with GitHub or Google."
+msgid "or continue with"
+msgstr "או להמשיך עם"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:58
+msgid "Organize with folders"
+msgstr "ארגון בעזרת תיקיות"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:106
+msgid "Our platform is built with modern technology and best practices, offering a comprehensive suite of features designed to help your team work smarter and faster."
+msgstr "הפלטפורמה שלנו נבנתה בטכנולוגיות עדכניות ועל פי מיטב שיטות העבודה, ומציעה סט עשיר של יכולות שנועדו לעזור לצוות שלכם לעבוד חכם ומהר יותר."
+
+#: apps/client/src/pages/auth/login/page.tsx:110
+#: apps/client/src/pages/auth/register/page.tsx:163
+#: apps/client/src/pages/auth/reset-password/page.tsx:83
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:73
+msgid "Password"
+msgstr "סיסמה"
+
+#: apps/client/src/pages/home/sections/support/index.tsx:27
+msgid "Payments"
+msgstr "תשלומים"
+
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:121
+msgid "Picture"
+msgstr "תמונה"
+
+#: apps/client/src/components/copyright.tsx:31
+msgid "Platform"
+msgstr ""
+
+#: apps/client/src/pages/auth/verify-email/page.tsx:59
+msgid "Please note that this step is completely optional."
+msgstr "נא לשים לב שזה שלב רשות בלבד."
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:228
+msgid "Please store your backup codes in a secure location. You can use one of these one-time use codes to login in case you lose access to your authenticator app."
+msgstr "נא לאחסון את הקודים שלמטרות גיבוי במקום מוגן. אפשר להשתמש באחד מהקודים החד־פעמיים האלה כדי להיכנס אם איבדת את הגישה ליישומון המאמת שלך."
+
+#: apps/client/src/pages/home/sections/features/index.tsx:95
+msgid "Powered by"
+msgstr "מופעל על גבי"
+
+#: apps/client/src/pages/dashboard/agent-chat/page.tsx:145
+msgid "Powered by Tavily web search + OpenAI"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:94
+msgid "Price"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:34
+#: apps/client/src/pages/home/pricing/page.tsx:5
+msgid "Pricing"
+msgstr "תמחור"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:61
+msgid "Priority support"
+msgstr "תמיכה בעדיפות גבוהה"
+
+#: apps/client/src/pages/home/components/footer.tsx:49
+#: apps/client/src/pages/home/privacy-policy/page.tsx:5
+msgid "Privacy Policy"
+msgstr "מדיניות פרטיות"
+
+#: apps/client/src/pages/home/components/footer.tsx:28
+msgid "Product"
+msgstr "מוצר"
+
+#: apps/client/src/components/ai-actions.tsx:113
+#: apps/client/src/components/ai-actions.tsx:116
+msgid "Professional"
+msgstr "מקצועי"
+
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:66
+msgid "Profile"
+msgstr "פרופיל"
+
+#: apps/client/src/pages/home/sections/statistics/index.tsx:14
+msgid "Projects Created"
+msgstr "פרויקטים שנוצרו"
+
+#: apps/client/src/pages/home/sections/contributors/index.tsx:41
+msgid "Questions? Our team is here to help. Reach out anytime and we'll get back to you within 24 hours."
+msgstr "יש לכם שאלות? הצוות שלנו כאן כדי לעזור. אפשר לפנות אלינו בכל עת ונחזור אליכם בתוך 24 שעות."
+
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:17
+msgid "Reactive Resume"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/hero/call-to-action.tsx:20
+msgid "Read docs"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/contributors/index.tsx:16
+msgid "Ready to get started?"
+msgstr "מוכנים להתחיל?"
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:156
+msgid "Renews on"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:199
+msgid "Resend email confirmation link"
+msgstr "שליחת קישור לאימות בדוא״ל מחדש"
+
+#: apps/client/src/pages/auth/reset-password/page.tsx:60
+#: apps/client/src/pages/auth/reset-password/page.tsx:65
+msgid "Reset your password"
+msgstr "איפוס הסיסמה שלך"
+
+#: apps/client/src/pages/home/components/footer.tsx:60
+msgid "Resources"
+msgstr "משאבים"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:65
+msgid "Rich text editor"
+msgstr "עורך טקסט עשיר"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:63
+msgid "Role-based access control"
+msgstr "בקרת גישה מבוססת תפקידים"
+
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:217
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:131
+msgid "Save Changes"
+msgstr "שמירת שינויים"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:274
+msgid "Save Locally"
+msgstr "שמור באופן מקומי"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:274
+msgid "Saved"
+msgstr "נשמר"
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:168
+msgid "Scan the QR code below with your authenticator app to setup 2FA on your account."
+msgstr "יש לסרוק את קוד ה־QR שלהלן עם יישומון המאמת שלך כדי להקים אימות דו־שלבי לחשבון שלך."
+
+#: apps/client/src/components/locale-combobox.tsx:41
+msgid "Search for a language"
+msgstr "חיפוש שפה"
+
+#: apps/client/src/pages/dashboard/agent-chat/page.tsx:64
+msgid "Search the web and get AI-summarized answers"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/support/index.tsx:23
+msgid "Secure user authentication with multiple sign-in options including email, OAuth providers, and two-factor authentication."
+msgstr "אימות משתמשים מאובטח עם מגוון אפשרויות כניסה, כולל דוא\"ל, ספקי OAuth ואימות דו‑שלבי."
+
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:65
+#: apps/client/src/pages/home/sections/support/index.tsx:32
+msgid "Security"
+msgstr "אבטחה"
+
+#: apps/client/src/pages/auth/forgot-password/page.tsx:104
+msgid "Send Email"
+msgstr "שליחת דוא״ל"
+
+#: apps/client/src/components/user-options.tsx:32
+#: apps/client/src/pages/dashboard/_components/sidebar.tsx:119
+#: apps/client/src/pages/dashboard/settings/page.tsx:16
+#: apps/client/src/pages/dashboard/settings/page.tsx:26
+msgid "Settings"
+msgstr "הגדרות"
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:159
+msgid "Setup two-factor authentication on your account"
+msgstr "הקמת אימות דו־שלבי לחשבון שלך"
+
+#: apps/client/src/pages/auth/backup-otp/page.tsx:103
+#: apps/client/src/pages/auth/login/page.tsx:127
+#: apps/client/src/pages/auth/verify-otp/page.tsx:92
+msgid "Sign in"
+msgstr "כניסה"
+
+#: apps/client/src/pages/auth/register/page.tsx:74
+msgid "Sign in now"
+msgstr "כניסה כעת"
+
+#: apps/client/src/pages/auth/login/page.tsx:55
+#: apps/client/src/pages/auth/login/page.tsx:60
+msgid "Sign in to your account"
+msgstr "כניסה לחשבון שלך"
+
+#: apps/client/src/pages/auth/register/page.tsx:179
+msgid "Sign up"
+msgstr "הרשמה"
+
+#: apps/client/src/pages/auth/login/page.tsx:74
+msgid "Signing in via email is currently disabled by the administrator."
+msgstr "הכניסה באמצעות דוא\"ל מושבתת כרגע על ידי המנהל."
+
+#: apps/client/src/pages/auth/register/page.tsx:82
+msgid "Signups are currently disabled by the administrator."
+msgstr "ההרשמות מושבתות כרגע על ידי ההנהלה."
+
+#: apps/client/src/services/errors/translate-error.ts:43
+msgid "Something went wrong while processing your request. Please try again later or raise an issue on GitHub."
+msgstr "משהו השתבש בעיבוד הבקשה שלך. נא לנסות שוב מאוחר יותר או לדווח על תקלה ב־GitHub."
+
+#: apps/client/src/pages/home/sections/contributors/index.tsx:28
+msgid "Start Free Trial"
+msgstr "התחילו בתקופת ניסיון חינמית"
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:149
+msgid "Status"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:17
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:27
+msgid "Stock Chat"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:162
+msgid "Store your backup codes securely"
+msgstr "יש לאחסן את הקודים למטרות גיבוי בצורה מוגנת"
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:75
+msgid "Subscription successful!"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:69
+#: apps/client/src/pages/home/support/page.tsx:5
+msgid "Support"
+msgstr "תמיכה"
+
+#: apps/client/src/components/theme-switch.tsx:31
+msgid "Switch to Dark Mode"
+msgstr "עבור למצב כהה"
+
+#: apps/client/src/components/theme-switch.tsx:29
+msgid "Switch to Light Mode"
+msgstr "עבור למצב בהיר"
+
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:85
+msgid "System"
+msgstr "מערכת"
+
+#: apps/client/src/pages/home/components/footer.tsx:52
+#: apps/client/src/pages/home/terms/page.tsx:5
+msgid "Terms of Service"
+msgstr "תנאי שימוש"
+
+#: apps/client/src/pages/home/sections/testimonials/index.tsx:68
+msgid "Testimonials"
+msgstr "המלצות"
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:76
+msgid "Thank you for subscribing. Your plan is now active."
+msgstr ""
+
+#: apps/client/src/pages/public/error.tsx:17
+msgid "The page you're looking for doesn't exist."
+msgstr ""
+
+#: apps/client/src/pages/public/error.tsx:29
+msgid "The request was invalid."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:79
+msgid "Theme"
+msgstr "ערכת עיצוב"
+
+#: apps/client/src/services/errors/translate-error.ts:40
+msgid "There was an error connecting to the browser. Please make sure 'chrome' is running and reachable."
+msgstr "קרתה תקלה בחיבור לדפדפן. נא לוודא ש־‚chrome’ פעיל ונגיש."
+
+#: apps/client/src/services/errors/translate-error.ts:16
+msgid "This email address is associated with an OAuth account. Please sign in with your OAuth provider."
+msgstr "כתובת הדוא״ל משויכת לחשבון OAuth. נא להיכנס עם ספק ה־OAuth שלך."
+
+#: apps/client/src/pages/home/sections/features/index.tsx:47
+msgid "Transparent pricing"
+msgstr "תמחור שקוף"
+
+#: apps/client/src/pages/home/sections/logo-cloud/index.tsx:39
+msgid "Trusted by teams at leading companies worldwide:"
+msgstr "נבחר על‑ידי צוותים בחברות המובילות בעולם:"
+
+#: apps/client/src/pages/auth/verify-otp/page.tsx:52
+#: apps/client/src/pages/auth/verify-otp/page.tsx:57
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:129
+msgid "Two-Factor Authentication"
+msgstr "אימות דו־שלבי"
+
+#: apps/client/src/services/errors/translate-error.ts:31
+msgid "Two-factor authentication is already enabled for this account."
+msgstr "כבר מופעל אימות דו־שלבי לחשבון הזה."
+
+#: apps/client/src/services/errors/translate-error.ts:28
+msgid "Two-factor authentication is not enabled for this account."
+msgstr "אימות דו־שלבי לא מופעל לחשבון הזה."
+
+#: apps/client/src/pages/dashboard/settings/_sections/danger.tsx:84
+msgid "Type <0>delete</0> to confirm deleting your account."
+msgstr "נא להקליד <0>delete</0> (מחיקה) כדי לאשר את מחיקת החשבון שלך."
+
+#: apps/client/src/pages/home/sections/features/index.tsx:57
+msgid "Unlimited projects"
+msgstr "מספר בלתי מוגבל של פרויקטים"
+
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:192
+msgid "Unverified"
+msgstr "לא מאומת"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:247
+msgid "Use Azure OpenAI"
+msgstr "השתמש ב-Azure OpenAI"
+
+#: apps/client/src/components/theme-switch.tsx:30
+msgid "Use System Theme"
+msgstr "השתמש בערכת הנושא של המערכת"
+
+#: apps/client/src/pages/auth/backup-otp/page.tsx:52
+#: apps/client/src/pages/auth/backup-otp/page.tsx:57
+msgid "Use your backup code"
+msgstr "להשתמש בקוד הגיבוי שלך"
+
+#: apps/client/src/services/errors/translate-error.ts:13
+msgid "User does not have an associated 'secrets' record. Please report this issue on GitHub."
+msgstr "למשתמש אין רשומת ‚סודות’ (secrets) משויכת אליו. נא לדווח על התקלה הזאת ב־GitHub."
+
+#: apps/client/src/pages/home/sections/support/index.tsx:37
+msgid "User Management"
+msgstr "ניהול משתמשים"
+
+#: apps/client/src/pages/auth/register/page.tsx:119
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:167
+msgid "Username"
+msgstr "שם משתמש"
+
+#: apps/client/src/pages/home/sections/statistics/index.tsx:13
+msgid "Users Signed Up"
+msgstr "משתמשים נרשמו"
+
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:192
+msgid "Verified"
+msgstr "מאומת"
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:161
+msgid "Verify that two-factor authentication has been setup correctly"
+msgstr "נא לוודא שהאימות הדו־שלבי הוקם כראוי"
+
+#: apps/client/src/pages/auth/verify-email/page.tsx:43
+#: apps/client/src/pages/auth/verify-email/page.tsx:48
+msgid "Verify your email address"
+msgstr "אימות כתובת הדוא״ל שלך"
+
+#: apps/client/src/pages/home/sections/hero/index.tsx:67
+msgid "Version 1.0"
+msgstr "גרסה 1.0"
+
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:109
+msgid "Volume"
+msgstr ""
+
+#: apps/client/src/pages/auth/verify-email/page.tsx:61
+msgid "We verify your email address only to ensure that we can send you a password reset link in case you forget your password."
+msgstr "אנו מאמתים את כתובת הדוא״ל שלך רק כדי לוודא שאפשר לשלוח לך קישור לאיפוס סיסמה למקרה ששכחת אותה."
+
+#: apps/client/src/pages/home/sections/features/index.tsx:66
+msgid "Web-based platform"
+msgstr "פלטפורמה מבוססת דפדפן"
+
+#: apps/client/src/pages/dashboard/agent-chat/page.tsx:56
+msgid "What do you want to know?"
+msgstr ""
+
+#: apps/client/src/pages/public/error.tsx:26
+msgid "You are not authorized to access this page."
+msgstr ""
+
+#: apps/client/src/pages/auth/login/page.tsx:99
+msgid "You can also enter your username."
+msgstr "אפשר גם למלא את שם המשתמש שלך."
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:144
+msgid "You can also integrate with Azure OpenAI by enabling the <0>Use Azure OpenAI</0> checkbox and setting the Resource URL to your Azure OpenAI resource: <1>https://your-resource.openai.azure.com</1>. Set the deployment name in the Model field and specify the appropriate API version for your Azure deployment."
+msgstr "ניתן גם לבצע אינטגרציה עם Azure OpenAI על-ידי הפעלת תיבת <0>הסימון 'השתמש ב-Azure OpenAI'</0> והגדרת כתובת ה-URL של המשאב למשאב Azure OpenAI שלך: <1>https://your-resource.openai.azure.com</1>. הגדר את שם הפריסה בשדה 'מודל' וציין את גרסת ה-API המתאימה לפריסת Azure שלך."
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:153
+msgid "You can also integrate with Ollama simply by setting the API key to<0>sk-1234567890abcdef</0> and the Base URL to your Ollama URL, i.e.<1>http://localhost:11434/v1</1>. You can also pick and choose models and set the max tokens as per your preference."
+msgstr "ניתן גם לבצע אינטגרציה עם Ollama פשוט על ידי הגדרת מפתח ה-API<0>tosk-1234567890abcdef</0> וכתובת ה-URL הבסיסית לכתובת ה-URL של Ollama,<1>כלומרhttp://localhost:11434/v1</1>. ניתן גם לבחור מודלים ולהגדיר את מספר האסימונים המרבי בהתאם להעדפותיך."
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:122
+msgid "You can make use of the OpenAI API, Azure OpenAI, or Ollama to help you generate content, or improve your writing while composing your resume."
+msgstr "אתה יכול להשתמש ב-OpenAI API, Azure OpenAI או Ollama כדי לעזור לך ליצור תוכן או לשפר את הכתיבה שלך בזמן שאתה כותב את קורות החיים שלך."
+
+#: apps/client/src/pages/public/error.tsx:20
+msgid "You don't have permission to access this page."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:128
+msgid "You have the option to <0>obtain your own OpenAI API key</0>. This key empowers you to leverage the API as you see fit. Alternatively, if you wish to disable the AI features in Reactive Resume altogether, you can simply remove the key from your settings."
+msgstr "יש לך אפשרות <0>לקבל מפתח API משלך ל־OpenAI</0>. המפתח הזה מאפשר לך למנף את ה־API כפי שנראה לך לנכון. לחלופין, כדי להשבית את אפשרויות הבינה המלאכותית לחלוטין ב־Reactive Resume, אפשר פשוט להסיר את המפתח מההגדרות שלך."
+
+#: apps/client/src/pages/auth/verify-email/page.tsx:50
+msgid "You should have received an email from <0>My SaaS</0> with a link to verify your account."
+msgstr ""
+
+#: apps/client/src/pages/auth/forgot-password/page.tsx:49
+#: apps/client/src/pages/auth/forgot-password/page.tsx:54
+msgid "You've got mail!"
+msgstr "קיבלת הודעה!"
+
+#: apps/client/src/pages/dashboard/settings/_sections/danger.tsx:52
+msgid "Your account and all your data has been deleted successfully. Goodbye!"
+msgstr "החשבון וכל הנתונים שלך נמחקו בהצלחה. להתראות ובהצלחה!"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:289
+msgid "Your API key is securely stored in the browser's local storage and is only utilized when making requests to OpenAI via their official SDK. Rest assured that your key is not transmitted to any external server except when interacting with OpenAI's services."
+msgstr "מפתח ה־API שלך מאוחסן בדפדפן מקומית ונעשה בו שימוש רק בעת שליחת בקשות ל־OpenAI דרך ה־SDK הרשמי שלהם. אנו מתחייבים שהמפתח שלך לא מועבר לשרת חיצוני מלבד למטרות תפעול השירותים של OpenAI."
+
+#: apps/client/src/pages/auth/verify-email/page.tsx:28
+msgid "Your email address has been verified successfully."
+msgstr "כתובת הדוא״ל שלך עברה אימות בהצלחה."
+
+#: apps/client/src/services/openai/client.ts:11
+msgid "Your OpenAI API Key has not been set yet. Please go to your account settings to enable OpenAI Integration."
+msgstr "מפתח ה־API של OpenAI טרם הוגדר. נא לגשת להגדרות החשבון שלך ולהפעיל את השילוב מול OpenAI."
+
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:56
+msgid "Your password has been updated successfully."
+msgstr "הסיסמה שלך עודכנה בהצלחה."
+
+#: apps/client/src/pages/home/components/footer.tsx:18
+msgid "Your SaaS Platform"
+msgstr "פלטפורמת ה‑SaaS שלכם"
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:83
+msgid "Your subscription checkout was canceled."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:164
+msgid "Your subscription will be canceled at the end of the billing period."
+msgstr ""

@@ -1,0 +1,13 @@
+packages:
+  - 'apps/docs'
+
+onlyBuiltDependencies:
+  - "@nestjs/core"
+  - "@parcel/watcher"
+  - "@prisma/client"
+  - "@prisma/engines"
+  - "@swc/core"
+  - esbuild
+  - nx
+  - prisma
+  - sharp

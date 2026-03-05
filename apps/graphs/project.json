@@ -1,0 +1,36 @@
+{
+  "name": "graphs",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/graphs",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "cd apps/graphs && langgraph dev",
+        "envFile": ".env"
+      }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "cd apps/graphs && langgraph build -t my-saas-graphs",
+        "envFile": ".env"
+      }
+    },
+    "deploy": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "cd apps/graphs && langgraph build -t my-saas-graphs:latest",
+          "aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 301394200094.dkr.ecr.us-east-1.amazonaws.com",
+          "docker tag my-saas-graphs:latest 301394200094.dkr.ecr.us-east-1.amazonaws.com/my-saas-graphs:latest",
+          "docker push 301394200094.dkr.ecr.us-east-1.amazonaws.com/my-saas-graphs:latest",
+          "aws ecs update-service --cluster my-saas-cluster --service my-saas-graphs --force-new-deployment --region us-east-1"
+        ],
+        "parallel": false
+      }
+    }
+  },
+  "tags": ["backend", "python"]
+}

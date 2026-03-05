@@ -1,0 +1,204 @@
+---
+description: AWS CDK infrastructure management for My SaaS - deploy, diff, synth, and destroy cloud resources
+alwaysApply: false
+---
+
+# CDK Infrastructure Skill
+
+Manage AWS CDK infrastructure in `tools/infra/` for deploying the My SaaS application.
+
+## Commands
+
+```bash
+# Synthesize CloudFormation templates (dry run)
+pnpm cdk:synth
+
+# Show diff between deployed and local
+pnpm cdk:diff
+
+# Deploy all stacks to AWS
+pnpm cdk:deploy
+
+# Deploy single stack
+cd tools/infra && npx cdk deploy MySaasApiStack --require-approval never
+
+# Destroy all stacks
+pnpm cdk:destroy
+
+# Build TypeScript
+nx run infra:build
+```
+
+## Architecture
+
+```
+                         ┌─────────────┐
+                         │ CloudFront  │
+                         │   (CDN)     │
+                         └──────┬──────┘
+                                │
+              ┌─────────────────┼─────────────────┐
+              │                 │                 │
+              ▼                 ▼                 │
+        ┌─────────┐       ┌─────────┐            │
+        │   S3    │       │   ALB   │            │
+        │  (SPA)  │       │         │            │
+        └─────────┘       └────┬────┘            │
+                               │                 │
+┌──────────────────────────────┼─────────────────┼───────────────┐
+│                              │      VPC        │               │
+│  ┌───────────────────────────┼─────────────────┼─────────────┐ │
+│  │              Public Subnets                 │             │ │
+│  │   ┌─────────────┐              ┌─────────────┐            │ │
+│  │   │     ALB     │              │   NAT GW    │            │ │
+│  │   └─────────────┘              └─────────────┘            │ │
+│  └─────────────────────────────────────────────────────────────┘ │
+│                              │                                 │
+│  ┌─────────────────────────────────────────────────────────────┐ │
+│  │                   Private Subnets                           │ │
+│  │   ┌─────────────────┐              ┌─────────────┐          │ │
+│  │   │   ECS Fargate   │              │     RDS     │          │ │
+│  │   │  (NestJS API)   │──────────────│ PostgreSQL  │          │ │
+│  │   └─────────────────┘              └─────────────┘          │ │
+│  └─────────────────────────────────────────────────────────────┘ │
+└─────────────────────────────────────────────────────────────────┘
+                              │
+              ┌───────────────┴───────────────┐
+              │                               │
+        ┌─────────┐                    ┌─────────┐
+        │   S3    │                    │   SES   │
+        │(Uploads)│                    │ (Email) │
+        └─────────┘                    └─────────┘
+```
+
+## Stacks
+
+| Stack | File | Purpose | Dependencies |
+|-------|------|---------|--------------|
+| `MySaasEcrStack` | `ecr-stack.ts` | ECR container registry | none |
+| `MySaasSecretsStack` | `secrets-stack.ts` | Secrets Manager template | none |
+| `MySaasStorageStack` | `storage-stack.ts` | S3 bucket for file uploads | none |
+| `MySaasFrontendStack` | `frontend-stack.ts` | S3 + CloudFront for React SPA | none |
+| `MySaasNetworkStack` | `network-stack.ts` | VPC, subnets, security groups | none |
+| `MySaasDatabaseStack` | `database-stack.ts` | RDS PostgreSQL (t3.micro) | Network |
+| `MySaasApiStack` | `api-stack.ts` | ECS Fargate + ALB for NestJS | All above |
+
+**Deploy order**: ECR/Secrets/Storage/Frontend/Network → Database → API.
+
+## Deployed Resources (account 301394200094, us-east-1)
+
+| Resource | Value |
+|----------|-------|
+| API URL | `http://my-saas-alb-445995649.us-east-1.elb.amazonaws.com` |
+| Adminer URL | `http://my-saas-alb-445995649.us-east-1.elb.amazonaws.com:8080` |
+| CloudFront URL | `https://d1ar7lk5s3jc7p.cloudfront.net` |
+| CloudFront Distribution ID | `E2UT0W7O4SW87G` |
+| Frontend S3 bucket | `my-saas-frontend-301394200094-us-east-1` |
+| Uploads S3 bucket | `my-saas-uploads-301394200094-us-east-1` |
+| RDS endpoint | `my-saas-db.c8bys2oog0hm.us-east-1.rds.amazonaws.com` |
+| ECR repository | `my-saas-api` |
+| ECS cluster | `my-saas-cluster` |
+
+## Common Tasks
+
+### First-time deployment
+```bash
+# Bootstrap CDK (once per account/region)
+cd tools/infra && npx cdk bootstrap
+
+# Deploy all stacks
+pnpm cdk:deploy
+```
+
+### Deploy frontend
+```bash
+nx run client:build
+aws s3 sync dist/apps/client s3://my-saas-frontend-301394200094-us-east-1 --delete
+aws cloudfront create-invalidation --distribution-id E2UT0W7O4SW87G --paths "/*"
+```
+
+### Build & push API Docker image
+```bash
+aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 301394200094.dkr.ecr.us-east-1.amazonaws.com
+docker build --platform linux/amd64 -t my-saas-api:latest .
+docker tag my-saas-api:latest 301394200094.dkr.ecr.us-east-1.amazonaws.com/my-saas-api:latest
+docker push 301394200094.dkr.ecr.us-east-1.amazonaws.com/my-saas-api:latest
+# Force ECS to redeploy with new image:
+aws ecs update-service --cluster my-saas-cluster --service my-saas-api --force-new-deployment
+```
+
+## Secrets Management
+
+Two secrets in AWS Secrets Manager:
+- `my-saas/database-credentials` — auto-generated by RDS (username, password)
+- `my-saas/app-secrets` — application config, **must be manually populated after first deploy**
+
+### Required app secrets (server won't start without these)
+
+The app validates all config on startup via Zod (`apps/server/src/config/schema.ts`). Empty strings on `.url()` fields crash the container → ECS circuit breaker → `ROLLBACK_COMPLETE`.
+
+| Key | Notes |
+|-----|-------|
+| `DATABASE_URL` | `postgresql://postgres:<pass>@<rds-endpoint>:5432/mysaas` |
+| `ACCESS_TOKEN_SECRET` | `openssl rand -hex 32` |
+| `REFRESH_TOKEN_SECRET` | `openssl rand -hex 32` |
+| `PUBLIC_URL` | ALB DNS — `http://my-saas-alb-445995649.us-east-1.elb.amazonaws.com` |
+| `STORAGE_URL` | `https://my-saas-uploads-301394200094-us-east-1.s3.us-east-1.amazonaws.com` |
+| `CHROME_URL` | Headless Chrome URL (use placeholder until Chrome stack deployed) |
+| `CHROME_TOKEN` | Any string |
+| `STORAGE_ENDPOINT` | `s3.amazonaws.com` |
+| `STORAGE_PORT` | `443` |
+| `STORAGE_BUCKET` | `my-saas-uploads-301394200094-us-east-1` |
+| `STORAGE_ACCESS_KEY` | IAM user `my-saas-s3-user` access key |
+| `STORAGE_SECRET_KEY` | IAM user `my-saas-s3-user` secret key |
+| `STORAGE_USE_SSL` | `true` |
+| `MAIL_FROM` | `noreply@example.com` (placeholder) |
+| `SMTP_URL` | `smtp://localhost:25` (placeholder) |
+| Optional URL fields | Set to `http://placeholder.example.com` — empty string fails Zod `.url()` |
+
+### Storage IAM (important)
+
+MinIO SDK requires **explicit credentials** — it does NOT use the ECS task role. Create a dedicated IAM user:
+
+```bash
+aws iam create-user --user-name my-saas-s3-user
+aws iam put-user-policy --user-name my-saas-s3-user --policy-name s3-access --policy-document '{
+  "Version": "2012-10-17",
+  "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject","s3:PutObject","s3:DeleteObject","s3:ListBucket","s3:GetBucketLocation"],
+    "Resource": ["arn:aws:s3:::my-saas-uploads-301394200094-us-east-1","arn:aws:s3:::my-saas-uploads-301394200094-us-east-1/*"]}]}'
+aws iam create-access-key --user-name my-saas-s3-user
+```
+
+## Troubleshooting
+
+### Stack in ROLLBACK_COMPLETE — must delete before redeploying
+
+```bash
+aws cloudformation delete-stack --stack-name MySaasApiStack
+aws cloudformation wait stack-delete-complete --stack-name MySaasApiStack
+# Also clear orphaned log groups (block redeployment otherwise)
+aws logs delete-log-group --log-group-name /ecs/my-saas-api
+aws logs delete-log-group --log-group-name /ecs/my-saas-adminer
+cd tools/infra && npx cdk deploy MySaasApiStack --require-approval never
+```
+
+### ECS circuit breaker triggered — debug steps
+
+```bash
+# 1. Find failure reason
+aws cloudformation describe-stack-events --stack-name MySaasApiStack \
+  --query 'StackEvents[?ResourceStatus==`CREATE_FAILED`].[LogicalResourceId,ResourceStatusReason]' --output table
+
+# 2. Check container logs
+aws logs get-log-events --log-group-name /ecs/my-saas-api \
+  --log-stream-name $(aws logs describe-log-streams --log-group-name /ecs/my-saas-api \
+    --order-by LastEventTime --descending --query 'logStreams[0].logStreamName' --output text) \
+  --limit 50 --query 'events[*].message' --output text
+```
+
+### Audit which secrets are set vs empty
+```bash
+aws secretsmanager get-secret-value --secret-id my-saas/app-secrets \
+  --query SecretString --output text | tr -d '\n' | \
+  python3 -c "import sys,json; d=json.loads(sys.stdin.read()); print('\n'.join(f'{k}: {\"SET\" if v.strip() else \"EMPTY\"}' for k,v in d.items() if isinstance(v,str)))"
+```

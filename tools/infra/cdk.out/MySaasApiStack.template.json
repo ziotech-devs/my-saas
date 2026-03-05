@@ -1,0 +1,2065 @@
+{
+ "Description": "My SaaS - API + Adminer + Graphs infrastructure (ECS Fargate, ALB)",
+ "Resources": {
+  "ClusterEB0386A7": {
+   "Type": "AWS::ECS::Cluster",
+   "Properties": {
+    "ClusterName": "my-saas-cluster",
+    "ClusterSettings": [
+     {
+      "Name": "containerInsights",
+      "Value": "enabled"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "MySaasApiStack/Cluster/Resource"
+   }
+  },
+  "Alb16C2F182": {
+   "Type": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+   "Properties": {
+    "LoadBalancerAttributes": [
+     {
+      "Key": "deletion_protection.enabled",
+      "Value": "false"
+     }
+    ],
+    "Name": "my-saas-alb",
+    "Scheme": "internet-facing",
+    "SecurityGroups": [
+     {
+      "Fn::ImportValue": "MySaasNetworkStack:ExportsOutputFnGetAttAlbSecurityGroup86A59E99GroupIdE3A37BC7"
+     }
+    ],
+    "Subnets": [
+     {
+      "Fn::ImportValue": "MySaasNetworkStack:ExportsOutputRefVpcPublicSubnet1Subnet5C2D37C4FFA2B456"
+     },
+     {
+      "Fn::ImportValue": "MySaasNetworkStack:ExportsOutputRefVpcPublicSubnet2Subnet691E08A351552740"
+     }
+    ],
+    "Type": "application"
+   },
+   "Metadata": {
+    "aws:cdk:path": "MySaasApiStack/Alb/Resource"
+   }
+  },
+  "AlbHttpListener00C8B33E": {
+   "Type": "AWS::ElasticLoadBalancingV2::Listener",
+   "Properties": {
+    "DefaultActions": [
+     {
+      "TargetGroupArn": {
+       "Ref": "ApiTargetGroup5723F19D"
+      },
+      "Type": "forward"
+     }
+    ],
+    "LoadBalancerArn": {
+     "Ref": "Alb16C2F182"
+    },
+    "Port": 80,
+    "Protocol": "HTTP"
+   },
+   "Metadata": {
+    "aws:cdk:path": "MySaasApiStack/Alb/HttpListener/Resource"
+   }
+  },
+  "AlbAdminerListener1ECC7EFD": {
+   "Type": "AWS::ElasticLoadBalancingV2::Listener",
+   "Properties": {
+    "DefaultActions": [
+     {
+      "TargetGroupArn": {
+       "Ref": "AdminerTargetGroup7AD0E2C3"
+      },
+      "Type": "forward"
+     }
+    ],
+    "LoadBalancerArn": {
+     "Ref": "Alb16C2F182"
+    },
+    "Port": 8080,
+    "Protocol": "HTTP"
+   },
+   "Metadata": {
+    "aws:cdk:path": "MySaasApiStack/Alb/AdminerListener/Resource"
+   }
+  },
+  "AlbGraphsListenerEF6AE423": {
+   "Type": "AWS::ElasticLoadBalancingV2::Listener",
+   "Properties": {
+    "DefaultActions": [
+     {
+      "TargetGroupArn": {
+       "Ref": "GraphsTargetGroupA4D79D62"
+      },
+      "Type": "forward"
+     }
+    ],
+    "LoadBalancerArn": {
+     "Ref": "Alb16C2F182"
+    },
+    "Port": 8123,
+    "Protocol": "HTTP"
+   },
+   "Metadata": {
+    "aws:cdk:path": "MySaasApiStack/Alb/GraphsListener/Resource"
+   }
+  },
+  "ApiLogGroup1DEDFC07": {
+   "Type": "AWS::Logs::LogGroup",
+   "Properties": {
+    "LogGroupName": "/ecs/my-saas-api",
+    "RetentionInDays": 30
+   },
+   "UpdateReplacePolicy": "Retain",
+   "DeletionPolicy": "Retain",
+   "Metadata": {
+    "aws:cdk:path": "MySaasApiStack/ApiLogGroup/Resource"
+   }
+  },
+  "ApiTaskDefTaskRole76FB19FA": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "ecs-tasks.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MySaasApiStack/ApiTaskDef/TaskRole/Resource"
+   }
+  },
+  "ApiTaskDefTaskRoleDefaultPolicy66F6BAC0": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "s3:Abort*",
+        "s3:DeleteObject*",
+        "s3:GetBucket*",
+        "s3:GetObject*",
+        "s3:List*",
+        "s3:PutObject",
+        "s3:PutObjectLegalHold",
+        "s3:PutObjectRetention",
+        "s3:PutObjectTagging",
+        "s3:PutObjectVersionTagging"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::ImportValue": "MySaasStorageStack:ExportsOutputFnGetAttUploadsBucket5E5E9B64Arn8603C131"
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasStorageStack:ExportsOutputFnGetAttUploadsBucket5E5E9B64Arn8603C131"
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "ApiTaskDefTaskRoleDefaultPolicy66F6BAC0",
+    "Roles": [
+     {
+      "Ref": "ApiTaskDefTaskRole76FB19FA"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "MySaasApiStack/ApiTaskDef/TaskRole/DefaultPolicy/Resource"
+   }
+  },
+  "ApiTaskDef37DBDBD0": {
+   "Type": "AWS::ECS::TaskDefinition",
+   "Properties": {
+    "ContainerDefinitions": [
+     {
+      "Environment": [
+       {
+        "Name": "NODE_ENV",
+        "Value": "production"
+       },
+       {
+        "Name": "PORT",
+        "Value": "3000"
+       },
+       {
+        "Name": "DATABASE_HOST",
+        "Value": {
+         "Fn::ImportValue": "MySaasDatabaseStack:ExportsOutputFnGetAttPostgresInstance19CDD68AEndpointAddress2796CEED"
+        }
+       },
+       {
+        "Name": "DATABASE_PORT",
+        "Value": {
+         "Fn::ImportValue": "MySaasDatabaseStack:ExportsOutputFnGetAttPostgresInstance19CDD68AEndpointPortDAC780AA"
+        }
+       },
+       {
+        "Name": "DATABASE_NAME",
+        "Value": "mysaas"
+       }
+      ],
+      "Essential": true,
+      "HealthCheck": {
+       "Command": [
+        "CMD-SHELL",
+        "wget -q --spider http://localhost:3000/api/health || exit 1"
+       ],
+       "Interval": 30,
+       "Retries": 3,
+       "StartPeriod": 60,
+       "Timeout": 5
+      },
+      "Image": {
+       "Fn::Join": [
+        "",
+        [
+         {
+          "Fn::Select": [
+           4,
+           {
+            "Fn::Split": [
+             ":",
+             {
+              "Fn::ImportValue": "MySaasEcrStack:ExportsOutputFnGetAttApiRepositoryB8378B43ArnC5B66F61"
+             }
+            ]
+           }
+          ]
+         },
+         ".dkr.ecr.",
+         {
+          "Fn::Select": [
+           3,
+           {
+            "Fn::Split": [
+             ":",
+             {
+              "Fn::ImportValue": "MySaasEcrStack:ExportsOutputFnGetAttApiRepositoryB8378B43ArnC5B66F61"
+             }
+            ]
+           }
+          ]
+         },
+         ".",
+         {
+          "Ref": "AWS::URLSuffix"
+         },
+         "/",
+         {
+          "Fn::ImportValue": "MySaasEcrStack:ExportsOutputRefApiRepositoryB8378B43D566CA3C"
+         },
+         ":latest"
+        ]
+       ]
+      },
+      "LogConfiguration": {
+       "LogDriver": "awslogs",
+       "Options": {
+        "awslogs-group": {
+         "Ref": "ApiLogGroup1DEDFC07"
+        },
+        "awslogs-stream-prefix": "api",
+        "awslogs-region": "us-east-1"
+       }
+      },
+      "Name": "api",
+      "PortMappings": [
+       {
+        "ContainerPort": 3000,
+        "Protocol": "tcp"
+       }
+      ],
+      "Secrets": [
+       {
+        "Name": "PUBLIC_URL",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":PUBLIC_URL::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "STORAGE_URL",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":STORAGE_URL::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "ACCESS_TOKEN_SECRET",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":ACCESS_TOKEN_SECRET::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "REFRESH_TOKEN_SECRET",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":REFRESH_TOKEN_SECRET::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "CHROME_PORT",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":CHROME_PORT::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "CHROME_TOKEN",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":CHROME_TOKEN::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "CHROME_URL",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":CHROME_URL::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "CHROME_IGNORE_HTTPS_ERRORS",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":CHROME_IGNORE_HTTPS_ERRORS::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "MAIL_FROM",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":MAIL_FROM::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "SMTP_URL",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":SMTP_URL::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "STORAGE_ENDPOINT",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":STORAGE_ENDPOINT::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "STORAGE_PORT",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":STORAGE_PORT::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "STORAGE_REGION",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":STORAGE_REGION::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "STORAGE_BUCKET",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":STORAGE_BUCKET::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "STORAGE_ACCESS_KEY",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":STORAGE_ACCESS_KEY::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "STORAGE_SECRET_KEY",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":STORAGE_SECRET_KEY::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "STORAGE_USE_SSL",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":STORAGE_USE_SSL::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "STORAGE_SKIP_BUCKET_CHECK",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":STORAGE_SKIP_BUCKET_CHECK::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "DISABLE_SIGNUPS",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":DISABLE_SIGNUPS::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "DISABLE_EMAIL_AUTH",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":DISABLE_EMAIL_AUTH::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "GITHUB_CLIENT_ID",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":GITHUB_CLIENT_ID::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "GITHUB_CLIENT_SECRET",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":GITHUB_CLIENT_SECRET::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "GITHUB_CALLBACK_URL",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":GITHUB_CALLBACK_URL::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "GOOGLE_CLIENT_ID",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":GOOGLE_CLIENT_ID::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "GOOGLE_CLIENT_SECRET",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":GOOGLE_CLIENT_SECRET::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "GOOGLE_CALLBACK_URL",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":GOOGLE_CALLBACK_URL::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "VITE_OPENID_NAME",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":VITE_OPENID_NAME::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "OPENID_AUTHORIZATION_URL",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":OPENID_AUTHORIZATION_URL::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "OPENID_CALLBACK_URL",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":OPENID_CALLBACK_URL::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "OPENID_CLIENT_ID",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":OPENID_CLIENT_ID::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "OPENID_CLIENT_SECRET",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":OPENID_CLIENT_SECRET::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "OPENID_ISSUER",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":OPENID_ISSUER::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "OPENID_SCOPE",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":OPENID_SCOPE::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "OPENID_TOKEN_URL",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":OPENID_TOKEN_URL::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "OPENID_USER_INFO_URL",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":OPENID_USER_INFO_URL::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "OPENAI_API_KEY",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":OPENAI_API_KEY::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "LANGSMITH_API_KEY",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":LANGSMITH_API_KEY::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "LANGSMITH_TRACING_V2",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":LANGSMITH_TRACING_V2::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "LANGSMITH_PROJECT",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":LANGSMITH_PROJECT::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "LANGSMITH_ENDPOINT",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":LANGSMITH_ENDPOINT::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "TAVILY_API_KEY",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":TAVILY_API_KEY::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "STRIPE_PUBLISHABLE_KEY",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":STRIPE_PUBLISHABLE_KEY::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "STRIPE_SECRET_KEY",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":STRIPE_SECRET_KEY::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "STRIPE_WEBHOOK_SECRET",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":STRIPE_WEBHOOK_SECRET::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "STRIPE_BILLING_PORTAL_RETURN_URL",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":STRIPE_BILLING_PORTAL_RETURN_URL::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "ANTHROPIC_API_KEY",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":ANTHROPIC_API_KEY::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "DATABASE_USERNAME",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasDatabaseStack:ExportsOutputRefPostgresInstanceSecretAttachmentDFCC79DF38428EF0"
+           },
+           ":username::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "DATABASE_PASSWORD",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasDatabaseStack:ExportsOutputRefPostgresInstanceSecretAttachmentDFCC79DF38428EF0"
+           },
+           ":password::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "DATABASE_URL",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+           },
+           ":DATABASE_URL::"
+          ]
+         ]
+        }
+       }
+      ]
+     }
+    ],
+    "Cpu": "256",
+    "ExecutionRoleArn": {
+     "Fn::GetAtt": [
+      "ApiTaskDefExecutionRoleE6ABB053",
+      "Arn"
+     ]
+    },
+    "Family": "MySaasApiStackApiTaskDefA5F01589",
+    "Memory": "512",
+    "NetworkMode": "awsvpc",
+    "RequiresCompatibilities": [
+     "FARGATE"
+    ],
+    "TaskRoleArn": {
+     "Fn::GetAtt": [
+      "ApiTaskDefTaskRole76FB19FA",
+      "Arn"
+     ]
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MySaasApiStack/ApiTaskDef/Resource"
+   }
+  },
+  "ApiTaskDefExecutionRoleE6ABB053": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "ecs-tasks.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MySaasApiStack/ApiTaskDef/ExecutionRole/Resource"
+   }
+  },
+  "ApiTaskDefExecutionRoleDefaultPolicy358EAD94": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "ecr:BatchCheckLayerAvailability",
+        "ecr:BatchGetImage",
+        "ecr:GetDownloadUrlForLayer"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::ImportValue": "MySaasEcrStack:ExportsOutputFnGetAttApiRepositoryB8378B43ArnC5B66F61"
+       }
+      },
+      {
+       "Action": "ecr:GetAuthorizationToken",
+       "Effect": "Allow",
+       "Resource": "*"
+      },
+      {
+       "Action": [
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::GetAtt": [
+         "ApiLogGroup1DEDFC07",
+         "Arn"
+        ]
+       }
+      },
+      {
+       "Action": [
+        "secretsmanager:DescribeSecret",
+        "secretsmanager:GetSecretValue"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::ImportValue": "MySaasDatabaseStack:ExportsOutputRefPostgresInstanceSecretAttachmentDFCC79DF38428EF0"
+        },
+        {
+         "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefAppSecretFAB5164C4B25CED8"
+        }
+       ]
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "ApiTaskDefExecutionRoleDefaultPolicy358EAD94",
+    "Roles": [
+     {
+      "Ref": "ApiTaskDefExecutionRoleE6ABB053"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "MySaasApiStack/ApiTaskDef/ExecutionRole/DefaultPolicy/Resource"
+   }
+  },
+  "ApiTargetGroup5723F19D": {
+   "Type": "AWS::ElasticLoadBalancingV2::TargetGroup",
+   "Properties": {
+    "HealthCheckIntervalSeconds": 10,
+    "HealthCheckPath": "/api/health",
+    "HealthCheckTimeoutSeconds": 5,
+    "HealthyThresholdCount": 2,
+    "Name": "my-saas-api-tg",
+    "Port": 3000,
+    "Protocol": "HTTP",
+    "TargetGroupAttributes": [
+     {
+      "Key": "stickiness.enabled",
+      "Value": "false"
+     }
+    ],
+    "TargetType": "ip",
+    "UnhealthyThresholdCount": 2,
+    "VpcId": {
+     "Fn::ImportValue": "MySaasNetworkStack:ExportsOutputRefVpc8378EB38272D6E3A"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MySaasApiStack/ApiTargetGroup/Resource"
+   }
+  },
+  "ApiServiceC9037CF0": {
+   "Type": "AWS::ECS::Service",
+   "Properties": {
+    "Cluster": {
+     "Ref": "ClusterEB0386A7"
+    },
+    "DeploymentConfiguration": {
+     "DeploymentCircuitBreaker": {
+      "Enable": true,
+      "Rollback": true
+     },
+     "MaximumPercent": 200,
+     "MinimumHealthyPercent": 50
+    },
+    "DesiredCount": 1,
+    "EnableECSManagedTags": false,
+    "HealthCheckGracePeriodSeconds": 60,
+    "LaunchType": "FARGATE",
+    "LoadBalancers": [
+     {
+      "ContainerName": "api",
+      "ContainerPort": 3000,
+      "TargetGroupArn": {
+       "Ref": "ApiTargetGroup5723F19D"
+      }
+     }
+    ],
+    "NetworkConfiguration": {
+     "AwsvpcConfiguration": {
+      "AssignPublicIp": "DISABLED",
+      "SecurityGroups": [
+       {
+        "Fn::ImportValue": "MySaasNetworkStack:ExportsOutputFnGetAttEcsSecurityGroup44008BF1GroupIdDE2CA5C5"
+       }
+      ],
+      "Subnets": [
+       {
+        "Fn::ImportValue": "MySaasNetworkStack:ExportsOutputRefVpcPrivateSubnet1Subnet536B997AFD4CC940"
+       },
+       {
+        "Fn::ImportValue": "MySaasNetworkStack:ExportsOutputRefVpcPrivateSubnet2Subnet3788AAA1380949A3"
+       }
+      ]
+     }
+    },
+    "ServiceName": "my-saas-api",
+    "TaskDefinition": {
+     "Ref": "ApiTaskDef37DBDBD0"
+    }
+   },
+   "DependsOn": [
+    "AlbHttpListener00C8B33E",
+    "ApiTaskDefTaskRoleDefaultPolicy66F6BAC0",
+    "ApiTaskDefTaskRole76FB19FA"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "MySaasApiStack/ApiService/Service"
+   }
+  },
+  "ApiServiceTaskCountTargetBFC64025": {
+   "Type": "AWS::ApplicationAutoScaling::ScalableTarget",
+   "Properties": {
+    "MaxCapacity": 4,
+    "MinCapacity": 1,
+    "ResourceId": {
+     "Fn::Join": [
+      "",
+      [
+       "service/",
+       {
+        "Ref": "ClusterEB0386A7"
+       },
+       "/",
+       {
+        "Fn::GetAtt": [
+         "ApiServiceC9037CF0",
+         "Name"
+        ]
+       }
+      ]
+     ]
+    },
+    "RoleARN": "arn:aws:iam::301394200094:role/aws-service-role/ecs.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_ECSService",
+    "ScalableDimension": "ecs:service:DesiredCount",
+    "ServiceNamespace": "ecs"
+   },
+   "DependsOn": [
+    "ApiTaskDefTaskRoleDefaultPolicy66F6BAC0",
+    "ApiTaskDefTaskRole76FB19FA"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "MySaasApiStack/ApiService/TaskCount/Target/Resource"
+   }
+  },
+  "ApiServiceTaskCountTargetCpuScaling9EAFB075": {
+   "Type": "AWS::ApplicationAutoScaling::ScalingPolicy",
+   "Properties": {
+    "PolicyName": "MySaasApiStackApiServiceTaskCountTargetCpuScalingD652BC9A",
+    "PolicyType": "TargetTrackingScaling",
+    "ScalingTargetId": {
+     "Ref": "ApiServiceTaskCountTargetBFC64025"
+    },
+    "TargetTrackingScalingPolicyConfiguration": {
+     "PredefinedMetricSpecification": {
+      "PredefinedMetricType": "ECSServiceAverageCPUUtilization"
+     },
+     "ScaleInCooldown": 60,
+     "ScaleOutCooldown": 60,
+     "TargetValue": 70
+    }
+   },
+   "DependsOn": [
+    "ApiTaskDefTaskRoleDefaultPolicy66F6BAC0",
+    "ApiTaskDefTaskRole76FB19FA"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "MySaasApiStack/ApiService/TaskCount/Target/CpuScaling/Resource"
+   }
+  },
+  "ApiServiceTaskCountTargetMemoryScalingB131DB4D": {
+   "Type": "AWS::ApplicationAutoScaling::ScalingPolicy",
+   "Properties": {
+    "PolicyName": "MySaasApiStackApiServiceTaskCountTargetMemoryScaling5132B785",
+    "PolicyType": "TargetTrackingScaling",
+    "ScalingTargetId": {
+     "Ref": "ApiServiceTaskCountTargetBFC64025"
+    },
+    "TargetTrackingScalingPolicyConfiguration": {
+     "PredefinedMetricSpecification": {
+      "PredefinedMetricType": "ECSServiceAverageMemoryUtilization"
+     },
+     "ScaleInCooldown": 60,
+     "ScaleOutCooldown": 60,
+     "TargetValue": 70
+    }
+   },
+   "DependsOn": [
+    "ApiTaskDefTaskRoleDefaultPolicy66F6BAC0",
+    "ApiTaskDefTaskRole76FB19FA"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "MySaasApiStack/ApiService/TaskCount/Target/MemoryScaling/Resource"
+   }
+  },
+  "AdminerLogGroupB4698279": {
+   "Type": "AWS::Logs::LogGroup",
+   "Properties": {
+    "LogGroupName": "/ecs/my-saas-adminer",
+    "RetentionInDays": 7
+   },
+   "UpdateReplacePolicy": "Retain",
+   "DeletionPolicy": "Retain",
+   "Metadata": {
+    "aws:cdk:path": "MySaasApiStack/AdminerLogGroup/Resource"
+   }
+  },
+  "AdminerTaskDefTaskRole3F40B56B": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "ecs-tasks.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MySaasApiStack/AdminerTaskDef/TaskRole/Resource"
+   }
+  },
+  "AdminerTaskDef8119E22A": {
+   "Type": "AWS::ECS::TaskDefinition",
+   "Properties": {
+    "ContainerDefinitions": [
+     {
+      "Environment": [
+       {
+        "Name": "ADMINER_DEFAULT_DRIVER",
+        "Value": "pgsql"
+       },
+       {
+        "Name": "ADMINER_DEFAULT_SERVER",
+        "Value": {
+         "Fn::ImportValue": "MySaasDatabaseStack:ExportsOutputFnGetAttPostgresInstance19CDD68AEndpointAddress2796CEED"
+        }
+       },
+       {
+        "Name": "ADMINER_DEFAULT_DB",
+        "Value": "mysaas"
+       }
+      ],
+      "Essential": true,
+      "Image": "shyim/adminerevo:latest",
+      "LogConfiguration": {
+       "LogDriver": "awslogs",
+       "Options": {
+        "awslogs-group": {
+         "Ref": "AdminerLogGroupB4698279"
+        },
+        "awslogs-stream-prefix": "adminer",
+        "awslogs-region": "us-east-1"
+       }
+      },
+      "Name": "adminer",
+      "PortMappings": [
+       {
+        "ContainerPort": 8080,
+        "Protocol": "tcp"
+       }
+      ]
+     }
+    ],
+    "Cpu": "256",
+    "ExecutionRoleArn": {
+     "Fn::GetAtt": [
+      "AdminerTaskDefExecutionRole9B20E720",
+      "Arn"
+     ]
+    },
+    "Family": "MySaasApiStackAdminerTaskDef5495DB5B",
+    "Memory": "512",
+    "NetworkMode": "awsvpc",
+    "RequiresCompatibilities": [
+     "FARGATE"
+    ],
+    "TaskRoleArn": {
+     "Fn::GetAtt": [
+      "AdminerTaskDefTaskRole3F40B56B",
+      "Arn"
+     ]
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MySaasApiStack/AdminerTaskDef/Resource"
+   }
+  },
+  "AdminerTaskDefExecutionRole9B20E720": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "ecs-tasks.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MySaasApiStack/AdminerTaskDef/ExecutionRole/Resource"
+   }
+  },
+  "AdminerTaskDefExecutionRoleDefaultPolicy13DE7786": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::GetAtt": [
+         "AdminerLogGroupB4698279",
+         "Arn"
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "AdminerTaskDefExecutionRoleDefaultPolicy13DE7786",
+    "Roles": [
+     {
+      "Ref": "AdminerTaskDefExecutionRole9B20E720"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "MySaasApiStack/AdminerTaskDef/ExecutionRole/DefaultPolicy/Resource"
+   }
+  },
+  "AdminerTargetGroup7AD0E2C3": {
+   "Type": "AWS::ElasticLoadBalancingV2::TargetGroup",
+   "Properties": {
+    "HealthCheckIntervalSeconds": 60,
+    "HealthCheckPath": "/",
+    "HealthCheckTimeoutSeconds": 10,
+    "HealthyThresholdCount": 2,
+    "Name": "my-saas-adminer-tg",
+    "Port": 8080,
+    "Protocol": "HTTP",
+    "TargetGroupAttributes": [
+     {
+      "Key": "stickiness.enabled",
+      "Value": "false"
+     }
+    ],
+    "TargetType": "ip",
+    "UnhealthyThresholdCount": 3,
+    "VpcId": {
+     "Fn::ImportValue": "MySaasNetworkStack:ExportsOutputRefVpc8378EB38272D6E3A"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MySaasApiStack/AdminerTargetGroup/Resource"
+   }
+  },
+  "AdminerService8195C079": {
+   "Type": "AWS::ECS::Service",
+   "Properties": {
+    "Cluster": {
+     "Ref": "ClusterEB0386A7"
+    },
+    "DeploymentConfiguration": {
+     "MaximumPercent": 200,
+     "MinimumHealthyPercent": 50
+    },
+    "DesiredCount": 1,
+    "EnableECSManagedTags": false,
+    "HealthCheckGracePeriodSeconds": 60,
+    "LaunchType": "FARGATE",
+    "LoadBalancers": [
+     {
+      "ContainerName": "adminer",
+      "ContainerPort": 8080,
+      "TargetGroupArn": {
+       "Ref": "AdminerTargetGroup7AD0E2C3"
+      }
+     }
+    ],
+    "NetworkConfiguration": {
+     "AwsvpcConfiguration": {
+      "AssignPublicIp": "DISABLED",
+      "SecurityGroups": [
+       {
+        "Fn::ImportValue": "MySaasNetworkStack:ExportsOutputFnGetAttAdminerSecurityGroup4CE42C38GroupIdEB1B5984"
+       }
+      ],
+      "Subnets": [
+       {
+        "Fn::ImportValue": "MySaasNetworkStack:ExportsOutputRefVpcPrivateSubnet1Subnet536B997AFD4CC940"
+       },
+       {
+        "Fn::ImportValue": "MySaasNetworkStack:ExportsOutputRefVpcPrivateSubnet2Subnet3788AAA1380949A3"
+       }
+      ]
+     }
+    },
+    "ServiceName": "my-saas-adminer",
+    "TaskDefinition": {
+     "Ref": "AdminerTaskDef8119E22A"
+    }
+   },
+   "DependsOn": [
+    "AdminerTaskDefTaskRole3F40B56B",
+    "AlbAdminerListener1ECC7EFD"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "MySaasApiStack/AdminerService/Service"
+   }
+  },
+  "GraphsLogGroupD3302133": {
+   "Type": "AWS::Logs::LogGroup",
+   "Properties": {
+    "LogGroupName": "/ecs/my-saas-graphs",
+    "RetentionInDays": 30
+   },
+   "UpdateReplacePolicy": "Retain",
+   "DeletionPolicy": "Retain",
+   "Metadata": {
+    "aws:cdk:path": "MySaasApiStack/GraphsLogGroup/Resource"
+   }
+  },
+  "GraphsTaskDefTaskRole127E06E0": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "ecs-tasks.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MySaasApiStack/GraphsTaskDef/TaskRole/Resource"
+   }
+  },
+  "GraphsTaskDef8474F954": {
+   "Type": "AWS::ECS::TaskDefinition",
+   "Properties": {
+    "ContainerDefinitions": [
+     {
+      "Environment": [
+       {
+        "Name": "PORT",
+        "Value": "8123"
+       },
+       {
+        "Name": "REDIS_URI",
+        "Value": {
+         "Fn::Join": [
+          "",
+          [
+           "redis://",
+           {
+            "Fn::ImportValue": "MySaasCacheStack:ExportsOutputFnGetAttRedisClusterRedisEndpointAddress2C712DA2"
+           },
+           ":",
+           {
+            "Fn::ImportValue": "MySaasCacheStack:ExportsOutputFnGetAttRedisClusterRedisEndpointPortD2710AFC"
+           }
+          ]
+         ]
+        }
+       }
+      ],
+      "Essential": true,
+      "HealthCheck": {
+       "Command": [
+        "CMD-SHELL",
+        "curl -f http://localhost:8123/ok || exit 1"
+       ],
+       "Interval": 30,
+       "Retries": 3,
+       "StartPeriod": 90,
+       "Timeout": 5
+      },
+      "Image": {
+       "Fn::Join": [
+        "",
+        [
+         {
+          "Fn::Select": [
+           4,
+           {
+            "Fn::Split": [
+             ":",
+             {
+              "Fn::ImportValue": "MySaasEcrStack:ExportsOutputFnGetAttGraphsRepository373CE781Arn7C6E1F9A"
+             }
+            ]
+           }
+          ]
+         },
+         ".dkr.ecr.",
+         {
+          "Fn::Select": [
+           3,
+           {
+            "Fn::Split": [
+             ":",
+             {
+              "Fn::ImportValue": "MySaasEcrStack:ExportsOutputFnGetAttGraphsRepository373CE781Arn7C6E1F9A"
+             }
+            ]
+           }
+          ]
+         },
+         ".",
+         {
+          "Ref": "AWS::URLSuffix"
+         },
+         "/",
+         {
+          "Fn::ImportValue": "MySaasEcrStack:ExportsOutputRefGraphsRepository373CE781797EC34C"
+         },
+         ":latest"
+        ]
+       ]
+      },
+      "LogConfiguration": {
+       "LogDriver": "awslogs",
+       "Options": {
+        "awslogs-group": {
+         "Ref": "GraphsLogGroupD3302133"
+        },
+        "awslogs-stream-prefix": "graphs",
+        "awslogs-region": "us-east-1"
+       }
+      },
+      "Name": "graphs",
+      "PortMappings": [
+       {
+        "ContainerPort": 8123,
+        "Protocol": "tcp"
+       }
+      ],
+      "Secrets": [
+       {
+        "Name": "OPENAI_API_KEY",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefGraphsSecret58773B91128BBE37"
+           },
+           ":OPENAI_API_KEY::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "LANGSMITH_API_KEY",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefGraphsSecret58773B91128BBE37"
+           },
+           ":LANGSMITH_API_KEY::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "LANGSMITH_TRACING_V2",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefGraphsSecret58773B91128BBE37"
+           },
+           ":LANGSMITH_TRACING_V2::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "LANGSMITH_PROJECT",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefGraphsSecret58773B91128BBE37"
+           },
+           ":LANGSMITH_PROJECT::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "LANGSMITH_ENDPOINT",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefGraphsSecret58773B91128BBE37"
+           },
+           ":LANGSMITH_ENDPOINT::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "TAVILY_API_KEY",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefGraphsSecret58773B91128BBE37"
+           },
+           ":TAVILY_API_KEY::"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "DATABASE_URI",
+        "ValueFrom": {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefGraphsSecret58773B91128BBE37"
+           },
+           ":DATABASE_URI::"
+          ]
+         ]
+        }
+       }
+      ]
+     }
+    ],
+    "Cpu": "512",
+    "ExecutionRoleArn": {
+     "Fn::GetAtt": [
+      "GraphsTaskDefExecutionRole00BFA0CC",
+      "Arn"
+     ]
+    },
+    "Family": "MySaasApiStackGraphsTaskDef8FB6E633",
+    "Memory": "1024",
+    "NetworkMode": "awsvpc",
+    "RequiresCompatibilities": [
+     "FARGATE"
+    ],
+    "TaskRoleArn": {
+     "Fn::GetAtt": [
+      "GraphsTaskDefTaskRole127E06E0",
+      "Arn"
+     ]
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MySaasApiStack/GraphsTaskDef/Resource"
+   }
+  },
+  "GraphsTaskDefExecutionRole00BFA0CC": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "ecs-tasks.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MySaasApiStack/GraphsTaskDef/ExecutionRole/Resource"
+   }
+  },
+  "GraphsTaskDefExecutionRoleDefaultPolicyDBF93320": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "ecr:BatchCheckLayerAvailability",
+        "ecr:BatchGetImage",
+        "ecr:GetDownloadUrlForLayer"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::ImportValue": "MySaasEcrStack:ExportsOutputFnGetAttGraphsRepository373CE781Arn7C6E1F9A"
+       }
+      },
+      {
+       "Action": "ecr:GetAuthorizationToken",
+       "Effect": "Allow",
+       "Resource": "*"
+      },
+      {
+       "Action": [
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::GetAtt": [
+         "GraphsLogGroupD3302133",
+         "Arn"
+        ]
+       }
+      },
+      {
+       "Action": [
+        "secretsmanager:DescribeSecret",
+        "secretsmanager:GetSecretValue"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::ImportValue": "MySaasSecretsStack:ExportsOutputRefGraphsSecret58773B91128BBE37"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "GraphsTaskDefExecutionRoleDefaultPolicyDBF93320",
+    "Roles": [
+     {
+      "Ref": "GraphsTaskDefExecutionRole00BFA0CC"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "MySaasApiStack/GraphsTaskDef/ExecutionRole/DefaultPolicy/Resource"
+   }
+  },
+  "GraphsTargetGroupA4D79D62": {
+   "Type": "AWS::ElasticLoadBalancingV2::TargetGroup",
+   "Properties": {
+    "HealthCheckIntervalSeconds": 10,
+    "HealthCheckPath": "/ok",
+    "HealthCheckTimeoutSeconds": 5,
+    "HealthyThresholdCount": 2,
+    "Name": "my-saas-graphs-tg",
+    "Port": 8123,
+    "Protocol": "HTTP",
+    "TargetGroupAttributes": [
+     {
+      "Key": "stickiness.enabled",
+      "Value": "false"
+     }
+    ],
+    "TargetType": "ip",
+    "UnhealthyThresholdCount": 2,
+    "VpcId": {
+     "Fn::ImportValue": "MySaasNetworkStack:ExportsOutputRefVpc8378EB38272D6E3A"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MySaasApiStack/GraphsTargetGroup/Resource"
+   }
+  },
+  "GraphsService9D4B767D": {
+   "Type": "AWS::ECS::Service",
+   "Properties": {
+    "Cluster": {
+     "Ref": "ClusterEB0386A7"
+    },
+    "DeploymentConfiguration": {
+     "DeploymentCircuitBreaker": {
+      "Enable": true,
+      "Rollback": true
+     },
+     "MaximumPercent": 200,
+     "MinimumHealthyPercent": 50
+    },
+    "DesiredCount": 1,
+    "EnableECSManagedTags": false,
+    "HealthCheckGracePeriodSeconds": 60,
+    "LaunchType": "FARGATE",
+    "LoadBalancers": [
+     {
+      "ContainerName": "graphs",
+      "ContainerPort": 8123,
+      "TargetGroupArn": {
+       "Ref": "GraphsTargetGroupA4D79D62"
+      }
+     }
+    ],
+    "NetworkConfiguration": {
+     "AwsvpcConfiguration": {
+      "AssignPublicIp": "DISABLED",
+      "SecurityGroups": [
+       {
+        "Fn::ImportValue": "MySaasNetworkStack:ExportsOutputFnGetAttGraphsSecurityGroupB6CA77CDGroupId8907EFEE"
+       }
+      ],
+      "Subnets": [
+       {
+        "Fn::ImportValue": "MySaasNetworkStack:ExportsOutputRefVpcPrivateSubnet1Subnet536B997AFD4CC940"
+       },
+       {
+        "Fn::ImportValue": "MySaasNetworkStack:ExportsOutputRefVpcPrivateSubnet2Subnet3788AAA1380949A3"
+       }
+      ]
+     }
+    },
+    "ServiceName": "my-saas-graphs",
+    "TaskDefinition": {
+     "Ref": "GraphsTaskDef8474F954"
+    }
+   },
+   "DependsOn": [
+    "AlbGraphsListenerEF6AE423",
+    "GraphsTaskDefTaskRole127E06E0"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "MySaasApiStack/GraphsService/Service"
+   }
+  },
+  "CDKMetadata": {
+   "Type": "AWS::CDK::Metadata",
+   "Properties": {
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/11Qy07DMBD8lt5dAwHEGYrgUgmU5I62ztbaxvVGfrRClv8dJW764LSzM/uarWT1+CIfFnD0S9X1S0MbmZoAqhdw9D8JlZdpZaIP6MRqa2f4AU5DwBZ8/45bshSI7Vjwn2EbgCy6K+7U26A7kMKxaYaNAgMbM41dcbQhCzTgAynD0G3AgFVk9aGS6XUYDCkYB64ZurdJKzfe5Nd15APaU82Mr/QWnMbw6TgOxck5zcKw9jKtWZ/lGWdBsJepZjNZmeI3G1K/Y1pQFnBZAzGwV2DIapkujsdl0y9umRJaB6onq5vSd5l/Q+QsavQcXfnqVwxDDFlY7lDu/N2hepLP8n6x80RLF22gPcq6xD+v7AJhCAIAAA=="
+   },
+   "Metadata": {
+    "aws:cdk:path": "MySaasApiStack/CDKMetadata/Default"
+   }
+  }
+ },
+ "Outputs": {
+  "AlbDnsName": {
+   "Description": "Application Load Balancer DNS name",
+   "Value": {
+    "Fn::GetAtt": [
+     "Alb16C2F182",
+     "DNSName"
+    ]
+   }
+  },
+  "ApiUrl": {
+   "Description": "API URL (port 80)",
+   "Value": {
+    "Fn::Join": [
+     "",
+     [
+      "http://",
+      {
+       "Fn::GetAtt": [
+        "Alb16C2F182",
+        "DNSName"
+       ]
+      }
+     ]
+    ]
+   }
+  },
+  "AdminerUrl": {
+   "Description": "Adminer URL (database management, port 8080)",
+   "Value": {
+    "Fn::Join": [
+     "",
+     [
+      "http://",
+      {
+       "Fn::GetAtt": [
+        "Alb16C2F182",
+        "DNSName"
+       ]
+      },
+      ":8080"
+     ]
+    ]
+   }
+  },
+  "EcsClusterName": {
+   "Description": "ECS Cluster name",
+   "Value": {
+    "Ref": "ClusterEB0386A7"
+   }
+  },
+  "ApiServiceName": {
+   "Description": "API ECS Service name",
+   "Value": {
+    "Fn::GetAtt": [
+     "ApiServiceC9037CF0",
+     "Name"
+    ]
+   }
+  },
+  "AdminerServiceName": {
+   "Description": "Adminer ECS Service name",
+   "Value": {
+    "Fn::GetAtt": [
+     "AdminerService8195C079",
+     "Name"
+    ]
+   }
+  },
+  "GraphsUrl": {
+   "Description": "LangGraph API URL (port 8123)",
+   "Value": {
+    "Fn::Join": [
+     "",
+     [
+      "http://",
+      {
+       "Fn::GetAtt": [
+        "Alb16C2F182",
+        "DNSName"
+       ]
+      },
+      ":8123"
+     ]
+    ]
+   }
+  },
+  "GraphsServiceName": {
+   "Description": "Graphs ECS Service name",
+   "Value": {
+    "Fn::GetAtt": [
+     "GraphsService9D4B767D",
+     "Name"
+    ]
+   }
+  },
+  "ExportsOutputFnGetAttAlb16C2F182DNSNameB67BDABC": {
+   "Value": {
+    "Fn::GetAtt": [
+     "Alb16C2F182",
+     "DNSName"
+    ]
+   },
+   "Export": {
+    "Name": "MySaasApiStack:ExportsOutputFnGetAttAlb16C2F182DNSNameB67BDABC"
+   }
+  }
+ },
+ "Parameters": {
+  "BootstrapVersion": {
+   "Type": "AWS::SSM::Parameter::Value<String>",
+   "Default": "/cdk-bootstrap/hnb659fds/version",
+   "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]"
+  }
+ },
+ "Rules": {
+  "CheckBootstrapVersion": {
+   "Assertions": [
+    {
+     "Assert": {
+      "Fn::Not": [
+       {
+        "Fn::Contains": [
+         [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+         ],
+         {
+          "Ref": "BootstrapVersion"
+         }
+        ]
+       }
+      ]
+     },
+     "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI."
+    }
+   ]
+  }
+ }
+}

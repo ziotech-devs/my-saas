@@ -1,0 +1,1115 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2023-11-10 13:15+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: da\n"
+"Project-Id-Version: my-saas\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-02-27 11:37\n"
+"Last-Translator: \n"
+"Language-Team: Danish\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: my-saas\n"
+"X-Crowdin-Project-ID: 875978\n"
+"X-Crowdin-Language: da\n"
+"X-Crowdin-File: messages.po\n"
+"X-Crowdin-File-ID: 1\n"
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:171
+msgid "You have enabled two-factor authentication successfully."
+msgstr "Du har aktiveret to-faktor-godkendelse."
+
+#: apps/client/src/pages/home/sections/features/index.tsx:56
+msgid "{templatesCount}+ pre-built templates"
+msgstr ""
+
+#: apps/client/src/components/copyright.tsx:19
+msgid "© {currentYear} My SaaS. All rights reserved."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:299
+msgid "<0>Note: </0>By utilizing the OpenAI API, you acknowledge and accept the <1>terms of use</1> and <2>privacy policy</2> outlined by OpenAI. Please note that Reactive Resume bears no responsibility for any improper or unauthorized utilization of the service, and any resulting repercussions or liabilities solely rest on the user."
+msgstr "<0>Bemærk:</0> Ved at bruge OpenAI API'en anerkender og accepterer du <1>brugsbetingelserne</1> og <2>privatlivspolitik</2> skitseret af OpenAI. Bemærk venligst at Reactive Resume ikke bærer noget ansvar for ukorrekt eller uautoriseret brug af tjenesten, og eventuelle følgevirkninger eller ansvar påhviler udelukkende brugeren."
+
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:140
+msgid "<0>Two-factor authentication is currently disabled.</0> You can enable it by adding an authenticator app to your account."
+msgstr "<0>Tofaktorgodkendelse er i øjeblikket deaktiveret.</0> Du kan aktivere det ved at tilføje en godkendelsesapp til din konto."
+
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:133
+msgid "<0>Two-factor authentication is enabled.</0> You will be asked to enter a code every time you sign in."
+msgstr "<0>Tofaktorgodkendelse er aktiveret.</0> Du bliver bedt om at indtaste en kode, hver gang du logger ind."
+
+#: apps/client/src/pages/home/page.tsx:23
+#: apps/client/src/pages/home/sections/hero/index.tsx:80
+msgid "A free and open-source SaaS boilerplate"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/hero/index.tsx:89
+msgid "A free and open-source SaaS boilerplate that simplifies the process of creating, updating, and sharing your SaaS application."
+msgstr ""
+
+#: apps/client/src/pages/auth/forgot-password/page.tsx:57
+msgid "A password reset link should have been sent to your inbox, if an account existed with the email you provided."
+msgstr "Et link til nulstilling af adgangskode skulle være blevet sendt til din indbakke, hvis der eksisterede en konto med den e-mail, du har angivet."
+
+#: apps/client/src/services/errors/translate-error.ts:10
+msgid "A user with this email address and/or username already exists."
+msgstr "Der findes allerede en bruger med denne e-mailadresse og/eller brugernavn."
+
+#: apps/client/src/pages/home/about/page.tsx:5
+#: apps/client/src/pages/home/components/footer.tsx:43
+msgid "About"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:105
+msgid "Account"
+msgstr "Konto"
+
+#: apps/client/src/pages/dashboard/_components/sidebar.tsx:113
+#: apps/client/src/pages/dashboard/agent-chat/page.tsx:34
+msgid "Agent Chat"
+msgstr ""
+
+#: apps/client/src/components/ai-actions.tsx:79
+msgid "AI"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:51
+msgid "AI-powered features"
+msgstr ""
+
+#: apps/client/src/pages/auth/register/page.tsx:71
+msgid "Already have an account?"
+msgstr "Har du allerede en bruger?"
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:97
+msgid "An error occurred while subscribing to the plan."
+msgstr ""
+
+#: apps/client/src/pages/public/error.tsx:23
+msgid "An internal server error occurred."
+msgstr ""
+
+#: apps/client/src/pages/public/error.tsx:32
+msgid "An unexpected error occurred."
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:67
+msgid "Analytics and insights"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:133
+msgid "and many more..."
+msgstr "og mange flere..."
+
+#: apps/client/src/pages/home/sections/features/index.tsx:46
+msgid "API access included"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:125
+msgid "Are you sure you want to disable two-factor authentication?"
+msgstr "Er du sikker på, at du vil deaktivere to-faktor godkendelse?"
+
+#: apps/client/src/pages/dashboard/settings/_sections/danger.tsx:94
+msgid "Are you sure?"
+msgstr "Er du sikker?"
+
+#: apps/client/src/pages/dashboard/agent-chat/_components/chat-input.tsx:41
+msgid "Ask anything..."
+msgstr ""
+
+#: apps/client/src/pages/home/sections/support/index.tsx:22
+msgid "Authentication"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:258
+msgid "Azure API Version"
+msgstr ""
+
+#: apps/client/src/services/openai/client.ts:18
+msgid "Azure OpenAI Base URL, deployment name (model), and API version are required when using Azure OpenAI."
+msgstr "Azure OpenAI Base URL, implementering navn (model) og API version er påkrævet, når du bruger Azure OpenAI."
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:183
+msgid "Azure OpenAI Resource URL"
+msgstr "Azure OpenAI Resource Url"
+
+#: apps/client/src/pages/auth/backup-otp/page.tsx:99
+#: apps/client/src/pages/auth/forgot-password/page.tsx:100
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:243
+msgid "Back"
+msgstr "Tilbage"
+
+#: apps/client/src/pages/auth/backup-otp/page.tsx:75
+msgid "Backup Code"
+msgstr "Backup kode"
+
+#: apps/client/src/pages/auth/backup-otp/page.tsx:81
+msgid "Backup Codes may contain only lowercase letters or numbers, and must be exactly 10 characters."
+msgstr "Backup-koder må kun indeholde små bogstaver eller tal og skal bestå af nøjagtigt 10 tegn."
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:183
+msgid "Base URL"
+msgstr "Basis-URL"
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:112
+#: apps/client/src/pages/dashboard/billing/page.tsx:208
+msgid "Billed Monthly"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:112
+#: apps/client/src/pages/dashboard/billing/page.tsx:225
+msgid "Billed Yearly"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/_components/sidebar.tsx:107
+#: apps/client/src/pages/dashboard/billing/page.tsx:119
+#: apps/client/src/pages/dashboard/billing/page.tsx:129
+msgid "Billing"
+msgstr ""
+
+#: apps/client/src/components/copyright.tsx:24
+msgid "Built with modern technology and best practices."
+msgstr ""
+
+#: apps/client/src/pages/home/sections/support/index.tsx:49
+msgid "Built-in Core Features"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:137
+msgid "Cancel"
+msgstr "Annuller"
+
+#: apps/client/src/components/ai-actions.tsx:107
+#: apps/client/src/components/ai-actions.tsx:110
+msgid "Casual"
+msgstr "Uformel"
+
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:98
+msgid "Change"
+msgstr ""
+
+#: apps/client/src/components/locale-switch.tsx:17
+msgid "Change Language"
+msgstr "Skift Sprog"
+
+#: apps/client/src/pages/auth/reset-password/page.tsx:99
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:115
+msgid "Change Password"
+msgstr "Skift adgangskode"
+
+#: apps/client/src/components/ai-actions.tsx:101
+msgid "Change Tone"
+msgstr "Skift tone"
+
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:70
+msgid "Check your email for the confirmation link to update your email address."
+msgstr "Tjek din e-mail for bekræftelseslinket til at opdatere din e-mailadresse."
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:82
+msgid "Checkout canceled"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:187
+msgid "Choose a plan that works best for you. You can change or cancel your subscription at any time."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:249
+msgid "Close"
+msgstr "Luk"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:49
+msgid "Cloud-hosted solution"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:201
+msgid "Code"
+msgstr "Kode"
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:52
+msgid "Code must be exactly 6 digits long."
+msgstr "Koden skal være præcis 6 cifre lang."
+
+#: apps/client/src/pages/home/sections/features/index.tsx:62
+msgid "Collaborative notes"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:40
+msgid "Company"
+msgstr "Virksomhed"
+
+#: apps/client/src/pages/home/sections/support/index.tsx:38
+msgid "Comprehensive user management with profiles, teams, permissions, and activity tracking."
+msgstr ""
+
+#: apps/client/src/components/ai-actions.tsx:119
+#: apps/client/src/components/ai-actions.tsx:122
+msgid "Confident"
+msgstr "Selvsikker"
+
+#: apps/client/src/pages/home/components/footer.tsx:46
+#: apps/client/src/pages/home/contact/page.tsx:5
+msgid "Contact"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/contributors/index.tsx:36
+msgid "Contact Sales"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:234
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:246
+msgid "Continue"
+msgstr "Forsæt"
+
+#: apps/client/src/pages/auth/register/page.tsx:64
+#: apps/client/src/pages/auth/register/page.tsx:69
+msgid "Create a new account"
+msgstr "Opret en ny konto"
+
+#: apps/client/src/pages/auth/login/page.tsx:65
+msgctxt "This is a link to create a new account"
+msgid "Create one now"
+msgstr "Opret en nu"
+
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:82
+msgid "Current Password"
+msgstr "Nuværende adgangskode"
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:145
+msgid "Current Subscription"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:59
+msgid "Custom branding"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:60
+msgid "Customizable dashboards"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/danger.tsx:62
+msgid "Danger Zone"
+msgstr "Farezone"
+
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:87
+msgid "Dark"
+msgstr "Mørk"
+
+#: apps/client/src/pages/dashboard/_components/sidebar.tsx:101
+msgid "Dashboard"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/danger.tsx:79
+#: apps/client/src/pages/dashboard/settings/_sections/danger.tsx:94
+msgid "Delete Account"
+msgstr "Slet Konto"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:205
+msgid "Deployment Name"
+msgstr "Deployment Navn"
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:139
+msgid "Disable"
+msgstr "Deaktivér"
+
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:154
+msgid "Disable 2FA"
+msgstr "Deaktivér 2FA"
+
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:220
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:134
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:118
+msgid "Discard"
+msgstr "Kassér"
+
+#: apps/client/src/pages/home/components/footer.tsx:66
+#: apps/client/src/pages/home/docs/page.tsx:5
+msgid "Documentation"
+msgstr "Dokumentation"
+
+#: apps/client/src/pages/auth/login/page.tsx:62
+msgid "Don't have an account?"
+msgstr "Har du ikke en konto?"
+
+#: apps/client/src/pages/home/sections/testimonials/index.tsx:70
+msgid "Don't just take our word for it. Here's what our customers have to say about their experience with our platform. Have questions or feedback? Reach out to us at <0>{email}</0>."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:107
+msgid "Don't see your language? <0>Help translate the app.</0>"
+msgstr "Kan du ikke se dit sprog? <0>Hjælp med at oversætte appen.</0>"
+
+#: apps/client/src/pages/auth/forgot-password/page.tsx:82
+#: apps/client/src/pages/auth/login/page.tsx:90
+#: apps/client/src/pages/auth/register/page.tsx:141
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:181
+msgid "Email"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:54
+msgid "Email notifications"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:21
+msgid "Empowering teams with powerful tools to streamline workflows and boost productivity."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:163
+msgid "Enable 2FA"
+msgstr "Aktiver 2FA"
+
+#: apps/client/src/pages/auth/reset-password/page.tsx:67
+msgid "Enter a new password below, and make sure it's secure."
+msgstr "Indtast en ny adgangskode nedenfor, og sørg for, at den er sikker."
+
+#: apps/client/src/pages/auth/backup-otp/page.tsx:59
+msgid "Enter one of the 10 backup codes you saved when you enabled two-factor authentication."
+msgstr "Indtast en af de 10 backup-koder, du gemte, da du aktiverede to-faktor godkendelse."
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:170
+msgid "Enter the 6-digit code from your authenticator app to verify that 2FA has been setup correctly."
+msgstr "Indtast den 6-cifrede kode fra din authenticator-app for at bekræfte, at 2FA er blevet konfigureret korrekt."
+
+#: apps/client/src/pages/auth/verify-otp/page.tsx:60
+msgid "Enter the one-time password provided by your authenticator app below."
+msgstr "Indtast engangsadgangskoden fra din authenticator app nedenfor."
+
+#: apps/client/src/pages/auth/forgot-password/page.tsx:70
+msgid "Enter your email address and we will send you a link to reset your password if the account exists."
+msgstr "Indtast din e-mailadresse, og vi sender dig et link til at nulstille din adgangskode, hvis kontoen eksisterer."
+
+#: apps/client/src/pages/home/sections/features/index.tsx:55
+msgid "Enterprise-grade security"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/support/index.tsx:33
+msgid "Enterprise-grade security with encryption, role-based access control, and compliance with industry standards."
+msgstr ""
+
+#: apps/client/src/pages/public/error.tsx:46
+msgid "Error {statusCode}"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:49
+msgid "Error loading stock data:"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:96
+msgid "Error subscribing"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/support/index.tsx:51
+msgid "Everything you need to launch and scale your SaaS product, built right in. No need to integrate multiple services."
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:104
+msgid "Everything you need to succeed."
+msgstr ""
+
+#: apps/client/src/pages/home/sections/hero/index.tsx:72
+msgid "Explore what's included"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:64
+msgid "Export to multiple formats"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:63
+msgid "FAQ"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:31
+msgid "Features"
+msgstr ""
+
+#: apps/client/src/components/ai-actions.tsx:90
+msgid "Fix Spelling & Grammar"
+msgstr "Ret stavning og grammatik"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:45
+msgid "Flexible pricing plans"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:280
+msgid "Forget"
+msgstr "Glem"
+
+#: apps/client/src/pages/auth/login/page.tsx:131
+msgid "Forgot Password?"
+msgstr "Glemt adgangskode?"
+
+#: apps/client/src/pages/auth/forgot-password/page.tsx:68
+msgid "Forgot your password?"
+msgstr "Har du glemt din adgangskode?"
+
+#: apps/client/src/components/ai-actions.tsx:125
+#: apps/client/src/components/ai-actions.tsx:128
+msgid "Friendly"
+msgstr "Venlig"
+
+#: apps/client/src/pages/auth/_components/social-auth.tsx:18
+msgid "GitHub"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:52
+msgid "GitHub integration"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/statistics/index.tsx:12
+msgid "GitHub Stars"
+msgstr "GitHub stjerner"
+
+#: apps/client/src/pages/auth/verify-email/page.tsx:67
+msgid "Go to Dashboard"
+msgstr "Gå til dashboard"
+
+#: apps/client/src/pages/public/error.tsx:55
+msgid "Go to home"
+msgstr ""
+
+#: apps/client/src/pages/auth/_components/social-auth.tsx:31
+msgid "Google"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:53
+msgid "Google Workspace integration"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:107
+msgid "Here, you can update your account information such as your profile picture, name and username."
+msgstr "Her kan du opdatere dine kontooplysninger såsom dit profilbillede, navn og brugernavn."
+
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:68
+msgid "Here, you can update your profile to customize and personalize your experience."
+msgstr "Her kan du opdatere din profil for at tilpasse og personliggøre din oplevelse."
+
+#: apps/client/src/pages/auth/login/page.tsx:115
+#: apps/client/src/pages/auth/register/page.tsx:168
+#: apps/client/src/pages/auth/reset-password/page.tsx:88
+msgid "Hold <0>Ctrl</0> to display your password temporarily."
+msgstr "Hold <0>Ctrl</0>nede for at vise din adgangskode midlertidigt."
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:128
+msgid "If you disable two-factor authentication, you will no longer be required to enter a verification code when logging in."
+msgstr "Hvis du deaktiverer to-faktor godkendelse, skal du ikke længere indtaste en bekræftelseskode, når du logger ind."
+
+#: apps/client/src/components/ai-actions.tsx:85
+msgid "Improve Writing"
+msgstr "Forbedre skrivning"
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:188
+msgid "In case you are unable to scan this QR Code, you can also copy-paste this link into your authenticator app."
+msgstr "Hvis du ikke kan scanne denne QR-kode, kan du også copy-paste dette link i din authenticator-app."
+
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:67
+msgid "In this section, you can change your password and enable/disable two-factor authentication."
+msgstr "I dette afsnit kan du ændre din adgangskode og aktivere/deaktivere to-faktor godkendelse."
+
+#: apps/client/src/pages/dashboard/settings/_sections/danger.tsx:64
+msgid "In this section, you can delete your account and all the data associated to your user, but please keep in mind that <0>this action is irreversible</0>."
+msgstr "I dette afsnit kan du slette din konto og alle de data, der er knyttet til din bruger, men husk, at <0>denne handling er uigenkaldelig</0>."
+
+#: apps/client/src/pages/home/sections/support/index.tsx:28
+msgid "Integrated payment processing with support for subscriptions, one-time payments, and multiple payment methods."
+msgstr ""
+
+#: apps/client/src/services/errors/translate-error.ts:7
+msgid "It doesn't look like a user exists with the credentials you provided."
+msgstr "Det ser ikke ud til, at der findes en bruger med de logon oplysninger, du har angivet."
+
+#: apps/client/src/services/errors/translate-error.ts:37
+msgid "It looks like the backup code you provided is invalid or used. Please try again."
+msgstr "Det ser ud til, at den backupkode, du har angivet, er ugyldig eller brugt. Prøv venligst igen."
+
+#: apps/client/src/services/errors/translate-error.ts:19
+msgid "It looks like the reset token you provided is invalid. Please try restarting the password reset process again."
+msgstr "Det ser ud til, at det nulstillingstoken, du angav, er ugyldigt. Prøv at genstarte processen til nulstilling af adgangskode igen."
+
+#: apps/client/src/services/errors/translate-error.ts:34
+msgid "It looks like the two-factor authentication code you provided is invalid. Please try again."
+msgstr "Det ser ud til, at den to-faktor godkendelseskode, du har angivet, er ugyldig. Prøv venligst igen."
+
+#: apps/client/src/services/errors/translate-error.ts:22
+msgid "It looks like the verification token you provided is invalid. Please try restarting the verification process again."
+msgstr "Det ser ud til, at det verifikationstoken, du angav, er ugyldigt. Prøv venligst at genstarte bekræftelsesprocessen igen."
+
+#: apps/client/src/services/errors/translate-error.ts:25
+msgid "It looks like your email address has already been verified."
+msgstr "Det ser ud til, at din e-mailadresse allerede er blevet verificeret."
+
+#: apps/client/src/pages/auth/register/page.tsx:101
+msgctxt "Localized version of a placeholder name. For example, Max Mustermann in German or Jan Kowalski in Polish."
+msgid "John Doe"
+msgstr "Anders Andersen"
+
+#: apps/client/src/pages/auth/register/page.tsx:123
+msgctxt "Localized version of a placeholder username. For example, max.mustermann in German or jan.kowalski in Polish."
+msgid "john.doe"
+msgstr "anders.andersen"
+
+#: apps/client/src/pages/auth/register/page.tsx:145
+msgctxt "Localized version of a placeholder email. For example, max.mustermann@example.de in German or jan.kowalski@example.pl in Polish."
+msgid "john.doe@example.com"
+msgstr "anders.andersen@example.com"
+
+#: apps/client/src/pages/home/sections/contributors/index.tsx:18
+msgid "Join thousands of teams already using our platform to streamline their workflow and boost productivity. Start your free trial today - no credit card required."
+msgstr ""
+
+#: apps/client/src/pages/home/sections/logo-cloud/index.tsx:47
+msgid "Join thousands of teams already using our platform. <0>Get in touch</0>."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:101
+msgid "Language"
+msgstr "Sprog"
+
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:60
+msgid "Last updated:"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:86
+msgid "Light"
+msgstr "Lyst"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:68
+msgid "Light or dark theme"
+msgstr "Lyst eller mørkt tema"
+
+#: apps/client/src/pages/home/sections/hero/call-to-action.tsx:14
+msgid "Live Demo"
+msgstr ""
+
+#: apps/client/src/components/user-options.tsx:38
+msgid "Logout"
+msgstr "Log ud"
+
+#: apps/client/src/pages/auth/verify-otp/page.tsx:64
+msgid "Lost your device?"
+msgstr "Har du mistet din enhed?"
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:178
+msgid "Manage Subscription"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:218
+msgid "Max Tokens"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:205
+msgid "Model"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:50
+msgid "Multi-language support"
+msgstr ""
+
+#: apps/client/src/pages/auth/backup-otp/page.tsx:52
+#: apps/client/src/pages/auth/forgot-password/page.tsx:49
+#: apps/client/src/pages/auth/login/page.tsx:55
+#: apps/client/src/pages/auth/register/page.tsx:64
+#: apps/client/src/pages/auth/reset-password/page.tsx:60
+#: apps/client/src/pages/auth/verify-email/page.tsx:43
+#: apps/client/src/pages/auth/verify-otp/page.tsx:52
+#: apps/client/src/pages/dashboard/agent-chat/page.tsx:34
+#: apps/client/src/pages/dashboard/billing/page.tsx:119
+#: apps/client/src/pages/dashboard/settings/page.tsx:16
+#: apps/client/src/pages/home/page.tsx:23
+msgid "My SaaS"
+msgstr ""
+
+#: apps/client/src/pages/auth/register/page.tsx:98
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:153
+msgid "Name"
+msgstr "Navn"
+
+#: apps/client/src/pages/dashboard/agent-chat/page.tsx:112
+msgid "New chat"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:96
+msgid "New Password"
+msgstr "Ny adgangskode"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:48
+msgid "No hidden fees or tracking"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:251
+msgid "No plans available"
+msgstr ""
+
+#: apps/client/src/components/locale-combobox.tsx:45
+msgid "No results found"
+msgstr "Ingen resultater fundet"
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:133
+msgid "Note: This will make your account less secure."
+msgstr "Bemærk: Dette vil gøre din konto mindre sikker."
+
+#: apps/client/src/pages/auth/verify-otp/page.tsx:82
+msgid "One-Time Password"
+msgstr "Engangskodeord"
+
+#: apps/client/src/components/ai-actions.tsx:56
+#: apps/client/src/libs/axios.ts:30
+msgid "Oops, the server returned an error."
+msgstr "Ups, serveren returnerede en fejl."
+
+#: apps/client/src/services/openai/change-tone.ts:35
+#: apps/client/src/services/openai/fix-grammar.ts:33
+#: apps/client/src/services/openai/improve-writing.ts:33
+msgid "OpenAI did not return any choices for your text."
+msgstr "OpenAI returnerede ikke nogen valgmuligheder for din tekst."
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:120
+msgid "OpenAI/Azure OpenAI/Ollama Integration"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:169
+msgid "OpenAI/Ollama API Key"
+msgstr "OpenAI/Ollama API-nøgle"
+
+#: apps/client/src/pages/auth/layout.tsx:46
+msgctxt "The user can either login with email/password, or continue with GitHub or Google."
+msgid "or continue with"
+msgstr "eller fortsæt med"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:58
+msgid "Organize with folders"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:106
+msgid "Our platform is built with modern technology and best practices, offering a comprehensive suite of features designed to help your team work smarter and faster."
+msgstr ""
+
+#: apps/client/src/pages/auth/login/page.tsx:110
+#: apps/client/src/pages/auth/register/page.tsx:163
+#: apps/client/src/pages/auth/reset-password/page.tsx:83
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:73
+msgid "Password"
+msgstr "Adgangskode"
+
+#: apps/client/src/pages/home/sections/support/index.tsx:27
+msgid "Payments"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:121
+msgid "Picture"
+msgstr "Billede"
+
+#: apps/client/src/components/copyright.tsx:31
+msgid "Platform"
+msgstr ""
+
+#: apps/client/src/pages/auth/verify-email/page.tsx:59
+msgid "Please note that this step is completely optional."
+msgstr "Bemærk, at dette trin er helt valgfrit."
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:228
+msgid "Please store your backup codes in a secure location. You can use one of these one-time use codes to login in case you lose access to your authenticator app."
+msgstr "Gem venligst dine backupkoder på et sikkert sted. Du kan bruge en af disse engangskoder til at logge på, hvis du mister adgangen til din authenticator app."
+
+#: apps/client/src/pages/home/sections/features/index.tsx:95
+msgid "Powered by"
+msgstr "Drevet af"
+
+#: apps/client/src/pages/dashboard/agent-chat/page.tsx:145
+msgid "Powered by Tavily web search + OpenAI"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:94
+msgid "Price"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:34
+#: apps/client/src/pages/home/pricing/page.tsx:5
+msgid "Pricing"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:61
+msgid "Priority support"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:49
+#: apps/client/src/pages/home/privacy-policy/page.tsx:5
+msgid "Privacy Policy"
+msgstr "Fortrolighedspolitik"
+
+#: apps/client/src/pages/home/components/footer.tsx:28
+msgid "Product"
+msgstr ""
+
+#: apps/client/src/components/ai-actions.tsx:113
+#: apps/client/src/components/ai-actions.tsx:116
+msgid "Professional"
+msgstr "Professionel"
+
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:66
+msgid "Profile"
+msgstr "Profil"
+
+#: apps/client/src/pages/home/sections/statistics/index.tsx:14
+msgid "Projects Created"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/contributors/index.tsx:41
+msgid "Questions? Our team is here to help. Reach out anytime and we'll get back to you within 24 hours."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:17
+msgid "Reactive Resume"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/hero/call-to-action.tsx:20
+msgid "Read docs"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/contributors/index.tsx:16
+msgid "Ready to get started?"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:156
+msgid "Renews on"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:199
+msgid "Resend email confirmation link"
+msgstr "Send bekræftelseslink til e-mail igen"
+
+#: apps/client/src/pages/auth/reset-password/page.tsx:60
+#: apps/client/src/pages/auth/reset-password/page.tsx:65
+msgid "Reset your password"
+msgstr "Nulstil din adgangskode"
+
+#: apps/client/src/pages/home/components/footer.tsx:60
+msgid "Resources"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:65
+msgid "Rich text editor"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:63
+msgid "Role-based access control"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:217
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:131
+msgid "Save Changes"
+msgstr "Gem ændringer"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:274
+msgid "Save Locally"
+msgstr "Spar lokalt"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:274
+msgid "Saved"
+msgstr "Gemt"
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:168
+msgid "Scan the QR code below with your authenticator app to setup 2FA on your account."
+msgstr "Scan QR-koden nedenfor med din autentificeringsapp for at konfigurere 2FA på din konto."
+
+#: apps/client/src/components/locale-combobox.tsx:41
+msgid "Search for a language"
+msgstr "Søg efter et sprog"
+
+#: apps/client/src/pages/dashboard/agent-chat/page.tsx:64
+msgid "Search the web and get AI-summarized answers"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/support/index.tsx:23
+msgid "Secure user authentication with multiple sign-in options including email, OAuth providers, and two-factor authentication."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:65
+#: apps/client/src/pages/home/sections/support/index.tsx:32
+msgid "Security"
+msgstr "Sikkerhed"
+
+#: apps/client/src/pages/auth/forgot-password/page.tsx:104
+msgid "Send Email"
+msgstr "Send e-mail"
+
+#: apps/client/src/components/user-options.tsx:32
+#: apps/client/src/pages/dashboard/_components/sidebar.tsx:119
+#: apps/client/src/pages/dashboard/settings/page.tsx:16
+#: apps/client/src/pages/dashboard/settings/page.tsx:26
+msgid "Settings"
+msgstr "Indstillinger"
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:159
+msgid "Setup two-factor authentication on your account"
+msgstr "Opsæt to-faktor godkendelse på din konto"
+
+#: apps/client/src/pages/auth/backup-otp/page.tsx:103
+#: apps/client/src/pages/auth/login/page.tsx:127
+#: apps/client/src/pages/auth/verify-otp/page.tsx:92
+msgid "Sign in"
+msgstr "Log ind"
+
+#: apps/client/src/pages/auth/register/page.tsx:74
+msgid "Sign in now"
+msgstr "Log på nu"
+
+#: apps/client/src/pages/auth/login/page.tsx:55
+#: apps/client/src/pages/auth/login/page.tsx:60
+msgid "Sign in to your account"
+msgstr "Log ind på din konto"
+
+#: apps/client/src/pages/auth/register/page.tsx:179
+msgid "Sign up"
+msgstr "Tilmeld dig"
+
+#: apps/client/src/pages/auth/login/page.tsx:74
+msgid "Signing in via email is currently disabled by the administrator."
+msgstr "Indlogning via e-mail er i øjeblikket deaktiveret af administratoren."
+
+#: apps/client/src/pages/auth/register/page.tsx:82
+msgid "Signups are currently disabled by the administrator."
+msgstr "Tilmeldinger er i øjeblikket deaktiveret af administratoren."
+
+#: apps/client/src/services/errors/translate-error.ts:43
+msgid "Something went wrong while processing your request. Please try again later or raise an issue on GitHub."
+msgstr "Noget gik galt under behandlingen af din anmodning. Prøv igen senere, eller opret et problem på GitHub."
+
+#: apps/client/src/pages/home/sections/contributors/index.tsx:28
+msgid "Start Free Trial"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:149
+msgid "Status"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:17
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:27
+msgid "Stock Chat"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:162
+msgid "Store your backup codes securely"
+msgstr "Opbevar dine backup-koder sikkert"
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:75
+msgid "Subscription successful!"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:69
+#: apps/client/src/pages/home/support/page.tsx:5
+msgid "Support"
+msgstr ""
+
+#: apps/client/src/components/theme-switch.tsx:31
+msgid "Switch to Dark Mode"
+msgstr "Skift til mørk tilstand"
+
+#: apps/client/src/components/theme-switch.tsx:29
+msgid "Switch to Light Mode"
+msgstr "Skift til lystilstand"
+
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:85
+msgid "System"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:52
+#: apps/client/src/pages/home/terms/page.tsx:5
+msgid "Terms of Service"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/testimonials/index.tsx:68
+msgid "Testimonials"
+msgstr "Udtalelser"
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:76
+msgid "Thank you for subscribing. Your plan is now active."
+msgstr ""
+
+#: apps/client/src/pages/public/error.tsx:17
+msgid "The page you're looking for doesn't exist."
+msgstr ""
+
+#: apps/client/src/pages/public/error.tsx:29
+msgid "The request was invalid."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:79
+msgid "Theme"
+msgstr "Tema"
+
+#: apps/client/src/services/errors/translate-error.ts:40
+msgid "There was an error connecting to the browser. Please make sure 'chrome' is running and reachable."
+msgstr "Der opstod en fejl ved forbindelsen til browseren. Sørg for, at 'chrome' kører og er tilgængelig."
+
+#: apps/client/src/services/errors/translate-error.ts:16
+msgid "This email address is associated with an OAuth account. Please sign in with your OAuth provider."
+msgstr "Denne e-mailadresse er knyttet til en OAuth-konto. Log venligst på med din OAuth-udbyder."
+
+#: apps/client/src/pages/home/sections/features/index.tsx:47
+msgid "Transparent pricing"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/logo-cloud/index.tsx:39
+msgid "Trusted by teams at leading companies worldwide:"
+msgstr ""
+
+#: apps/client/src/pages/auth/verify-otp/page.tsx:52
+#: apps/client/src/pages/auth/verify-otp/page.tsx:57
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:129
+msgid "Two-Factor Authentication"
+msgstr "To-faktor godkendelse"
+
+#: apps/client/src/services/errors/translate-error.ts:31
+msgid "Two-factor authentication is already enabled for this account."
+msgstr "To-faktor godkendelse er allerede aktiveret for denne konto."
+
+#: apps/client/src/services/errors/translate-error.ts:28
+msgid "Two-factor authentication is not enabled for this account."
+msgstr "Totrinsgodkendelse er ikke aktiveret for denne konto."
+
+#: apps/client/src/pages/dashboard/settings/_sections/danger.tsx:84
+msgid "Type <0>delete</0> to confirm deleting your account."
+msgstr "Skriv <0>delete</0> for at bekræfte sletningen af din konto."
+
+#: apps/client/src/pages/home/sections/features/index.tsx:57
+msgid "Unlimited projects"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:192
+msgid "Unverified"
+msgstr "Ikke verificeret"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:247
+msgid "Use Azure OpenAI"
+msgstr "Brug Azure OpenAI"
+
+#: apps/client/src/components/theme-switch.tsx:30
+msgid "Use System Theme"
+msgstr "Brug System Tema"
+
+#: apps/client/src/pages/auth/backup-otp/page.tsx:52
+#: apps/client/src/pages/auth/backup-otp/page.tsx:57
+msgid "Use your backup code"
+msgstr "Brug din backup-kode"
+
+#: apps/client/src/services/errors/translate-error.ts:13
+msgid "User does not have an associated 'secrets' record. Please report this issue on GitHub."
+msgstr "Brugeren har ikke en tilknyttet 'secrets'-post. Rapporter venligst dette problem på GitHub."
+
+#: apps/client/src/pages/home/sections/support/index.tsx:37
+msgid "User Management"
+msgstr ""
+
+#: apps/client/src/pages/auth/register/page.tsx:119
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:167
+msgid "Username"
+msgstr "Brugernavn"
+
+#: apps/client/src/pages/home/sections/statistics/index.tsx:13
+msgid "Users Signed Up"
+msgstr "Tilmeldte brugere"
+
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:192
+msgid "Verified"
+msgstr "Verificeret"
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:161
+msgid "Verify that two-factor authentication has been setup correctly"
+msgstr "Bekræft at to-faktor godkendelse er konfigureret korrekt"
+
+#: apps/client/src/pages/auth/verify-email/page.tsx:43
+#: apps/client/src/pages/auth/verify-email/page.tsx:48
+msgid "Verify your email address"
+msgstr "Bekræft din e-mailadresse"
+
+#: apps/client/src/pages/home/sections/hero/index.tsx:67
+msgid "Version 1.0"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:109
+msgid "Volume"
+msgstr ""
+
+#: apps/client/src/pages/auth/verify-email/page.tsx:61
+msgid "We verify your email address only to ensure that we can send you a password reset link in case you forget your password."
+msgstr "Vi bekræfter kun din e-mailadresse for at sikre, at vi kan sende dig et link til nulstilling af adgangskoden, hvis du glemmer din adgangskode."
+
+#: apps/client/src/pages/home/sections/features/index.tsx:66
+msgid "Web-based platform"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/agent-chat/page.tsx:56
+msgid "What do you want to know?"
+msgstr ""
+
+#: apps/client/src/pages/public/error.tsx:26
+msgid "You are not authorized to access this page."
+msgstr ""
+
+#: apps/client/src/pages/auth/login/page.tsx:99
+msgid "You can also enter your username."
+msgstr "Du kan også indtaste dit brugernavn."
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:144
+msgid "You can also integrate with Azure OpenAI by enabling the <0>Use Azure OpenAI</0> checkbox and setting the Resource URL to your Azure OpenAI resource: <1>https://your-resource.openai.azure.com</1>. Set the deployment name in the Model field and specify the appropriate API version for your Azure deployment."
+msgstr "Du kan også integrere med Azure OpenAI ved at aktivere afkrydsningsfeltet <0>Brug Azure OpenAI</0> og indstille ressource-URL'en til din Azure OpenAI-ressource: <1>https://your-resource. penai.azure.com</1>. Indstil implementeringsnavnet i Model feltet og angiv den relevante API version til din Azure implementering."
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:153
+msgid "You can also integrate with Ollama simply by setting the API key to<0>sk-1234567890abcdef</0> and the Base URL to your Ollama URL, i.e.<1>http://localhost:11434/v1</1>. You can also pick and choose models and set the max tokens as per your preference."
+msgstr "Du kan også integrere med Ollama ved blot at indstille API-nøglen til<0>sk-1234567890abcdef</0> og Base URL til din Ollama URL, jeg. .<1>http://localhost:11434/v1</1>. Du kan også vælge modeller og indstille max tokens som pr din præference."
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:122
+msgid "You can make use of the OpenAI API, Azure OpenAI, or Ollama to help you generate content, or improve your writing while composing your resume."
+msgstr "Du kan gøre brug af OpenAI API, Azure OpenAI, eller Ollama til at hjælpe dig med at generere indhold, eller forbedre din skrivning, mens du komponerer dit cv."
+
+#: apps/client/src/pages/public/error.tsx:20
+msgid "You don't have permission to access this page."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:128
+msgid "You have the option to <0>obtain your own OpenAI API key</0>. This key empowers you to leverage the API as you see fit. Alternatively, if you wish to disable the AI features in Reactive Resume altogether, you can simply remove the key from your settings."
+msgstr "Du har mulighed for at <0>få din egen OpenAI API-nøgle</0>. Denne nøgle giver dig mulighed for at udnytte API'en, som det passer dig. Alternativt, hvis du ønsker at deaktivere AI-funktionerne i Reactive Resume helt, kan du blot fjerne nøglen fra dine indstillinger."
+
+#: apps/client/src/pages/auth/verify-email/page.tsx:50
+msgid "You should have received an email from <0>My SaaS</0> with a link to verify your account."
+msgstr ""
+
+#: apps/client/src/pages/auth/forgot-password/page.tsx:49
+#: apps/client/src/pages/auth/forgot-password/page.tsx:54
+msgid "You've got mail!"
+msgstr "Du har post!"
+
+#: apps/client/src/pages/dashboard/settings/_sections/danger.tsx:52
+msgid "Your account and all your data has been deleted successfully. Goodbye!"
+msgstr "Din konto og alle dine data er blevet slettet. Vi siger farvel!"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:289
+msgid "Your API key is securely stored in the browser's local storage and is only utilized when making requests to OpenAI via their official SDK. Rest assured that your key is not transmitted to any external server except when interacting with OpenAI's services."
+msgstr "Din API-nøgle gemmes sikkert i browserens lokale lager og bruges kun, når du sender anmodninger til OpenAI via deres officielle SDK. Du kan være sikker på, at din nøgle ikke overføres til nogen ekstern server, undtagen når du interagerer med OpenAI's tjenester."
+
+#: apps/client/src/pages/auth/verify-email/page.tsx:28
+msgid "Your email address has been verified successfully."
+msgstr "Din e-mailadresse er blevet verificeret."
+
+#: apps/client/src/services/openai/client.ts:11
+msgid "Your OpenAI API Key has not been set yet. Please go to your account settings to enable OpenAI Integration."
+msgstr "Din OpenAI API-nøgle er ikke blevet indstillet endnu. Gå til dine kontoindstillinger for at aktivere OpenAI-integration."
+
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:56
+msgid "Your password has been updated successfully."
+msgstr "Din adgangskode er blevet ændret."
+
+#: apps/client/src/pages/home/components/footer.tsx:18
+msgid "Your SaaS Platform"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:83
+msgid "Your subscription checkout was canceled."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:164
+msgid "Your subscription will be canceled at the end of the billing period."
+msgstr ""

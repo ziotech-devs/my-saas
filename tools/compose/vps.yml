@@ -1,0 +1,198 @@
+# Production VPS deployment using Traefik for TLS termination.
+# Requires a domain with wildcard DNS pointing to the VPS.
+# Build the server image: docker build -t my-saas-server:latest .
+# Build the graphs image: cd apps/graphs && langgraph build -t my-saas-graphs:latest
+# Start: docker compose --project-directory . -f tools/compose/vps.yml up -d
+
+name: my-saas
+
+# Log rotation applied to all services — prevents disk exhaustion from verbose AI/DB logs.
+# 10 MB per file × 5 files = max 50 MB per service.
+x-logging: &default-logging
+  driver: json-file
+  options:
+    max-size: "10m"
+    max-file: "5"
+
+networks:
+  public:
+  internal:
+
+volumes:
+  postgres_data:
+  langgraph_redis_data:
+  letsencrypt_data:
+  client_dist:
+
+services:
+
+  # ── Reverse proxy ──────────────────────────────────────────────────────────
+  traefik:
+    image: traefik:v3
+    restart: unless-stopped
+    logging: *default-logging
+    command:
+      - --providers.docker=true
+      - --providers.docker.exposedByDefault=false
+      - --entrypoints.web.address=:80
+      - --entrypoints.web.http.redirections.entrypoint.to=websecure
+      - --entrypoints.web.http.redirections.entrypoint.scheme=https
+      - --entrypoints.websecure.address=:443
+      - --certificatesresolvers.letsencrypt.acme.tlsChallenge=true
+      - --certificatesresolvers.letsencrypt.acme.email=${ACME_EMAIL}
+      - --certificatesresolvers.letsencrypt.acme.storage=/letsencrypt/acme.json
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - letsencrypt_data:/letsencrypt
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    networks:
+      - public
+
+  # ── Application (NestJS API) ────────────────────────────────────────────────
+  server:
+    image: ${SERVER_IMAGE:-my-saas-server:latest}
+    restart: unless-stopped
+    logging: *default-logging
+    depends_on:
+      postgres:
+        condition: service_healthy
+      langgraph-redis:
+        condition: service_healthy
+    env_file:
+      - .env
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      PUBLIC_URL: https://${APP_DOMAIN}
+      DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
+      ACCESS_TOKEN_SECRET: ${ACCESS_TOKEN_SECRET}
+      REFRESH_TOKEN_SECRET: ${REFRESH_TOKEN_SECRET}
+      GRAPHS_URL: http://graphs:8000
+      # Storage — not deployed; dummy values prevent startup validation errors
+      STORAGE_URL: http://localhost:9000/default
+      STORAGE_ENDPOINT: localhost
+      STORAGE_PORT: 9000
+      STORAGE_BUCKET: default
+      STORAGE_ACCESS_KEY: disabled
+      STORAGE_SECRET_KEY: disabled
+      STORAGE_USE_SSL: "false"
+      STORAGE_SKIP_BUCKET_CHECK: "true"
+      # Chrome — not deployed; dummy values prevent startup validation errors
+      CHROME_TOKEN: disabled
+      CHROME_URL: http://localhost:3001
+      MAIL_FROM: ${MAIL_FROM:-noreply@example.com}
+    networks:
+      - internal
+
+  # ── React client init (copies built assets into shared volume) ─────────────
+  client-init:
+    image: ${SERVER_IMAGE:-my-saas-server:latest}
+    user: root
+    entrypoint: ["sh", "-c", "cp -r /app/dist/apps/client/. /client-dist/"]
+    volumes:
+      - client_dist:/client-dist
+    restart: "no"
+
+  # ── Nginx (serves React SPA + proxies /api to NestJS) ──────────────────────
+  nginx:
+    image: nginx:alpine
+    restart: unless-stopped
+    logging: *default-logging
+    depends_on:
+      - client-init
+      - server
+    volumes:
+      - client_dist:/usr/share/nginx/html:ro
+      - ./tools/compose/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=my-saas_public
+      - traefik.http.routers.nginx.rule=Host(`${APP_DOMAIN}`)
+      - traefik.http.routers.nginx.entrypoints=websecure
+      - traefik.http.routers.nginx.tls.certresolver=letsencrypt
+      - traefik.http.services.nginx.loadbalancer.server.port=80
+    networks:
+      - public
+      - internal
+
+  # ── LangGraph graphs service ────────────────────────────────────────────────
+  graphs:
+    image: ${GRAPHS_IMAGE:-my-saas-graphs:latest}
+    restart: unless-stopped
+    logging: *default-logging
+    depends_on:
+      langgraph-redis:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+    environment:
+      REDIS_URI: redis://langgraph-redis:6379
+      DATABASE_URI: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/langgraph?sslmode=disable
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4o-mini}
+      TAVILY_API_KEY: ${TAVILY_API_KEY}
+      LANGSMITH_API_KEY: ${LANGSMITH_API_KEY}
+      LANGSMITH_PROJECT: ${LANGSMITH_PROJECT}
+      LANGSMITH_TRACING_V2: ${LANGSMITH_TRACING_V2:-true}
+      LANGSMITH_ENDPOINT: ${LANGSMITH_ENDPOINT:-https://api.smith.langchain.com} 
+    networks:
+      - internal
+
+  # ── PostgreSQL ──────────────────────────────────────────────────────────────
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    logging: *default-logging
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./postgres-init:/docker-entrypoint-initdb.d:ro
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - internal
+
+  # ── Redis (LangGraph checkpointer) ──────────────────────────────────────────
+  langgraph-redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    logging: *default-logging
+    volumes:
+      - langgraph_redis_data:/data
+    healthcheck:
+      test: redis-cli ping
+      interval: 5s
+      timeout: 1s
+      retries: 5
+    networks:
+      - internal
+
+  # ── Adminer (database UI) ────────────────────────────────────────────────────
+  adminer:
+    image: shyim/adminerevo:latest
+    restart: unless-stopped
+    logging: *default-logging
+    environment:
+      ADMINER_DEFAULT_DRIVER: pgsql
+      ADMINER_DEFAULT_SERVER: postgres
+      ADMINER_DEFAULT_DB: ${POSTGRES_DB}
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=my-saas_public
+      - traefik.http.routers.adminer.rule=Host(`${ADMINER_DOMAIN}`)
+      - traefik.http.routers.adminer.entrypoints=websecure
+      - traefik.http.routers.adminer.tls.certresolver=letsencrypt
+      - traefik.http.services.adminer.loadbalancer.server.port=8080
+      - traefik.http.routers.adminer.middlewares=adminer-auth
+      - traefik.http.middlewares.adminer-auth.basicauth.users=${ADMINER_BASIC_AUTH}
+    networks:
+      - public
+      - internal

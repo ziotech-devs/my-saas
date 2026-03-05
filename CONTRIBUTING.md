@@ -1,0 +1,1 @@
+icon/light.svg -> icon/dark.svg switch between them

@@ -1,0 +1,29 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "importHelpers": true,
+    "strictNullChecks": true,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/client/*": ["apps/client/src/*"],
+      "@/server/*": ["apps/server/src/*"],
+      "@my-saas/dto": ["libs/dto/src/index.ts"],
+      "@my-saas/hooks": ["libs/hooks/src/index.ts"],
+      "@my-saas/schema": ["libs/schema/src/index.ts"],
+      "@my-saas/ui": ["libs/ui/src/index.ts"],
+      "@my-saas/utils": ["libs/utils/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "dist", "tmp", ".nx"]
+}

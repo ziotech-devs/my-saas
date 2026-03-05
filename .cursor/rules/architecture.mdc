@@ -1,0 +1,39 @@
+---
+description: My SaaS architecture overview - monorepo structure, tech stack, and development principles
+globs: []
+alwaysApply: true
+---
+
+# My SaaS Architecture
+
+## Tech Stack
+- **Frontend**: React 18, React Query, TypeScript, TailwindCSS, Shadcn, Radix, Vite, Zod
+- **Backend**: NestJS, Prisma, PostgreSQL, Redis, Zod
+- **Monorepo**: Nx workspace with pnpm
+
+## Apps Structure
+```
+packages/
+├── server/     # NestJS API  
+├── client/     # React app
+├── graphs/     # Langgraph python app
+```
+
+## Libraries Structure
+```
+packages/
+├── dto/     # Shared DTOs
+├── hooks/     # Shared hooks
+
+├── schema/     # Shared schema
+├── ui/     # Shared UI components
+├── utils/     # Shared utilities
+```
+
+## Key Principles
+- **Functional components only** (no classes)
+- **Named exports only** (no default exports)
+- **Types over interfaces** (except for extending third-party)
+- **String literals over enums**
+- **No 'any' type allowed**
+- **Event handlers over useEffect** for state updates

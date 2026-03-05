@@ -1,0 +1,84 @@
+{
+ "Description": "My SaaS - Container registry (ECR)",
+ "Resources": {
+  "ApiRepositoryB8378B43": {
+   "Type": "AWS::ECR::Repository",
+   "Properties": {
+    "ImageTagMutability": "MUTABLE",
+    "LifecyclePolicy": {
+     "LifecyclePolicyText": "{\"rules\":[{\"rulePriority\":1,\"description\":\"Keep only the last 10 images\",\"selection\":{\"tagStatus\":\"any\",\"countType\":\"imageCountMoreThan\",\"countNumber\":10},\"action\":{\"type\":\"expire\"}}]}"
+    },
+    "RepositoryName": "my-saas-api"
+   },
+   "UpdateReplacePolicy": "Retain",
+   "DeletionPolicy": "Retain",
+   "Metadata": {
+    "aws:cdk:path": "MySaasEcrStack/ApiRepository/Resource"
+   }
+  },
+  "CDKMetadata": {
+   "Type": "AWS::CDK::Metadata",
+   "Properties": {
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/zPSMzI21zNUTCwv1k1OydbNyUzSqw4uSUzO1kksL45PTS7Sqw5KLcgvzizJL6rUcU7LQ/Bqa3Xy8lNS9bKK9cuMTPRM9QwUs4ozM3WLSvNKMnNT9YIgNACBpBjuYwAAAA=="
+   },
+   "Metadata": {
+    "aws:cdk:path": "MySaasEcrStack/CDKMetadata/Default"
+   }
+  }
+ },
+ "Outputs": {
+  "ExportsOutputFnGetAttApiRepositoryB8378B43ArnC5B66F61": {
+   "Value": {
+    "Fn::GetAtt": [
+     "ApiRepositoryB8378B43",
+     "Arn"
+    ]
+   },
+   "Export": {
+    "Name": "MySaasEcrStack:ExportsOutputFnGetAttApiRepositoryB8378B43ArnC5B66F61"
+   }
+  },
+  "ExportsOutputRefApiRepositoryB8378B43D566CA3C": {
+   "Value": {
+    "Ref": "ApiRepositoryB8378B43"
+   },
+   "Export": {
+    "Name": "MySaasEcrStack:ExportsOutputRefApiRepositoryB8378B43D566CA3C"
+   }
+  }
+ },
+ "Parameters": {
+  "BootstrapVersion": {
+   "Type": "AWS::SSM::Parameter::Value<String>",
+   "Default": "/cdk-bootstrap/hnb659fds/version",
+   "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]"
+  }
+ },
+ "Rules": {
+  "CheckBootstrapVersion": {
+   "Assertions": [
+    {
+     "Assert": {
+      "Fn::Not": [
+       {
+        "Fn::Contains": [
+         [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+         ],
+         {
+          "Ref": "BootstrapVersion"
+         }
+        ]
+       }
+      ]
+     },
+     "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI."
+    }
+   ]
+  }
+ }
+}

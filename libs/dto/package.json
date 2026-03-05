@@ -1,0 +1,20 @@
+{
+  "name": "@my-saas/dto",
+  "version": "0.0.1",
+  "private": false,
+  "type": "commonjs",
+  "main": "./src/index.js",
+  "typings": "./src/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@my-saas/utils": "*",
+    "@my-saas/schema": "*",
+    "@sindresorhus/slugify": "^2.2.1",
+    "nestjs-zod": "^3.0.0",
+    "@swc/helpers": "~0.5.11",
+    "zod": "^3.24.1",
+    "@paralleldrive/cuid2": "^2.2.2"
+  }
+}

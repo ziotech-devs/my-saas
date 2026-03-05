@@ -1,0 +1,11 @@
+{
+  "graphs": {
+    "scraper_graph": "./scraper_graph.py:graph"
+  },
+  "python_version": "3.11",
+  "dockerfile_lines": [],
+  "dependencies": [
+    "./"
+  ],
+  "env": "../../.env"
+}

@@ -1,0 +1,1115 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2023-11-10 13:15+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: hu\n"
+"Project-Id-Version: my-saas\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-02-27 11:37\n"
+"Last-Translator: \n"
+"Language-Team: Hungarian\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: my-saas\n"
+"X-Crowdin-Project-ID: 875978\n"
+"X-Crowdin-Language: hu\n"
+"X-Crowdin-File: messages.po\n"
+"X-Crowdin-File-ID: 1\n"
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:171
+msgid "You have enabled two-factor authentication successfully."
+msgstr "Sikeresen engedélyezte a kétfaktoros hitelesítést."
+
+#: apps/client/src/pages/home/sections/features/index.tsx:56
+msgid "{templatesCount}+ pre-built templates"
+msgstr ""
+
+#: apps/client/src/components/copyright.tsx:19
+msgid "© {currentYear} My SaaS. All rights reserved."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:299
+msgid "<0>Note: </0>By utilizing the OpenAI API, you acknowledge and accept the <1>terms of use</1> and <2>privacy policy</2> outlined by OpenAI. Please note that Reactive Resume bears no responsibility for any improper or unauthorized utilization of the service, and any resulting repercussions or liabilities solely rest on the user."
+msgstr "<0>Megjegyzés: </0>Az OpenAI API használatával Ön tudomásul veszi és elfogadja az OpenAI által meghatározott <1>felhasználási feltételeket</1> és <2>adatvédelmi szabályzatot</2>. Felhívjuk figyelmét, hogy a Reactive Resume nem vállal felelősséget a szolgáltatás nem megfelelő vagy jogosulatlan használatáért, és az ebből eredő következmények vagy felelősségek kizárólag a felhasználót terhelik."
+
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:140
+msgid "<0>Two-factor authentication is currently disabled.</0> You can enable it by adding an authenticator app to your account."
+msgstr "<0>A kétfaktoros hitelesítés jelenleg ki van kapcsolva.</0> A hitelesítést egy hitelesítő alkalmazás hozzáadásával engedélyezheti a fiókjához."
+
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:133
+msgid "<0>Two-factor authentication is enabled.</0> You will be asked to enter a code every time you sign in."
+msgstr "<0>A kétfaktoros hitelesítés engedélyezve van.</0> Minden bejelentkezéskor meg kell adnia egy kódot."
+
+#: apps/client/src/pages/home/page.tsx:23
+#: apps/client/src/pages/home/sections/hero/index.tsx:80
+msgid "A free and open-source SaaS boilerplate"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/hero/index.tsx:89
+msgid "A free and open-source SaaS boilerplate that simplifies the process of creating, updating, and sharing your SaaS application."
+msgstr ""
+
+#: apps/client/src/pages/auth/forgot-password/page.tsx:57
+msgid "A password reset link should have been sent to your inbox, if an account existed with the email you provided."
+msgstr "Egy jelszó-visszaállítási linket kellett volna küldeni a postaládájába, ha a megadott e-mail címen létezett fiók."
+
+#: apps/client/src/services/errors/translate-error.ts:10
+msgid "A user with this email address and/or username already exists."
+msgstr "Ezzel az e-mail címmel és/vagy felhasználónévvel már létezik egy felhasználó."
+
+#: apps/client/src/pages/home/about/page.tsx:5
+#: apps/client/src/pages/home/components/footer.tsx:43
+msgid "About"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:105
+msgid "Account"
+msgstr "Fiók"
+
+#: apps/client/src/pages/dashboard/_components/sidebar.tsx:113
+#: apps/client/src/pages/dashboard/agent-chat/page.tsx:34
+msgid "Agent Chat"
+msgstr ""
+
+#: apps/client/src/components/ai-actions.tsx:79
+msgid "AI"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:51
+msgid "AI-powered features"
+msgstr ""
+
+#: apps/client/src/pages/auth/register/page.tsx:71
+msgid "Already have an account?"
+msgstr "Van már fiókod?"
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:97
+msgid "An error occurred while subscribing to the plan."
+msgstr ""
+
+#: apps/client/src/pages/public/error.tsx:23
+msgid "An internal server error occurred."
+msgstr ""
+
+#: apps/client/src/pages/public/error.tsx:32
+msgid "An unexpected error occurred."
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:67
+msgid "Analytics and insights"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:133
+msgid "and many more..."
+msgstr "- És még sok más..."
+
+#: apps/client/src/pages/home/sections/features/index.tsx:46
+msgid "API access included"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:125
+msgid "Are you sure you want to disable two-factor authentication?"
+msgstr "Biztosan ki szeretnéd kapcsolni a kétlépcsős hitelesítést?"
+
+#: apps/client/src/pages/dashboard/settings/_sections/danger.tsx:94
+msgid "Are you sure?"
+msgstr "Biztos vagy benne?"
+
+#: apps/client/src/pages/dashboard/agent-chat/_components/chat-input.tsx:41
+msgid "Ask anything..."
+msgstr ""
+
+#: apps/client/src/pages/home/sections/support/index.tsx:22
+msgid "Authentication"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:258
+msgid "Azure API Version"
+msgstr "Azure API verzió"
+
+#: apps/client/src/services/openai/client.ts:18
+msgid "Azure OpenAI Base URL, deployment name (model), and API version are required when using Azure OpenAI."
+msgstr "Az Azure OpenAI Bázis URL, telepítési név (modell) és API-verzió szükséges az Azure OpenAI használatakor."
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:183
+msgid "Azure OpenAI Resource URL"
+msgstr "Azure OpenAI erőforrás URL címe"
+
+#: apps/client/src/pages/auth/backup-otp/page.tsx:99
+#: apps/client/src/pages/auth/forgot-password/page.tsx:100
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:243
+msgid "Back"
+msgstr "Vissza"
+
+#: apps/client/src/pages/auth/backup-otp/page.tsx:75
+msgid "Backup Code"
+msgstr "Biztonsági kód"
+
+#: apps/client/src/pages/auth/backup-otp/page.tsx:81
+msgid "Backup Codes may contain only lowercase letters or numbers, and must be exactly 10 characters."
+msgstr "A biztonsági kódok csak kisbetűket vagy számokat tartalmazhatnak, és pontosan 10 karakterből kell állniuk."
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:183
+msgid "Base URL"
+msgstr "Bázis URL"
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:112
+#: apps/client/src/pages/dashboard/billing/page.tsx:208
+msgid "Billed Monthly"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:112
+#: apps/client/src/pages/dashboard/billing/page.tsx:225
+msgid "Billed Yearly"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/_components/sidebar.tsx:107
+#: apps/client/src/pages/dashboard/billing/page.tsx:119
+#: apps/client/src/pages/dashboard/billing/page.tsx:129
+msgid "Billing"
+msgstr ""
+
+#: apps/client/src/components/copyright.tsx:24
+msgid "Built with modern technology and best practices."
+msgstr ""
+
+#: apps/client/src/pages/home/sections/support/index.tsx:49
+msgid "Built-in Core Features"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:137
+msgid "Cancel"
+msgstr "Mégsem"
+
+#: apps/client/src/components/ai-actions.tsx:107
+#: apps/client/src/components/ai-actions.tsx:110
+msgid "Casual"
+msgstr "Alkalmi"
+
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:98
+msgid "Change"
+msgstr ""
+
+#: apps/client/src/components/locale-switch.tsx:17
+msgid "Change Language"
+msgstr "Nyelvváltás"
+
+#: apps/client/src/pages/auth/reset-password/page.tsx:99
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:115
+msgid "Change Password"
+msgstr "Jelszó módosítása"
+
+#: apps/client/src/components/ai-actions.tsx:101
+msgid "Change Tone"
+msgstr "Hangszínváltás"
+
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:70
+msgid "Check your email for the confirmation link to update your email address."
+msgstr "Ellenőrizze e-mailjét a megerősítő linkért, hogy frissítse e-mail címét."
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:82
+msgid "Checkout canceled"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:187
+msgid "Choose a plan that works best for you. You can change or cancel your subscription at any time."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:249
+msgid "Close"
+msgstr "Bezárás"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:49
+msgid "Cloud-hosted solution"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:201
+msgid "Code"
+msgstr "Kód"
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:52
+msgid "Code must be exactly 6 digits long."
+msgstr "A kódnak pontosan 6 számjegyből kell állnia."
+
+#: apps/client/src/pages/home/sections/features/index.tsx:62
+msgid "Collaborative notes"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:40
+msgid "Company"
+msgstr "Cég"
+
+#: apps/client/src/pages/home/sections/support/index.tsx:38
+msgid "Comprehensive user management with profiles, teams, permissions, and activity tracking."
+msgstr ""
+
+#: apps/client/src/components/ai-actions.tsx:119
+#: apps/client/src/components/ai-actions.tsx:122
+msgid "Confident"
+msgstr "Magabiztos"
+
+#: apps/client/src/pages/home/components/footer.tsx:46
+#: apps/client/src/pages/home/contact/page.tsx:5
+msgid "Contact"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/contributors/index.tsx:36
+msgid "Contact Sales"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:234
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:246
+msgid "Continue"
+msgstr "Tovább"
+
+#: apps/client/src/pages/auth/register/page.tsx:64
+#: apps/client/src/pages/auth/register/page.tsx:69
+msgid "Create a new account"
+msgstr "Új fiók létrehozása"
+
+#: apps/client/src/pages/auth/login/page.tsx:65
+msgctxt "This is a link to create a new account"
+msgid "Create one now"
+msgstr "Létrehozás most"
+
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:82
+msgid "Current Password"
+msgstr "Jelenlegi jelszó"
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:145
+msgid "Current Subscription"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:59
+msgid "Custom branding"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:60
+msgid "Customizable dashboards"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/danger.tsx:62
+msgid "Danger Zone"
+msgstr "Veszélyes terület"
+
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:87
+msgid "Dark"
+msgstr "Sötét"
+
+#: apps/client/src/pages/dashboard/_components/sidebar.tsx:101
+msgid "Dashboard"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/danger.tsx:79
+#: apps/client/src/pages/dashboard/settings/_sections/danger.tsx:94
+msgid "Delete Account"
+msgstr "Fiók törlése"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:205
+msgid "Deployment Name"
+msgstr "Telepítés neve"
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:139
+msgid "Disable"
+msgstr "Letiltás"
+
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:154
+msgid "Disable 2FA"
+msgstr "2FA Kikapcsolása"
+
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:220
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:134
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:118
+msgid "Discard"
+msgstr "Elvetés"
+
+#: apps/client/src/pages/home/components/footer.tsx:66
+#: apps/client/src/pages/home/docs/page.tsx:5
+msgid "Documentation"
+msgstr "Dokumentáció"
+
+#: apps/client/src/pages/auth/login/page.tsx:62
+msgid "Don't have an account?"
+msgstr "Nincs fiókod?"
+
+#: apps/client/src/pages/home/sections/testimonials/index.tsx:70
+msgid "Don't just take our word for it. Here's what our customers have to say about their experience with our platform. Have questions or feedback? Reach out to us at <0>{email}</0>."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:107
+msgid "Don't see your language? <0>Help translate the app.</0>"
+msgstr "Nem találod a saját nyelved? <0>Segíts az alkalmazás lefordításában.</0>"
+
+#: apps/client/src/pages/auth/forgot-password/page.tsx:82
+#: apps/client/src/pages/auth/login/page.tsx:90
+#: apps/client/src/pages/auth/register/page.tsx:141
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:181
+msgid "Email"
+msgstr "E-mail"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:54
+msgid "Email notifications"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:21
+msgid "Empowering teams with powerful tools to streamline workflows and boost productivity."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:163
+msgid "Enable 2FA"
+msgstr "2FA bekapcsolása"
+
+#: apps/client/src/pages/auth/reset-password/page.tsx:67
+msgid "Enter a new password below, and make sure it's secure."
+msgstr "Írjon be egy új jelszót alább, és győződjön meg arról, hogy biztonságos."
+
+#: apps/client/src/pages/auth/backup-otp/page.tsx:59
+msgid "Enter one of the 10 backup codes you saved when you enabled two-factor authentication."
+msgstr "Adja meg a kétfaktoros hitelesítés engedélyezésekor elmentett 10 biztonsági kód egyikét."
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:170
+msgid "Enter the 6-digit code from your authenticator app to verify that 2FA has been setup correctly."
+msgstr "Írja be a 6 számjegyű kódot a hitelesítési alkalmazásból, hogy ellenőrizze, hogy a 2FA helyesen lett-e beállítva."
+
+#: apps/client/src/pages/auth/verify-otp/page.tsx:60
+msgid "Enter the one-time password provided by your authenticator app below."
+msgstr "Írja be az alábbiakban a hitelesítési alkalmazás által megadott egyszeri jelszót."
+
+#: apps/client/src/pages/auth/forgot-password/page.tsx:70
+msgid "Enter your email address and we will send you a link to reset your password if the account exists."
+msgstr "Adja meg e-mail címét, és küldünk egy linket a jelszó visszaállításához, ha a fiók létezik."
+
+#: apps/client/src/pages/home/sections/features/index.tsx:55
+msgid "Enterprise-grade security"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/support/index.tsx:33
+msgid "Enterprise-grade security with encryption, role-based access control, and compliance with industry standards."
+msgstr ""
+
+#: apps/client/src/pages/public/error.tsx:46
+msgid "Error {statusCode}"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:49
+msgid "Error loading stock data:"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:96
+msgid "Error subscribing"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/support/index.tsx:51
+msgid "Everything you need to launch and scale your SaaS product, built right in. No need to integrate multiple services."
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:104
+msgid "Everything you need to succeed."
+msgstr ""
+
+#: apps/client/src/pages/home/sections/hero/index.tsx:72
+msgid "Explore what's included"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:64
+msgid "Export to multiple formats"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:63
+msgid "FAQ"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:31
+msgid "Features"
+msgstr ""
+
+#: apps/client/src/components/ai-actions.tsx:90
+msgid "Fix Spelling & Grammar"
+msgstr "Helyesírás és nyelvtan javítása"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:45
+msgid "Flexible pricing plans"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:280
+msgid "Forget"
+msgstr "Elfelejt"
+
+#: apps/client/src/pages/auth/login/page.tsx:131
+msgid "Forgot Password?"
+msgstr "Elfelejtette jelszavát?"
+
+#: apps/client/src/pages/auth/forgot-password/page.tsx:68
+msgid "Forgot your password?"
+msgstr "Elfelejtette a jelszavát?"
+
+#: apps/client/src/components/ai-actions.tsx:125
+#: apps/client/src/components/ai-actions.tsx:128
+msgid "Friendly"
+msgstr "Barátságos"
+
+#: apps/client/src/pages/auth/_components/social-auth.tsx:18
+msgid "GitHub"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:52
+msgid "GitHub integration"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/statistics/index.tsx:12
+msgid "GitHub Stars"
+msgstr "GitHub csillagok"
+
+#: apps/client/src/pages/auth/verify-email/page.tsx:67
+msgid "Go to Dashboard"
+msgstr "Tovább az Irányítópultra"
+
+#: apps/client/src/pages/public/error.tsx:55
+msgid "Go to home"
+msgstr ""
+
+#: apps/client/src/pages/auth/_components/social-auth.tsx:31
+msgid "Google"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:53
+msgid "Google Workspace integration"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:107
+msgid "Here, you can update your account information such as your profile picture, name and username."
+msgstr "Itt frissítheti fiókja adatait, például profilképét, nevét és felhasználónevét."
+
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:68
+msgid "Here, you can update your profile to customize and personalize your experience."
+msgstr "Itt frissítheti profilját, hogy személyre szabhassa élményét."
+
+#: apps/client/src/pages/auth/login/page.tsx:115
+#: apps/client/src/pages/auth/register/page.tsx:168
+#: apps/client/src/pages/auth/reset-password/page.tsx:88
+msgid "Hold <0>Ctrl</0> to display your password temporarily."
+msgstr "Tartsa lenyomva a <0>Ctrl</0> billentyűt jelszavának ideiglenes megjelenítéséhez."
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:128
+msgid "If you disable two-factor authentication, you will no longer be required to enter a verification code when logging in."
+msgstr "Ha kikapcsolja a kétfaktoros hitelesítést, a bejelentkezéskor nem kell többé ellenőrző kódot megadnia."
+
+#: apps/client/src/components/ai-actions.tsx:85
+msgid "Improve Writing"
+msgstr "Az írás javítása"
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:188
+msgid "In case you are unable to scan this QR Code, you can also copy-paste this link into your authenticator app."
+msgstr "Ha nem tudja beolvasni ezt a QR-kódot, akkor másolja be ezt a linket a hitelesítési alkalmazásba."
+
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:67
+msgid "In this section, you can change your password and enable/disable two-factor authentication."
+msgstr "Ebben a szakaszban módosíthatja jelszavát, és engedélyezheti/letilthatja a kétfaktoros hitelesítést."
+
+#: apps/client/src/pages/dashboard/settings/_sections/danger.tsx:64
+msgid "In this section, you can delete your account and all the data associated to your user, but please keep in mind that <0>this action is irreversible</0>."
+msgstr "Ebben a szakaszban törölheti fiókját és a felhasználóhoz kapcsolódó összes adatot, de ne feledje, hogy <0>ez a művelet visszafordíthatatlan</0>."
+
+#: apps/client/src/pages/home/sections/support/index.tsx:28
+msgid "Integrated payment processing with support for subscriptions, one-time payments, and multiple payment methods."
+msgstr ""
+
+#: apps/client/src/services/errors/translate-error.ts:7
+msgid "It doesn't look like a user exists with the credentials you provided."
+msgstr "Úgy tűnik, hogy nem létezik felhasználó az Ön által megadott hitelesítő adatokkal."
+
+#: apps/client/src/services/errors/translate-error.ts:37
+msgid "It looks like the backup code you provided is invalid or used. Please try again."
+msgstr "Úgy tűnik, hogy az Ön által megadott biztonsági kód érvénytelen vagy használt. Kérjük, próbálja meg újra."
+
+#: apps/client/src/services/errors/translate-error.ts:19
+msgid "It looks like the reset token you provided is invalid. Please try restarting the password reset process again."
+msgstr "Úgy tűnik, hogy a megadott visszaállítási token érvénytelen. Kérjük, próbálja meg újraindítani a jelszó-visszaállítási folyamatot."
+
+#: apps/client/src/services/errors/translate-error.ts:34
+msgid "It looks like the two-factor authentication code you provided is invalid. Please try again."
+msgstr "Úgy tűnik, hogy az Ön által megadott kétfaktoros hitelesítési kód érvénytelen. Kérjük, próbálja meg újra."
+
+#: apps/client/src/services/errors/translate-error.ts:22
+msgid "It looks like the verification token you provided is invalid. Please try restarting the verification process again."
+msgstr "Úgy tűnik, hogy az Ön által megadott ellenőrző jelszó érvénytelen. Kérjük, próbálja meg újraindítani az ellenőrzési folyamatot."
+
+#: apps/client/src/services/errors/translate-error.ts:25
+msgid "It looks like your email address has already been verified."
+msgstr "Úgy tűnik, hogy az e-mail címét már ellenőrizték."
+
+#: apps/client/src/pages/auth/register/page.tsx:101
+msgctxt "Localized version of a placeholder name. For example, Max Mustermann in German or Jan Kowalski in Polish."
+msgid "John Doe"
+msgstr "Gipsz Jakab"
+
+#: apps/client/src/pages/auth/register/page.tsx:123
+msgctxt "Localized version of a placeholder username. For example, max.mustermann in German or jan.kowalski in Polish."
+msgid "john.doe"
+msgstr "gipsz.jakab"
+
+#: apps/client/src/pages/auth/register/page.tsx:145
+msgctxt "Localized version of a placeholder email. For example, max.mustermann@example.de in German or jan.kowalski@example.pl in Polish."
+msgid "john.doe@example.com"
+msgstr "gipsz.jakab@example.com"
+
+#: apps/client/src/pages/home/sections/contributors/index.tsx:18
+msgid "Join thousands of teams already using our platform to streamline their workflow and boost productivity. Start your free trial today - no credit card required."
+msgstr ""
+
+#: apps/client/src/pages/home/sections/logo-cloud/index.tsx:47
+msgid "Join thousands of teams already using our platform. <0>Get in touch</0>."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:101
+msgid "Language"
+msgstr "Nyelv"
+
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:60
+msgid "Last updated:"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:86
+msgid "Light"
+msgstr "Fény"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:68
+msgid "Light or dark theme"
+msgstr "Világos vagy sötét téma"
+
+#: apps/client/src/pages/home/sections/hero/call-to-action.tsx:14
+msgid "Live Demo"
+msgstr ""
+
+#: apps/client/src/components/user-options.tsx:38
+msgid "Logout"
+msgstr "Kijelentkezés"
+
+#: apps/client/src/pages/auth/verify-otp/page.tsx:64
+msgid "Lost your device?"
+msgstr "Elvesztette a készülékét?"
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:178
+msgid "Manage Subscription"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:218
+msgid "Max Tokens"
+msgstr "Max zsetonok"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:205
+msgid "Model"
+msgstr "Modell"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:50
+msgid "Multi-language support"
+msgstr ""
+
+#: apps/client/src/pages/auth/backup-otp/page.tsx:52
+#: apps/client/src/pages/auth/forgot-password/page.tsx:49
+#: apps/client/src/pages/auth/login/page.tsx:55
+#: apps/client/src/pages/auth/register/page.tsx:64
+#: apps/client/src/pages/auth/reset-password/page.tsx:60
+#: apps/client/src/pages/auth/verify-email/page.tsx:43
+#: apps/client/src/pages/auth/verify-otp/page.tsx:52
+#: apps/client/src/pages/dashboard/agent-chat/page.tsx:34
+#: apps/client/src/pages/dashboard/billing/page.tsx:119
+#: apps/client/src/pages/dashboard/settings/page.tsx:16
+#: apps/client/src/pages/home/page.tsx:23
+msgid "My SaaS"
+msgstr ""
+
+#: apps/client/src/pages/auth/register/page.tsx:98
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:153
+msgid "Name"
+msgstr "Név"
+
+#: apps/client/src/pages/dashboard/agent-chat/page.tsx:112
+msgid "New chat"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:96
+msgid "New Password"
+msgstr "Új Jelszó"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:48
+msgid "No hidden fees or tracking"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:251
+msgid "No plans available"
+msgstr ""
+
+#: apps/client/src/components/locale-combobox.tsx:45
+msgid "No results found"
+msgstr "Nincs találat"
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:133
+msgid "Note: This will make your account less secure."
+msgstr "Megjegyzés: Ezzel fiókja kevésbé lesz biztonságos."
+
+#: apps/client/src/pages/auth/verify-otp/page.tsx:82
+msgid "One-Time Password"
+msgstr "Egyszer használható jelszó"
+
+#: apps/client/src/components/ai-actions.tsx:56
+#: apps/client/src/libs/axios.ts:30
+msgid "Oops, the server returned an error."
+msgstr "Hoppá, a szerver hibát jelzett."
+
+#: apps/client/src/services/openai/change-tone.ts:35
+#: apps/client/src/services/openai/fix-grammar.ts:33
+#: apps/client/src/services/openai/improve-writing.ts:33
+msgid "OpenAI did not return any choices for your text."
+msgstr "Az OpenAI nem adott vissza semmilyen választási lehetőséget a szövegedre."
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:120
+msgid "OpenAI/Azure OpenAI/Ollama Integration"
+msgstr "OpenAI/Azure OpenAI/Ollama integráció"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:169
+msgid "OpenAI/Ollama API Key"
+msgstr "OpenAI/Ollama API kulcs"
+
+#: apps/client/src/pages/auth/layout.tsx:46
+msgctxt "The user can either login with email/password, or continue with GitHub or Google."
+msgid "or continue with"
+msgstr "vagy folytassa ezzel"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:58
+msgid "Organize with folders"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:106
+msgid "Our platform is built with modern technology and best practices, offering a comprehensive suite of features designed to help your team work smarter and faster."
+msgstr ""
+
+#: apps/client/src/pages/auth/login/page.tsx:110
+#: apps/client/src/pages/auth/register/page.tsx:163
+#: apps/client/src/pages/auth/reset-password/page.tsx:83
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:73
+msgid "Password"
+msgstr "Jelszó"
+
+#: apps/client/src/pages/home/sections/support/index.tsx:27
+msgid "Payments"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:121
+msgid "Picture"
+msgstr "Fénykép"
+
+#: apps/client/src/components/copyright.tsx:31
+msgid "Platform"
+msgstr ""
+
+#: apps/client/src/pages/auth/verify-email/page.tsx:59
+msgid "Please note that this step is completely optional."
+msgstr "Kérjük, vegye figyelembe, hogy ez a lépés teljesen opcionális."
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:228
+msgid "Please store your backup codes in a secure location. You can use one of these one-time use codes to login in case you lose access to your authenticator app."
+msgstr "Kérjük, tárolja biztonsági kódjait biztonságos helyen. Az egyszer használatos kódok valamelyikével bejelentkezhet arra az esetre, ha elveszítené a hozzáférést a hitelesítő alkalmazáshoz."
+
+#: apps/client/src/pages/home/sections/features/index.tsx:95
+msgid "Powered by"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/agent-chat/page.tsx:145
+msgid "Powered by Tavily web search + OpenAI"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:94
+msgid "Price"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:34
+#: apps/client/src/pages/home/pricing/page.tsx:5
+msgid "Pricing"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:61
+msgid "Priority support"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:49
+#: apps/client/src/pages/home/privacy-policy/page.tsx:5
+msgid "Privacy Policy"
+msgstr "Adatvédelmi irányelvek"
+
+#: apps/client/src/pages/home/components/footer.tsx:28
+msgid "Product"
+msgstr ""
+
+#: apps/client/src/components/ai-actions.tsx:113
+#: apps/client/src/components/ai-actions.tsx:116
+msgid "Professional"
+msgstr "Professzionális"
+
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:66
+msgid "Profile"
+msgstr "Profil"
+
+#: apps/client/src/pages/home/sections/statistics/index.tsx:14
+msgid "Projects Created"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/contributors/index.tsx:41
+msgid "Questions? Our team is here to help. Reach out anytime and we'll get back to you within 24 hours."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:17
+msgid "Reactive Resume"
+msgstr "Reaktív önéletrajz"
+
+#: apps/client/src/pages/home/sections/hero/call-to-action.tsx:20
+msgid "Read docs"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/contributors/index.tsx:16
+msgid "Ready to get started?"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:156
+msgid "Renews on"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:199
+msgid "Resend email confirmation link"
+msgstr "E-mail megerősítő link újraküldése"
+
+#: apps/client/src/pages/auth/reset-password/page.tsx:60
+#: apps/client/src/pages/auth/reset-password/page.tsx:65
+msgid "Reset your password"
+msgstr "Jelszó visszaállítása"
+
+#: apps/client/src/pages/home/components/footer.tsx:60
+msgid "Resources"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:65
+msgid "Rich text editor"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/features/index.tsx:63
+msgid "Role-based access control"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:217
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:131
+msgid "Save Changes"
+msgstr "Változások mentése"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:274
+msgid "Save Locally"
+msgstr "Helyben menteni"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:274
+msgid "Saved"
+msgstr "Megmentett"
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:168
+msgid "Scan the QR code below with your authenticator app to setup 2FA on your account."
+msgstr "Szkennelje be az alábbi QR-kódot a hitelesítési alkalmazással a 2FA beállításához a fiókján."
+
+#: apps/client/src/components/locale-combobox.tsx:41
+msgid "Search for a language"
+msgstr "Nyelv keresése"
+
+#: apps/client/src/pages/dashboard/agent-chat/page.tsx:64
+msgid "Search the web and get AI-summarized answers"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/support/index.tsx:23
+msgid "Secure user authentication with multiple sign-in options including email, OAuth providers, and two-factor authentication."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:65
+#: apps/client/src/pages/home/sections/support/index.tsx:32
+msgid "Security"
+msgstr "Biztonság"
+
+#: apps/client/src/pages/auth/forgot-password/page.tsx:104
+msgid "Send Email"
+msgstr "E-mail küldése"
+
+#: apps/client/src/components/user-options.tsx:32
+#: apps/client/src/pages/dashboard/_components/sidebar.tsx:119
+#: apps/client/src/pages/dashboard/settings/page.tsx:16
+#: apps/client/src/pages/dashboard/settings/page.tsx:26
+msgid "Settings"
+msgstr "Beállítások"
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:159
+msgid "Setup two-factor authentication on your account"
+msgstr "Kétfaktoros hitelesítés beállítása a fiókjában"
+
+#: apps/client/src/pages/auth/backup-otp/page.tsx:103
+#: apps/client/src/pages/auth/login/page.tsx:127
+#: apps/client/src/pages/auth/verify-otp/page.tsx:92
+msgid "Sign in"
+msgstr "Bejelentkezés"
+
+#: apps/client/src/pages/auth/register/page.tsx:74
+msgid "Sign in now"
+msgstr "Jelentkezzen be most"
+
+#: apps/client/src/pages/auth/login/page.tsx:55
+#: apps/client/src/pages/auth/login/page.tsx:60
+msgid "Sign in to your account"
+msgstr "Jelentkezzen be fiókjába"
+
+#: apps/client/src/pages/auth/register/page.tsx:179
+msgid "Sign up"
+msgstr "Feliratkozás"
+
+#: apps/client/src/pages/auth/login/page.tsx:74
+msgid "Signing in via email is currently disabled by the administrator."
+msgstr "Az e-mail címmel történő bejelentkezés jelenleg le van tiltva a rendszergazda által."
+
+#: apps/client/src/pages/auth/register/page.tsx:82
+msgid "Signups are currently disabled by the administrator."
+msgstr "A regisztrációkat jelenleg a rendszergazda letiltotta."
+
+#: apps/client/src/services/errors/translate-error.ts:43
+msgid "Something went wrong while processing your request. Please try again later or raise an issue on GitHub."
+msgstr "Valami hiba történt a kérés feldolgozása során. Kérjük, próbálja meg később újra, vagy jelezzen problémát a GitHubon."
+
+#: apps/client/src/pages/home/sections/contributors/index.tsx:28
+msgid "Start Free Trial"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:149
+msgid "Status"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:17
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:27
+msgid "Stock Chat"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:162
+msgid "Store your backup codes securely"
+msgstr "Tárolja biztonságosan a biztonsági kódokat"
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:75
+msgid "Subscription successful!"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:69
+#: apps/client/src/pages/home/support/page.tsx:5
+msgid "Support"
+msgstr ""
+
+#: apps/client/src/components/theme-switch.tsx:31
+msgid "Switch to Dark Mode"
+msgstr "Sötét üzemmódra váltás"
+
+#: apps/client/src/components/theme-switch.tsx:29
+msgid "Switch to Light Mode"
+msgstr "Fény üzemmódra váltás"
+
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:85
+msgid "System"
+msgstr "Rendszer"
+
+#: apps/client/src/pages/home/components/footer.tsx:52
+#: apps/client/src/pages/home/terms/page.tsx:5
+msgid "Terms of Service"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/testimonials/index.tsx:68
+msgid "Testimonials"
+msgstr "Ajánlások"
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:76
+msgid "Thank you for subscribing. Your plan is now active."
+msgstr ""
+
+#: apps/client/src/pages/public/error.tsx:17
+msgid "The page you're looking for doesn't exist."
+msgstr ""
+
+#: apps/client/src/pages/public/error.tsx:29
+msgid "The request was invalid."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:79
+msgid "Theme"
+msgstr "Téma"
+
+#: apps/client/src/services/errors/translate-error.ts:40
+msgid "There was an error connecting to the browser. Please make sure 'chrome' is running and reachable."
+msgstr "Hiba történt a böngészőhöz való csatlakozásban. Kérjük, győződjön meg róla, hogy a 'chrome' fut és elérhető."
+
+#: apps/client/src/services/errors/translate-error.ts:16
+msgid "This email address is associated with an OAuth account. Please sign in with your OAuth provider."
+msgstr "Ez az e-mail cím egy OAuth-fiókhoz kapcsolódik. Kérjük, jelentkezzen be az OAuth-szolgáltatójával."
+
+#: apps/client/src/pages/home/sections/features/index.tsx:47
+msgid "Transparent pricing"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/logo-cloud/index.tsx:39
+msgid "Trusted by teams at leading companies worldwide:"
+msgstr ""
+
+#: apps/client/src/pages/auth/verify-otp/page.tsx:52
+#: apps/client/src/pages/auth/verify-otp/page.tsx:57
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:129
+msgid "Two-Factor Authentication"
+msgstr "Kétfaktoros hitelesítés"
+
+#: apps/client/src/services/errors/translate-error.ts:31
+msgid "Two-factor authentication is already enabled for this account."
+msgstr "A kétfaktoros hitelesítés már engedélyezve van ezen a fiókon."
+
+#: apps/client/src/services/errors/translate-error.ts:28
+msgid "Two-factor authentication is not enabled for this account."
+msgstr "A kétfaktoros hitelesítés nincs engedélyezve ezen a fiókon."
+
+#: apps/client/src/pages/dashboard/settings/_sections/danger.tsx:84
+msgid "Type <0>delete</0> to confirm deleting your account."
+msgstr "A fiók törlésének megerősítéséhez írja be a <0>törlés</0> gombot."
+
+#: apps/client/src/pages/home/sections/features/index.tsx:57
+msgid "Unlimited projects"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:192
+msgid "Unverified"
+msgstr "Ellenőrizetlen"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:247
+msgid "Use Azure OpenAI"
+msgstr "Azure OpenAI használata"
+
+#: apps/client/src/components/theme-switch.tsx:30
+msgid "Use System Theme"
+msgstr "Rendszer téma használata"
+
+#: apps/client/src/pages/auth/backup-otp/page.tsx:52
+#: apps/client/src/pages/auth/backup-otp/page.tsx:57
+msgid "Use your backup code"
+msgstr "Használja a biztonsági kódot"
+
+#: apps/client/src/services/errors/translate-error.ts:13
+msgid "User does not have an associated 'secrets' record. Please report this issue on GitHub."
+msgstr "A felhasználónak nincs kapcsolódó \"titkok\" rekordja. Kérjük, jelentse ezt a problémát a GitHubon."
+
+#: apps/client/src/pages/home/sections/support/index.tsx:37
+msgid "User Management"
+msgstr ""
+
+#: apps/client/src/pages/auth/register/page.tsx:119
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:167
+msgid "Username"
+msgstr "Felhasználónév"
+
+#: apps/client/src/pages/home/sections/statistics/index.tsx:13
+msgid "Users Signed Up"
+msgstr "Regisztrált felhasználók"
+
+#: apps/client/src/pages/dashboard/settings/_sections/account.tsx:192
+msgid "Verified"
+msgstr "Ellenőrzött"
+
+#: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:161
+msgid "Verify that two-factor authentication has been setup correctly"
+msgstr "Ellenőrizze, hogy a kétfaktoros hitelesítés helyesen lett-e beállítva."
+
+#: apps/client/src/pages/auth/verify-email/page.tsx:43
+#: apps/client/src/pages/auth/verify-email/page.tsx:48
+msgid "Verify your email address"
+msgstr "Ellenőrizze az e-mail címét"
+
+#: apps/client/src/pages/home/sections/hero/index.tsx:67
+msgid "Version 1.0"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/stock-chat/page.tsx:109
+msgid "Volume"
+msgstr ""
+
+#: apps/client/src/pages/auth/verify-email/page.tsx:61
+msgid "We verify your email address only to ensure that we can send you a password reset link in case you forget your password."
+msgstr "Csak azért ellenőrizzük az e-mail címét, hogy küldhessünk Önnek egy jelszó-visszaállítási linket, ha elfelejtené a jelszavát."
+
+#: apps/client/src/pages/home/sections/features/index.tsx:66
+msgid "Web-based platform"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/agent-chat/page.tsx:56
+msgid "What do you want to know?"
+msgstr ""
+
+#: apps/client/src/pages/public/error.tsx:26
+msgid "You are not authorized to access this page."
+msgstr ""
+
+#: apps/client/src/pages/auth/login/page.tsx:99
+msgid "You can also enter your username."
+msgstr "Megadhatja a felhasználónevét is."
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:144
+msgid "You can also integrate with Azure OpenAI by enabling the <0>Use Azure OpenAI</0> checkbox and setting the Resource URL to your Azure OpenAI resource: <1>https://your-resource.openai.azure.com</1>. Set the deployment name in the Model field and specify the appropriate API version for your Azure deployment."
+msgstr "Az Azure OpenAI-val is integrálhatja az <0>Azure OpenAI-t az Azure OpenAI használata</0> jelölőnégyzet engedélyezésével és az Azure OpenAI-erőforrás URL-jének beállításával: <1>https://your-resource.openai.azure.com.</1> Állítsa be a telepítés nevét a Modell mezőben, és adja meg az Azure telepítéshez tartozó megfelelő API-verziót."
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:153
+msgid "You can also integrate with Ollama simply by setting the API key to<0>sk-1234567890abcdef</0> and the Base URL to your Ollama URL, i.e.<1>http://localhost:11434/v1</1>. You can also pick and choose models and set the max tokens as per your preference."
+msgstr "Az Ollama-val is integrálhatod, egyszerűen az API kulcs <0>tosk-1234567890abcdef</0> és a Base URL az Ollama URL-hez, azaz<1>http://localhost:11434/v1</1>. Kiválaszthatod a modelleket és beállíthatod a maximális tokeneket, ahogyan azt szeretnéd."
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:122
+msgid "You can make use of the OpenAI API, Azure OpenAI, or Ollama to help you generate content, or improve your writing while composing your resume."
+msgstr "Az OpenAI API-t, az Azure OpenAI-t vagy az Ollama-t használhatja a tartalomgeneráláshoz, vagy javíthatja az írást az önéletrajz megírása közben."
+
+#: apps/client/src/pages/public/error.tsx:20
+msgid "You don't have permission to access this page."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:128
+msgid "You have the option to <0>obtain your own OpenAI API key</0>. This key empowers you to leverage the API as you see fit. Alternatively, if you wish to disable the AI features in Reactive Resume altogether, you can simply remove the key from your settings."
+msgstr "Lehetősége van <0>saját OpenAI API-kulcsot szerezni</0>. Ez a kulcs lehetővé teszi, hogy az API-t saját belátása szerint használhassa. Alternatív megoldásként, ha teljesen le szeretné tiltani a Reactive Resume AI funkcióit, egyszerűen eltávolíthatja a kulcsot a beállításai közül."
+
+#: apps/client/src/pages/auth/verify-email/page.tsx:50
+msgid "You should have received an email from <0>My SaaS</0> with a link to verify your account."
+msgstr ""
+
+#: apps/client/src/pages/auth/forgot-password/page.tsx:49
+#: apps/client/src/pages/auth/forgot-password/page.tsx:54
+msgid "You've got mail!"
+msgstr "Levelet kaptál!"
+
+#: apps/client/src/pages/dashboard/settings/_sections/danger.tsx:52
+msgid "Your account and all your data has been deleted successfully. Goodbye!"
+msgstr "A fiókja és minden adata sikeresen törlődött. Viszontlátásra!"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:289
+msgid "Your API key is securely stored in the browser's local storage and is only utilized when making requests to OpenAI via their official SDK. Rest assured that your key is not transmitted to any external server except when interacting with OpenAI's services."
+msgstr "Az API-kulcs biztonságosan tárolódik a böngésző helyi tárolójában, és csak akkor kerül felhasználásra, amikor a hivatalos SDK-n keresztül kéréseket intéz az OpenAI-hoz. Biztos lehet benne, hogy a kulcsa nem kerül továbbításra semmilyen külső szerverre, kivéve, amikor az OpenAI szolgáltatásaival lép kapcsolatba."
+
+#: apps/client/src/pages/auth/verify-email/page.tsx:28
+msgid "Your email address has been verified successfully."
+msgstr "Az e-mail címét sikeresen ellenőriztük."
+
+#: apps/client/src/services/openai/client.ts:11
+msgid "Your OpenAI API Key has not been set yet. Please go to your account settings to enable OpenAI Integration."
+msgstr "Az OpenAI API kulcsa még nem lett beállítva. Kérjük, lépjen be a fiókbeállításokba az OpenAI integráció engedélyezéséhez."
+
+#: apps/client/src/pages/dashboard/settings/_sections/security.tsx:56
+msgid "Your password has been updated successfully."
+msgstr "Jelszavát sikeresen frissítettük."
+
+#: apps/client/src/pages/home/components/footer.tsx:18
+msgid "Your SaaS Platform"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:83
+msgid "Your subscription checkout was canceled."
+msgstr ""
+
+#: apps/client/src/pages/dashboard/billing/page.tsx:164
+msgid "Your subscription will be canceled at the end of the billing period."
+msgstr ""

@@ -1,0 +1,113 @@
+name: Deploy to VPS
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: "${{ github.workflow }}-${{ github.ref }}"
+  cancel-in-progress: true
+
+env:
+  SERVER_IMAGE: ghcr.io/${{ github.repository_owner }}/my-saas-server
+  GRAPHS_IMAGE: ghcr.io/${{ github.repository_owner }}/my-saas-graphs
+
+jobs:
+  build-server:
+    name: Build & Push Server Image
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        env:
+          BUILDKIT_PROGRESS: plain
+        with:
+          context: .
+          platforms: linux/amd64
+          push: true
+          tags: ghcr.io/${{ github.repository_owner }}/my-saas-server:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+  build-graphs:
+    name: Build & Push Graphs Image
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install LangGraph CLI
+        run: pip install langgraph-cli
+
+      - name: Build LangGraph image
+        working-directory: apps/graphs
+        run: langgraph build -t my-saas-graphs:latest
+
+      - name: Push to ghcr.io
+        run: |
+          docker tag my-saas-graphs:latest ghcr.io/${{ github.repository_owner }}/my-saas-graphs:latest
+          docker push ghcr.io/${{ github.repository_owner }}/my-saas-graphs:latest
+
+  deploy:
+    name: Deploy to VPS
+    runs-on: ubuntu-latest
+    needs: [build-server, build-graphs]
+
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1
+        env:
+          GH_ACTOR: ${{ github.actor }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SERVER_IMAGE: ghcr.io/${{ github.repository_owner }}/my-saas-server:latest
+          GRAPHS_IMAGE: ghcr.io/${{ github.repository_owner }}/my-saas-graphs:latest
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          envs: GH_ACTOR,GH_TOKEN,SERVER_IMAGE,GRAPHS_IMAGE
+          script: |
+            echo "$GH_TOKEN" | docker login ghcr.io -u "$GH_ACTOR" --password-stdin
+            cd ~/my-saas
+            git pull
+            SERVER_IMAGE=$SERVER_IMAGE GRAPHS_IMAGE=$GRAPHS_IMAGE \
+              docker compose --project-directory . -f tools/compose/vps.yml pull
+            SERVER_IMAGE=$SERVER_IMAGE GRAPHS_IMAGE=$GRAPHS_IMAGE \
+              docker compose --project-directory . -f tools/compose/vps.yml up -d --remove-orphans
+            docker compose --project-directory . -f tools/compose/vps.yml run --rm \
+              -e COREPACK_ENABLE_DOWNLOAD_PROMPT=0 \
+              server pnpm prisma migrate deploy
+            docker logout ghcr.io
+            docker image prune -f

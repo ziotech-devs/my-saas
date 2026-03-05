@@ -1,0 +1,21 @@
+{
+  "version": "48.0.0",
+  "files": {
+    "33f2c7bb572cb99bdc45efe6e6b6e695ebff88f9189102494645c0402dd80328": {
+      "displayName": "MySaasEcrStack Template",
+      "source": {
+        "path": "MySaasEcrStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "301394200094-us-east-1-56f55324": {
+          "bucketName": "cdk-hnb659fds-assets-301394200094-us-east-1",
+          "objectKey": "33f2c7bb572cb99bdc45efe6e6b6e695ebff88f9189102494645c0402dd80328.json",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::301394200094:role/cdk-hnb659fds-file-publishing-role-301394200094-us-east-1"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

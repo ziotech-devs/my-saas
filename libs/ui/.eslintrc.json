@@ -1,0 +1,33 @@
+{
+  "extends": ["plugin:@nx/react", "../../.eslintrc.json"],
+  "ignorePatterns": ["!**/*"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        // eslint
+        "@typescript-eslint/no-require-imports": "off",
+
+        // react
+        "react/no-unescaped-entities": "off",
+        "react/jsx-sort-props": [
+          "error",
+          {
+            "reservedFirst": true,
+            "callbacksLast": true,
+            "shorthandFirst": true,
+            "noSortAlphabetically": true
+          }
+        ]
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {}
+    },
+    {
+      "files": ["*.js", "*.jsx"],
+      "rules": {}
+    }
+  ]
+}

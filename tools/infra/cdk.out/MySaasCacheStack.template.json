@@ -1,0 +1,113 @@
+{
+ "Description": "My SaaS - Cache infrastructure (ElastiCache Redis)",
+ "Resources": {
+  "RedisSubnetGroup": {
+   "Type": "AWS::ElastiCache::SubnetGroup",
+   "Properties": {
+    "CacheSubnetGroupName": "my-saas-redis-subnet-group",
+    "Description": "Subnet group for LangGraph Redis",
+    "SubnetIds": [
+     {
+      "Fn::ImportValue": "MySaasNetworkStack:ExportsOutputRefVpcPrivateSubnet1Subnet536B997AFD4CC940"
+     },
+     {
+      "Fn::ImportValue": "MySaasNetworkStack:ExportsOutputRefVpcPrivateSubnet2Subnet3788AAA1380949A3"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "MySaasCacheStack/RedisSubnetGroup"
+   }
+  },
+  "RedisCluster": {
+   "Type": "AWS::ElastiCache::CacheCluster",
+   "Properties": {
+    "CacheNodeType": "cache.t3.micro",
+    "CacheSubnetGroupName": {
+     "Ref": "RedisSubnetGroup"
+    },
+    "ClusterName": "my-saas-redis",
+    "Engine": "redis",
+    "NumCacheNodes": 1,
+    "VpcSecurityGroupIds": [
+     {
+      "Fn::ImportValue": "MySaasNetworkStack:ExportsOutputFnGetAttRedisSecurityGroupB05951F6GroupIdECA64B37"
+     }
+    ]
+   },
+   "DependsOn": [
+    "RedisSubnetGroup"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "MySaasCacheStack/RedisCluster"
+   }
+  },
+  "CDKMetadata": {
+   "Type": "AWS::CDK::Metadata",
+   "Properties": {
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/yXJMQ7CMAwAwLd0TwwEEA/IwE4fgNzUFW6DW8UOHar+HSGmGy5AON/g1OCqPvWTz9zB1hqmyeGqT8qoxgnTi2CLg7S1E7J7mevi4iDxFzFXNSr77mTuCUY9fMIFrnBsRmX2pYrxm+Dx9wtArgl6cQAAAA=="
+   },
+   "Metadata": {
+    "aws:cdk:path": "MySaasCacheStack/CDKMetadata/Default"
+   }
+  }
+ },
+ "Outputs": {
+  "ExportsOutputFnGetAttRedisClusterRedisEndpointAddress2C712DA2": {
+   "Value": {
+    "Fn::GetAtt": [
+     "RedisCluster",
+     "RedisEndpoint.Address"
+    ]
+   },
+   "Export": {
+    "Name": "MySaasCacheStack:ExportsOutputFnGetAttRedisClusterRedisEndpointAddress2C712DA2"
+   }
+  },
+  "ExportsOutputFnGetAttRedisClusterRedisEndpointPortD2710AFC": {
+   "Value": {
+    "Fn::GetAtt": [
+     "RedisCluster",
+     "RedisEndpoint.Port"
+    ]
+   },
+   "Export": {
+    "Name": "MySaasCacheStack:ExportsOutputFnGetAttRedisClusterRedisEndpointPortD2710AFC"
+   }
+  }
+ },
+ "Parameters": {
+  "BootstrapVersion": {
+   "Type": "AWS::SSM::Parameter::Value<String>",
+   "Default": "/cdk-bootstrap/hnb659fds/version",
+   "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]"
+  }
+ },
+ "Rules": {
+  "CheckBootstrapVersion": {
+   "Assertions": [
+    {
+     "Assert": {
+      "Fn::Not": [
+       {
+        "Fn::Contains": [
+         [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+         ],
+         {
+          "Ref": "BootstrapVersion"
+         }
+        ]
+       }
+      ]
+     },
+     "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,138 @@
+{
+ "Description": "My SaaS - Storage infrastructure (S3)",
+ "Resources": {
+  "UploadsBucket5E5E9B64": {
+   "Type": "AWS::S3::Bucket",
+   "Properties": {
+    "BucketEncryption": {
+     "ServerSideEncryptionConfiguration": [
+      {
+       "ServerSideEncryptionByDefault": {
+        "SSEAlgorithm": "AES256"
+       }
+      }
+     ]
+    },
+    "BucketName": "my-saas-uploads-301394200094-us-east-1",
+    "CorsConfiguration": {
+     "CorsRules": [
+      {
+       "AllowedHeaders": [
+        "*"
+       ],
+       "AllowedMethods": [
+        "GET",
+        "PUT",
+        "POST",
+        "DELETE",
+        "HEAD"
+       ],
+       "AllowedOrigins": [
+        "*"
+       ],
+       "ExposedHeaders": [
+        "ETag"
+       ],
+       "MaxAge": 3000
+      }
+     ]
+    },
+    "LifecycleConfiguration": {
+     "Rules": [
+      {
+       "AbortIncompleteMultipartUpload": {
+        "DaysAfterInitiation": 7
+       },
+       "Id": "DeleteIncompleteMultipartUploads",
+       "Status": "Enabled"
+      },
+      {
+       "Id": "TransitionToInfrequentAccess",
+       "Status": "Enabled",
+       "Transitions": [
+        {
+         "StorageClass": "STANDARD_IA",
+         "TransitionInDays": 90
+        }
+       ]
+      }
+     ]
+    },
+    "OwnershipControls": {
+     "Rules": [
+      {
+       "ObjectOwnership": "BucketOwnerEnforced"
+      }
+     ]
+    },
+    "PublicAccessBlockConfiguration": {
+     "BlockPublicAcls": true,
+     "BlockPublicPolicy": true,
+     "IgnorePublicAcls": true,
+     "RestrictPublicBuckets": true
+    }
+   },
+   "UpdateReplacePolicy": "Retain",
+   "DeletionPolicy": "Retain",
+   "Metadata": {
+    "aws:cdk:path": "MySaasStorageStack/UploadsBucket/Resource"
+   }
+  },
+  "CDKMetadata": {
+   "Type": "AWS::CDK::Metadata",
+   "Properties": {
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/zPSMzI21zNUTCwv1k1OydbNyUzSqw4uSUzO1kksL44vNtardipNzk4t0XFOy4Owamt18vJTUvWyivXLjEz0TPUMFLOKMzN1i0rzSjJzU/WCIDQAw6zXGloAAAA="
+   },
+   "Metadata": {
+    "aws:cdk:path": "MySaasStorageStack/CDKMetadata/Default"
+   }
+  }
+ },
+ "Outputs": {
+  "ExportsOutputFnGetAttUploadsBucket5E5E9B64Arn8603C131": {
+   "Value": {
+    "Fn::GetAtt": [
+     "UploadsBucket5E5E9B64",
+     "Arn"
+    ]
+   },
+   "Export": {
+    "Name": "MySaasStorageStack:ExportsOutputFnGetAttUploadsBucket5E5E9B64Arn8603C131"
+   }
+  }
+ },
+ "Parameters": {
+  "BootstrapVersion": {
+   "Type": "AWS::SSM::Parameter::Value<String>",
+   "Default": "/cdk-bootstrap/hnb659fds/version",
+   "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]"
+  }
+ },
+ "Rules": {
+  "CheckBootstrapVersion": {
+   "Assertions": [
+    {
+     "Assert": {
+      "Fn::Not": [
+       {
+        "Fn::Contains": [
+         [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+         ],
+         {
+          "Ref": "BootstrapVersion"
+         }
+        ]
+       }
+      ]
+     },
+     "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI."
+    }
+   ]
+  }
+ }
+}

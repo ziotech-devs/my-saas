@@ -1,0 +1,21 @@
+{
+  "version": "48.0.0",
+  "files": {
+    "2158fdda28767e5e7f2e0b25974c886e8c2270476668e2ac6176b0fe0484602a": {
+      "displayName": "MySaasStorageStack Template",
+      "source": {
+        "path": "MySaasStorageStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "301394200094-us-east-1-c6dee993": {
+          "bucketName": "cdk-hnb659fds-assets-301394200094-us-east-1",
+          "objectKey": "2158fdda28767e5e7f2e0b25974c886e8c2270476668e2ac6176b0fe0484602a.json",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::301394200094:role/cdk-hnb659fds-file-publishing-role-301394200094-us-east-1"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}
