@@ -1,52 +1,52 @@
-## My SaaS – Full-Stack SaaS Boilerplate
+## 🚀 My SaaS – Full-Stack SaaS Boilerplate
 
 **Production-ready SaaS boilerplate with React, NestJS, Prisma, PostgreSQL, Redis, Stripe, and AI features.**
 
-- **Live demo**: [ziotech.dev/saas-boilerplate](https://ziotech.dev/saas-boilerplate)
-- **Documentation**: [docs.ziotech.dev](https://docs.ziotech.dev)
+- 🌐 **Live demo**: [ziotech.dev/saas-boilerplate](https://ziotech.dev/saas-boilerplate)  
+- 📚 **Documentation**: [docs.ziotech.dev](https://docs.ziotech.dev)
 
 ---
 
-### What is this?
+### 💡 What is this?
 
 **My SaaS** is a batteries-included boilerplate for building modern SaaS products. It gives you:
 
-- **Frontend**: React 18, TypeScript, Vite, TailwindCSS, Shadcn, Radix, React Query
-- **Backend**: NestJS, Prisma, PostgreSQL, Redis
-- **Monorepo tooling**: Nx workspace with `pnpm` for fast, incremental dev
+- 🎨 **Frontend**: React 18, TypeScript, Vite, TailwindCSS, Shadcn, Radix, React Query  
+- 🧱 **Backend**: NestJS, Prisma, PostgreSQL, Redis  
+- 🧰 **Monorepo tooling**: Nx workspace with `pnpm` for fast, incremental dev  
 
 The goal is to let you focus on your product logic instead of rebuilding authentication, billing, admin dashboards, and infrastructure from scratch.
 
 ---
 
-### Key Features
+### ✨ Key Features
 
-- **Authentication & Accounts**
+- 🔐 **Authentication & Accounts**
   - Secure user auth and session management
   - Role-based access control (e.g. user/admin)
-- **Billing & Subscriptions (Stripe)**
+- 💳 **Billing & Subscriptions (Stripe)**
   - Stripe-powered subscriptions and payments
   - Plan management and metered billing–ready architecture
-- **Admin Dashboard**
+- 🛠️ **Admin Dashboard**
   - Admin-facing views to manage users and data
   - Ready to extend with your own domain-specific modules
-- **AI Chat & Agents**
+- 🤖 **AI Chat & Agents**
   - AI-powered chat/assistant features
   - LangGraph-based `graphs` app for more advanced workflows
-- **Feature Flags**
+- 🚩 **Feature Flags**
   - Turn features on/off per user or environment
   - Safely roll out new capabilities
-- **Email & Notifications**
+- 📧 **Email & Notifications**
   - Mail sending pipeline with templating
   - Room to plug in your preferred provider
-- **Storage & File Handling**
+- 📁 **Storage & File Handling**
   - Object storage integration (e.g. MinIO/S3-compatible)
   - Upload/download flows ready to extend
-- **Internationalization (i18n)**
+- 🌍 **Internationalization (i18n)**
   - Translation pipeline and i18n-aware UI
-- **Background Jobs & Workers**
+- ⚙️ **Background Jobs & Workers**
   - Redis-backed async processing for long-running tasks
-- **Adminer & Dev Tooling**
+- 🧪 **Adminer & Dev Tooling**
   - Adminer database UI, local dev Docker setup
   - Linting, formatting, and testing wired in
 
@@ -54,7 +54,7 @@ The goal is to let you focus on your product logic instead of rebuilding authent
 
 ---
 
-### Tech Stack & Architecture
+### 🏗️ Tech Stack & Architecture
 
 - **Frontend**
   - React 18 + TypeScript
@@ -89,11 +89,11 @@ The goal is to let you focus on your product logic instead of rebuilding authent
 
 ---
 
-### Local Development
+### 💻 Local Development
 
 You can run the full stack locally using Docker and `compose.dev.yml`.
 
-#### Quick Start (Postgres, Redis, MinIO, Adminer)
+#### ⚡ Quick Start (Postgres, Redis, MinIO, Adminer)
 
 From the repo root, bring up all main services:
 
@@ -123,7 +123,7 @@ This will typically start:
 
 ---
 
-### Scripts (root)
+### 🧾 Scripts (root)
 
 Some commonly used scripts (check `package.json` for the full list):
 
@@ -143,7 +143,7 @@ Some commonly used scripts (check `package.json` for the full list):
 
 ---
 
-### Conventions & Principles
+### 📐 Conventions & Principles
 
 - **Functional components only** in React (no classes)
 - **Named exports only** (no default exports)
@@ -156,10 +156,11 @@ These conventions help keep the codebase predictable, composable, and easy to re
 
 ---
 
-### Next Steps
+### 🚀 Next Steps
 
 - Explore the code under `packages/server` and `packages/client`
 - Tailor the auth, billing, and admin flows to your product
 - Add your own features on top of the existing AI chat, feature flags, and admin tooling
+- Dive deeper into the docs at [docs.ziotech.dev](https://docs.ziotech.dev)
 
 If you run into anything confusing or have ideas for improvements, treat this README as a living document and update it as the project evolves.
