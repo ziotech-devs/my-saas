@@ -299,6 +299,7 @@ msgid "Dark"
 msgstr "Dark"
 
 #: apps/client/src/pages/dashboard/_components/sidebar.tsx:101
+#: apps/client/src/pages/home/sections/hero/call-to-action.tsx:14
 msgid "Dashboard"
 msgstr "Dashboard"
 
@@ -580,8 +581,8 @@ msgid "Light or dark theme"
 msgstr "Light or dark theme"
 
 #: apps/client/src/pages/home/sections/hero/call-to-action.tsx:14
-msgid "Live Demo"
-msgstr "Live Demo"
+msgid "Login"
+msgstr "Login"
 
 #: apps/client/src/components/user-options.tsx:38
 msgid "Logout"

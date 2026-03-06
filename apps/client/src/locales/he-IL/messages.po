@@ -299,6 +299,7 @@ msgid "Dark"
 msgstr "כהה"
 
 #: apps/client/src/pages/dashboard/_components/sidebar.tsx:101
+#: apps/client/src/pages/home/sections/hero/call-to-action.tsx:14
 msgid "Dashboard"
 msgstr ""
 
@@ -580,8 +581,8 @@ msgid "Light or dark theme"
 msgstr "ערכת עיצוב בהירה או כהה"
 
 #: apps/client/src/pages/home/sections/hero/call-to-action.tsx:14
-msgid "Live Demo"
-msgstr "הדגמה חיה"
+msgid "Login"
+msgstr ""
 
 #: apps/client/src/components/user-options.tsx:38
 msgid "Logout"

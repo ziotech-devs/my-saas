@@ -21,7 +21,7 @@ COPY . .
 ENV NX_DAEMON=false
 ENV NX_NO_CLOUD=true
 
-RUN pnpm nx run server:build && pnpm nx run client:build && pnpm nx run docs:build
+RUN pnpm nx run server:build && pnpm nx run client:build && pnpm --filter docs run build
 
 # --- Release Image ---
 FROM base AS release
