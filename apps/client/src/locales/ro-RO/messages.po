@@ -299,6 +299,7 @@ msgid "Dark"
 msgstr "Întunecat"
 
 #: apps/client/src/pages/dashboard/_components/sidebar.tsx:101
+#: apps/client/src/pages/home/sections/hero/call-to-action.tsx:14
 msgid "Dashboard"
 msgstr ""
 
@@ -582,7 +583,7 @@ msgid "Light or dark theme"
 msgstr "Temă deschisă sau întunecată"
 
 #: apps/client/src/pages/home/sections/hero/call-to-action.tsx:14
-msgid "Live Demo"
+msgid "Login"
 msgstr ""
 
 #: apps/client/src/components/user-options.tsx:38
