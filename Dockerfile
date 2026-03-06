@@ -13,16 +13,18 @@ FROM base AS build
 
 COPY .npmrc package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 COPY ./tools/prisma /app/tools/prisma
-COPY apps/docs/package.json ./apps/docs/package.json
 RUN pnpm install --frozen-lockfile
 
 COPY . .
+
+# Install docs dependencies separately — pnpm workspace doesn't create apps/docs/node_modules during root install
+RUN cd apps/docs && pnpm install --frozen-lockfile
 
 # Disable Nx daemon and cloud in Docker — avoids SQLite/EPIPE errors in isolated build env
 ENV NX_DAEMON=false
 ENV NX_NO_CLOUD=true
 
-RUN pnpm nx run server:build && pnpm nx run client:build && pnpm --filter docs run build
+RUN pnpm nx run server:build && pnpm nx run client:build && pnpm nx run docs:build
 
 # --- Release Image ---
 FROM base AS release
