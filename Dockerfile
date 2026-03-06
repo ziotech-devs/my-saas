@@ -13,7 +13,6 @@ FROM base AS build
 
 COPY .npmrc package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 COPY ./tools/prisma /app/tools/prisma
-COPY apps/docs/package.json ./apps/docs/package.json
 RUN pnpm install --frozen-lockfile
 
 COPY . .
