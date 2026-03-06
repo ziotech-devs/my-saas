@@ -23,6 +23,7 @@ volumes:
   langgraph_redis_data:
   letsencrypt_data:
   client_dist:
+  docs_dist:
 
 services:
 
@@ -95,6 +96,15 @@ services:
       - client_dist:/client-dist
     restart: "no"
 
+  # ── Docs init (copies Docusaurus build into shared volume) ─────────────────
+  docs-init:
+    image: ${SERVER_IMAGE:-my-saas-server:latest}
+    user: root
+    entrypoint: ["sh", "-c", "cp -r /app/apps/docs/build/. /docs-dist/"]
+    volumes:
+      - docs_dist:/docs-dist
+    restart: "no"
+
   # ── Nginx (serves React SPA + proxies /api to NestJS) ──────────────────────
   nginx:
     image: nginx:alpine
@@ -116,6 +126,26 @@ services:
     networks:
       - public
       - internal
+
+  # ── Docs (Docusaurus static site) ───────────────────────────────────────────
+  docs:
+    image: nginx:alpine
+    restart: unless-stopped
+    logging: *default-logging
+    depends_on:
+      - docs-init
+    volumes:
+      - docs_dist:/usr/share/nginx/html:ro
+      - ./tools/compose/nginx-docs.conf:/etc/nginx/conf.d/default.conf:ro
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=my-saas_public
+      - traefik.http.routers.docs.rule=Host(`${DOCS_DOMAIN}`)
+      - traefik.http.routers.docs.entrypoints=websecure
+      - traefik.http.routers.docs.tls.certresolver=letsencrypt
+      - traefik.http.services.docs.loadbalancer.server.port=80
+    networks:
+      - public
 
   # ── LangGraph graphs service ────────────────────────────────────────────────
   graphs:

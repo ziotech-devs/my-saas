@@ -21,7 +21,7 @@ COPY . .
 ENV NX_DAEMON=false
 ENV NX_NO_CLOUD=true
 
-RUN pnpm nx run server:build && pnpm nx run client:build
+RUN pnpm nx run server:build && pnpm nx run client:build && pnpm nx run docs:build
 
 # --- Release Image ---
 FROM base AS release
@@ -32,6 +32,7 @@ COPY --chown=node:node --from=build /app/.npmrc /app/package.json /app/pnpm-lock
 RUN pnpm install --prod --frozen-lockfile
 
 COPY --chown=node:node --from=build /app/dist ./dist
+COPY --chown=node:node --from=build /app/apps/docs/build ./apps/docs/build
 COPY --chown=node:node --from=build /app/tools/prisma ./tools/prisma
 RUN pnpm prisma generate
 
