@@ -1,8 +1,8 @@
-## 🚀 My SaaS – Full-Stack SaaS Boilerplate
+## 🚀 [My SaaS – Full-Stack SaaS Boilerplate](https://ziotech.dev/saas-boilerplate)
 
 **Production-ready SaaS boilerplate with React, NestJS, Prisma, PostgreSQL, Redis, Stripe, and AI features.**
 
-- 🌐 **Live demo**: [ziotech.dev/saas-boilerplate](https://ziotech.dev/saas-boilerplate)  
+- 🌐 **Live demo**: [my-saas.ziotech.dev](https://my-saas.ziotech.dev)
 - 📚 **Documentation**: [docs.ziotech.dev](https://docs.ziotech.dev)
 
 ---
