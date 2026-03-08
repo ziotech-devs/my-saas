@@ -43,11 +43,11 @@ msgid "<0>Two-factor authentication is enabled.</0> You will be asked to enter a
 msgstr "<0>אימות דו־שלבי פעיל.</0> תופיע בקשה למלא את הקוד שלך עם כל כניסה למערכת."
 
 #: apps/client/src/pages/home/page.tsx:23
-#: apps/client/src/pages/home/sections/hero/index.tsx:80
+#: apps/client/src/pages/home/sections/hero/index.tsx:83
 msgid "A free and open-source SaaS boilerplate"
 msgstr "תבנית SaaS חינמית וקוד פתוח"
 
-#: apps/client/src/pages/home/sections/hero/index.tsx:89
+#: apps/client/src/pages/home/sections/hero/index.tsx:92
 msgid "A free and open-source SaaS boilerplate that simplifies the process of creating, updating, and sharing your SaaS application."
 msgstr "תבנית SaaS חינמית וקוד פתוח שמפשטת את תהליך יצירה, עדכון ושיתוף ה‑SaaS שלך."
 
@@ -299,7 +299,7 @@ msgid "Dark"
 msgstr "כהה"
 
 #: apps/client/src/pages/dashboard/_components/sidebar.tsx:101
-#: apps/client/src/pages/home/sections/hero/call-to-action.tsx:14
+#: apps/client/src/pages/home/sections/hero/call-to-action.tsx:13
 msgid "Dashboard"
 msgstr ""
 
@@ -410,9 +410,9 @@ msgstr "כל מה שנדרש כדי להשיק ולהגדיל את מוצר ה�
 msgid "Everything you need to succeed."
 msgstr "כל מה שנדרש כדי להצליח."
 
-#: apps/client/src/pages/home/sections/hero/index.tsx:72
-msgid "Explore what's included"
-msgstr "גלו מה כלול"
+#: apps/client/src/pages/home/sections/hero/call-to-action.tsx:13
+msgid "Explore"
+msgstr ""
 
 #: apps/client/src/pages/home/sections/features/index.tsx:64
 msgid "Export to multiple formats"
@@ -579,10 +579,6 @@ msgstr "בהירה"
 #: apps/client/src/pages/home/sections/features/index.tsx:68
 msgid "Light or dark theme"
 msgstr "ערכת עיצוב בהירה או כהה"
-
-#: apps/client/src/pages/home/sections/hero/call-to-action.tsx:14
-msgid "Login"
-msgstr ""
 
 #: apps/client/src/components/user-options.tsx:38
 msgid "Logout"
@@ -765,7 +761,7 @@ msgstr "יש לכם שאלות? הצוות שלנו כאן כדי לעזור. א
 msgid "Reactive Resume"
 msgstr ""
 
-#: apps/client/src/pages/home/sections/hero/call-to-action.tsx:20
+#: apps/client/src/pages/home/sections/hero/call-to-action.tsx:18
 msgid "Read docs"
 msgstr ""
 
@@ -877,6 +873,10 @@ msgstr "ההרשמות מושבתות כרגע על ידי ההנהלה."
 #: apps/client/src/services/errors/translate-error.ts:43
 msgid "Something went wrong while processing your request. Please try again later or raise an issue on GitHub."
 msgstr "משהו השתבש בעיבוד הבקשה שלך. נא לנסות שוב מאוחר יותר או לדווח על תקלה ב־GitHub."
+
+#: apps/client/src/pages/home/sections/hero/index.tsx:75
+msgid "Source code"
+msgstr ""
 
 #: apps/client/src/pages/home/sections/contributors/index.tsx:28
 msgid "Start Free Trial"

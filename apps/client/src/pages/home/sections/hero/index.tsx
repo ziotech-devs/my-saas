@@ -1,7 +1,7 @@
 import { t } from "@lingui/macro";
 import { Badge, buttonVariants } from "@my-saas/ui";
 import { cn } from "@my-saas/utils";
-import { ArrowRightIcon } from "@phosphor-icons/react";
+import { ArrowRightIcon, GithubLogoIcon } from "@phosphor-icons/react";
 import { motion } from "framer-motion";
 
 import { HeroCTA } from "./call-to-action";
@@ -66,10 +66,13 @@ export const HeroSection = () => (
         <motion.div className="flex items-center gap-x-4" variants={item}>
           <Badge>{t`Version 1.0`}</Badge>
           <a
-            href="#features"
+            href="https://github.com/ziotech-devs/my-saas"
+            target="_blank"
+            rel="noreferrer"
             className={cn(buttonVariants({ variant: "link" }), "space-x-2")}
           >
-            <p>{t`Explore what's included`}</p>
+          <GithubLogoIcon className="mr-3" />
+            <p>{t`Source code`}</p>
             <ArrowRightIcon />
           </a>
         </motion.div>

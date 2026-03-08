@@ -43,11 +43,11 @@ msgid "<0>Two-factor authentication is enabled.</0> You will be asked to enter a
 msgstr "<0>Двофакторну автентифікацію увімкнено.</0> Тепер, щоб увійти до облікового запису ви матимете вводити код."
 
 #: apps/client/src/pages/home/page.tsx:23
-#: apps/client/src/pages/home/sections/hero/index.tsx:80
+#: apps/client/src/pages/home/sections/hero/index.tsx:83
 msgid "A free and open-source SaaS boilerplate"
 msgstr ""
 
-#: apps/client/src/pages/home/sections/hero/index.tsx:89
+#: apps/client/src/pages/home/sections/hero/index.tsx:92
 msgid "A free and open-source SaaS boilerplate that simplifies the process of creating, updating, and sharing your SaaS application."
 msgstr ""
 
@@ -299,7 +299,7 @@ msgid "Dark"
 msgstr "Темна"
 
 #: apps/client/src/pages/dashboard/_components/sidebar.tsx:101
-#: apps/client/src/pages/home/sections/hero/call-to-action.tsx:14
+#: apps/client/src/pages/home/sections/hero/call-to-action.tsx:13
 msgid "Dashboard"
 msgstr ""
 
@@ -410,8 +410,8 @@ msgstr ""
 msgid "Everything you need to succeed."
 msgstr ""
 
-#: apps/client/src/pages/home/sections/hero/index.tsx:72
-msgid "Explore what's included"
+#: apps/client/src/pages/home/sections/hero/call-to-action.tsx:13
+msgid "Explore"
 msgstr ""
 
 #: apps/client/src/pages/home/sections/features/index.tsx:64
@@ -579,10 +579,6 @@ msgstr "Світла"
 #: apps/client/src/pages/home/sections/features/index.tsx:68
 msgid "Light or dark theme"
 msgstr "Світла або темна тема"
-
-#: apps/client/src/pages/home/sections/hero/call-to-action.tsx:14
-msgid "Login"
-msgstr ""
 
 #: apps/client/src/components/user-options.tsx:38
 msgid "Logout"
@@ -765,7 +761,7 @@ msgstr ""
 msgid "Reactive Resume"
 msgstr ""
 
-#: apps/client/src/pages/home/sections/hero/call-to-action.tsx:20
+#: apps/client/src/pages/home/sections/hero/call-to-action.tsx:18
 msgid "Read docs"
 msgstr ""
 
@@ -877,6 +873,10 @@ msgstr "Наразі можливість реєстрації відключе�
 #: apps/client/src/services/errors/translate-error.ts:43
 msgid "Something went wrong while processing your request. Please try again later or raise an issue on GitHub."
 msgstr "Щось пішло не так під час обробки вашого запиту. Спробуйте пізніше або підніміть проблему на GitHub."
+
+#: apps/client/src/pages/home/sections/hero/index.tsx:75
+msgid "Source code"
+msgstr ""
 
 #: apps/client/src/pages/home/sections/contributors/index.tsx:28
 msgid "Start Free Trial"
