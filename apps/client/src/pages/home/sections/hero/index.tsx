@@ -71,7 +71,7 @@ export const HeroSection = () => (
             rel="noreferrer"
             className={cn(buttonVariants({ variant: "link" }), "space-x-2")}
           >
-          <GithubLogoIcon className="mr-3" />
+          <GithubLogoIcon className="" />
             <p>{t`Source code`}</p>
             <ArrowRightIcon />
           </a>
