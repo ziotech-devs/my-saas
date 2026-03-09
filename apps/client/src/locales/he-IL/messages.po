@@ -259,6 +259,10 @@ msgstr ""
 msgid "Contact Sales"
 msgstr ""
 
+#: apps/client/src/pages/home/components/header.tsx:44
+msgid "Contact Us"
+msgstr ""
+
 #: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:234
 #: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:246
 msgid "Continue"
@@ -299,7 +303,8 @@ msgid "Dark"
 msgstr "כהה"
 
 #: apps/client/src/pages/dashboard/_components/sidebar.tsx:101
-#: apps/client/src/pages/home/sections/hero/call-to-action.tsx:13
+#: apps/client/src/pages/home/components/header.tsx:50
+#: apps/client/src/pages/home/sections/hero/call-to-action.tsx:14
 msgid "Dashboard"
 msgstr ""
 
@@ -325,6 +330,10 @@ msgstr "השבתת האימות הדו־שלבי"
 #: apps/client/src/pages/dashboard/settings/_sections/security.tsx:118
 msgid "Discard"
 msgstr "התעלמות"
+
+#: apps/client/src/pages/home/components/header.tsx:36
+msgid "Docs"
+msgstr ""
 
 #: apps/client/src/pages/home/components/footer.tsx:66
 #: apps/client/src/pages/home/docs/page.tsx:5
@@ -410,7 +419,7 @@ msgstr "כל מה שנדרש כדי להשיק ולהגדיל את מוצר ה�
 msgid "Everything you need to succeed."
 msgstr "כל מה שנדרש כדי להצליח."
 
-#: apps/client/src/pages/home/sections/hero/call-to-action.tsx:13
+#: apps/client/src/pages/home/sections/hero/call-to-action.tsx:14
 msgid "Explore"
 msgstr ""
 
@@ -761,7 +770,7 @@ msgstr "יש לכם שאלות? הצוות שלנו כאן כדי לעזור. א
 msgid "Reactive Resume"
 msgstr ""
 
-#: apps/client/src/pages/home/sections/hero/call-to-action.tsx:18
+#: apps/client/src/pages/home/sections/hero/call-to-action.tsx:20
 msgid "Read docs"
 msgstr ""
 
@@ -861,6 +870,10 @@ msgstr "כניסה לחשבון שלך"
 #: apps/client/src/pages/auth/register/page.tsx:179
 msgid "Sign up"
 msgstr "הרשמה"
+
+#: apps/client/src/pages/home/components/header.tsx:50
+msgid "Sign Up"
+msgstr ""
 
 #: apps/client/src/pages/auth/login/page.tsx:74
 msgid "Signing in via email is currently disabled by the administrator."
