@@ -51,7 +51,7 @@ focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2
 
 - No `Finally,` label above the headline — removed entirely
 - Badge shows version: `Version 1.0`
-- Link next to badge: `Explore what's included` (links to `#features`) with `ArrowRightIcon`
+- Link next to badge: `Source code` (links to `https://github.com/ziotech-devs/my-saas`) with `GithubLogoIcon` and `ArrowRightIcon`
 - Headline uses `.hero-title` CSS class: animated shimmer gradient between `--foreground` and `--primary`
 - Subheading: `prose prose-base prose-zinc max-w-2xl text-lg leading-8 dark:prose-invert`
 - Animations: staggered `framer-motion` with `staggerChildren: 0.12`, `delayChildren: 0.1`

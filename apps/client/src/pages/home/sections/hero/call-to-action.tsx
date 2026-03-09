@@ -1,5 +1,6 @@
 import { t } from "@lingui/macro";
 import { Button } from "@my-saas/ui";
+import { BookOpenIcon } from "@phosphor-icons/react";
 import { Link } from "react-router";
 
 import { useAuthStore } from "@/client/stores/auth";
@@ -14,7 +15,8 @@ export const HeroCTA = () => {
       </Button>
 
       <Button asChild size="lg" variant="link">
-        <a href="https://docs.ziotech.dev" target="_blank" rel="noopener noreferrer">
+        <a href="https://docs.ziotech.dev" target="_blank" rel="noopener noreferrer" className="gap-x-2">
+          <BookOpenIcon />
           {t`Read docs`}
         </a>
       </Button>
