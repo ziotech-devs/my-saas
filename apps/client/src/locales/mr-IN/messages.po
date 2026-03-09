@@ -31,7 +31,7 @@ msgid "© {currentYear} My SaaS. All rights reserved."
 msgstr ""
 
 #: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:299
-msgid "<0>Note: </0>By utilizing the OpenAI API, you acknowledge and accept the <1>terms of use</1> and <2>privacy policy</2> outlined by OpenAI. Please note that Reactive Resume bears no responsibility for any improper or unauthorized utilization of the service, and any resulting repercussions or liabilities solely rest on the user."
+msgid "<0>Note: </0>By utilizing the OpenAI API, you acknowledge and accept the <1>terms of use</1> and <2>privacy policy</2> outlined by OpenAI. Please note that My SaaS bears no responsibility for any improper or unauthorized utilization of the service, and any resulting repercussions or liabilities solely rest on the user."
 msgstr ""
 
 #: apps/client/src/pages/dashboard/settings/_sections/security.tsx:140
@@ -187,10 +187,6 @@ msgstr "रद्द करा"
 #: apps/client/src/components/ai-actions.tsx:110
 msgid "Casual"
 msgstr "नैमित्तिक"
-
-#: apps/client/src/pages/dashboard/stock-chat/page.tsx:98
-msgid "Change"
-msgstr ""
 
 #: apps/client/src/components/locale-switch.tsx:17
 msgid "Change Language"
@@ -403,10 +399,6 @@ msgstr ""
 msgid "Error {statusCode}"
 msgstr ""
 
-#: apps/client/src/pages/dashboard/stock-chat/page.tsx:49
-msgid "Error loading stock data:"
-msgstr ""
-
 #: apps/client/src/pages/dashboard/billing/page.tsx:96
 msgid "Error subscribing"
 msgstr ""
@@ -577,10 +569,6 @@ msgstr ""
 msgid "Language"
 msgstr "भाषा"
 
-#: apps/client/src/pages/dashboard/stock-chat/page.tsx:60
-msgid "Last updated:"
-msgstr ""
-
 #: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:86
 msgid "Light"
 msgstr "हलकी"
@@ -727,10 +715,6 @@ msgstr ""
 msgid "Powered by Tavily web search + OpenAI"
 msgstr ""
 
-#: apps/client/src/pages/dashboard/stock-chat/page.tsx:94
-msgid "Price"
-msgstr ""
-
 #: apps/client/src/pages/home/components/footer.tsx:34
 #: apps/client/src/pages/home/pricing/page.tsx:5
 msgid "Pricing"
@@ -765,10 +749,6 @@ msgstr ""
 #: apps/client/src/pages/home/sections/contributors/index.tsx:41
 msgid "Questions? Our team is here to help. Reach out anytime and we'll get back to you within 24 hours."
 msgstr ""
-
-#: apps/client/src/pages/dashboard/stock-chat/page.tsx:17
-msgid "Reactive Resume"
-msgstr "रिअ‍ॅक्टिव्ह रेझ्युमे"
 
 #: apps/client/src/pages/home/sections/hero/call-to-action.tsx:20
 msgid "Read docs"
@@ -897,11 +877,6 @@ msgstr ""
 
 #: apps/client/src/pages/dashboard/billing/page.tsx:149
 msgid "Status"
-msgstr ""
-
-#: apps/client/src/pages/dashboard/stock-chat/page.tsx:17
-#: apps/client/src/pages/dashboard/stock-chat/page.tsx:27
-msgid "Stock Chat"
 msgstr ""
 
 #: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:162
@@ -1043,10 +1018,6 @@ msgstr "आपला ईमेल पत्ता पडताळून घ्�
 msgid "Version 1.0"
 msgstr ""
 
-#: apps/client/src/pages/dashboard/stock-chat/page.tsx:109
-msgid "Volume"
-msgstr ""
-
 #: apps/client/src/pages/auth/verify-email/page.tsx:61
 msgid "We verify your email address only to ensure that we can send you a password reset link in case you forget your password."
 msgstr ""
@@ -1084,7 +1055,7 @@ msgid "You don't have permission to access this page."
 msgstr ""
 
 #: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:128
-msgid "You have the option to <0>obtain your own OpenAI API key</0>. This key empowers you to leverage the API as you see fit. Alternatively, if you wish to disable the AI features in Reactive Resume altogether, you can simply remove the key from your settings."
+msgid "You have the option to <0>obtain your own OpenAI API key</0>. This key empowers you to leverage the API as you see fit. Alternatively, if you wish to disable the AI features in My SaaS altogether, you can simply remove the key from your settings."
 msgstr ""
 
 #: apps/client/src/pages/auth/verify-email/page.tsx:50

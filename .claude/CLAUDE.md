@@ -46,7 +46,6 @@ npx nx affected -t build --base=main  # Build affected projects
 apps/
 ├── server/         # NestJS API (port 3000, API prefix: /api)
 ├── client/         # React frontend (port 5173)
-├── artboard/       # React resume builder (port 6173)
 └── graphs/         # Python LangGraph service
 libs/
 ├── dto/            # Shared Data Transfer Objects
@@ -87,7 +86,6 @@ apps/server/src/
 ├── health/         # Health checks and monitoring
 ├── mail/           # Email sending logic
 ├── printer/        # PDF printing services
-├── resume/         # Resume management
 ├── storage/        # File storage (MinIO)
 ├── translation/    # i18n services
 ├── types/          # Shared type definitions

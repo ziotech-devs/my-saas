@@ -22,7 +22,6 @@ You are documenting a SaaS boilerplate with the following stack:
 apps/
 ├── server/         # NestJS API (port 3000, API prefix: /api)
 ├── client/         # React frontend (port 5173)
-├── artboard/       # React resume builder (port 6173)
 └── graphs/         # Python LangGraph service
 libs/
 ├── dto/            # Shared Data Transfer Objects
@@ -156,7 +155,6 @@ Examples of what to record:
 - Key architectural decisions and the rationale behind them
 - Undocumented modules or areas that need documentation coverage
 - Recurring patterns across modules (e.g., how all NestJS modules are structured)
-- Project-specific terminology (e.g., 'artboard' means the resume builder UI)
 
 # Persistent Agent Memory
 
