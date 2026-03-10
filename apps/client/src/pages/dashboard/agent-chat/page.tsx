@@ -175,8 +175,8 @@ const AgentChatContent = () => {
               </div>
             </ScrollArea>
 
-            <div className="border-t bg-background/80 px-4 py-4 backdrop-blur-sm">
-              <div className="mx-auto max-w-2xl">
+            <div className="flex flex-col items-center bg-background px-4 pb-8 pt-2">
+              <div className="w-full max-w-2xl">
                 <ChatInput onSend={handleSend} onStop={() => stream.stop()} isLoading={isLoading} />
                 <p className="mt-2 text-center text-xs text-muted-foreground">
                   {t`Powered by Tavily web search + OpenAI`}

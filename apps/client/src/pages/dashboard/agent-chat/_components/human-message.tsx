@@ -66,7 +66,7 @@ export const HumanMessage = ({ message, isLoading }: HumanMessageProps) => {
             autoFocus
           />
         ) : (
-          <p className="px-4 py-2 rounded-3xl bg-muted w-fit ml-auto whitespace-pre-wrap text-sm">
+          <p className="px-4 py-3 rounded-2xl border bg-muted w-fit ml-auto whitespace-pre-wrap text-sm">
             {contentString}
           </p>
         )}

@@ -1,6 +1,6 @@
 import { t } from "@lingui/macro";
 import { Button } from "@my-saas/ui";
-import { ArrowUpIcon, StopIcon } from "@phosphor-icons/react";
+import { StopIcon } from "@phosphor-icons/react";
 import { type FormEvent, type KeyboardEvent, useState } from "react";
 
 type ChatInputProps = {
@@ -29,41 +29,31 @@ export const ChatInput = ({ onSend, onStop, isLoading, autoFocus }: ChatInputPro
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="flex items-end gap-3 rounded-2xl border bg-background px-4 py-3 shadow-sm transition-shadow focus-within:shadow-md outline-none"
-    >
-      <textarea
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
-        onKeyDown={handleKeyDown}
-        // eslint-disable-next-line jsx-a11y/no-autofocus
-        autoFocus={autoFocus}
-        placeholder={t`Ask anything...`}
-        rows={1}
-        disabled={isLoading}
-        className="flex-1 resize-none bg-transparent text-sm outline-none placeholder:text-muted-foreground/60 max-h-40 disabled:opacity-50"
-      />
-      {isLoading ? (
-        <Button
-          type="button"
-          size="icon"
-          variant="ghost"
-          onClick={onStop}
-          className="shrink-0 size-8 rounded-xl"
-        >
-          <StopIcon className="size-4" />
-        </Button>
-      ) : (
-        <Button
-          type="submit"
-          size="icon"
-          disabled={!value.trim()}
-          className="shrink-0 size-8 rounded-xl"
-        >
-          <ArrowUpIcon className="size-4" />
-        </Button>
-      )}
-    </form>
+    <div className="bg-muted rounded-2xl border shadow-xs w-full">
+      <form onSubmit={handleSubmit} className="grid grid-rows-[1fr_auto] gap-2">
+        <textarea
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+          onKeyDown={handleKeyDown}
+          // eslint-disable-next-line jsx-a11y/no-autofocus
+          autoFocus={autoFocus}
+          placeholder={t`Ask anything...`}
+          disabled={isLoading}
+          className="p-3.5 pb-0 border-none bg-transparent field-sizing-content shadow-none ring-0 outline-none focus:outline-none focus:ring-0 resize-none text-sm placeholder:text-muted-foreground/60 min-h-[44px] disabled:opacity-50"
+        />
+        <div className="flex items-center justify-end p-2 pt-4">
+          {isLoading ? (
+            <Button type="button" onClick={onStop} className="transition-all shadow-md">
+              <StopIcon className="size-4" />
+              {t`Cancel`}
+            </Button>
+          ) : (
+            <Button type="submit" disabled={!value.trim()} className="transition-all shadow-md">
+              {t`Send`}
+            </Button>
+          )}
+        </div>
+      </form>
+    </div>
   );
 };

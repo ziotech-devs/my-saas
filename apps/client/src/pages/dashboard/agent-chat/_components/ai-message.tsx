@@ -32,7 +32,7 @@ export const AiMessage = ({ message, isLoading, onRegenerate }: AiMessageProps) 
     <div className={cn("flex items-start mr-auto gap-2 group max-w-[85%]")}>
       <div className="flex flex-col gap-1">
         {contentString.length > 0 && (
-          <div className="py-1 text-sm leading-relaxed">
+          <div className="rounded-2xl border bg-muted px-4 py-3 text-sm leading-relaxed">
             <MarkdownText>{contentString}</MarkdownText>
           </div>
         )}
