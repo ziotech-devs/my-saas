@@ -6,6 +6,7 @@ import { DocumentBuilder, SwaggerModule } from "@nestjs/swagger";
 import cookieParser from "cookie-parser";
 import session from "express-session";
 import helmet from "helmet";
+import { createProxyMiddleware } from "http-proxy-middleware";
 import { patchNestJsSwagger } from "nestjs-zod";
 
 import { AppModule } from "./app.module";
@@ -43,6 +44,25 @@ async function bootstrap() {
 
   // Helmet - enabled only in production
   if (isHTTPS) app.use(helmet({ contentSecurityPolicy: false }));
+
+  // Proxy /api/graphs/* → LangGraph service
+  // Express strips the /api/graphs mount path before forwarding, so no pathRewrite needed
+  const graphsUrl = configService.getOrThrow<string>("GRAPHS_URL");
+  app.use(
+    "/api/graphs",
+    createProxyMiddleware({
+      target: graphsUrl,
+      changeOrigin: true,
+      on: {
+        error: (err, _req, res) => {
+          Logger.error(`Graphs proxy error: ${(err as Error).message}`, "GraphsProxy");
+          if (!(res as import("http").ServerResponse).headersSent) {
+            (res as import("express").Response).status(502).json({ message: "Graphs service unavailable" });
+          }
+        },
+      },
+    }),
+  );
 
   // Global Prefix
   const globalPrefix = "api";
