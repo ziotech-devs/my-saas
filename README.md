@@ -6,6 +6,8 @@
 - 📚 **Documentation**: [docs.ziotech.dev](https://docs.ziotech.dev)
 
 ---
+<img width="1602" height="840" alt="image" src="https://github.com/user-attachments/assets/fadd594b-5925-4b1c-bb65-6419b25a0972" />
+
 
 ### 💡 What is this?
 
