@@ -158,9 +158,8 @@ pnpm cdk:deploy
 
 ### Deploy frontend
 ```bash
-# Build React app — set VITE_LANGGRAPH_URL to the ALB graphs endpoint (port 8123)
-# so the client streams directly to LangGraph without going through the API server
-VITE_LANGGRAPH_URL=http://<ALB_URL>:8123 nx run client:build
+# Build React app — graphs traffic is proxied through NestJS at /api/graphs
+nx run client:build
 
 # Sync to S3 (after CDK deploy)
 aws s3 sync dist/apps/client s3://my-saas-frontend-ACCOUNT-REGION --delete

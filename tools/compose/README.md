@@ -18,7 +18,7 @@ Uses the root `.env` file — Docker Compose picks it up automatically when run 
 |---------|--------------|-------|
 | server | `https://APP_DOMAIN` | NestJS API + built React client |
 | adminer | `https://ADMINER_DOMAIN` | Protected by basic auth |
-| graphs | `https://GRAPHS_DOMAIN` | LangGraph API, set `VITE_LANGGRAPH_URL` at client build time |
+| graphs | internal only | LangGraph API, proxied through NestJS at `/api/graphs` |
 | postgres | internal only | |
 | langgraph-redis | internal only | LangGraph checkpointer |
 

@@ -32,9 +32,7 @@ Deploy the full stack on a single VPS using Docker Compose + Traefik for TLS ter
 
 ```bash
 # Build API + frontend
-docker build \
-  --build-arg VITE_LANGGRAPH_URL=https://app.yourdomain.com/api/graphs \
-  -t my-saas-server:latest .
+docker build -t my-saas-server:latest .
 
 # Build graphs service
 cd apps/graphs && langgraph build -t my-saas-graphs:latest
