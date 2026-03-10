@@ -1,6 +1,7 @@
 import { Logger } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
 import { NestFactory } from "@nestjs/core";
+import type { Response } from "express";
 import type { NestExpressApplication } from "@nestjs/platform-express";
 import { DocumentBuilder, SwaggerModule } from "@nestjs/swagger";
 import cookieParser from "cookie-parser";
@@ -56,8 +57,9 @@ async function bootstrap() {
       on: {
         error: (err, _req, res) => {
           Logger.error(`Graphs proxy error: ${(err as Error).message}`, "GraphsProxy");
-          if (!(res as import("http").ServerResponse).headersSent) {
-            (res as import("express").Response).status(502).json({ message: "Graphs service unavailable" });
+          const expressRes = res as Response;
+          if (!expressRes.headersSent) {
+            expressRes.status(502).json({ message: "Graphs service unavailable" });
           }
         },
       },
