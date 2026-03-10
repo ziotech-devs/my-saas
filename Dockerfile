@@ -24,6 +24,11 @@ RUN cd apps/docs && pnpm install --frozen-lockfile
 ENV NX_DAEMON=false
 ENV NX_NO_CLOUD=true
 
+# Optional: bake the LangGraph URL into the client at build time so it talks directly
+# to the graphs service instead of falling back to /api/graphs.
+ARG VITE_LANGGRAPH_URL
+ENV VITE_LANGGRAPH_URL=$VITE_LANGGRAPH_URL
+
 RUN pnpm nx run server:build && pnpm nx run client:build && pnpm nx run docs:build
 
 # --- Release Image ---

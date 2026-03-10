@@ -30,7 +30,7 @@ msgstr ""
 msgid "© {currentYear} My SaaS. All rights reserved."
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:299
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:282
 msgid "<0>Note: </0>By utilizing the OpenAI API, you acknowledge and accept the <1>terms of use</1> and <2>privacy policy</2> outlined by OpenAI. Please note that My SaaS bears no responsibility for any improper or unauthorized utilization of the service, and any resulting repercussions or liabilities solely rest on the user."
 msgstr ""
 
@@ -125,17 +125,13 @@ msgstr ""
 msgid "Authentication"
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:258
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:241
 msgid "Azure API Version"
 msgstr "Versi API Azure"
 
 #: apps/client/src/services/openai/client.ts:18
 msgid "Azure OpenAI Base URL, deployment name (model), and API version are required when using Azure OpenAI."
 msgstr "URL Dasar Azure OpenAI, nama penerapan (model), dan versi API diperlukan saat menggunakan Azure OpenAI."
-
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:183
-msgid "Azure OpenAI Resource URL"
-msgstr "URL Sumber Daya Azure OpenAI"
 
 #: apps/client/src/pages/auth/backup-otp/page.tsx:99
 #: apps/client/src/pages/auth/forgot-password/page.tsx:100
@@ -150,10 +146,6 @@ msgstr "Kode Cadangan"
 #: apps/client/src/pages/auth/backup-otp/page.tsx:81
 msgid "Backup Codes may contain only lowercase letters or numbers, and must be exactly 10 characters."
 msgstr "Kode Cadangan hanya boleh berisi huruf kecil atau angka, dan harus tepat 10 karakter."
-
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:183
-msgid "Base URL"
-msgstr "URL dasar"
 
 #: apps/client/src/pages/dashboard/billing/page.tsx:112
 #: apps/client/src/pages/dashboard/billing/page.tsx:208
@@ -309,7 +301,7 @@ msgstr ""
 msgid "Delete Account"
 msgstr "Menghapus Akun"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:205
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:188
 msgid "Deployment Name"
 msgstr "Nama Penyebaran"
 
@@ -435,7 +427,7 @@ msgstr "Perbaiki Ejaan & Tata Bahasa"
 msgid "Flexible pricing plans"
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:280
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:263
 msgid "Forget"
 msgstr "Lupakan."
 
@@ -589,11 +581,11 @@ msgstr "Kehilangan perangkat Anda?"
 msgid "Manage Subscription"
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:218
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:201
 msgid "Max Tokens"
 msgstr "Token Max"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:205
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:188
 msgid "Model"
 msgstr "Model"
 
@@ -659,12 +651,16 @@ msgstr "Ups, server mengembalikan kesalahan."
 msgid "OpenAI did not return any choices for your text."
 msgstr "OpenAI tidak mengembalikan pilihan apa pun untuk teks Anda."
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:120
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:113
 msgid "OpenAI/Azure OpenAI/Ollama Integration"
 msgstr "Integrasi OpenAI/Azure OpenAI/Ollama"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:169
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:162
 msgid "OpenAI/Ollama API Key"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:175
+msgid "optional"
 msgstr ""
 
 #: apps/client/src/pages/auth/layout.tsx:46
@@ -788,11 +784,11 @@ msgstr ""
 msgid "Save Changes"
 msgstr "Menyimpan Perubahan"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:274
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:257
 msgid "Save Locally"
 msgstr "Simpan Secara Lokal"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:274
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:257
 msgid "Saved"
 msgstr "Tersimpan"
 
@@ -904,6 +900,10 @@ msgstr "Beralih ke Mode Cahaya"
 msgid "System"
 msgstr "Sistem"
 
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:175
+msgid "Tavily API Key"
+msgstr ""
+
 #: apps/client/src/pages/home/components/footer.tsx:52
 #: apps/client/src/pages/home/terms/page.tsx:5
 msgid "Terms of Service"
@@ -971,7 +971,7 @@ msgstr ""
 msgid "Unverified"
 msgstr "Tidak diverifikasi"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:247
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:230
 msgid "Use Azure OpenAI"
 msgstr "Gunakan Azure OpenAI"
 
@@ -1038,23 +1038,23 @@ msgstr ""
 msgid "You can also enter your username."
 msgstr "Anda juga dapat memasukkan nama pengguna Anda."
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:144
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:137
 msgid "You can also integrate with Azure OpenAI by enabling the <0>Use Azure OpenAI</0> checkbox and setting the Resource URL to your Azure OpenAI resource: <1>https://your-resource.openai.azure.com</1>. Set the deployment name in the Model field and specify the appropriate API version for your Azure deployment."
 msgstr "Anda juga dapat mengintegrasikan dengan Azure OpenAI dengan mengaktifkan kotak centang <0>Gunakan Azure OpenAI</0> dan mengatur URL Sumber Daya ke sumber daya Azure OpenAI Anda: <1>https://your-resource.openai.azure.com</1>. Tetapkan nama penerapan di bidang Model dan tentukan versi API yang sesuai untuk penerapan Azure Anda."
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:153
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:146
 msgid "You can also integrate with Ollama simply by setting the API key to<0>sk-1234567890abcdef</0> and the Base URL to your Ollama URL, i.e.<1>http://localhost:11434/v1</1>. You can also pick and choose models and set the max tokens as per your preference."
 msgstr "Anda juga dapat berintegrasi dengan Ollama hanya dengan mengatur kunci API <0>tosk-1234567890abcdef</0> dan URL Dasar ke URL Ollama Anda, yaitu<1>http://localhost:11434/v1.</1> Anda juga dapat memilih dan memilih model dan mengatur token maksimum sesuai keinginan Anda."
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:122
-msgid "You can make use of the OpenAI API, Azure OpenAI, or Ollama to help you generate content, or improve your writing while composing your resume."
-msgstr "Anda dapat menggunakan OpenAI API, Azure OpenAI, atau Ollama untuk membantu Anda menghasilkan konten, atau meningkatkan tulisan Anda saat membuat resume."
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:115
+msgid "You can make use of the OpenAI API to chat with AI."
+msgstr ""
 
 #: apps/client/src/pages/public/error.tsx:20
 msgid "You don't have permission to access this page."
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:128
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:121
 msgid "You have the option to <0>obtain your own OpenAI API key</0>. This key empowers you to leverage the API as you see fit. Alternatively, if you wish to disable the AI features in My SaaS altogether, you can simply remove the key from your settings."
 msgstr ""
 
@@ -1071,7 +1071,7 @@ msgstr "Kau punya surat!"
 msgid "Your account and all your data has been deleted successfully. Goodbye!"
 msgstr "Akun Anda dan semua data Anda telah berhasil dihapus. Selamat tinggal!"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:289
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:272
 msgid "Your API key is securely stored in the browser's local storage and is only utilized when making requests to OpenAI via their official SDK. Rest assured that your key is not transmitted to any external server except when interacting with OpenAI's services."
 msgstr "Kunci API Anda disimpan dengan aman di penyimpanan lokal peramban dan hanya digunakan ketika membuat permintaan ke OpenAI melalui SDK resmi mereka. Yakinlah bahwa kunci Anda tidak dikirimkan ke server eksternal mana pun kecuali saat berinteraksi dengan layanan OpenAI."
 

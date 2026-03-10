@@ -55,6 +55,8 @@ apps/client/src/locales/*/messages.*js
 
 # LangGraph API
 apps/graphs/langgraph_api
+apps/graphs/.langgraph_api
+apps/graphs/**/*.pckl
 
 # Git worktrees
 .worktrees

@@ -166,8 +166,16 @@ services:
       LANGSMITH_API_KEY: ${LANGSMITH_API_KEY}
       LANGSMITH_PROJECT: ${LANGSMITH_PROJECT}
       LANGSMITH_TRACING_V2: ${LANGSMITH_TRACING_V2:-true}
-      LANGSMITH_ENDPOINT: ${LANGSMITH_ENDPOINT:-https://api.smith.langchain.com} 
+      LANGSMITH_ENDPOINT: ${LANGSMITH_ENDPOINT:-https://api.smith.langchain.com}
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=my-saas_public
+      - traefik.http.routers.graphs.rule=Host(`${GRAPHS_DOMAIN}`)
+      - traefik.http.routers.graphs.entrypoints=websecure
+      - traefik.http.routers.graphs.tls.certresolver=letsencrypt
+      - traefik.http.services.graphs.loadbalancer.server.port=8000
     networks:
+      - public
       - internal
 
   # ── PostgreSQL ──────────────────────────────────────────────────────────────

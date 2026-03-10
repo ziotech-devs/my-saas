@@ -5,7 +5,6 @@ import type { NestExpressApplication } from "@nestjs/platform-express";
 import { DocumentBuilder, SwaggerModule } from "@nestjs/swagger";
 import cookieParser from "cookie-parser";
 import session from "express-session";
-import { createProxyMiddleware } from "http-proxy-middleware";
 import helmet from "helmet";
 import { patchNestJsSwagger } from "nestjs-zod";
 
@@ -28,17 +27,6 @@ async function bootstrap() {
 
   // Cookie Parser
   app.use(cookieParser());
-
-  // Proxy LangGraph SDK requests to the internal graphs service
-  const graphsUrl = process.env["GRAPHS_URL"] ?? "http://localhost:8123";
-  app.use(
-    "/api/graphs",
-    createProxyMiddleware({
-      target: graphsUrl,
-      changeOrigin: true,
-      pathRewrite: { "^/api/graphs": "" },
-    }),
-  );
 
   // Session
   app.use(

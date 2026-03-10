@@ -30,7 +30,7 @@ msgstr ""
 msgid "© {currentYear} My SaaS. All rights reserved."
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:299
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:282
 msgid "<0>Note: </0>By utilizing the OpenAI API, you acknowledge and accept the <1>terms of use</1> and <2>privacy policy</2> outlined by OpenAI. Please note that My SaaS bears no responsibility for any improper or unauthorized utilization of the service, and any resulting repercussions or liabilities solely rest on the user."
 msgstr ""
 
@@ -125,17 +125,13 @@ msgstr ""
 msgid "Authentication"
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:258
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:241
 msgid "Azure API Version"
 msgstr "Azure Έκδοση Api"
 
 #: apps/client/src/services/openai/client.ts:18
 msgid "Azure OpenAI Base URL, deployment name (model), and API version are required when using Azure OpenAI."
 msgstr "Azure OpenAI Base URL, όνομα ανάπτυξης (μοντέλο) και έκδοση API απαιτούνται όταν χρησιμοποιείτε το Azure OpenAI."
-
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:183
-msgid "Azure OpenAI Resource URL"
-msgstr "Url Πόρου Azure OpenAI"
 
 #: apps/client/src/pages/auth/backup-otp/page.tsx:99
 #: apps/client/src/pages/auth/forgot-password/page.tsx:100
@@ -150,10 +146,6 @@ msgstr "Εφεδρικός κωδικός"
 #: apps/client/src/pages/auth/backup-otp/page.tsx:81
 msgid "Backup Codes may contain only lowercase letters or numbers, and must be exactly 10 characters."
 msgstr "Οι κωδικοί αντιγράφων ασφαλείας μπορούν να περιέχουν μόνο πεζά γράμματα ή αριθμούς και πρέπει να είναι ακριβώς 10 χαρακτήρες."
-
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:183
-msgid "Base URL"
-msgstr "https://rxresu.me/builder/cm23wdob830tdmtv5iyuvprzz"
 
 #: apps/client/src/pages/dashboard/billing/page.tsx:112
 #: apps/client/src/pages/dashboard/billing/page.tsx:208
@@ -309,7 +301,7 @@ msgstr ""
 msgid "Delete Account"
 msgstr "Διαγραφή Λογαριασμού"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:205
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:188
 msgid "Deployment Name"
 msgstr "Όνομα Εφαρμογής"
 
@@ -435,7 +427,7 @@ msgstr "Ορθογραφία & γραμματική"
 msgid "Flexible pricing plans"
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:280
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:263
 msgid "Forget"
 msgstr "Ξεχάστε το"
 
@@ -589,11 +581,11 @@ msgstr "Χάσατε τη συσκευή σας;"
 msgid "Manage Subscription"
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:218
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:201
 msgid "Max Tokens"
 msgstr "Μέγιστα κουπόνια"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:205
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:188
 msgid "Model"
 msgstr "Μοντέλο"
 
@@ -659,13 +651,17 @@ msgstr "Ουπς, ο διακομιστής επέστρεψε σφάλμα."
 msgid "OpenAI did not return any choices for your text."
 msgstr "Το OpenAI δεν επέστρεψε καμία επιλογή για το κείμενό σας."
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:120
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:113
 msgid "OpenAI/Azure OpenAI/Ollama Integration"
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:169
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:162
 msgid "OpenAI/Ollama API Key"
 msgstr "Κλειδί API OpenAI/Ollama"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:175
+msgid "optional"
+msgstr ""
 
 #: apps/client/src/pages/auth/layout.tsx:46
 msgctxt "The user can either login with email/password, or continue with GitHub or Google."
@@ -788,11 +784,11 @@ msgstr ""
 msgid "Save Changes"
 msgstr "Αποθήκευση Αλλαγών;"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:274
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:257
 msgid "Save Locally"
 msgstr "Αποθηκεύστε τοπικά"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:274
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:257
 msgid "Saved"
 msgstr "Αποθηκευμένο"
 
@@ -904,6 +900,10 @@ msgstr "Εναλλαγή σε λειτουργία φωτός"
 msgid "System"
 msgstr "Σύστημα"
 
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:175
+msgid "Tavily API Key"
+msgstr ""
+
 #: apps/client/src/pages/home/components/footer.tsx:52
 #: apps/client/src/pages/home/terms/page.tsx:5
 msgid "Terms of Service"
@@ -971,7 +971,7 @@ msgstr ""
 msgid "Unverified"
 msgstr "Μη επαληθευμένο"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:247
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:230
 msgid "Use Azure OpenAI"
 msgstr "Χρήση Azure OpenAI"
 
@@ -1038,23 +1038,23 @@ msgstr ""
 msgid "You can also enter your username."
 msgstr "Μπορείτε επίσης να εισάγετε το όνομα χρήστη σας."
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:144
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:137
 msgid "You can also integrate with Azure OpenAI by enabling the <0>Use Azure OpenAI</0> checkbox and setting the Resource URL to your Azure OpenAI resource: <1>https://your-resource.openai.azure.com</1>. Set the deployment name in the Model field and specify the appropriate API version for your Azure deployment."
 msgstr "Μπορείτε επίσης να ενσωματώσετε με το Azure OpenAI ενεργοποιώντας το πλαίσιο ελέγχου <0>Χρήση Azure OpenAI</0> και ορίζοντας τη διεύθυνση URL του πόρου στο Azure OpenAI πόρος: <1>https://your-resource. penai.azure.com</1>. Ορίστε το όνομα ανάπτυξης στο πεδίο Μοντέλο και καθορίστε την κατάλληλη έκδοση API για την ανάπτυξη του Azure."
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:153
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:146
 msgid "You can also integrate with Ollama simply by setting the API key to<0>sk-1234567890abcdef</0> and the Base URL to your Ollama URL, i.e.<1>http://localhost:11434/v1</1>. You can also pick and choose models and set the max tokens as per your preference."
 msgstr "Μπορείτε επίσης να ενσωματώσετε με την Ollama απλά με τη ρύθμιση του κλειδιού API στο<0>sk-1234567890abcdef</0> και το URL βάσης στο Ollama URL, i. .<1>http://localhost:11434/v1</1>. Μπορείτε επίσης να επιλέξετε μοντέλα και να ορίσετε τις μέγιστες μάρκες σύμφωνα με τις προτιμήσεις σας."
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:122
-msgid "You can make use of the OpenAI API, Azure OpenAI, or Ollama to help you generate content, or improve your writing while composing your resume."
-msgstr "Μπορείτε να χρησιμοποιήσετε το OpenAI API, το Azure OpenAI, ή το Ollama για να σας βοηθήσει να δημιουργήσετε περιεχόμενο, ή να βελτιώσετε το γράψιμό σας ενώ συνθέτετε το βιογραφικό σας."
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:115
+msgid "You can make use of the OpenAI API to chat with AI."
+msgstr ""
 
 #: apps/client/src/pages/public/error.tsx:20
 msgid "You don't have permission to access this page."
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:128
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:121
 msgid "You have the option to <0>obtain your own OpenAI API key</0>. This key empowers you to leverage the API as you see fit. Alternatively, if you wish to disable the AI features in My SaaS altogether, you can simply remove the key from your settings."
 msgstr ""
 
@@ -1071,7 +1071,7 @@ msgstr "Έχετε email!"
 msgid "Your account and all your data has been deleted successfully. Goodbye!"
 msgstr "Ο λογαριασμός σας και όλα τα δεδομένα σας έχουν διαγραφεί επιτυχώς. Goodbye!"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:289
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:272
 msgid "Your API key is securely stored in the browser's local storage and is only utilized when making requests to OpenAI via their official SDK. Rest assured that your key is not transmitted to any external server except when interacting with OpenAI's services."
 msgstr "Το κλειδί API σας αποθηκεύεται με ασφάλεια στον τοπικό αποθηκευτικό χώρο του προγράμματος περιήγησης και χρησιμοποιείται μόνο όταν κάνει αιτήσεις στο OpenAI μέσω του επίσημου SDK. Να είστε βέβαιοι ότι το κλειδί σας δεν μεταδίδεται σε κανέναν εξωτερικό διακομιστή εκτός όταν αλληλεπιδρά με τις υπηρεσίες του OpenAI."
 

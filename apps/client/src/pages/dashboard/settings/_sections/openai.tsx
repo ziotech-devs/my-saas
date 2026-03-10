@@ -29,12 +29,7 @@ const formSchema = z.object({
     // eslint-disable-next-line lingui/no-unlocalized-strings
     .min(1, "API key cannot be empty.")
     .default(""),
-  baseURL: z
-    .string()
-    // eslint-disable-next-line lingui/no-unlocalized-strings
-    .regex(/^https?:\/\/\S+$/, "That doesn't look like a valid URL")
-    .or(z.literal(""))
-    .default(""),
+  tavilyApiKey: z.string().default(""),
   model: z.string().default(DEFAULT_MODEL),
   maxTokens: z.number().default(DEFAULT_MAX_TOKENS),
   isAzure: z.boolean().default(false),
@@ -47,8 +42,8 @@ export const OpenAISettings = () => {
   const {
     apiKey,
     setApiKey,
-    baseURL,
-    setBaseURL,
+    tavilyApiKey,
+    setTavilyApiKey,
     model,
     setModel,
     maxTokens,
@@ -65,7 +60,7 @@ export const OpenAISettings = () => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       apiKey: apiKey ?? "",
-      baseURL: baseURL ?? "",
+      tavilyApiKey: tavilyApiKey ?? "",
       model: model ?? DEFAULT_MODEL,
       maxTokens: maxTokens ?? DEFAULT_MAX_TOKENS,
       isAzure,
@@ -75,7 +70,7 @@ export const OpenAISettings = () => {
 
   const onSubmit = ({
     apiKey,
-    baseURL,
+    tavilyApiKey,
     model,
     maxTokens,
     isAzure,
@@ -83,9 +78,7 @@ export const OpenAISettings = () => {
   }: FormValues) => {
     setApiKey(apiKey);
     setIsAzure(isAzure);
-    if (baseURL) {
-      setBaseURL(baseURL);
-    }
+    setTavilyApiKey(tavilyApiKey || null);
     if (model) {
       setModel(model);
     }
@@ -99,14 +92,14 @@ export const OpenAISettings = () => {
 
   const onRemove = () => {
     setApiKey(null);
-    setBaseURL(null);
+    setTavilyApiKey(null);
     setModel(DEFAULT_MODEL);
     setMaxTokens(DEFAULT_MAX_TOKENS);
     setIsAzure(false);
     setAzureApiVersion(DEFAULT_AZURE_API_VERSION);
     form.reset({
       apiKey: "",
-      baseURL: "",
+      tavilyApiKey: "",
       model: DEFAULT_MODEL,
       maxTokens: DEFAULT_MAX_TOKENS,
       isAzure: false,
@@ -119,7 +112,7 @@ export const OpenAISettings = () => {
       <div>
         <h3 className="text-2xl font-bold leading-relaxed tracking-tight">{t`OpenAI/Azure OpenAI/Ollama Integration`}</h3>
         <p className="leading-relaxed opacity-75">
-          {t`You can make use of the OpenAI API, Azure OpenAI, or Ollama to help you generate content, or improve your writing while composing your resume.`}
+          {t`You can make use of the OpenAI API to chat with AI.`}
         </p>
       </div>
 
@@ -175,23 +168,13 @@ export const OpenAISettings = () => {
             )}
           />
           <FormField
-            name="baseURL"
+            name="tavilyApiKey"
             control={form.control}
             render={({ field }) => (
               <FormItem>
-                <FormLabel>
-                  {form.watch("isAzure") ? t`Azure OpenAI Resource URL` : t`Base URL`}
-                </FormLabel>
+                <FormLabel>{t`Tavily API Key`} <span className="text-muted-foreground">({t`optional`})</span></FormLabel>
                 <FormControl>
-                  <Input
-                    type="text"
-                    placeholder={
-                      form.watch("isAzure")
-                        ? "https://your-resource.openai.azure.com"
-                        : "http://localhost:11434/v1"
-                    }
-                    {...field}
-                  />
+                  <Input type="password" placeholder="tvly-..." {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>

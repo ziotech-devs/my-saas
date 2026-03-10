@@ -10,9 +10,10 @@ Manage the production Docker Compose stack running on a DigitalOcean VPS behind 
 ## Architecture
 
 ```
-Browser → Cloudflare (<APP_DOMAIN>) → Traefik (:443) → nginx → NestJS server (:3000)
-                                                       → adminer (:8080)
-                                                       → docs nginx
+Browser → Cloudflare (<APP_DOMAIN>)   → Traefik (:443) → nginx → NestJS server (:3000)
+Browser → Cloudflare (<GRAPHS_DOMAIN>) → Traefik (:443) → graphs (:8000)  [direct, SSE streaming]
+                                                         → adminer (:8080)
+                                                         → docs nginx
 ```
 
 ```
@@ -20,7 +21,7 @@ traefik          Reverse proxy + TLS (Let's Encrypt via HTTP-01 challenge)
 nginx            Serves React SPA + proxies /api → server:3000
 server           NestJS API (:3000)
 docs             Docusaurus static site
-graphs           LangGraph Python service
+graphs           LangGraph Python service — publicly exposed at GRAPHS_DOMAIN (SSE streaming direct to client)
 postgres         PostgreSQL 16
 langgraph-redis  Redis 7 (LangGraph checkpointer)
 adminer          DB admin UI
@@ -37,6 +38,7 @@ adminer          DB admin UI
 | App domain | `<APP_DOMAIN>` |
 | Adminer domain | `<ADMINER_DOMAIN>` |
 | Docs domain | `<DOCS_DOMAIN>` |
+| Graphs domain | `<GRAPHS_DOMAIN>` |
 | ACME email | `<ACME_EMAIL>` |
 | Compose file | `tools/compose/vps.yml` |
 | Env file | `.env` (project root) |
@@ -91,6 +93,7 @@ APP_DOMAIN=<APP_DOMAIN>
 ADMINER_DOMAIN=<ADMINER_DOMAIN>
 ADMINER_BASIC_AUTH=<user:htpasswd>    # htpasswd -nb user pass
 DOCS_DOMAIN=<DOCS_DOMAIN>
+GRAPHS_DOMAIN=<GRAPHS_DOMAIN>         # e.g. graphs.yourdomain.com — exposed directly via Traefik for SSE streaming
 OPENAI_API_KEY=<key>
 TAVILY_API_KEY=<key>
 LANGSMITH_API_KEY=<key>

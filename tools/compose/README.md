@@ -18,7 +18,7 @@ Uses the root `.env` file — Docker Compose picks it up automatically when run 
 |---------|--------------|-------|
 | server | `https://APP_DOMAIN` | NestJS API + built React client |
 | adminer | `https://ADMINER_DOMAIN` | Protected by basic auth |
-| graphs | internal only | Proxied through NestJS `/api/graphs/*` |
+| graphs | `https://GRAPHS_DOMAIN` | LangGraph API, set `VITE_LANGGRAPH_URL` at client build time |
 | postgres | internal only | |
 | langgraph-redis | internal only | LangGraph checkpointer |
 
@@ -28,6 +28,7 @@ Uses the root `.env` file — Docker Compose picks it up automatically when run 
 - Domain with DNS A records pointing to the VPS IP:
   - `app.yourdomain.com` → VPS IP
   - `adminer.yourdomain.com` → VPS IP
+  - `graphs.yourdomain.com` → VPS IP
 - `langgraph` CLI for building the graphs image
 
 ### One-time setup

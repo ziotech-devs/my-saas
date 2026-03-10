@@ -1,89 +1,92 @@
-import { PencilSimpleIcon } from "@phosphor-icons/react";
-import { type KeyboardEvent, useState } from "react";
+import { useState } from "react";
+import type { Message } from "@langchain/langgraph-sdk";
+import { cn } from "@my-saas/utils";
+import { useStreamContext } from "../_providers/stream-provider";
+import type { AgentState } from "../_providers/stream-provider";
+import { HumanMessageActions } from "./message-actions";
 
 type HumanMessageProps = {
-  content: string;
-  onEdit?: (newContent: string) => void;
+  message: Message;
+  isLoading: boolean;
 };
 
-export const HumanMessage = ({ content, onEdit }: HumanMessageProps) => {
+const getContentString = (content: Message["content"]): string => {
+  if (typeof content === "string") return content;
+  return (content as Array<{ type: string; text?: string }>)
+    .filter((c) => c.type === "text")
+    .map((c) => c.text ?? "")
+    .join(" ");
+};
+
+export const HumanMessage = ({ message, isLoading }: HumanMessageProps) => {
+  const stream = useStreamContext();
+  const meta = stream.getMessagesMetadata(message);
+  const parentCheckpoint = meta?.firstSeenState?.parent_checkpoint;
+  const contentString = getContentString(message.content);
+
   const [isEditing, setIsEditing] = useState(false);
-  const [editValue, setEditValue] = useState(content);
+  const [editValue, setEditValue] = useState("");
 
-  const handleConfirm = () => {
-    const trimmed = editValue.trim();
-    if (trimmed && trimmed !== content) {
-      onEdit?.(trimmed);
-    }
+  const handleStartEdit = () => {
+    setEditValue(contentString);
+    setIsEditing(true);
+  };
+
+  const handleSubmitEdit = () => {
     setIsEditing(false);
-  };
-
-  const handleKeyDown = (e: KeyboardEvent<HTMLTextAreaElement>) => {
-    if (e.key === "Enter" && !e.shiftKey && !e.nativeEvent.isComposing) {
-      e.preventDefault();
-      handleConfirm();
-    }
-    if (e.key === "Escape") {
-      setEditValue(content);
-      setIsEditing(false);
-    }
-  };
-
-  if (isEditing) {
-    return (
-      <div className="flex justify-end">
-        <div className="w-full max-w-xl">
-          <textarea
-            value={editValue}
-            onChange={(e) => setEditValue(e.target.value)}
-            onKeyDown={handleKeyDown}
-            // eslint-disable-next-line jsx-a11y/no-autofocus
-            autoFocus
-            rows={2}
-            className="w-full resize-none rounded-2xl bg-muted px-4 py-2 text-sm outline-none ring-2 ring-ring"
-          />
-          <div className="mt-1.5 flex justify-end gap-3">
-            <button
-              type="button"
-              onClick={() => {
-                setEditValue(content);
-                setIsEditing(false);
-              }}
-              className="text-xs text-muted-foreground transition-colors hover:text-foreground"
-            >
-              Cancel
-            </button>
-            <button
-              type="button"
-              onClick={handleConfirm}
-              className="text-xs font-medium text-primary transition-colors hover:underline"
-            >
-              Send
-            </button>
-          </div>
-        </div>
-      </div>
+    const newMessage: Message = { type: "human", content: editValue };
+    stream.submit(
+      { messages: [newMessage] },
+      {
+        checkpoint: parentCheckpoint,
+        streamMode: ["values"],
+        optimisticValues: (prev: AgentState) => {
+          const base = meta?.firstSeenState?.values;
+          if (!base) return prev;
+          return { ...base, messages: [...(base.messages ?? []), newMessage] };
+        },
+      },
     );
-  }
+  };
 
   return (
-    <div className="group flex items-end justify-end gap-1.5">
-      {onEdit && (
-        <button
-          type="button"
-          onClick={() => {
-            setEditValue(content);
-            setIsEditing(true);
-          }}
-          aria-label="Edit message"
-          className="mb-1 opacity-0 transition-opacity group-hover:opacity-100"
+    <div className={cn("flex items-center ml-auto gap-2 group", isEditing && "w-full max-w-xl")}>
+      <div className={cn("flex flex-col gap-1", isEditing && "w-full")}>
+        {isEditing ? (
+          <textarea
+            value={editValue}
+            onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setEditValue(e.target.value)}
+            onKeyDown={(e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+              if ((e.metaKey || e.ctrlKey) && e.key === "Enter") {
+                e.preventDefault();
+                handleSubmitEdit();
+              }
+            }}
+            className="w-full resize-none rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 min-h-[80px]"
+            autoFocus
+          />
+        ) : (
+          <p className="px-4 py-2 rounded-3xl bg-muted w-fit ml-auto whitespace-pre-wrap text-sm">
+            {contentString}
+          </p>
+        )}
+
+        <div
+          className={cn(
+            "flex ml-auto transition-opacity",
+            isEditing ? "opacity-100" : "opacity-0 group-hover:opacity-100 group-focus-within:opacity-100",
+          )}
         >
-          <PencilSimpleIcon className="size-3.5 text-muted-foreground hover:text-foreground" />
-        </button>
-      )}
-      <p className="max-w-xl rounded-3xl bg-muted px-4 py-2 whitespace-pre-wrap text-sm">
-        {content}
-      </p>
+          <HumanMessageActions
+            content={contentString}
+            isLoading={isLoading}
+            isEditing={isEditing}
+            onStartEdit={handleStartEdit}
+            onCancelEdit={() => setIsEditing(false)}
+            onSubmitEdit={handleSubmitEdit}
+          />
+        </div>
+      </div>
     </div>
   );
 };

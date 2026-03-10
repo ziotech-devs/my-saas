@@ -1,62 +1,58 @@
 """LangGraph graph for web search and AI-powered analysis."""
 
 import logging
-import operator
 import os
 from typing import Annotated, TypedDict
 
-from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
+from langchain_core.messages import AIMessage, HumanMessage, SystemMessage, BaseMessage
+from langchain_core.runnables import RunnableConfig
 from langchain_openai import ChatOpenAI
 from langgraph.graph import END, START, StateGraph
+from langgraph.graph.message import add_messages
 from tavily import TavilyClient
 
 logger = logging.getLogger(__name__)
 
 
 class ScraperState(TypedDict):
-    """State for the scraper graph.
-
-    `messages` uses operator.add so LangGraph's checkpointer (MemorySaver
-    locally, server-managed in langgraph dev) accumulates the full conversation
-    across runs on the same thread as plain (role, content) tuples.
-    """
-
-    messages: Annotated[list, operator.add]
+    messages: Annotated[list, add_messages]
+    query: str
     search_results: str | None
     result: str | None
 
 
 SYSTEM_PROMPT = (
-    "You are a web research assistant. You will receive a user query and web "
-    "search results.\n\n"
-    "Your task:\n"
-    "1. Carefully read the search results.\n"
-    "2. Identify the most important information that answers the query.\n"
-    "3. Write a clear, concise summary in plain text.\n"
-    "4. Take prior conversation context into account for follow-up questions.\n"
-    "5. If there is uncertainty or conflicting information, call it out.\n"
+    "You are a helpful assistant. You may receive web search results alongside the user query.\n\n"
+    "If web search results are provided:\n"
+    "1. Carefully read them and identify the most relevant information.\n"
+    "2. Write a clear, concise summary that answers the query.\n"
+    "3. If there is uncertainty or conflicting information, call it out.\n\n"
+    "If no web search results are provided:\n"
+    "1. Answer directly from your own knowledge.\n"
+    "2. If the query requires real-time or up-to-date web data, let the user know they can add a Tavily API key in the Settings section to enable web search.\n\n"
+    "Always take prior conversation context into account for follow-up questions.\n"
 )
 
 
-def _get_last_human_query(messages: list[tuple[str, str]]) -> str:
-    for item in reversed(messages):
-        if not (isinstance(item, (tuple, list)) and len(item) == 2):
-            continue
-        role, content = item
-        if role in ("user", "human"):
-            return content
-    return ""
+def extract_query(state: ScraperState) -> dict:
+    """Extract the latest human message content into state["query"]."""
+    messages = state["messages"]
+    for msg in reversed(messages):
+        if isinstance(msg, BaseMessage) and msg.type in ("human", "user"):
+            return {"query": msg.content if isinstance(msg.content, str) else ""}
+    return {"query": ""}
 
 
-def search(state: ScraperState) -> dict:
-    """Use Tavily to search for the latest human message query."""
-    query = _get_last_human_query(state["messages"])
+def search(state: ScraperState, config: RunnableConfig) -> dict:
+    """Use Tavily to search for state["query"]."""
+    query = state["query"]
     if not query:
         return {"search_results": "No query provided."}
 
-    api_key = os.getenv("TAVILY_API_KEY")
+    configurable = config.get("configurable", {})
+    api_key = configurable.get("tavily_api_key")
     if not api_key:
-        return {"search_results": "Error: TAVILY_API_KEY not configured"}
+        return {"search_results": ""}
 
     try:
         client = TavilyClient(api_key=api_key)
@@ -84,70 +80,54 @@ def search(state: ScraperState) -> dict:
         return {"search_results": f"Search failed for '{query}': {str(exception)}"}
 
 
-_ROLE_MAP = {
-    "user": HumanMessage,
-    "human": HumanMessage,
-    "assistant": AIMessage,
-    "ai": AIMessage,
-}
-
-_LLM = ChatOpenAI(model=os.getenv("OPENAI_MODEL", "gpt-4o-mini"), temperature=0.3)
-
-
-def agent(state: ScraperState) -> dict:
+def agent(state: ScraperState, config: RunnableConfig) -> dict:
     """Summarize search results with full conversation context."""
-    api_key = os.getenv("OPENAI_API_KEY")
-    if not api_key:
-        error = "Error: OPENAI_API_KEY not configured"
-        return {"messages": [("assistant", error)], "result": error}
+    configurable = config.get("configurable", {})
+    api_key = configurable.get("openai_api_key")
+    model = configurable.get("openai_model") or "gpt-4o-mini"
 
-    all_messages = state["messages"]
-    query = _get_last_human_query(all_messages)
+    if not api_key:
+        error = "No OpenAI API key provided. Please add your API key in the settings."
+        return {"messages": [AIMessage(content=error)], "result": error}
+
+    query = state["query"]
     if not query:
         error = "No user query found in message history."
-        return {"messages": [("assistant", error)], "result": error}
+        return {"messages": [AIMessage(content=error)], "result": error}
 
     search_results = state.get("search_results") or ""
     if len(search_results) > 50000:
-        truncated = search_results[:50000] + "\n\n[Content truncated...]"
-    else:
-        truncated = search_results
+        search_results = search_results[:50000] + "\n\n[Content truncated...]"
 
-    # Replace raw user turn with search-enriched version so the model has grounded context
-    llm_messages = [SystemMessage(content=SYSTEM_PROMPT)]
-    for role, content in all_messages[:-1]:
-        msg_class = _ROLE_MAP.get(role)
-        if msg_class:
-            llm_messages.append(msg_class(content=content))
-
-    llm_messages.append(
-        HumanMessage(
-            content=(
-                f"User query: {query}\n\n"
-                f"Web search results:\n{truncated}\n\n"
-                "Please provide a concise summary of the key information "
-                "relevant to the query."
-            )
-        )
+    search_section = f"Web search results:\n{search_results}\n\n" if search_results else ""
+    augmented_query = f"User query: {query}\n\n{search_section}Please answer the query."
+    llm_messages = (
+        [SystemMessage(content=SYSTEM_PROMPT)]
+        + list(state["messages"][:-1])
+        + [HumanMessage(content=augmented_query)]
     )
 
+    llm = ChatOpenAI(api_key=api_key, model=model, temperature=0.3)
+
     try:
-        response = _LLM.invoke(llm_messages)
-        return {"messages": [("assistant", response.content)], "result": response.content}
+        response = llm.invoke(llm_messages)
+        return {"messages": [AIMessage(content=response.content)], "result": response.content}
     except Exception as exc:
         logger.exception("LLM invocation failed")
         error = f"Error: LLM call failed — {exc}"
-        return {"messages": [("assistant", error)], "result": error}
+        return {"messages": [AIMessage(content=error)], "result": error}
 
 
 def create_graph():
     """Create the scraper graph — persistence is handled by the LangGraph platform."""
     workflow = StateGraph(ScraperState)
 
+    workflow.add_node("extract_query", extract_query)
     workflow.add_node("search", search)
     workflow.add_node("agent", agent)
 
-    workflow.add_edge(START, "search")
+    workflow.add_edge(START, "extract_query")
+    workflow.add_edge("extract_query", "search")
     workflow.add_edge("search", "agent")
     workflow.add_edge("agent", END)
 

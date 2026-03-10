@@ -30,7 +30,7 @@ msgstr ""
 msgid "© {currentYear} My SaaS. All rights reserved."
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:299
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:282
 msgid "<0>Note: </0>By utilizing the OpenAI API, you acknowledge and accept the <1>terms of use</1> and <2>privacy policy</2> outlined by OpenAI. Please note that My SaaS bears no responsibility for any improper or unauthorized utilization of the service, and any resulting repercussions or liabilities solely rest on the user."
 msgstr ""
 
@@ -125,17 +125,13 @@ msgstr ""
 msgid "Authentication"
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:258
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:241
 msgid "Azure API Version"
 msgstr "Azure API versjon"
 
 #: apps/client/src/services/openai/client.ts:18
 msgid "Azure OpenAI Base URL, deployment name (model), and API version are required when using Azure OpenAI."
 msgstr "Azure OpenAI Base URL, Distribusjonsnavn (modell) og API-versjon er påkrevd når du bruker Azure OpenAI."
-
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:183
-msgid "Azure OpenAI Resource URL"
-msgstr "Azure OpenAI Ressurs-URL"
 
 #: apps/client/src/pages/auth/backup-otp/page.tsx:99
 #: apps/client/src/pages/auth/forgot-password/page.tsx:100
@@ -150,10 +146,6 @@ msgstr "Sikkerhetskopi-kode"
 #: apps/client/src/pages/auth/backup-otp/page.tsx:81
 msgid "Backup Codes may contain only lowercase letters or numbers, and must be exactly 10 characters."
 msgstr "Sikkerhetskopi-koder kan bare inneholde små bokstaver eller tall, og må være nøyaktig 10 tegn."
-
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:183
-msgid "Base URL"
-msgstr "Basis-URL"
 
 #: apps/client/src/pages/dashboard/billing/page.tsx:112
 #: apps/client/src/pages/dashboard/billing/page.tsx:208
@@ -309,7 +301,7 @@ msgstr ""
 msgid "Delete Account"
 msgstr "Slett Konto"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:205
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:188
 msgid "Deployment Name"
 msgstr "Distribusjon navn"
 
@@ -435,7 +427,7 @@ msgstr "Fiks Staving og Grammatikk"
 msgid "Flexible pricing plans"
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:280
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:263
 msgid "Forget"
 msgstr "Glem"
 
@@ -589,11 +581,11 @@ msgstr "Mistet enheten din?"
 msgid "Manage Subscription"
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:218
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:201
 msgid "Max Tokens"
 msgstr "Maks antall tegn"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:205
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:188
 msgid "Model"
 msgstr "Modell"
 
@@ -659,13 +651,17 @@ msgstr "Oops, serveren returnerte en feil."
 msgid "OpenAI did not return any choices for your text."
 msgstr "OpenAI returnerte ingen valg for teksten din."
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:120
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:113
 msgid "OpenAI/Azure OpenAI/Ollama Integration"
 msgstr "OpenAI/Azure OpenAI/Ollama integrasjon"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:169
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:162
 msgid "OpenAI/Ollama API Key"
 msgstr "OpenAI/Ollama API-nøkkel"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:175
+msgid "optional"
+msgstr ""
 
 #: apps/client/src/pages/auth/layout.tsx:46
 msgctxt "The user can either login with email/password, or continue with GitHub or Google."
@@ -788,11 +784,11 @@ msgstr ""
 msgid "Save Changes"
 msgstr "Lagre Endringer"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:274
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:257
 msgid "Save Locally"
 msgstr "Lagre lokalt"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:274
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:257
 msgid "Saved"
 msgstr "Lagret"
 
@@ -904,6 +900,10 @@ msgstr "Bytt til lysmodus"
 msgid "System"
 msgstr ""
 
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:175
+msgid "Tavily API Key"
+msgstr ""
+
 #: apps/client/src/pages/home/components/footer.tsx:52
 #: apps/client/src/pages/home/terms/page.tsx:5
 msgid "Terms of Service"
@@ -971,7 +971,7 @@ msgstr ""
 msgid "Unverified"
 msgstr "Ubekreftet"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:247
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:230
 msgid "Use Azure OpenAI"
 msgstr "Bruk Azure OpenAI"
 
@@ -1038,23 +1038,23 @@ msgstr ""
 msgid "You can also enter your username."
 msgstr "Du kan også skrive inn brukernavnet ditt."
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:144
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:137
 msgid "You can also integrate with Azure OpenAI by enabling the <0>Use Azure OpenAI</0> checkbox and setting the Resource URL to your Azure OpenAI resource: <1>https://your-resource.openai.azure.com</1>. Set the deployment name in the Model field and specify the appropriate API version for your Azure deployment."
 msgstr "Du kan også integrere med Azure OpenAI ved å aktivere <0>Bruk Azure OpenAI</0> avkrysningsboksen og sette ressursadressen til din Azure OpenAI ressurs: <1>https://your-resource. penai.azure.com</1>. Sett distribusjonsnavn i Model feltet og angi riktig API versjon for din Azure distribusjon."
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:153
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:146
 msgid "You can also integrate with Ollama simply by setting the API key to<0>sk-1234567890abcdef</0> and the Base URL to your Ollama URL, i.e.<1>http://localhost:11434/v1</1>. You can also pick and choose models and set the max tokens as per your preference."
 msgstr "Du kan også integrere med Ollama ved å sette API-nøkkelen til<0>sk-1234567890abcdef</0> og Base URL til din Ollama URL, i. .<1>http://localhost:11434/v1</1>. Du kan også velge modeller og sette maks tokens i henhold til din preferanse."
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:122
-msgid "You can make use of the OpenAI API, Azure OpenAI, or Ollama to help you generate content, or improve your writing while composing your resume."
-msgstr "Du kan bruke OpenAI API, Azure OpenAI, eller Ollama for å hjelpe deg med å generere innhold, eller forbedre skrivingen din når du skriver \"gjenopptaket\"."
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:115
+msgid "You can make use of the OpenAI API to chat with AI."
+msgstr ""
 
 #: apps/client/src/pages/public/error.tsx:20
 msgid "You don't have permission to access this page."
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:128
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:121
 msgid "You have the option to <0>obtain your own OpenAI API key</0>. This key empowers you to leverage the API as you see fit. Alternatively, if you wish to disable the AI features in My SaaS altogether, you can simply remove the key from your settings."
 msgstr ""
 
@@ -1071,7 +1071,7 @@ msgstr "Du har fått e-post!"
 msgid "Your account and all your data has been deleted successfully. Goodbye!"
 msgstr "Kontoen din og alle dataene dine er slettet. Ha det bra!"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:289
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:272
 msgid "Your API key is securely stored in the browser's local storage and is only utilized when making requests to OpenAI via their official SDK. Rest assured that your key is not transmitted to any external server except when interacting with OpenAI's services."
 msgstr "API-nøkkelen din er trygt lagret i nettleserens lokale lagring og brukes kun når du sender forespørsler til OpenAI via deres offisielle SDK. Du kan være trygg på at nøkkelen din ikke overføres til noen ekstern server bortsett fra når du samhandler med OpenAI's tjenester."
 

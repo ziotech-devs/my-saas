@@ -1,15 +1,16 @@
 import { t } from "@lingui/macro";
 import { Button } from "@my-saas/ui";
-import { ArrowUpIcon, SpinnerGapIcon } from "@phosphor-icons/react";
+import { ArrowUpIcon, StopIcon } from "@phosphor-icons/react";
 import { type FormEvent, type KeyboardEvent, useState } from "react";
 
 type ChatInputProps = {
   onSend: (message: string) => void;
+  onStop: () => void;
   isLoading: boolean;
   autoFocus?: boolean;
 };
 
-export const ChatInput = ({ onSend, isLoading, autoFocus }: ChatInputProps) => {
+export const ChatInput = ({ onSend, onStop, isLoading, autoFocus }: ChatInputProps) => {
   const [value, setValue] = useState("");
 
   const handleSubmit = (e: FormEvent) => {
@@ -30,7 +31,7 @@ export const ChatInput = ({ onSend, isLoading, autoFocus }: ChatInputProps) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex items-end gap-3 rounded-2xl border bg-background px-4 py-3 shadow-sm transition-shadow focus-within:shadow-md focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2 focus-within:ring-offset-background"
+      className="flex items-end gap-3 rounded-2xl border bg-background px-4 py-3 shadow-sm transition-shadow focus-within:shadow-md outline-none"
     >
       <textarea
         value={value}
@@ -43,18 +44,26 @@ export const ChatInput = ({ onSend, isLoading, autoFocus }: ChatInputProps) => {
         disabled={isLoading}
         className="flex-1 resize-none bg-transparent text-sm outline-none placeholder:text-muted-foreground/60 max-h-40 disabled:opacity-50"
       />
-      <Button
-        type="submit"
-        size="icon"
-        disabled={isLoading || !value.trim()}
-        className="shrink-0 size-8 rounded-xl"
-      >
-        {isLoading ? (
-          <SpinnerGapIcon className="size-4 animate-spin" />
-        ) : (
+      {isLoading ? (
+        <Button
+          type="button"
+          size="icon"
+          variant="ghost"
+          onClick={onStop}
+          className="shrink-0 size-8 rounded-xl"
+        >
+          <StopIcon className="size-4" />
+        </Button>
+      ) : (
+        <Button
+          type="submit"
+          size="icon"
+          disabled={!value.trim()}
+          className="shrink-0 size-8 rounded-xl"
+        >
           <ArrowUpIcon className="size-4" />
-        )}
-      </Button>
+        </Button>
+      )}
     </form>
   );
 };

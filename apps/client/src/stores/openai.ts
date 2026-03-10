@@ -16,6 +16,8 @@ type OpenAIStore = {
   setIsAzure: (isAzure: boolean) => void;
   azureApiVersion: string | null;
   setAzureApiVersion: (apiVersion: string | null) => void;
+  tavilyApiKey: string | null;
+  setTavilyApiKey: (tavilyApiKey: string | null) => void;
 };
 
 export const useOpenAiStore = create<OpenAIStore>()(
@@ -44,6 +46,10 @@ export const useOpenAiStore = create<OpenAIStore>()(
       azureApiVersion: DEFAULT_AZURE_API_VERSION,
       setAzureApiVersion: (azureApiVersion: string | null) => {
         set({ azureApiVersion });
+      },
+      tavilyApiKey: null,
+      setTavilyApiKey: (tavilyApiKey: string | null) => {
+        set({ tavilyApiKey });
       },
     }),
     { name: "openai" },

@@ -30,7 +30,7 @@ msgstr ""
 msgid "© {currentYear} My SaaS. All rights reserved."
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:299
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:282
 msgid "<0>Note: </0>By utilizing the OpenAI API, you acknowledge and accept the <1>terms of use</1> and <2>privacy policy</2> outlined by OpenAI. Please note that My SaaS bears no responsibility for any improper or unauthorized utilization of the service, and any resulting repercussions or liabilities solely rest on the user."
 msgstr ""
 
@@ -125,16 +125,12 @@ msgstr ""
 msgid "Authentication"
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:258
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:241
 msgid "Azure API Version"
 msgstr ""
 
 #: apps/client/src/services/openai/client.ts:18
 msgid "Azure OpenAI Base URL, deployment name (model), and API version are required when using Azure OpenAI."
-msgstr ""
-
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:183
-msgid "Azure OpenAI Resource URL"
 msgstr ""
 
 #: apps/client/src/pages/auth/backup-otp/page.tsx:99
@@ -150,10 +146,6 @@ msgstr "کد پشتیبان"
 #: apps/client/src/pages/auth/backup-otp/page.tsx:81
 msgid "Backup Codes may contain only lowercase letters or numbers, and must be exactly 10 characters."
 msgstr "کدهای پشتیبان فقط باید شامل حروف کوچک یا اعداد و دقیقاً 10 کاراکتر باشند."
-
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:183
-msgid "Base URL"
-msgstr "آدرس پایه"
 
 #: apps/client/src/pages/dashboard/billing/page.tsx:112
 #: apps/client/src/pages/dashboard/billing/page.tsx:208
@@ -309,7 +301,7 @@ msgstr ""
 msgid "Delete Account"
 msgstr "حذف حساب کاربری"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:205
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:188
 msgid "Deployment Name"
 msgstr ""
 
@@ -435,7 +427,7 @@ msgstr "تصحیح املا و گرامر"
 msgid "Flexible pricing plans"
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:280
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:263
 msgid "Forget"
 msgstr "فراموش کردن"
 
@@ -589,11 +581,11 @@ msgstr "دستگاه خود را گم کرده اید؟"
 msgid "Manage Subscription"
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:218
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:201
 msgid "Max Tokens"
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:205
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:188
 msgid "Model"
 msgstr "مدل"
 
@@ -659,12 +651,16 @@ msgstr "اوه ، مشکلی در سرور پدید امد."
 msgid "OpenAI did not return any choices for your text."
 msgstr "OpenAI نتوانست هیچ پیشنهادی برای متن شما ارائه دهد."
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:120
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:113
 msgid "OpenAI/Azure OpenAI/Ollama Integration"
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:169
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:162
 msgid "OpenAI/Ollama API Key"
+msgstr ""
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:175
+msgid "optional"
 msgstr ""
 
 #: apps/client/src/pages/auth/layout.tsx:46
@@ -788,11 +784,11 @@ msgstr ""
 msgid "Save Changes"
 msgstr "ذخیرهٔ تغییرات"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:274
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:257
 msgid "Save Locally"
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:274
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:257
 msgid "Saved"
 msgstr ""
 
@@ -904,6 +900,10 @@ msgstr ""
 msgid "System"
 msgstr "سامانه"
 
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:175
+msgid "Tavily API Key"
+msgstr ""
+
 #: apps/client/src/pages/home/components/footer.tsx:52
 #: apps/client/src/pages/home/terms/page.tsx:5
 msgid "Terms of Service"
@@ -971,7 +971,7 @@ msgstr ""
 msgid "Unverified"
 msgstr "تأیید نشده"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:247
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:230
 msgid "Use Azure OpenAI"
 msgstr ""
 
@@ -1038,23 +1038,23 @@ msgstr ""
 msgid "You can also enter your username."
 msgstr "شما همچنین می‌توانید نام کاربری خود را وارد کنید."
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:144
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:137
 msgid "You can also integrate with Azure OpenAI by enabling the <0>Use Azure OpenAI</0> checkbox and setting the Resource URL to your Azure OpenAI resource: <1>https://your-resource.openai.azure.com</1>. Set the deployment name in the Model field and specify the appropriate API version for your Azure deployment."
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:153
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:146
 msgid "You can also integrate with Ollama simply by setting the API key to<0>sk-1234567890abcdef</0> and the Base URL to your Ollama URL, i.e.<1>http://localhost:11434/v1</1>. You can also pick and choose models and set the max tokens as per your preference."
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:122
-msgid "You can make use of the OpenAI API, Azure OpenAI, or Ollama to help you generate content, or improve your writing while composing your resume."
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:115
+msgid "You can make use of the OpenAI API to chat with AI."
 msgstr ""
 
 #: apps/client/src/pages/public/error.tsx:20
 msgid "You don't have permission to access this page."
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:128
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:121
 msgid "You have the option to <0>obtain your own OpenAI API key</0>. This key empowers you to leverage the API as you see fit. Alternatively, if you wish to disable the AI features in My SaaS altogether, you can simply remove the key from your settings."
 msgstr ""
 
@@ -1071,7 +1071,7 @@ msgstr "شما ایمیل دریافت کردید"
 msgid "Your account and all your data has been deleted successfully. Goodbye!"
 msgstr "حساب شما و تمام داده‌های شما با موفقیت حذف شد. خدانگهدار!"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:289
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:272
 msgid "Your API key is securely stored in the browser's local storage and is only utilized when making requests to OpenAI via their official SDK. Rest assured that your key is not transmitted to any external server except when interacting with OpenAI's services."
 msgstr "کلید API شما به صورت ایمن در حافظه مرورگر دستگاه ذخیره می شود و تنها هنگام ارسال درخواست به OpenAI از طریق SDK رسمی آنها استفاده می شود. اطمینان حاصل کنید که کلید شما به هیچ سرور خارجی انتقال داده نمی شود مگر اینکه برای تعامل با خدمات OpenAI استفاده شود."
 
