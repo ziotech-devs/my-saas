@@ -21,7 +21,6 @@ export const StreamProvider = ({ children }: { children: ReactNode }) => {
   const [threadId, setThreadId] = useState<string | null>(null);
 
   const apiUrl =
-    (import.meta.env["VITE_LANGGRAPH_URL"] as string | undefined) ??
     `${window.location.origin}/api/graphs`;
 
   const stream = useStream<AgentState>({
