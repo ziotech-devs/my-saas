@@ -30,7 +30,7 @@ msgstr ""
 msgid "© {currentYear} My SaaS. All rights reserved."
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:282
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:273
 msgid "<0>Note: </0>By utilizing the OpenAI API, you acknowledge and accept the <1>terms of use</1> and <2>privacy policy</2> outlined by OpenAI. Please note that My SaaS bears no responsibility for any improper or unauthorized utilization of the service, and any resulting repercussions or liabilities solely rest on the user."
 msgstr ""
 
@@ -125,7 +125,7 @@ msgstr ""
 msgid "Authentication"
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:241
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:231
 msgid "Azure API Version"
 msgstr "Phiên bản API Azure"
 
@@ -302,7 +302,7 @@ msgstr ""
 msgid "Delete Account"
 msgstr "Xóa tài khoản"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:188
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:178
 msgid "Deployment Name"
 msgstr "Tên triển khai"
 
@@ -428,7 +428,7 @@ msgstr "Sửa chữa Chính tả và ngữ pháp"
 msgid "Flexible pricing plans"
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:263
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:253
 msgid "Forget"
 msgstr "Quên"
 
@@ -582,11 +582,11 @@ msgstr "Bạn bị mất thiết bị?"
 msgid "Manage Subscription"
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:201
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:191
 msgid "Max Tokens"
 msgstr "Số lượng token tối đa"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:188
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:178
 msgid "Model"
 msgstr "Mô hình"
 
@@ -656,11 +656,11 @@ msgstr "OpenAI không trả về bất kỳ phản hồi nào cho văn bản c�
 msgid "OpenAI/Azure OpenAI/Ollama Integration"
 msgstr "Tích hợp OpenAI/Azure OpenAI/Ollama"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:162
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:152
 msgid "OpenAI/Ollama API Key"
 msgstr "Khóa API OpenAI/Ollama"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:175
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:165
 msgid "optional"
 msgstr ""
 
@@ -785,11 +785,11 @@ msgstr ""
 msgid "Save Changes"
 msgstr "Lưu thay đổi"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:257
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:247
 msgid "Save Locally"
 msgstr "Lưu trữ cục bộ"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:257
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:247
 msgid "Saved"
 msgstr "Đã lưu"
 
@@ -905,7 +905,7 @@ msgstr "Chuyển sang Chế độ Sáng"
 msgid "System"
 msgstr "Hệ thống"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:175
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:165
 msgid "Tavily API Key"
 msgstr ""
 
@@ -976,7 +976,7 @@ msgstr ""
 msgid "Unverified"
 msgstr "Chưa xác minh"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:230
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:220
 msgid "Use Azure OpenAI"
 msgstr "Sử dụng Azure OpenAI"
 
@@ -988,6 +988,10 @@ msgstr "Sử dụng chủ đề hệ thống"
 #: apps/client/src/pages/auth/backup-otp/page.tsx:57
 msgid "Use your backup code"
 msgstr "Sử dụng mã dự phòng của bạn"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:137
+msgid "Use your own OpenAI API key to power the built-in chat experience. Messages are processed through a LangGraph workflow that can call OpenAI for reasoning and Tavily for web search and retrieval."
+msgstr ""
 
 #: apps/client/src/services/errors/translate-error.ts:13
 msgid "User does not have an associated 'secrets' record. Please report this issue on GitHub."
@@ -1043,14 +1047,6 @@ msgstr ""
 msgid "You can also enter your username."
 msgstr "Bạn cũng có thể nhập tên người dùng của bạn."
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:137
-msgid "You can also integrate with Azure OpenAI by enabling the <0>Use Azure OpenAI</0> checkbox and setting the Resource URL to your Azure OpenAI resource: <1>https://your-resource.openai.azure.com</1>. Set the deployment name in the Model field and specify the appropriate API version for your Azure deployment."
-msgstr "Bạn cũng có thể tích hợp với Azure OpenAI bằng cách bật hộp kiểm <0>\"Sử dụng Azure OpenAI</0> \" và đặt URL tài nguyên thành tài nguyên Azure OpenAI của bạn: <1>https://your-resource.openai.azure.com</1>. Đặt tên triển khai trong trường \"Model\" và chỉ định phiên bản API phù hợp cho triển khai Azure của bạn."
-
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:146
-msgid "You can also integrate with Ollama simply by setting the API key to<0>sk-1234567890abcdef</0> and the Base URL to your Ollama URL, i.e.<1>http://localhost:11434/v1</1>. You can also pick and choose models and set the max tokens as per your preference."
-msgstr "Bạn cũng có thể tích hợp với Ollama bằng cách thiết lập khóa API<0>là tosk-1234567890abcdef</0> và URL cơ sở là URL Ollama của bạn, ví dụ:<1>http://localhost:11434/v1</1>. Bạn cũng có thể chọn mô hình và thiết lập số token tối đa theo sở thích của mình."
-
 #: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:115
 msgid "You can make use of the OpenAI API to chat with AI."
 msgstr ""
@@ -1076,9 +1072,9 @@ msgstr "Bạn vừa nhận thư!"
 msgid "Your account and all your data has been deleted successfully. Goodbye!"
 msgstr "Tài khoản của bạn và tất cả dữ liệu của bạn đã được xóa thành công. Tạm biệt!"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:272
-msgid "Your API key is securely stored in the browser's local storage and is only utilized when making requests to OpenAI via their official SDK. Rest assured that your key is not transmitted to any external server except when interacting with OpenAI's services."
-msgstr "Key API của bạn được lưu trữ an toàn trong bộ nhớ cục bộ của trình duyệt và chỉ được sử dụng khi gửi yêu cầu tới OpenAI thông qua SDK chính thức của họ. Hãy yên tâm rằng Key của bạn không được truyền đến bất kỳ máy chủ bên ngoài nào ngoại trừ khi tương tác với các dịch vụ của OpenAI."
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:262
+msgid "Your API key is securely stored in the browser's local storage and is only utilized when making requests to OpenAI via their official SDK. Rest assured that your key is not transmitted to any external server except forward requests to OpenAI and is never persisted in our database."
+msgstr ""
 
 #: apps/client/src/pages/auth/verify-email/page.tsx:28
 msgid "Your email address has been verified successfully."

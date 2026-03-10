@@ -3,7 +3,6 @@ import { t, Trans } from "@lingui/macro";
 import {
   Alert,
   Button,
-  Checkbox,
   Form,
   FormControl,
   FormField,
@@ -135,19 +134,9 @@ export const OpenAISettings = () => {
 
         <p>
           <Trans>
-            You can also integrate with Azure OpenAI by enabling the <code>Use Azure OpenAI</code>{" "}
-            checkbox and setting the Resource URL to your Azure OpenAI resource:{" "}
-            <code>https://your-resource.openai.azure.com</code>. Set the deployment name in the
-            Model field and specify the appropriate API version for your Azure deployment.
-          </Trans>
-        </p>
-
-        <p>
-          <Trans>
-            You can also integrate with Ollama simply by setting the API key to
-            <code>sk-1234567890abcdef</code> and the Base URL to your Ollama URL, i.e.
-            <code>http://localhost:11434/v1</code>. You can also pick and choose models and set the
-            max tokens as per your preference.
+            Use your own OpenAI API key to power the built-in chat experience. Messages are
+            processed through a LangGraph workflow that can call OpenAI for reasoning and
+            Tavily for web search and retrieval.
           </Trans>
         </p>
       </div>
@@ -213,44 +202,6 @@ export const OpenAISettings = () => {
               </FormItem>
             )}
           />
-          <FormField
-            name="isAzure"
-            control={form.control}
-            render={({ field }) => (
-              <FormItem className="flex flex-row items-center space-x-3 space-y-0">
-                <FormControl>
-                  <Checkbox
-                    checked={field.value}
-                    onCheckedChange={(value) => {
-                      field.onChange(Boolean(value));
-                    }}
-                  />
-                </FormControl>
-                <div className="space-y-1 leading-none">
-                  <FormLabel>{t`Use Azure OpenAI`}</FormLabel>
-                </div>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            name="azureApiVersion"
-            control={form.control}
-            render={({ field }) => (
-              <FormItem className={form.watch("isAzure") ? "" : "opacity-50"}>
-                <FormLabel>{t`Azure API Version`}</FormLabel>
-                <FormControl>
-                  <Input
-                    type="text"
-                    placeholder={DEFAULT_AZURE_API_VERSION}
-                    disabled={!form.watch("isAzure")}
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
           <div className="flex items-center space-x-2 self-end sm:col-start-2">
             <Button type="submit" disabled={!form.formState.isValid}>
               {isEnabled && <FloppyDiskIcon className="mr-2" />}
@@ -272,7 +223,8 @@ export const OpenAISettings = () => {
           <Trans>
             Your API key is securely stored in the browser's local storage and is only utilized when
             making requests to OpenAI via their official SDK. Rest assured that your key is not
-            transmitted to any external server except when interacting with OpenAI's services.
+            transmitted to any external server except forward requests to OpenAI and is never persisted
+            in our database.
           </Trans>
         </p>
       </div>

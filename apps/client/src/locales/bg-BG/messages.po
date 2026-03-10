@@ -30,7 +30,7 @@ msgstr ""
 msgid "© {currentYear} My SaaS. All rights reserved."
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:282
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:273
 msgid "<0>Note: </0>By utilizing the OpenAI API, you acknowledge and accept the <1>terms of use</1> and <2>privacy policy</2> outlined by OpenAI. Please note that My SaaS bears no responsibility for any improper or unauthorized utilization of the service, and any resulting repercussions or liabilities solely rest on the user."
 msgstr ""
 
@@ -125,7 +125,7 @@ msgstr ""
 msgid "Authentication"
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:241
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:231
 msgid "Azure API Version"
 msgstr "Версия на Azure API"
 
@@ -302,7 +302,7 @@ msgstr ""
 msgid "Delete Account"
 msgstr "Изтриване на профила"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:188
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:178
 msgid "Deployment Name"
 msgstr "Име на внедряване"
 
@@ -428,7 +428,7 @@ msgstr "Поправяне на правописа и граматиката"
 msgid "Flexible pricing plans"
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:263
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:253
 msgid "Forget"
 msgstr "Забравете"
 
@@ -582,11 +582,11 @@ msgstr "Загубили сте устройството си?"
 msgid "Manage Subscription"
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:201
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:191
 msgid "Max Tokens"
 msgstr "Максимален брой жетони"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:188
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:178
 msgid "Model"
 msgstr "Модел"
 
@@ -656,11 +656,11 @@ msgstr "OpenAI не върна никакви варианти за вашия �
 msgid "OpenAI/Azure OpenAI/Ollama Integration"
 msgstr "Интеграция на OpenAI/Azure OpenAI/Ollama"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:162
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:152
 msgid "OpenAI/Ollama API Key"
 msgstr "Ключ за API на OpenAI/Ollama"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:175
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:165
 msgid "optional"
 msgstr ""
 
@@ -785,11 +785,11 @@ msgstr ""
 msgid "Save Changes"
 msgstr "Запазване на промените"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:257
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:247
 msgid "Save Locally"
 msgstr "Запазване на местно ниво"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:257
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:247
 msgid "Saved"
 msgstr "Запазено"
 
@@ -905,7 +905,7 @@ msgstr "Превключване в режим на светлина"
 msgid "System"
 msgstr "Система"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:175
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:165
 msgid "Tavily API Key"
 msgstr ""
 
@@ -976,7 +976,7 @@ msgstr ""
 msgid "Unverified"
 msgstr "Непроверен"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:230
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:220
 msgid "Use Azure OpenAI"
 msgstr "Използване на Azure OpenAI"
 
@@ -988,6 +988,10 @@ msgstr "Използване на темата на системата"
 #: apps/client/src/pages/auth/backup-otp/page.tsx:57
 msgid "Use your backup code"
 msgstr "Използване на резервен код"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:137
+msgid "Use your own OpenAI API key to power the built-in chat experience. Messages are processed through a LangGraph workflow that can call OpenAI for reasoning and Tavily for web search and retrieval."
+msgstr ""
 
 #: apps/client/src/services/errors/translate-error.ts:13
 msgid "User does not have an associated 'secrets' record. Please report this issue on GitHub."
@@ -1043,14 +1047,6 @@ msgstr ""
 msgid "You can also enter your username."
 msgstr "Можете да въведете и потребителското си име."
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:137
-msgid "You can also integrate with Azure OpenAI by enabling the <0>Use Azure OpenAI</0> checkbox and setting the Resource URL to your Azure OpenAI resource: <1>https://your-resource.openai.azure.com</1>. Set the deployment name in the Model field and specify the appropriate API version for your Azure deployment."
-msgstr "Можете също така да се интегрирате с Azure OpenAI, като поставите отметка в квадратчето <0>Use Azure OpenAI</0> и зададете URL адрес на ресурса на вашия ресурс Azure OpenAI: <1>https://your-resource.openai.azure.com.</1> Задайте името на внедряването в полето Model (Модел) и посочете подходящата версия на API за вашето внедряване в Azure."
-
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:146
-msgid "You can also integrate with Ollama simply by setting the API key to<0>sk-1234567890abcdef</0> and the Base URL to your Ollama URL, i.e.<1>http://localhost:11434/v1</1>. You can also pick and choose models and set the max tokens as per your preference."
-msgstr "Можете също така да се интегрирате с Ollama, като просто зададете API ключа<0>tosk-1234567890abcdef</0>, а базовия URL адрес - вашия URL адрес на Ollama, т.е.<1>http://localhost:11434/v1.</1> Можете също така да избирате модели и да задавате максималните токени според предпочитанията си."
-
 #: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:115
 msgid "You can make use of the OpenAI API to chat with AI."
 msgstr ""
@@ -1076,9 +1072,9 @@ msgstr "Имате поща!"
 msgid "Your account and all your data has been deleted successfully. Goodbye!"
 msgstr "Вашият акаунт и всички ваши данни са изтрити успешно. Сбогом!"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:272
-msgid "Your API key is securely stored in the browser's local storage and is only utilized when making requests to OpenAI via their official SDK. Rest assured that your key is not transmitted to any external server except when interacting with OpenAI's services."
-msgstr "Вашият API ключ се съхранява по сигурен начин в локалното хранилище на браузъра и се използва само при извършване на заявки към OpenAI чрез официалния им SDK. Бъдете сигурни, че вашият ключ не се предава на външен сървър, освен при взаимодействие с услугите на OpenAI."
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:262
+msgid "Your API key is securely stored in the browser's local storage and is only utilized when making requests to OpenAI via their official SDK. Rest assured that your key is not transmitted to any external server except forward requests to OpenAI and is never persisted in our database."
+msgstr ""
 
 #: apps/client/src/pages/auth/verify-email/page.tsx:28
 msgid "Your email address has been verified successfully."

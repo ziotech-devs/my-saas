@@ -30,7 +30,7 @@ msgstr ""
 msgid "© {currentYear} My SaaS. All rights reserved."
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:282
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:273
 msgid "<0>Note: </0>By utilizing the OpenAI API, you acknowledge and accept the <1>terms of use</1> and <2>privacy policy</2> outlined by OpenAI. Please note that My SaaS bears no responsibility for any improper or unauthorized utilization of the service, and any resulting repercussions or liabilities solely rest on the user."
 msgstr ""
 
@@ -125,7 +125,7 @@ msgstr ""
 msgid "Authentication"
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:241
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:231
 msgid "Azure API Version"
 msgstr "Azure API 버전"
 
@@ -302,7 +302,7 @@ msgstr ""
 msgid "Delete Account"
 msgstr "계정 삭제"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:188
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:178
 msgid "Deployment Name"
 msgstr "배포 이름"
 
@@ -428,7 +428,7 @@ msgstr "맞춤법 및 문법 수정"
 msgid "Flexible pricing plans"
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:263
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:253
 msgid "Forget"
 msgstr "잊어버림"
 
@@ -582,11 +582,11 @@ msgstr "기기를 분실하셨나요?"
 msgid "Manage Subscription"
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:201
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:191
 msgid "Max Tokens"
 msgstr "최대 토큰"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:188
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:178
 msgid "Model"
 msgstr "모델"
 
@@ -656,11 +656,11 @@ msgstr "OpenAI가 텍스트에 대한 선택 항목을 반환하지 않았습니
 msgid "OpenAI/Azure OpenAI/Ollama Integration"
 msgstr "OpenAI/Azure OpenAI/올라마 통합"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:162
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:152
 msgid "OpenAI/Ollama API Key"
 msgstr "OpenAI/올라마 API 키"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:175
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:165
 msgid "optional"
 msgstr ""
 
@@ -785,11 +785,11 @@ msgstr ""
 msgid "Save Changes"
 msgstr "변경 사항 저장"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:257
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:247
 msgid "Save Locally"
 msgstr "로컬에 저장"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:257
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:247
 msgid "Saved"
 msgstr "저장됨"
 
@@ -905,7 +905,7 @@ msgstr "조명 모드로 전환"
 msgid "System"
 msgstr "시스템"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:175
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:165
 msgid "Tavily API Key"
 msgstr ""
 
@@ -976,7 +976,7 @@ msgstr ""
 msgid "Unverified"
 msgstr "확인되지 않음"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:230
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:220
 msgid "Use Azure OpenAI"
 msgstr "Azure OpenAI 사용"
 
@@ -988,6 +988,10 @@ msgstr "시스템 테마 사용"
 #: apps/client/src/pages/auth/backup-otp/page.tsx:57
 msgid "Use your backup code"
 msgstr "백업 코드 사용"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:137
+msgid "Use your own OpenAI API key to power the built-in chat experience. Messages are processed through a LangGraph workflow that can call OpenAI for reasoning and Tavily for web search and retrieval."
+msgstr ""
 
 #: apps/client/src/services/errors/translate-error.ts:13
 msgid "User does not have an associated 'secrets' record. Please report this issue on GitHub."
@@ -1043,14 +1047,6 @@ msgstr ""
 msgid "You can also enter your username."
 msgstr "사용자 아이디를 입력할 수도 있습니다."
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:137
-msgid "You can also integrate with Azure OpenAI by enabling the <0>Use Azure OpenAI</0> checkbox and setting the Resource URL to your Azure OpenAI resource: <1>https://your-resource.openai.azure.com</1>. Set the deployment name in the Model field and specify the appropriate API version for your Azure deployment."
-msgstr "<0>Azure OpenAI 사용</0> 확인란을 사용 설정하고 리소스 URL을 Azure OpenAI 리소스 <1>(https://your-resource.openai.azure.com)</1>로 설정하여 Azure OpenAI와 통합할 수도 있습니다. 모델 필드에서 배포 이름을 설정하고 Azure 배포에 적합한 API 버전을 지정합니다."
-
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:146
-msgid "You can also integrate with Ollama simply by setting the API key to<0>sk-1234567890abcdef</0> and the Base URL to your Ollama URL, i.e.<1>http://localhost:11434/v1</1>. You can also pick and choose models and set the max tokens as per your preference."
-msgstr "또한 API 키 <0>tosk-1234567890abcdef와</0> 기본 URL을 Ollama URL(예: http:<1>//localhost:11434/v1)</1>로 설정하여 Ollama와 통합할 수도 있습니다. 원하는 대로 모델을 선택하고 최대 토큰을 설정할 수도 있습니다."
-
 #: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:115
 msgid "You can make use of the OpenAI API to chat with AI."
 msgstr ""
@@ -1076,9 +1072,9 @@ msgstr "메일이 도착했습니다!"
 msgid "Your account and all your data has been deleted successfully. Goodbye!"
 msgstr "계정과 모든 데이터가 성공적으로 삭제되었습니다. 안녕히 계세요!"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:272
-msgid "Your API key is securely stored in the browser's local storage and is only utilized when making requests to OpenAI via their official SDK. Rest assured that your key is not transmitted to any external server except when interacting with OpenAI's services."
-msgstr "API 키는 브라우저의 로컬 저장소에 안전하게 저장되며 공식 SDK를 통해 OpenAI에 요청할 때만 활용됩니다. OpenAI의 서비스와 상호작용할 때를 제외하고는 키가 외부 서버로 전송되지 않으니 안심하세요."
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:262
+msgid "Your API key is securely stored in the browser's local storage and is only utilized when making requests to OpenAI via their official SDK. Rest assured that your key is not transmitted to any external server except forward requests to OpenAI and is never persisted in our database."
+msgstr ""
 
 #: apps/client/src/pages/auth/verify-email/page.tsx:28
 msgid "Your email address has been verified successfully."

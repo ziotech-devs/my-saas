@@ -30,7 +30,7 @@ msgstr "{templatesCount}+ תבניות מוכנות מראש"
 msgid "© {currentYear} My SaaS. All rights reserved."
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:282
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:273
 msgid "<0>Note: </0>By utilizing the OpenAI API, you acknowledge and accept the <1>terms of use</1> and <2>privacy policy</2> outlined by OpenAI. Please note that My SaaS bears no responsibility for any improper or unauthorized utilization of the service, and any resulting repercussions or liabilities solely rest on the user."
 msgstr ""
 
@@ -125,7 +125,7 @@ msgstr ""
 msgid "Authentication"
 msgstr "אימות"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:241
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:231
 msgid "Azure API Version"
 msgstr "גרסת ממשק ה-API של Azure"
 
@@ -302,7 +302,7 @@ msgstr ""
 msgid "Delete Account"
 msgstr "מחיקת חשבון"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:188
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:178
 msgid "Deployment Name"
 msgstr "שם הפריסה"
 
@@ -428,7 +428,7 @@ msgstr "תיקון איות ודקדוק"
 msgid "Flexible pricing plans"
 msgstr "תוכניות תמחור גמישות"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:263
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:253
 msgid "Forget"
 msgstr "לשכוח"
 
@@ -582,11 +582,11 @@ msgstr "איבדת את המכשיר שלך?"
 msgid "Manage Subscription"
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:201
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:191
 msgid "Max Tokens"
 msgstr "אסימונים מקסימליים"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:188
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:178
 msgid "Model"
 msgstr "מודל"
 
@@ -656,11 +656,11 @@ msgstr "OpenAI לא החזיר אפשרויות לטקסט שלך."
 msgid "OpenAI/Azure OpenAI/Ollama Integration"
 msgstr "OpenAI/Azure OpenAI/Ollama אינטגרציה"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:162
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:152
 msgid "OpenAI/Ollama API Key"
 msgstr "מפתח API של OpenAI/Ollama"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:175
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:165
 msgid "optional"
 msgstr ""
 
@@ -785,11 +785,11 @@ msgstr "בקרת גישה מבוססת תפקידים"
 msgid "Save Changes"
 msgstr "שמירת שינויים"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:257
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:247
 msgid "Save Locally"
 msgstr "שמור באופן מקומי"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:257
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:247
 msgid "Saved"
 msgstr "נשמר"
 
@@ -905,7 +905,7 @@ msgstr "עבור למצב בהיר"
 msgid "System"
 msgstr "מערכת"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:175
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:165
 msgid "Tavily API Key"
 msgstr ""
 
@@ -976,7 +976,7 @@ msgstr "מספר בלתי מוגבל של פרויקטים"
 msgid "Unverified"
 msgstr "לא מאומת"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:230
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:220
 msgid "Use Azure OpenAI"
 msgstr "השתמש ב-Azure OpenAI"
 
@@ -988,6 +988,10 @@ msgstr "השתמש בערכת הנושא של המערכת"
 #: apps/client/src/pages/auth/backup-otp/page.tsx:57
 msgid "Use your backup code"
 msgstr "להשתמש בקוד הגיבוי שלך"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:137
+msgid "Use your own OpenAI API key to power the built-in chat experience. Messages are processed through a LangGraph workflow that can call OpenAI for reasoning and Tavily for web search and retrieval."
+msgstr ""
 
 #: apps/client/src/services/errors/translate-error.ts:13
 msgid "User does not have an associated 'secrets' record. Please report this issue on GitHub."
@@ -1043,14 +1047,6 @@ msgstr ""
 msgid "You can also enter your username."
 msgstr "אפשר גם למלא את שם המשתמש שלך."
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:137
-msgid "You can also integrate with Azure OpenAI by enabling the <0>Use Azure OpenAI</0> checkbox and setting the Resource URL to your Azure OpenAI resource: <1>https://your-resource.openai.azure.com</1>. Set the deployment name in the Model field and specify the appropriate API version for your Azure deployment."
-msgstr "ניתן גם לבצע אינטגרציה עם Azure OpenAI על-ידי הפעלת תיבת <0>הסימון 'השתמש ב-Azure OpenAI'</0> והגדרת כתובת ה-URL של המשאב למשאב Azure OpenAI שלך: <1>https://your-resource.openai.azure.com</1>. הגדר את שם הפריסה בשדה 'מודל' וציין את גרסת ה-API המתאימה לפריסת Azure שלך."
-
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:146
-msgid "You can also integrate with Ollama simply by setting the API key to<0>sk-1234567890abcdef</0> and the Base URL to your Ollama URL, i.e.<1>http://localhost:11434/v1</1>. You can also pick and choose models and set the max tokens as per your preference."
-msgstr "ניתן גם לבצע אינטגרציה עם Ollama פשוט על ידי הגדרת מפתח ה-API<0>tosk-1234567890abcdef</0> וכתובת ה-URL הבסיסית לכתובת ה-URL של Ollama,<1>כלומרhttp://localhost:11434/v1</1>. ניתן גם לבחור מודלים ולהגדיר את מספר האסימונים המרבי בהתאם להעדפותיך."
-
 #: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:115
 msgid "You can make use of the OpenAI API to chat with AI."
 msgstr ""
@@ -1076,9 +1072,9 @@ msgstr "קיבלת הודעה!"
 msgid "Your account and all your data has been deleted successfully. Goodbye!"
 msgstr "החשבון וכל הנתונים שלך נמחקו בהצלחה. להתראות ובהצלחה!"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:272
-msgid "Your API key is securely stored in the browser's local storage and is only utilized when making requests to OpenAI via their official SDK. Rest assured that your key is not transmitted to any external server except when interacting with OpenAI's services."
-msgstr "מפתח ה־API שלך מאוחסן בדפדפן מקומית ונעשה בו שימוש רק בעת שליחת בקשות ל־OpenAI דרך ה־SDK הרשמי שלהם. אנו מתחייבים שהמפתח שלך לא מועבר לשרת חיצוני מלבד למטרות תפעול השירותים של OpenAI."
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:262
+msgid "Your API key is securely stored in the browser's local storage and is only utilized when making requests to OpenAI via their official SDK. Rest assured that your key is not transmitted to any external server except forward requests to OpenAI and is never persisted in our database."
+msgstr ""
 
 #: apps/client/src/pages/auth/verify-email/page.tsx:28
 msgid "Your email address has been verified successfully."

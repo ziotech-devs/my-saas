@@ -30,7 +30,7 @@ msgstr ""
 msgid "© {currentYear} My SaaS. All rights reserved."
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:282
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:273
 msgid "<0>Note: </0>By utilizing the OpenAI API, you acknowledge and accept the <1>terms of use</1> and <2>privacy policy</2> outlined by OpenAI. Please note that My SaaS bears no responsibility for any improper or unauthorized utilization of the service, and any resulting repercussions or liabilities solely rest on the user."
 msgstr ""
 
@@ -125,7 +125,7 @@ msgstr ""
 msgid "Authentication"
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:241
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:231
 msgid "Azure API Version"
 msgstr "Azure API 版本"
 
@@ -302,7 +302,7 @@ msgstr ""
 msgid "Delete Account"
 msgstr "刪除帳號"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:188
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:178
 msgid "Deployment Name"
 msgstr "部署名稱"
 
@@ -428,7 +428,7 @@ msgstr "修正拼字和語法"
 msgid "Flexible pricing plans"
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:263
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:253
 msgid "Forget"
 msgstr "略過"
 
@@ -582,11 +582,11 @@ msgstr "遺失裝置？"
 msgid "Manage Subscription"
 msgstr ""
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:201
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:191
 msgid "Max Tokens"
 msgstr "最大 Token"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:188
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:178
 msgid "Model"
 msgstr "模型"
 
@@ -656,11 +656,11 @@ msgstr "OpenAI 沒有為您的文字傳回任何選項。"
 msgid "OpenAI/Azure OpenAI/Ollama Integration"
 msgstr "OpenAI/Azure OpenAI/Ollama 整合"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:162
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:152
 msgid "OpenAI/Ollama API Key"
 msgstr "OpenAI/Ollama API 金鑰"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:175
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:165
 msgid "optional"
 msgstr ""
 
@@ -785,11 +785,11 @@ msgstr ""
 msgid "Save Changes"
 msgstr "儲存變更"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:257
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:247
 msgid "Save Locally"
 msgstr "儲存至本機"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:257
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:247
 msgid "Saved"
 msgstr "已儲存"
 
@@ -905,7 +905,7 @@ msgstr "切換至燈光模式"
 msgid "System"
 msgstr "系統"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:175
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:165
 msgid "Tavily API Key"
 msgstr ""
 
@@ -976,7 +976,7 @@ msgstr ""
 msgid "Unverified"
 msgstr "未驗證"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:230
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:220
 msgid "Use Azure OpenAI"
 msgstr "使用 Azure OpenAI"
 
@@ -988,6 +988,10 @@ msgstr "使用系統主題"
 #: apps/client/src/pages/auth/backup-otp/page.tsx:57
 msgid "Use your backup code"
 msgstr "使用您的備份代碼"
+
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:137
+msgid "Use your own OpenAI API key to power the built-in chat experience. Messages are processed through a LangGraph workflow that can call OpenAI for reasoning and Tavily for web search and retrieval."
+msgstr ""
 
 #: apps/client/src/services/errors/translate-error.ts:13
 msgid "User does not have an associated 'secrets' record. Please report this issue on GitHub."
@@ -1043,14 +1047,6 @@ msgstr ""
 msgid "You can also enter your username."
 msgstr "您也可以輸入您的使用者名稱。"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:137
-msgid "You can also integrate with Azure OpenAI by enabling the <0>Use Azure OpenAI</0> checkbox and setting the Resource URL to your Azure OpenAI resource: <1>https://your-resource.openai.azure.com</1>. Set the deployment name in the Model field and specify the appropriate API version for your Azure deployment."
-msgstr "您也可以與 Azure OpenAI 整合，方法是啟用<0>使用 Azure OpenAI</0>核取方塊，並將資源 URL 設定為您的 Azure OpenAI 資源<1>：https://your-resource.openai.azure.com。</1>在模型欄位中設定部署名稱，並為您的 Azure 部署指定適當的 API 版本。"
-
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:146
-msgid "You can also integrate with Ollama simply by setting the API key to<0>sk-1234567890abcdef</0> and the Base URL to your Ollama URL, i.e.<1>http://localhost:11434/v1</1>. You can also pick and choose models and set the max tokens as per your preference."
-msgstr "您也可以透過設定 API key<0>tosk-1234567890abcdef</0>和 Base URL 至您的 Ollama URL (即<1>http://localhost:11434/v1</1>) 來與 Ollama 整合。您也可以依您的喜好挑選模型和設定最大代幣。"
-
 #: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:115
 msgid "You can make use of the OpenAI API to chat with AI."
 msgstr ""
@@ -1076,9 +1072,9 @@ msgstr "你有新郵件"
 msgid "Your account and all your data has been deleted successfully. Goodbye!"
 msgstr "您的帳戶和所有資料已成功刪除。再見"
 
-#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:272
-msgid "Your API key is securely stored in the browser's local storage and is only utilized when making requests to OpenAI via their official SDK. Rest assured that your key is not transmitted to any external server except when interacting with OpenAI's services."
-msgstr "您的 API 密鑰會安全地儲存在瀏覽器的本機儲存空間中，並且僅會在透過官方 SDK 向 OpenAI 提出請求時使用。請放心，除了與 OpenAI 的服務互動時，您的金鑰不會傳送到任何外部伺服器。"
+#: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:262
+msgid "Your API key is securely stored in the browser's local storage and is only utilized when making requests to OpenAI via their official SDK. Rest assured that your key is not transmitted to any external server except forward requests to OpenAI and is never persisted in our database."
+msgstr ""
 
 #: apps/client/src/pages/auth/verify-email/page.tsx:28
 msgid "Your email address has been verified successfully."
