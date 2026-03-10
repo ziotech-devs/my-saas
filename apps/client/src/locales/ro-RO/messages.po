@@ -69,7 +69,7 @@ msgid "Account"
 msgstr "Cont"
 
 #: apps/client/src/pages/dashboard/_components/sidebar.tsx:113
-#: apps/client/src/pages/dashboard/agent-chat/page.tsx:34
+#: apps/client/src/pages/dashboard/agent-chat/page.tsx:197
 msgid "Agent Chat"
 msgstr ""
 
@@ -117,7 +117,7 @@ msgstr "Sunteți sigur că doriți să dezactivați autentificarea cu doi factor
 msgid "Are you sure?"
 msgstr "Ești sigur?"
 
-#: apps/client/src/pages/dashboard/agent-chat/_components/chat-input.tsx:41
+#: apps/client/src/pages/dashboard/agent-chat/_components/chat-input.tsx:40
 msgid "Ask anything..."
 msgstr ""
 
@@ -171,6 +171,7 @@ msgstr ""
 msgid "Built-in Core Features"
 msgstr ""
 
+#: apps/client/src/pages/dashboard/agent-chat/_components/chat-input.tsx:48
 #: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:137
 msgid "Cancel"
 msgstr "Anulează"
@@ -602,7 +603,7 @@ msgstr ""
 #: apps/client/src/pages/auth/reset-password/page.tsx:60
 #: apps/client/src/pages/auth/verify-email/page.tsx:43
 #: apps/client/src/pages/auth/verify-otp/page.tsx:52
-#: apps/client/src/pages/dashboard/agent-chat/page.tsx:34
+#: apps/client/src/pages/dashboard/agent-chat/page.tsx:197
 #: apps/client/src/pages/dashboard/billing/page.tsx:119
 #: apps/client/src/pages/dashboard/settings/page.tsx:16
 #: apps/client/src/pages/home/page.tsx:23
@@ -614,7 +615,7 @@ msgstr ""
 msgid "Name"
 msgstr "Nume"
 
-#: apps/client/src/pages/dashboard/agent-chat/page.tsx:112
+#: apps/client/src/pages/dashboard/agent-chat/page.tsx:145
 msgid "New chat"
 msgstr ""
 
@@ -709,7 +710,7 @@ msgstr "Vă rugăm să păstrați codurile de rezervă într-o locație sigură.
 msgid "Powered by"
 msgstr "Oferit de"
 
-#: apps/client/src/pages/dashboard/agent-chat/page.tsx:145
+#: apps/client/src/pages/dashboard/agent-chat/page.tsx:182
 msgid "Powered by Tavily web search + OpenAI"
 msgstr ""
 
@@ -802,7 +803,7 @@ msgstr "Scanați codul QR de mai jos cu aplicația dvs. de autentificare pentru 
 msgid "Search for a language"
 msgstr "Căutați o limbă"
 
-#: apps/client/src/pages/dashboard/agent-chat/page.tsx:64
+#: apps/client/src/pages/dashboard/agent-chat/page.tsx:99
 msgid "Search the web and get AI-summarized answers"
 msgstr ""
 
@@ -814,6 +815,10 @@ msgstr ""
 #: apps/client/src/pages/home/sections/support/index.tsx:32
 msgid "Security"
 msgstr "Securitate"
+
+#: apps/client/src/pages/dashboard/agent-chat/_components/chat-input.tsx:52
+msgid "Send"
+msgstr ""
 
 #: apps/client/src/pages/auth/forgot-password/page.tsx:104
 msgid "Send Email"
@@ -1028,7 +1033,7 @@ msgstr "Vă verificăm adresa de e-mail numai pentru a ne asigura că vă putem 
 msgid "Web-based platform"
 msgstr ""
 
-#: apps/client/src/pages/dashboard/agent-chat/page.tsx:56
+#: apps/client/src/pages/dashboard/agent-chat/page.tsx:91
 msgid "What do you want to know?"
 msgstr ""
 
