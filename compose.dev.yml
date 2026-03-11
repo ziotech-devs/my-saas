@@ -1,6 +1,6 @@
 # Development services — starts only what the app needs to run locally.
 # Not for production use (ports are exposed directly).
-# For production, see tools/compose/vps.yml.
+# For production, see tools/compose/production.yml.
 
 services:
 
@@ -59,19 +59,9 @@ services:
       timeout: 1s
       retries: 5
 
-  graphs:
-    image: my-saas-graphs:latest
-    restart: unless-stopped
-    ports:
-      - "2024:8000"
-    depends_on:
-      langgraph-redis:
-        condition: service_healthy
-      postgres:
-        condition: service_healthy
-    environment:
-      REDIS_URI: redis://langgraph-redis:6379
-      DATABASE_URI: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-postgres}?sslmode=disable
+  # graphs:
+  #   Run separately with: pnpm graphs:dev
+  #   Or build the image first: cd apps/graphs && langgraph build -t my-saas-graphs:latest
 
 volumes:
   my-saas-postgres:
