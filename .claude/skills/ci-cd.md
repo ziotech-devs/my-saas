@@ -38,13 +38,13 @@ push to main
 
 ## Workflow: `.github/workflows/aws-cdk.yml`
 
-Triggers on push to `main` when `tools/infra/**` changes (or manually). Deploys all CDK stacks:
+Triggers on push to `main` when `tools/aws-cdk/**` changes (or manually). Deploys all CDK stacks:
 
 ```
-push to main (tools/infra/** changed)
+push to main (tools/aws-cdk/** changed)
   └─► deploy-aws-cdk
         1. Configure AWS credentials
-        2. cd tools/infra
+        2. cd tools/aws-cdk
         3. npx cdk deploy --all --require-approval never --hotswap-fallback --concurrency 4
 ```
 

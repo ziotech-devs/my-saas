@@ -40,20 +40,20 @@ adminer          DB admin UI
 | Docs domain | `<DOCS_DOMAIN>` |
 | Graphs domain | `<GRAPHS_DOMAIN>` |
 | ACME email | `<ACME_EMAIL>` |
-| Compose file | `tools/compose/vps.yml` |
+| Compose file | `tools/compose/production.yml` |
 | Env file | `.env` (project root) |
 
 ## Common Commands
 
 ```bash
 # Run all compose commands from project root
-docker compose --project-directory . -f tools/compose/vps.yml <command>
+docker compose --project-directory . -f tools/compose/production.yml <command>
 
 # Start / restart everything
-docker compose --project-directory . -f tools/compose/vps.yml up -d
+docker compose --project-directory . -f tools/compose/production.yml up -d
 
 # Restart single service (e.g. after .env change)
-docker compose --project-directory . -f tools/compose/vps.yml up -d --no-deps server
+docker compose --project-directory . -f tools/compose/production.yml up -d --no-deps server
 
 # View logs
 docker logs my-saas-server-1 --tail 50 -f
@@ -74,7 +74,7 @@ docker exec my-saas-nginx-1 nginx -s reload
 docker build -t my-saas-server:latest .
 
 # 2. Restart server (also restarts client-init and docs-init to refresh static assets)
-docker compose --project-directory . -f tools/compose/vps.yml up -d --no-deps server client-init docs-init nginx
+docker compose --project-directory . -f tools/compose/production.yml up -d --no-deps server client-init docs-init nginx
 ```
 
 ## Environment Variables
@@ -157,5 +157,5 @@ curl -sk --resolve "<APP_DOMAIN>:443:<VPS_IP>" https://<APP_DOMAIN>/api/health
 # 2. Run in DB container
 docker exec my-saas-postgres-1 psql -U postgres -c "ALTER USER postgres WITH PASSWORD '<new_password>';"
 # 3. Restart server
-docker compose --project-directory . -f tools/compose/vps.yml up -d --no-deps server
+docker compose --project-directory . -f tools/compose/production.yml up -d --no-deps server
 ```

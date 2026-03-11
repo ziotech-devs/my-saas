@@ -47,7 +47,6 @@ stats.html
 # Environment Variables
 *.env*
 !.env.example
-tools/compose/.env.vps
 
 # Lingui Compiled Messages
 apps/client/src/locales/_build/

@@ -48,13 +48,13 @@ cd apps/graphs && langgraph build -t my-saas-graphs:latest && cd ../..
 **3. Run database migrations**
 
 ```bash
-docker compose --project-directory . -f tools/compose/vps.yml run --rm server pnpm prisma migrate deploy
+docker compose --project-directory . -f tools/compose/production.yml run --rm server pnpm prisma migrate deploy
 ```
 
 ### Start the stack
 
 ```bash
-docker compose --project-directory . -f tools/compose/vps.yml up -d
+docker compose --project-directory . -f tools/compose/production.yml up -d
 ```
 
 ### Scale the server
@@ -62,21 +62,21 @@ docker compose --project-directory . -f tools/compose/vps.yml up -d
 Traefik automatically detects new replicas and round-robins traffic:
 
 ```bash
-docker compose --project-directory . -f tools/compose/vps.yml up -d --scale server=3
+docker compose --project-directory . -f tools/compose/production.yml up -d --scale server=3
 ```
 
 ### View logs
 
 ```bash
-docker compose --project-directory . -f tools/compose/vps.yml logs -f server
-docker compose --project-directory . -f tools/compose/vps.yml logs -f graphs
+docker compose --project-directory . -f tools/compose/production.yml logs -f server
+docker compose --project-directory . -f tools/compose/production.yml logs -f graphs
 ```
 
 ### Update the stack
 
 ```bash
 docker build -t my-saas-server:latest .
-docker compose --project-directory . -f tools/compose/vps.yml up -d --no-deps server
+docker compose --project-directory . -f tools/compose/production.yml up -d --no-deps server
 ```
 
 ### Generate Adminer basic auth

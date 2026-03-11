@@ -7,7 +7,7 @@ title: VPS (Self-Hosted)
 
 Deploy the full stack on a single VPS using Docker Compose + Traefik for TLS termination and automatic Let's Encrypt certificates.
 
-**Compose file:** `tools/compose/vps.yml`
+**Compose file:** `tools/compose/production.yml`
 **CI/CD:** `.github/workflows/deploy-vps.yml`
 
 ## Services

@@ -1,42 +1,42 @@
 {
   "name": "infra",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "tools/infra",
+  "sourceRoot": "tools/aws-cdk",
   "projectType": "application",
   "targets": {
     "build": {
       "executor": "nx:run-commands",
       "options": {
         "command": "tsc",
-        "cwd": "tools/infra"
+        "cwd": "tools/aws-cdk"
       }
     },
     "synth": {
       "executor": "nx:run-commands",
       "options": {
         "command": "npx cdk synth",
-        "cwd": "tools/infra"
+        "cwd": "tools/aws-cdk"
       }
     },
     "deploy": {
       "executor": "nx:run-commands",
       "options": {
         "command": "npx cdk deploy --all",
-        "cwd": "tools/infra"
+        "cwd": "tools/aws-cdk"
       }
     },
     "diff": {
       "executor": "nx:run-commands",
       "options": {
         "command": "npx cdk diff",
-        "cwd": "tools/infra"
+        "cwd": "tools/aws-cdk"
       }
     },
     "destroy": {
       "executor": "nx:run-commands",
       "options": {
         "command": "npx cdk destroy --all",
-        "cwd": "tools/infra"
+        "cwd": "tools/aws-cdk"
       }
     }
   },

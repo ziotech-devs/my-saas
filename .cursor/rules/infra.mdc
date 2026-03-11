@@ -5,7 +5,7 @@ alwaysApply: false
 
 # CDK Infrastructure Skill
 
-Manage AWS CDK infrastructure in `tools/infra/` for deploying the My SaaS application.
+Manage AWS CDK infrastructure in `tools/aws-cdk/` for deploying the My SaaS application.
 
 ## Commands
 
@@ -20,7 +20,7 @@ pnpm cdk:diff
 pnpm cdk:deploy
 
 # Deploy single stack
-cd tools/infra && npx cdk deploy MySaasApiStack --require-approval never
+cd tools/aws-cdk && npx cdk deploy MySaasApiStack --require-approval never
 
 # Destroy all stacks
 pnpm cdk:destroy
@@ -104,7 +104,7 @@ nx run infra:build
 ### First-time deployment
 ```bash
 # Bootstrap CDK (once per account/region)
-cd tools/infra && npx cdk bootstrap
+cd tools/aws-cdk && npx cdk bootstrap
 
 # Deploy all stacks
 pnpm cdk:deploy
@@ -177,7 +177,7 @@ aws cloudformation wait stack-delete-complete --stack-name MySaasApiStack
 # Also clear orphaned log groups (block redeployment otherwise)
 aws logs delete-log-group --log-group-name /ecs/my-saas-api
 aws logs delete-log-group --log-group-name /ecs/my-saas-adminer
-cd tools/infra && npx cdk deploy MySaasApiStack --require-approval never
+cd tools/aws-cdk && npx cdk deploy MySaasApiStack --require-approval never
 ```
 
 ### ECS circuit breaker triggered — debug steps

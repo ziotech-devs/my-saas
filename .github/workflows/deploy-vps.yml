@@ -103,10 +103,10 @@ jobs:
             cd ~/my-saas
             git pull
             SERVER_IMAGE=$SERVER_IMAGE GRAPHS_IMAGE=$GRAPHS_IMAGE \
-              docker compose --project-directory . -f tools/compose/vps.yml pull
+              docker compose --project-directory . -f tools/compose/production.yml pull
             SERVER_IMAGE=$SERVER_IMAGE GRAPHS_IMAGE=$GRAPHS_IMAGE \
-              docker compose --project-directory . -f tools/compose/vps.yml up -d --remove-orphans
-            docker compose --project-directory . -f tools/compose/vps.yml run --rm \
+              docker compose --project-directory . -f tools/compose/production.yml up -d --remove-orphans
+            docker compose --project-directory . -f tools/compose/production.yml run --rm \
               -e COREPACK_ENABLE_DOWNLOAD_PROMPT=0 \
               server pnpm prisma migrate deploy
             docker logout ghcr.io

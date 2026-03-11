@@ -2,7 +2,7 @@
 # Requires a domain with wildcard DNS pointing to the VPS.
 # Build the server image: docker build -t my-saas-server:latest .
 # Build the graphs image: cd apps/graphs && langgraph build -t my-saas-graphs:latest
-# Start: docker compose --project-directory . -f tools/compose/vps.yml up -d
+# Start: docker compose --project-directory . -f tools/compose/production.yml up -d
 
 name: my-saas
 

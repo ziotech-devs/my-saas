@@ -5,7 +5,7 @@ user-invocable: true
 
 # CDK Infrastructure Skill
 
-Manage AWS CDK infrastructure in `tools/infra/` for deploying the My SaaS application.
+Manage AWS CDK infrastructure in `tools/aws-cdk/` for deploying the My SaaS application.
 
 ## Commands
 
@@ -95,7 +95,7 @@ nx run infra:build
 ## File Structure
 
 ```
-tools/infra/
+tools/aws-cdk/
 ├── bin/
 │   └── infra.ts                     # CDK app entry point
 ├── lib/
@@ -141,7 +141,7 @@ export AWS_PROFILE=my-profile
 ### First-time deployment
 ```bash
 # Bootstrap CDK (once per account/region)
-cd tools/infra && npx cdk bootstrap
+cd tools/aws-cdk && npx cdk bootstrap
 
 # Deploy all stacks
 pnpm cdk:deploy
@@ -273,7 +273,7 @@ aws cloudformation delete-stack --stack-name MySaasApiStack
 aws cloudformation wait stack-delete-complete --stack-name MySaasApiStack
 
 # Then redeploy
-cd tools/infra && npx cdk deploy MySaasApiStack
+cd tools/aws-cdk && npx cdk deploy MySaasApiStack
 ```
 
 **Most common cause**: ECS container crashes on startup (missing/invalid env vars) → circuit breaker triggers → stack rollback. Check what's missing in `my-saas/app-secrets` first.
