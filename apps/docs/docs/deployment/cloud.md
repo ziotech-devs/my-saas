@@ -9,21 +9,21 @@ Deployed on AWS us-east-1 using ECS (API + graphs), S3 + CloudFront (frontend), 
 
 ## CI/CD Pipeline
 
-Deployment is fully automated via GitHub Actions (`.github/workflows/deploy.yml`).
+Deployment is automated via GitHub Actions (`.github/workflows/deploy-aws.yml`).
 
-**Triggers:** push to `main` or manual `workflow_dispatch`.
+**Trigger:** manual `workflow_dispatch` only.
 
 **Pipeline:**
 
 ```
-push to main
+workflow_dispatch
     │
     ▼
-Test & Build
+Test & Build (pnpm test + pnpm build)
     │
     ├──▶ Deploy API      → Docker image → ECR → ECS force redeploy
-    ├──▶ Deploy Frontend → nx build → S3 sync → CloudFront invalidation
-    └──▶ Deploy Graphs   → langgraph build → ECR → ECS force redeploy
+    ├──▶ Deploy Frontend → nx client:build → S3 sync → CloudFront invalidation
+    └──▶ Deploy Graphs   → langgraph build → ECR → ECS force redeploy (skipped if service not active)
 ```
 
 All three deploys run in parallel after tests pass.
@@ -35,26 +35,25 @@ All three deploys run in parallel after tests pass.
 | `AWS_ACCESS_KEY_ID` | IAM credentials |
 | `AWS_SECRET_ACCESS_KEY` | IAM credentials |
 | `CLOUDFRONT_DISTRIBUTION_ID` | CloudFront distribution to invalidate |
-| `NX_CLOUD_ACCESS_TOKEN` | Nx Cloud token (build cache) |
+| `NX_CLOUD_ACCESS_TOKEN` | Nx Cloud token (optional, for build cache) |
 
 ## Manual Deploy
 
 ### Frontend
 
 ```bash
-nx run client:build
-aws s3 sync dist/apps/client s3://$FRONTEND_BUCKET --delete
+pnpm exec nx run client:build
+aws s3 sync dist/apps/client s3://my-saas-frontend-301394200094-us-east-1 --delete
 aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
 ```
 
 ### API
 
 ```bash
-# Build and push Docker image to ECR, then:
-aws ecs update-service \
-  --cluster my-saas-cluster \
-  --service my-saas-api \
-  --force-new-deployment
+docker build -t my-saas-api:latest .
+docker tag my-saas-api:latest 301394200094.dkr.ecr.us-east-1.amazonaws.com/my-saas-api:latest
+docker push 301394200094.dkr.ecr.us-east-1.amazonaws.com/my-saas-api:latest
+aws ecs update-service --cluster my-saas-cluster --service my-saas-api --force-new-deployment
 ```
 
 ### AI Graphs Service
@@ -62,11 +61,9 @@ aws ecs update-service \
 ```bash
 cd apps/graphs
 langgraph build -t my-saas-graphs:latest
-# Tag and push to ECR, then:
-aws ecs update-service \
-  --cluster my-saas-cluster \
-  --service my-saas-graphs \
-  --force-new-deployment
+docker tag my-saas-graphs:latest 301394200094.dkr.ecr.us-east-1.amazonaws.com/my-saas-graphs:latest
+docker push 301394200094.dkr.ecr.us-east-1.amazonaws.com/my-saas-graphs:latest
+aws ecs update-service --cluster my-saas-cluster --service my-saas-graphs --force-new-deployment
 ```
 
 ## Infrastructure Resources
@@ -80,4 +77,4 @@ aws ecs update-service \
 | S3 (uploads) | User file uploads |
 | ECR (`my-saas-api`) | Docker image registry for API |
 | ECR (`my-saas-graphs`) | Docker image registry for graphs |
-| ALB | Load balancer, port 8080 for Adminer |
+| ALB | Load balancer for API and Adminer |

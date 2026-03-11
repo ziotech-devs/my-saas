@@ -35,7 +35,6 @@ const sidebars: SidebarsConfig = {
       items: [
         "deployment/cloud",
         "deployment/vps",
-        "deployment/docker",
       ],
     },
     "contributing",

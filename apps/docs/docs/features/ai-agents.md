@@ -9,18 +9,23 @@ The `apps/graphs` service is a Python LangGraph microservice for AI agent orches
 
 ## Architecture
 
+API keys (OpenAI, Tavily) are configured by the user in the client settings UI. The client sends requests to the NestJS API, which proxies them to the LangGraph service — injecting the keys at the server level.
+
 ```
-NestJS API ──HTTP──▶ Python LangGraph Service
-                          │
-                    ┌─────▼──────┐
-                    │ StateGraph │
-                    │  ┌──────┐  │
-                    │  │search│  │
-                    │  └──┬───┘  │
-                    │  ┌──▼───┐  │
-                    │  │ LLM  │  │
-                    │  └──────┘  │
-                    └────────────┘
+Client (settings UI)
+  │  API keys stored per user
+  ▼
+NestJS API ──HTTP + keys──▶ Python LangGraph Service
+                                  │
+                            ┌─────▼──────┐
+                            │ StateGraph │
+                            │  ┌──────┐  │
+                            │  │search│  │  ← Tavily
+                            │  └──┬───┘  │
+                            │  ┌──▼───┐  │
+                            │  │ LLM  │  │  ← OpenAI
+                            │  └──────┘  │
+                            └────────────┘
 ```
 
 ## Setup
@@ -28,13 +33,6 @@ NestJS API ──HTTP──▶ Python LangGraph Service
 ```bash
 cd apps/graphs
 pip install -r requirements.txt
-```
-
-## Environment Variables
-
-```env
-OPENAI_API_KEY=
-TAVILY_API_KEY=
 ```
 
 ## Running

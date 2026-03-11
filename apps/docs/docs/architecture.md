@@ -15,6 +15,8 @@ title: Architecture
 | AI Agents | Python, LangGraph, LangChain |
 | Monorepo | Nx, pnpm |
 | Bundler | Vite (client), SWC (server) |
+| CI/CD | GitHub Actions |
+| DevOps | Docker, AWS CDK |
 
 ## Project Structure
 

@@ -5,7 +5,7 @@ title: Contributing
 
 # Contributing
 
-See [CONTRIBUTING.md](https://github.com/talkenigs/my-saas/blob/main/CONTRIBUTING.md) in the root of the repository.
+See [CONTRIBUTING.md](https://github.com/ziotech-devs/my-saas/blob/main/CONTRIBUTING.md) in the root of the repository.
 
 ## Code Style
 

@@ -9,14 +9,16 @@ title: Admin (Adminer)
 
 ## Local Access
 
-Start with Docker Compose, then open: http://localhost:8080
+Open http://localhost:8080 — Adminer runs as part of `docker compose -f compose.dev.yml up -d`.
+
+If it's not running yet:
 
 ```bash
-docker compose -f tools/compose/docker-compose.yml up adminer
+docker compose -f compose.dev.yml up -d adminer
 ```
 
 Login with your PostgreSQL credentials from `.env`.
 
 ## Production
 
-The ALB exposes Adminer on port 8080. Restrict access via security groups to trusted IPs only.
+Adminer is protected with HTTP basic auth using the password set in `ADMINER_BASIC_AUTH` in your `.env`.
