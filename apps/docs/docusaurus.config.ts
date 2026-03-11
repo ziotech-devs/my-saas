@@ -45,7 +45,7 @@ const config: Config = {
           label: "Docs",
         },
         {
-          href: "https://github.com/talkenigs/my-saas",
+          href: "https://github.com/ziotech-devs/my-saas",
           label: "GitHub",
           position: "right",
         },

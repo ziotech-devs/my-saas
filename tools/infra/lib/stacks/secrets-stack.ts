@@ -30,12 +30,6 @@ const SECRET_TEMPLATE = {
   ACCESS_TOKEN_SECRET: 'replace-with-random-secret',
   REFRESH_TOKEN_SECRET: 'replace-with-random-secret',
 
-  // Chrome Browser (for printing) — REPLACE when Chrome service is deployed
-  CHROME_PORT: '8080',
-  CHROME_TOKEN: 'replace-with-chrome-token',
-  CHROME_URL: 'http://placeholder.example.com',
-  CHROME_IGNORE_HTTPS_ERRORS: 'false',
-
   // Mail Server — placeholders pass validation; REPLACE with real SMTP to send email
   MAIL_FROM: 'noreply@example.com',
   SMTP_URL: 'smtp://localhost:25',

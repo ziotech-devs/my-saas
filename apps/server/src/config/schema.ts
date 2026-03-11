@@ -17,14 +17,6 @@ export const configSchema = z.object({
   ACCESS_TOKEN_SECRET: z.string(),
   REFRESH_TOKEN_SECRET: z.string(),
 
-  // Browser
-  CHROME_TOKEN: z.string(),
-  CHROME_URL: z.string().url(),
-  CHROME_IGNORE_HTTPS_ERRORS: z
-    .string()
-    .default("false")
-    .transform((s) => s !== "false" && s !== "0"),
-
   // Mail Server
   MAIL_FROM: z.string().includes("@").optional().default("noreply@localhost"),
   SMTP_URL: z

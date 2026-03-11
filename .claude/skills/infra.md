@@ -219,8 +219,6 @@ The app validates config on startup via Zod schema (`apps/server/src/config/sche
 | `REFRESH_TOKEN_SECRET` | required string | any random 32+ char value |
 | `PUBLIC_URL` | required URL | CloudFront URL (e.g. `https://xxx.cloudfront.net`) — NOT the ALB |
 | `STORAGE_URL` | required URL | Public S3 URL: `https://<bucket>.s3.us-east-1.amazonaws.com` |
-| `CHROME_URL` | required URL | Headless Chrome service URL (no Chrome stack deployed yet) |
-| `CHROME_TOKEN` | required string | Token for Chrome service |
 | `STORAGE_ENDPOINT` | required string | `s3.amazonaws.com` for AWS S3 |
 | `STORAGE_PORT` | required number | `443` for S3 |
 | `STORAGE_BUCKET` | required string | the S3 bucket name |

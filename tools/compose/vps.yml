@@ -80,9 +80,6 @@ services:
       STORAGE_SECRET_KEY: disabled
       STORAGE_USE_SSL: "false"
       STORAGE_SKIP_BUCKET_CHECK: "true"
-      # Chrome — not deployed; dummy values prevent startup validation errors
-      CHROME_TOKEN: disabled
-      CHROME_URL: http://localhost:3001
       MAIL_FROM: ${MAIL_FROM:-noreply@example.com}
     networks:
       - internal

@@ -144,8 +144,6 @@ The app validates all config on startup via Zod (`apps/server/src/config/schema.
 | `REFRESH_TOKEN_SECRET` | `openssl rand -hex 32` |
 | `PUBLIC_URL` | ALB DNS — `http://my-saas-alb-445995649.us-east-1.elb.amazonaws.com` |
 | `STORAGE_URL` | `https://my-saas-uploads-301394200094-us-east-1.s3.us-east-1.amazonaws.com` |
-| `CHROME_URL` | Headless Chrome URL (use placeholder until Chrome stack deployed) |
-| `CHROME_TOKEN` | Any string |
 | `STORAGE_ENDPOINT` | `s3.amazonaws.com` |
 | `STORAGE_PORT` | `443` |
 | `STORAGE_BUCKET` | `my-saas-uploads-301394200094-us-east-1` |
