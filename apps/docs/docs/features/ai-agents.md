@@ -30,12 +30,20 @@ NestJS API ──HTTP + keys──▶ Python LangGraph Service
 
 ## Setup
 
+**1. Install dependencies**
+
 ```bash
 cd apps/graphs
 pip install -r requirements.txt
 ```
 
-## Running
+**2. Build the image**
+
+```bash
+langgraph build -t my-saas-graphs:latest
+```
+
+**3. Run**
 
 ```bash
 pnpm graphs:dev
