@@ -66,4 +66,4 @@ This starts:
 ## Next Steps
 
 - [Architecture](./architecture) — understand the stack, project structure, and request flow
-- [Deployment → Docker](./deployment/docker) — Docker Compose details and service reference
+- [Deployment → VPS](./deployment/vps) — Docker Compose details and service reference
