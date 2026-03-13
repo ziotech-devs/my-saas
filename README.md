@@ -2,7 +2,7 @@
 
 **Production-ready SaaS boilerplate with React, NestJS, Prisma, PostgreSQL, Redis, Stripe, and AI features.**
 
-- 🌐 **Live demo**: [my-saas.ziotech.dev](https://my-saas.ziotech.dev)
+- 🌐 **Live demo**: [app.ziotech.dev](https://app.ziotech.dev)
 - 📚 **Documentation**: [docs.ziotech.dev](https://docs.ziotech.dev)
 
 ---
