@@ -30,11 +30,15 @@
     "cdk:synth": "nx run infra:synth",
     "cdk:deploy": "nx run infra:deploy",
     "cdk:diff": "nx run infra:diff",
-    "cdk:destroy": "nx run infra:destroy"
+    "cdk:destroy": "nx run infra:destroy",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@babel/core": "^7.28.5",
     "@babel/preset-react": "^7.28.5",
+    "@commitlint/cli": "^21.0.2",
+    "@commitlint/config-conventional": "^21.0.2",
+    "@commitlint/types": "^21.0.1",
     "@crowdin/cli": "^4.14.0",
     "@lingui/cli": "^4.14.1",
     "@lingui/conf": "^4.14.1",
@@ -109,6 +113,7 @@
     "eslint-plugin-tailwindcss": "^3.18.2",
     "eslint-plugin-unicorn": "^55.0.0",
     "eslint-plugin-unused-imports": "^3.2.0",
+    "husky": "^9.1.7",
     "jest": "^29.7.0",
     "jest-environment-node": "^29.7.0",
     "jsdom": "^25.0.1",
