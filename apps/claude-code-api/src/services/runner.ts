@@ -23,7 +23,7 @@ import { cleanupWorktree, createWorktree } from "./worktree";
 export const handleTicket = async (
   ticket: Ticket,
   repoDir: string,
-  { review = false, lint = true, test = false }: PipelineOptions,
+  { review = false, lint = true, test = false }: PipelineOptions = {},
 ): Promise<void> => {
   const branchName = `ticket/${ticket.key.toLowerCase()}`;
   logger.info("Processing ticket", {
@@ -105,7 +105,7 @@ export const handleTicket = async (
       }
     }
 
-    const commitMessage = `feat: ${ticket.key} - ${ticket.summary}`;
+    const commitMessage = `fix: ${ticket.key} - ${ticket.summary}`;
     commitAndPush(worktreeDir, commitMessage, branchName);
 
     const prUrl = createPullRequest(
