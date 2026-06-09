@@ -272,15 +272,13 @@ export class AuthController {
   @HttpCode(200)
   @Post("forgot-password")
   async forgotPassword(@Body() { email }: ForgotPasswordDto) {
-    try {
-      await this.authService.forgotPassword(email);
-    } catch {
-      // pass
-    }
+    // The service returns a generic success regardless of whether the email is
+    // registered, preventing user enumeration. Unknown emails and OAuth users
+    // without a Secrets row are handled gracefully (no crash, no email sent).
+    await this.authService.forgotPassword(email);
 
     return {
-      message:
-        "A password reset link should have been sent to your inbox, if an account existed with the email you provided.",
+      message: "If that email is registered, you'll receive a reset link shortly.",
     };
   }
 
