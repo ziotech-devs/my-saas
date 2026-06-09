@@ -9,10 +9,10 @@
     "name": "Tal Kenigs"
   },
   "scripts": {
-    "dev": "nx run-many -t serve --exclude=graphs,docs",
+    "dev": "nx run-many -t serve --exclude=graphs,docs,claude-code-api",
     "test": "pnpm vitest run",
     "prebuild": "pnpm prisma:generate",
-    "build": "nx run-many -t build --exclude=graphs",
+    "build": "nx run-many -t build --exclude=graphs,claude-code-api",
     "prestart": "pnpm prisma:migrate",
     "start": "node dist/apps/server/main",
     "lint": "nx run-many -t lint",
@@ -31,7 +31,8 @@
     "cdk:deploy": "nx run infra:deploy",
     "cdk:diff": "nx run infra:diff",
     "cdk:destroy": "nx run infra:destroy",
-    "prepare": "husky"
+    "prepare": "husky",
+    "claude-code-api:serve": "nx run claude-code-api:serve"
   },
   "devDependencies": {
     "@babel/core": "^7.28.5",
@@ -135,6 +136,7 @@
     "vitest": "^2.1.9"
   },
   "dependencies": {
+    "@anthropic-ai/claude-agent-sdk": "^0.3.169",
     "@dnd-kit/core": "^6.3.1",
     "@dnd-kit/modifiers": "^7.0.0",
     "@dnd-kit/sortable": "^8.0.0",
@@ -211,6 +213,7 @@
     "cookie-parser": "^1.4.7",
     "dayjs": "^1.11.19",
     "deepmerge": "^4.3.1",
+    "express": "^5.2.1",
     "express-session": "^1.18.2",
     "file-saver": "^2.0.5",
     "framer-motion": "^11.18.2",
