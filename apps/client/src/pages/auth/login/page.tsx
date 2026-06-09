@@ -16,7 +16,7 @@ import {
   Input,
 } from "@my-saas/ui";
 import { cn } from "@my-saas/utils";
-import { ArrowRightIcon } from "@phosphor-icons/react";
+import { ArrowRightIcon, SpinnerGapIcon } from "@phosphor-icons/react";
 import { useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
@@ -124,7 +124,11 @@ export const LoginPage = () => {
 
             <div className="mt-4 flex items-center gap-x-4">
               <Button type="submit" disabled={loading} className="flex-1">
-                {t`Sign in`}
+                {loading ? (
+                  <SpinnerGapIcon size={16} className="animate-spin" />
+                ) : (
+                  t`Sign in`
+                )}
               </Button>
 
               <Button asChild variant="link" className="px-4">
