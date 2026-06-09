@@ -5,6 +5,7 @@ import { query, startup, type WarmQuery } from "@anthropic-ai/claude-agent-sdk";
 
 import { logger } from "../logger";
 import { buildReviewPrompt } from "../prompts/ticket.prompts";
+import { type Ticket } from "../types";
 
 const LOGS_DIR = path.join(process.cwd(), "logs", "runs");
 
@@ -88,10 +89,10 @@ type ReviewResult = {
   findings: string;
 };
 
-export const runCodeReview = async (repoDir: string, ticketKey: string): Promise<ReviewResult> => {
-  logger.info("Starting Claude code review session", { repoDir, ticketKey });
+export const runCodeReview = async (repoDir: string, ticket: Ticket): Promise<ReviewResult> => {
+  logger.info("Starting Claude code review session", { repoDir, ticketKey: ticket.key });
 
-  const prompt = buildReviewPrompt(ticketKey);
+  const prompt = buildReviewPrompt(ticket);
 
   const messages = query({
     prompt,

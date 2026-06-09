@@ -71,6 +71,31 @@ export const commitAndPush = (repoDir: string, message: string, branch: string):
   exec(`git push -u ${remote} ${branch}`, repoDir);
 };
 
+type LintResult = {
+  ok: boolean;
+  output: string;
+};
+
+export const runTests = (repoDir: string): LintResult => {
+  try {
+    const output = exec("pnpm test --run", repoDir);
+    return { ok: true, output };
+  } catch (error: unknown) {
+    const output = error instanceof Error ? error.message : String(error);
+    return { ok: false, output };
+  }
+};
+
+export const runLint = (repoDir: string): LintResult => {
+  try {
+    const output = exec("pnpm lint", repoDir);
+    return { ok: true, output };
+  } catch (error: unknown) {
+    const output = error instanceof Error ? error.message : String(error);
+    return { ok: false, output };
+  }
+};
+
 export const createPullRequest = (repoDir: string, title: string, body: string): string => {
   const url = exec(
     `gh pr create --title "${title.replace(/"/g, String.raw`\"`)}" --body "${body.replace(/"/g, String.raw`\"`)}" --base main`,
