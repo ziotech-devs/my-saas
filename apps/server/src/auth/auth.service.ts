@@ -145,9 +145,20 @@ export class AuthService {
 
   // Password Reset Flows
   async forgotPassword(email: string) {
+    // Look up the user first to avoid Prisma's P2025 crash (record not found)
+    // when updating a non-existent user. We intentionally return without error
+    // for unknown emails to prevent user enumeration attacks.
+    const user = await this.userService.findOneByIdentifier(email);
+
+    if (!user) return;
+
+    // OAuth users (GitHub/Google) may not have a Secrets row, which would make
+    // the nested `secrets: { update }` fail. Skip silently in that case as well.
+    if (!user.secrets) return;
+
     const token = this.generateToken("reset");
 
-    await this.userService.updateByEmail(email, {
+    await this.userService.updateByEmail(user.email, {
       secrets: { update: { resetToken: token } },
     });
 
@@ -156,7 +167,7 @@ export class AuthService {
     const subject = "Reset your My SaaS password";
     const text = `Please click on the link below to reset your password:\n\n${url}`;
 
-    await this.mailService.sendEmail({ to: email, subject, text });
+    await this.mailService.sendEmail({ to: user.email, subject, text });
   }
 
   async updatePassword(email: string, currentPassword: string, newPassword: string) {
