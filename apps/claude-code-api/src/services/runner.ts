@@ -23,7 +23,7 @@ import { cleanupWorktree, createWorktree } from "./worktree";
 export const handleTicket = async (
   ticket: Ticket,
   repoDir: string,
-  { review = false, lint = true, test = false }: PipelineOptions = {},
+  { review, lint = false, test }: PipelineOptions = {},
 ): Promise<void> => {
   const branchName = `ticket/${ticket.key.toLowerCase()}`;
   logger.info("Processing ticket", {
