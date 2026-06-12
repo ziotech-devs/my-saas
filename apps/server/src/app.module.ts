@@ -10,6 +10,7 @@ import { ContributorsModule } from "./contributors/contributors.module";
 import { DatabaseModule } from "./database/database.module";
 import { FeatureModule } from "./feature/feature.module";
 import { HealthModule } from "./health/health.module";
+import { HelloModule } from "./hello/hello.module";
 import { MailModule } from "./mail/mail.module";
 import { StockChatModule } from "./stock-chat/stock-chat.module";
 import { StorageModule } from "./storage/storage.module";
@@ -26,6 +27,7 @@ import { JobsModule } from "./jobs/jobs.module";
     MailModule,
     RavenModule,
     HealthModule,
+    HelloModule,
     ScheduleModule.forRoot(),
     JobsModule,
     // Feature Modules
