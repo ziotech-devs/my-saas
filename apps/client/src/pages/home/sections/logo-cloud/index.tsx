@@ -7,7 +7,7 @@ type LogoProps = { company: string };
 const Logo = ({ company }: LogoProps) => (
   <div
     className={cn(
-      "col-span-2 col-start-2 sm:col-start-auto lg:col-span-1",
+      "col-span-2 col-start-2 sm:col-start-auto lg:col-span-2",
       company === "twilio" && "sm:col-start-2",
     )}
   >
